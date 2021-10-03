@@ -1,0 +1,115 @@
+[
+    {
+        "name": "Brandon Rodriguez",
+        "address": "494 Nicholas Walk Apt. 143\nBarkershire, CO 09673",
+        "birthdate": "1980-01-11",
+        "telephone": "216.725.9607x324",
+        "id": 238294,
+        "pets": [
+            {
+                "name": "boxer",
+                "specie": "wanted-gnu",
+                "description": "huge",
+                "gender": "male",
+                "id": 32,
+                "weight": 765762
+            },
+            {
+                "name": "raven",
+                "specie": "known-drake",
+                "description": "fond",
+                "gender": "male",
+                "id": 87,
+                "weight": 455826
+            },
+            {
+                "name": "possum",
+                "specie": "amazed-horse",
+                "description": "right",
+                "gender": "male",
+                "id": 85,
+                "weight": 662654
+            },
+            {
+                "name": "chow",
+                "specie": "still-clam",
+                "description": "more",
+                "gender": "female",
+                "id": 29,
+                "weight": 823957
+            },
+            {
+                "name": "hawk",
+                "specie": "sought-lynx",
+                "description": "brief",
+                "gender": "female",
+                "id": 51,
+                "weight": 268285
+            },
+            {
+                "name": "clam",
+                "specie": "fine-dodo",
+                "description": "tough",
+                "gender": "female",
+                "id": 28,
+                "weight": 77052
+            },
+            {
+                "name": "adder",
+                "specie": "strong-man",
+                "description": "active",
+                "gender": "male",
+                "id": 27,
+                "weight": 331391
+            },
+            {
+                "name": "gnat",
+                "specie": "golden-pigeon",
+                "description": "firm",
+                "gender": "female",
+                "id": 84,
+                "weight": 933605
+            },
+            {
+                "name": "hyena",
+                "specie": "prompt-newt",
+                "description": "merry",
+                "gender": "female",
+                "id": 3,
+                "weight": 787839
+            },
+            {
+                "name": "gecko",
+                "specie": "noble-tomcat",
+                "description": "new",
+                "gender": "female",
+                "id": 49,
+                "weight": 371953
+            },
+            {
+                "name": "satyr",
+                "specie": "causal-skink",
+                "description": "exotic",
+                "gender": "female",
+                "id": 59,
+                "weight": 766067
+            },
+            {
+                "name": "shark",
+                "specie": "vocal-satyr",
+                "description": "vocal",
+                "gender": "female",
+                "id": 73,
+                "weight": 382849
+            },
+            {
+                "name": "bug",
+                "specie": "giving-deer",
+                "description": "vital",
+                "gender": "male",
+                "id": 35,
+                "weight": 328190
+            }
+        ]
+    }
+]

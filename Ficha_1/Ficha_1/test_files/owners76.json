@@ -1,0 +1,216 @@
+[
+    {
+        "name": "Samantha Terrell",
+        "address": "Unit 3910 Box 1368\nDPO AE 95867",
+        "birthdate": "2017-03-26",
+        "telephone": "001-940-744-9504x0709",
+        "id": 836678,
+        "pets": [
+            {
+                "name": "kit",
+                "specie": "witty-bull",
+                "description": "on",
+                "gender": "male",
+                "id": 74,
+                "weight": 963379
+            },
+            {
+                "name": "molly",
+                "specie": "sacred-locust",
+                "description": "enough",
+                "gender": "male",
+                "id": 13,
+                "weight": 196359
+            }
+        ]
+    },
+    {
+        "name": "Ryan Horton",
+        "address": "777 Case Streets\nKathleenhaven, WA 88108",
+        "birthdate": "2011-11-25",
+        "telephone": "1499682102",
+        "id": 3419,
+        "pets": [
+            {
+                "name": "lark",
+                "specie": "valued-swan",
+                "description": "humble",
+                "gender": "female",
+                "id": 47,
+                "weight": 733513
+            },
+            {
+                "name": "mako",
+                "specie": "new-minnow",
+                "description": "honest",
+                "gender": "male",
+                "id": 51,
+                "weight": 550733
+            },
+            {
+                "name": "monkey",
+                "specie": "tender-shrimp",
+                "description": "alive",
+                "gender": "male",
+                "id": 99,
+                "weight": 898401
+            },
+            {
+                "name": "dodo",
+                "specie": "sharp-gopher",
+                "description": "modest",
+                "gender": "female",
+                "id": 49,
+                "weight": 562352
+            },
+            {
+                "name": "bee",
+                "specie": "square-pug",
+                "description": "firm",
+                "gender": "female",
+                "id": 94,
+                "weight": 62646
+            }
+        ]
+    },
+    {
+        "name": "Jeremy Abbott",
+        "address": "702 Nicholas Station Suite 994\nSouth Jamieshire, SD 59795",
+        "birthdate": "2018-11-02",
+        "telephone": "978.858.8770",
+        "id": 461170,
+        "pets": [
+            {
+                "name": "horse",
+                "specie": "exact-jackal",
+                "description": "select",
+                "gender": "male",
+                "id": 100,
+                "weight": 557291
+            },
+            {
+                "name": "husky",
+                "specie": "immune-pika",
+                "description": "just",
+                "gender": "female",
+                "id": 77,
+                "weight": 21527
+            }
+        ]
+    },
+    {
+        "name": "Faith Villanueva",
+        "address": "Unit 6060 Box 3816\nDPO AP 78713",
+        "birthdate": "1998-11-23",
+        "telephone": "688.346.1042",
+        "id": 866873,
+        "pets": [
+            {
+                "name": "shrimp",
+                "specie": "famous-falcon",
+                "description": "loved",
+                "gender": "female",
+                "id": 50,
+                "weight": 52272
+            },
+            {
+                "name": "stud",
+                "specie": "glad-lizard",
+                "description": "exact",
+                "gender": "female",
+                "id": 58,
+                "weight": 739420
+            },
+            {
+                "name": "finch",
+                "specie": "star-mink",
+                "description": "humane",
+                "gender": "female",
+                "id": 4,
+                "weight": 897055
+            },
+            {
+                "name": "alpaca",
+                "specie": "ace-alien",
+                "description": "moral",
+                "gender": "male",
+                "id": 22,
+                "weight": 249217
+            },
+            {
+                "name": "badger",
+                "specie": "funny-weasel",
+                "description": "prime",
+                "gender": "male",
+                "id": 19,
+                "weight": 217380
+            },
+            {
+                "name": "koala",
+                "specie": "sharp-collie",
+                "description": "solid",
+                "gender": "male",
+                "id": 52,
+                "weight": 995412
+            }
+        ]
+    },
+    {
+        "name": "Evan Wilson",
+        "address": "59772 Sanchez Gateway\nNorth Samantha, OK 96275",
+        "birthdate": "1986-11-24",
+        "telephone": "643-682-8014",
+        "id": 813419,
+        "pets": [
+            {
+                "name": "moth",
+                "specie": "sure-bunny",
+                "description": "free",
+                "gender": "female",
+                "id": 47,
+                "weight": 407722
+            },
+            {
+                "name": "puma",
+                "specie": "rapid-hornet",
+                "description": "main",
+                "gender": "female",
+                "id": 51,
+                "weight": 202105
+            }
+        ]
+    },
+    {
+        "name": "Sarah Franklin",
+        "address": "20010 Susan Land Apt. 676\nDawsonview, IL 82763",
+        "birthdate": "1971-10-09",
+        "telephone": "(104)710-3772x7177",
+        "id": 917117,
+        "pets": [
+            {
+                "name": "gnu",
+                "specie": "novel-slug",
+                "description": "kind",
+                "gender": "female",
+                "id": 86,
+                "weight": 318131
+            },
+            {
+                "name": "cicada",
+                "specie": "kind-rabbit",
+                "description": "pumped",
+                "gender": "female",
+                "id": 84,
+                "weight": 485170
+            },
+            {
+                "name": "pup",
+                "specie": "mature-mammal",
+                "description": "secure",
+                "gender": "male",
+                "id": 85,
+                "weight": 997505
+            }
+        ]
+    }
+]

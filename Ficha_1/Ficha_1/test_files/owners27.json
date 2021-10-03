@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Michael Cruz",
+        "address": "9928 Jessica Way\nMichelleshire, MN 35664",
+        "birthdate": "2020-02-22",
+        "telephone": "(949)791-8138x167",
+        "id": 849720,
+        "pets": [
+            {
+                "name": "monkey",
+                "specie": "known-wolf",
+                "description": "modest",
+                "gender": "male",
+                "id": 27,
+                "weight": 74529
+            },
+            {
+                "name": "koi",
+                "specie": "ideal-macaw",
+                "description": "crack",
+                "gender": "female",
+                "id": 38,
+                "weight": 939396
+            },
+            {
+                "name": "duck",
+                "specie": "alert-heron",
+                "description": "fine",
+                "gender": "male",
+                "id": 47,
+                "weight": 421180
+            }
+        ]
+    }
+]

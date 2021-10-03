@@ -1,0 +1,85 @@
+[
+    {
+        "name": "Kristen Edwards",
+        "address": "582 Jessica Station\nMichaelborough, TN 80185",
+        "birthdate": "1990-05-31",
+        "telephone": "001-134-135-7413x474",
+        "id": 124842,
+        "pets": [
+            {
+                "name": "goblin",
+                "specie": "driven-baboon",
+                "description": "secure",
+                "gender": "male",
+                "id": 76,
+                "weight": 414230
+            }
+        ]
+    },
+    {
+        "name": "Natalie Berry",
+        "address": "2002 Long Trace\nNicolasburgh, MI 52055",
+        "birthdate": "2012-06-21",
+        "telephone": "8222767547",
+        "id": 436529,
+        "pets": [
+            {
+                "name": "trout",
+                "specie": "fluent-hound",
+                "description": "on",
+                "gender": "female",
+                "id": 94,
+                "weight": 540080
+            },
+            {
+                "name": "lab",
+                "specie": "better-spider",
+                "description": "sure",
+                "gender": "female",
+                "id": 34,
+                "weight": 86827
+            },
+            {
+                "name": "marlin",
+                "specie": "active-fawn",
+                "description": "strong",
+                "gender": "male",
+                "id": 78,
+                "weight": 447679
+            },
+            {
+                "name": "loon",
+                "specie": "famous-beetle",
+                "description": "clear",
+                "gender": "male",
+                "id": 62,
+                "weight": 21329
+            }
+        ]
+    },
+    {
+        "name": "Raymond Jones",
+        "address": "9100 Michael Island\nCalebshire, RI 41024",
+        "birthdate": "1994-12-12",
+        "telephone": "001-422-043-2275x43724",
+        "id": 825680,
+        "pets": [
+            {
+                "name": "prawn",
+                "specie": "brief-shrimp",
+                "description": "expert",
+                "gender": "female",
+                "id": 77,
+                "weight": 346306
+            },
+            {
+                "name": "emu",
+                "specie": "brief-yeti",
+                "description": "helped",
+                "gender": "male",
+                "id": 15,
+                "weight": 56972
+            }
+        ]
+    }
+]

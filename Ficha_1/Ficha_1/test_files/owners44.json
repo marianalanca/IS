@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Richard King",
+        "address": "191 Lowery Motorway Apt. 757\nSouth Martinchester, ND 30115",
+        "birthdate": "2000-10-21",
+        "telephone": "(242)529-9825x828",
+        "id": 938850,
+        "pets": [
+            {
+                "name": "glider",
+                "specie": "strong-cattle",
+                "description": "civil",
+                "gender": "female",
+                "id": 12,
+                "weight": 582441
+            },
+            {
+                "name": "gopher",
+                "specie": "loyal-akita",
+                "description": "happy",
+                "gender": "male",
+                "id": 55,
+                "weight": 929675
+            },
+            {
+                "name": "bison",
+                "specie": "liked-tomcat",
+                "description": "deep",
+                "gender": "female",
+                "id": 10,
+                "weight": 994928
+            },
+            {
+                "name": "tarpon",
+                "specie": "saving-lemur",
+                "description": "loyal",
+                "gender": "female",
+                "id": 20,
+                "weight": 100533
+            }
+        ]
+    }
+]

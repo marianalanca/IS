@@ -1,0 +1,108 @@
+[
+    {
+        "name": "Timothy Obrien",
+        "address": "299 Reese Streets Apt. 035\nAnnebury, VT 49608",
+        "birthdate": "1990-07-05",
+        "telephone": "(904)348-9908x70191",
+        "id": 396328,
+        "pets": [
+            {
+                "name": "drum",
+                "specie": "rapid-pika",
+                "description": "frank",
+                "gender": "female",
+                "id": 35,
+                "weight": 643826
+            },
+            {
+                "name": "pony",
+                "specie": "native-husky",
+                "description": "native",
+                "gender": "male",
+                "id": 85,
+                "weight": 101835
+            },
+            {
+                "name": "mako",
+                "specie": "brave-skink",
+                "description": "equal",
+                "gender": "female",
+                "id": 14,
+                "weight": 734532
+            },
+            {
+                "name": "gannet",
+                "specie": "lucky-alpaca",
+                "description": "key",
+                "gender": "male",
+                "id": 75,
+                "weight": 978574
+            },
+            {
+                "name": "akita",
+                "specie": "cuddly-roughy",
+                "description": "dear",
+                "gender": "female",
+                "id": 68,
+                "weight": 867089
+            },
+            {
+                "name": "whale",
+                "specie": "honest-hippo",
+                "description": "ruling",
+                "gender": "female",
+                "id": 7,
+                "weight": 234134
+            },
+            {
+                "name": "goose",
+                "specie": "pure-hippo",
+                "description": "handy",
+                "gender": "female",
+                "id": 3,
+                "weight": 699922
+            }
+        ]
+    },
+    {
+        "name": "Rebecca Deleon",
+        "address": "1032 Wiggins Ports Apt. 371\nLake Angie, MO 61333",
+        "birthdate": "2015-01-16",
+        "telephone": "001-057-043-8380x723",
+        "id": 447997,
+        "pets": [
+            {
+                "name": "stag",
+                "specie": "hardy-stork",
+                "description": "grown",
+                "gender": "female",
+                "id": 19,
+                "weight": 662647
+            },
+            {
+                "name": "sawfly",
+                "specie": "fancy-midge",
+                "description": "loving",
+                "gender": "female",
+                "id": 98,
+                "weight": 870874
+            },
+            {
+                "name": "tuna",
+                "specie": "polite-stork",
+                "description": "smart",
+                "gender": "male",
+                "id": 22,
+                "weight": 416922
+            },
+            {
+                "name": "tetra",
+                "specie": "first-doe",
+                "description": "whole",
+                "gender": "male",
+                "id": 53,
+                "weight": 681230
+            }
+        ]
+    }
+]

@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Frank Reed",
+        "address": "9321 Robert View\nWilkinsonmouth, MN 60706",
+        "birthdate": "2020-06-15",
+        "telephone": "+1-081-481-8494x0149",
+        "id": 756285,
+        "pets": [
+            {
+                "name": "fowl",
+                "specie": "noted-yak",
+                "description": "set",
+                "gender": "female",
+                "id": 15,
+                "weight": 949968
+            },
+            {
+                "name": "quail",
+                "specie": "ideal-hog",
+                "description": "immune",
+                "gender": "female",
+                "id": 62,
+                "weight": 778111
+            },
+            {
+                "name": "kitten",
+                "specie": "picked-robin",
+                "description": "direct",
+                "gender": "male",
+                "id": 34,
+                "weight": 335179
+            },
+            {
+                "name": "snail",
+                "specie": "viable-swift",
+                "description": "model",
+                "gender": "male",
+                "id": 76,
+                "weight": 310173
+            }
+        ]
+    }
+]
