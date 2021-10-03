@@ -49,6 +49,12 @@
       <artifactId>jaxb-runtime</artifactId>
       <version>2.3.2</version>
     </dependency>
+    <!-- messagePack https://gist.github.com/thiagozs/6699612 -->
+    <dependency>
+      <groupId>org.msgpack</groupId>
+      <artifactId>msgpack</artifactId>
+      <version>0.6.12</version>
+    </dependency>
   </dependencies>
 
   <build>
