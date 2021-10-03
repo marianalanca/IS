@@ -1,1595 +1,2628 @@
 [
     {
-        "name": "Natalie Dawson",
-        "address": "69909 Janet Plaza\nTanyabury, MN 65401",
-        "birthdate": "1991-09-22",
-        "telephone": "(924)564-5830",
-        "id": 921166,
-        "pets": [
-            {
-                "name": "cub",
-                "specie": "clean-jay",
-                "description": "prime",
-                "gender": "male",
-                "id": 99,
-                "weight": 553647
-            }
-        ]
-    },
-    {
-        "name": "Lori Collins",
-        "address": "7993 Shane Courts\nKeithmouth, UT 91260",
-        "birthdate": "2014-07-08",
-        "telephone": "772-341-0174x83974",
-        "id": 703287,
-        "pets": [
-            {
-                "name": "viper",
-                "specie": "quick-elk",
-                "description": "sunny",
-                "gender": "male",
-                "id": 47,
-                "weight": 48923
-            }
-        ]
-    },
-    {
-        "name": "Bradley Martin",
-        "address": "13492 Kimberly Mission\nLake Danielville, DE 61624",
-        "birthdate": "1990-10-07",
-        "telephone": "962.139.5781x68658",
-        "id": 481198,
-        "pets": [
-            {
-                "name": "moth",
-                "specie": "heroic-sole",
-                "description": "pumped",
-                "gender": "female",
-                "id": 92,
-                "weight": 108460
-            },
-            {
-                "name": "skunk",
-                "specie": "boss-ape",
-                "description": "able",
-                "gender": "female",
-                "id": 8,
-                "weight": 342466
-            }
-        ]
-    },
-    {
-        "name": "Douglas Lambert",
-        "address": "363 Alexandra Way\nMorganburgh, DC 71527",
-        "birthdate": "1976-10-19",
-        "telephone": "136-883-7525x058",
-        "id": 308194,
+        "name": "Mary Berry",
+        "address": "590 Shannon Curve\nKramerstad, IL 67183",
+        "birthdate": "1996-04-23",
+        "telephone": "(189)410-1687",
+        "id": 321684,
         "pets": [
             {
                 "name": "krill",
-                "specie": "cosmic-mule",
-                "description": "close",
+                "specie": "smart-krill",
+                "description": "daring",
                 "gender": "female",
-                "id": 72,
-                "weight": 986265
+                "id": 47,
+                "weight": 928355
             },
             {
-                "name": "goblin",
-                "specie": "humble-moose",
-                "description": "civil",
+                "name": "gibbon",
+                "specie": "holy-toad",
+                "description": "chief",
                 "gender": "female",
-                "id": 68,
-                "weight": 554753
-            }
-        ]
-    },
-    {
-        "name": "Travis Sanders",
-        "address": "20608 Braun Mews\nRebeccamouth, MI 74972",
-        "birthdate": "1990-11-11",
-        "telephone": "891-834-2422",
-        "id": 621890,
-        "pets": [
-            {
-                "name": "vervet",
-                "specie": "valued-cobra",
-                "description": "casual",
-                "gender": "female",
-                "id": 39,
-                "weight": 786885
-            }
-        ]
-    },
-    {
-        "name": "James Strong",
-        "address": "12356 Maria Circle\nNew Ariel, IL 33428",
-        "birthdate": "1981-05-30",
-        "telephone": "846-210-1568x481",
-        "id": 22631,
-        "pets": [
-            {
-                "name": "frog",
-                "specie": "casual-roughy",
-                "description": "tender",
-                "gender": "male",
-                "id": 21,
-                "weight": 714320
-            }
-        ]
-    },
-    {
-        "name": "Amanda Ortega",
-        "address": "0489 Ann Manors Apt. 915\nColinview, WV 79264",
-        "birthdate": "2008-08-11",
-        "telephone": "(145)545-7715",
-        "id": 237042,
-        "pets": [
-            {
-                "name": "ant",
-                "specie": "strong-pup",
-                "description": "finer",
-                "gender": "male",
-                "id": 19,
-                "weight": 658223
-            },
-            {
-                "name": "worm",
-                "specie": "native-lamb",
-                "description": "prompt",
-                "gender": "male",
-                "id": 10,
-                "weight": 788245
-            }
-        ]
-    },
-    {
-        "name": "Ray Burns",
-        "address": "5612 Brett Place Apt. 226\nNew Brittneyborough, OH 70353",
-        "birthdate": "1985-06-05",
-        "telephone": "857-951-4707x850",
-        "id": 490406,
-        "pets": [
-            {
-                "name": "goat",
-                "specie": "up-hound",
-                "description": "crisp",
-                "gender": "male",
-                "id": 84,
-                "weight": 303818
-            },
-            {
-                "name": "raven",
-                "specie": "mint-possum",
-                "description": "right",
-                "gender": "male",
-                "id": 61,
-                "weight": 731486
-            }
-        ]
-    },
-    {
-        "name": "Ashley Neal",
-        "address": "4549 Kathryn Mountain Suite 845\nNew Monica, OK 50939",
-        "birthdate": "1984-10-31",
-        "telephone": "789-009-8731x023",
-        "id": 543103,
-        "pets": [
-            {
-                "name": "fowl",
-                "specie": "sure-jackal",
-                "description": "eager",
-                "gender": "female",
-                "id": 71,
-                "weight": 873635
-            },
-            {
-                "name": "hare",
-                "specie": "robust-hyena",
-                "description": "causal",
-                "gender": "female",
-                "id": 20,
-                "weight": 43433
-            }
-        ]
-    },
-    {
-        "name": "Jasmine Smith",
-        "address": "092 Davies Via\nEast Monica, TX 44120",
-        "birthdate": "1985-09-04",
-        "telephone": "379.815.2430x643",
-        "id": 584797,
-        "pets": [
-            {
-                "name": "osprey",
-                "specie": "needed-beagle",
-                "description": "actual",
-                "gender": "male",
-                "id": 2,
-                "weight": 408600
-            },
-            {
-                "name": "crow",
-                "specie": "modest-cicada",
-                "description": "moving",
-                "gender": "female",
-                "id": 72,
-                "weight": 1715
-            }
-        ]
-    },
-    {
-        "name": "Randy Smith",
-        "address": "652 Parker Trace Apt. 669\nSouth Christymouth, VT 86655",
-        "birthdate": "1984-02-20",
-        "telephone": "7515413165",
-        "id": 573578,
-        "pets": [
-            {
-                "name": "emu",
-                "specie": "fluent-shrimp",
-                "description": "upward",
-                "gender": "female",
-                "id": 99,
-                "weight": 224340
-            }
-        ]
-    },
-    {
-        "name": "Russell Ferguson",
-        "address": "08602 Cook Cliff\nMooreborough, TN 67162",
-        "birthdate": "1981-07-22",
-        "telephone": "617.691.5824x881",
-        "id": 103302,
-        "pets": [
-            {
-                "name": "tapir",
-                "specie": "cosmic-egret",
-                "description": "pet",
-                "gender": "male",
-                "id": 62,
-                "weight": 312028
-            }
-        ]
-    },
-    {
-        "name": "Bradley Olson",
-        "address": "0260 Michael Meadow Suite 188\nNew Walter, NJ 61139",
-        "birthdate": "1971-04-18",
-        "telephone": "253.338.9141x00040",
-        "id": 758449,
-        "pets": [
-            {
-                "name": "eagle",
-                "specie": "amused-hound",
-                "description": "grown",
-                "gender": "female",
-                "id": 42,
-                "weight": 250275
-            }
-        ]
-    },
-    {
-        "name": "David Sullivan",
-        "address": "8128 Torres Spur Apt. 376\nKathleenshire, ND 33410",
-        "birthdate": "1981-03-07",
-        "telephone": "428.399.6947x172",
-        "id": 598226,
-        "pets": [
-            {
-                "name": "iguana",
-                "specie": "social-macaw",
-                "description": "loved",
-                "gender": "female",
-                "id": 80,
-                "weight": 134576
-            }
-        ]
-    },
-    {
-        "name": "James Gomez",
-        "address": "3685 David Wells Apt. 521\nGregorytown, MN 99287",
-        "birthdate": "2003-04-15",
-        "telephone": "680-863-0321",
-        "id": 105871,
-        "pets": [
-            {
-                "name": "hippo",
-                "specie": "fleet-baboon",
-                "description": "great",
-                "gender": "female",
-                "id": 64,
-                "weight": 980752
-            },
-            {
-                "name": "beagle",
-                "specie": "fluent-bird",
-                "description": "amazed",
-                "gender": "male",
-                "id": 55,
-                "weight": 510544
-            }
-        ]
-    },
-    {
-        "name": "Donna York",
-        "address": "62095 Paul Loaf\nNew Kristina, AZ 03021",
-        "birthdate": "2007-08-19",
-        "telephone": "001-172-864-4330x564",
-        "id": 462974,
-        "pets": [
-            {
-                "name": "squid",
-                "specie": "modern-pony",
-                "description": "open",
-                "gender": "female",
-                "id": 12,
-                "weight": 838930
-            }
-        ]
-    },
-    {
-        "name": "Jessica Collins",
-        "address": "854 Joseph Islands\nEast Nicoleton, KY 29393",
-        "birthdate": "2009-06-12",
-        "telephone": "(578)125-0667",
-        "id": 885936,
-        "pets": [
-            {
-                "name": "coyote",
-                "specie": "fast-mammal",
-                "description": "nearby",
-                "gender": "male",
-                "id": 13,
-                "weight": 58396
-            }
-        ]
-    },
-    {
-        "name": "Michael Allen",
-        "address": "91380 Samuel Burg Suite 979\nLake Lauren, OH 23069",
-        "birthdate": "1981-01-23",
-        "telephone": "(041)706-8940",
-        "id": 998996,
-        "pets": [
-            {
-                "name": "elf",
-                "specie": "intent-tuna",
-                "description": "noted",
-                "gender": "female",
-                "id": 97,
-                "weight": 848381
-            }
-        ]
-    },
-    {
-        "name": "Michael Yang",
-        "address": "061 Gonzales Summit\nVaughnborough, CA 26098",
-        "birthdate": "1992-03-12",
-        "telephone": "+1-695-736-2155x76446",
-        "id": 111215,
-        "pets": [
-            {
-                "name": "mako",
-                "specie": "ample-lizard",
-                "description": "mint",
-                "gender": "male",
-                "id": 48,
-                "weight": 335788
-            }
-        ]
-    },
-    {
-        "name": "Preston Olsen",
-        "address": "36015 Heidi Rest Suite 307\nPort Robertview, MI 97943",
-        "birthdate": "2003-06-19",
-        "telephone": "(146)703-6788",
-        "id": 321060,
-        "pets": [
-            {
-                "name": "pigeon",
-                "specie": "usable-snail",
-                "description": "great",
-                "gender": "female",
-                "id": 4,
-                "weight": 152752
+                "id": 18,
+                "weight": 443072
             },
             {
                 "name": "satyr",
-                "specie": "humane-civet",
-                "description": "exotic",
+                "specie": "ideal-jackal",
+                "description": "fit",
                 "gender": "female",
-                "id": 78,
-                "weight": 974651
-            }
-        ]
-    },
-    {
-        "name": "David Thomas",
-        "address": "97799 Erin Neck\nSouth Alicia, WI 34623",
-        "birthdate": "1982-10-03",
-        "telephone": "221-389-1832",
-        "id": 11862,
-        "pets": [
-            {
-                "name": "eft",
-                "specie": "top-frog",
-                "description": "moved",
-                "gender": "female",
-                "id": 75,
-                "weight": 296352
+                "id": 73,
+                "weight": 322473
             },
             {
-                "name": "worm",
-                "specie": "fast-sole",
-                "description": "alive",
+                "name": "drum",
+                "specie": "daring-robin",
+                "description": "pumped",
+                "gender": "female",
+                "id": 72,
+                "weight": 250284
+            },
+            {
+                "name": "piglet",
+                "specie": "unique-turtle",
+                "description": "humble",
                 "gender": "male",
-                "id": 54,
-                "weight": 586873
+                "id": 36,
+                "weight": 302099
             }
         ]
     },
     {
-        "name": "Ashley Silva",
-        "address": "PSC 2779, Box 3770\nAPO AP 34830",
-        "birthdate": "1976-03-01",
-        "telephone": "(348)168-8606x8655",
-        "id": 522040,
+        "name": "Timothy Savage",
+        "address": "786 Jennifer Mountains\nNorth Christopherbury, MI 69852",
+        "birthdate": "1978-06-24",
+        "telephone": "(650)941-8237x95823",
+        "id": 64078,
         "pets": [
             {
-                "name": "dane",
-                "specie": "chief-moose",
-                "description": "subtle",
+                "name": "spider",
+                "specie": "first-husky",
+                "description": "valued",
                 "gender": "female",
                 "id": 81,
-                "weight": 599311
-            }
-        ]
-    },
-    {
-        "name": "Thomas Sims",
-        "address": "1745 Ortiz Terrace\nNew Brad, OR 08707",
-        "birthdate": "2016-12-31",
-        "telephone": "+1-672-948-7519x3465",
-        "id": 978194,
-        "pets": [
+                "weight": 568577
+            },
             {
-                "name": "wombat",
-                "specie": "trusty-mammal",
-                "description": "fine",
-                "gender": "female",
-                "id": 21,
-                "weight": 608367
+                "name": "bug",
+                "specie": "wise-mite",
+                "description": "boss",
+                "gender": "male",
+                "id": 75,
+                "weight": 409595
             },
             {
                 "name": "boa",
-                "specie": "major-mink",
-                "description": "native",
+                "specie": "native-possum",
+                "description": "moved",
                 "gender": "female",
-                "id": 75,
-                "weight": 520501
-            }
-        ]
-    },
-    {
-        "name": "Sherry Robles",
-        "address": "364 Henderson Circle\nBenjaminport, AZ 69034",
-        "birthdate": "2006-02-21",
-        "telephone": "100.872.3770x969",
-        "id": 631666,
-        "pets": [
-            {
-                "name": "guppy",
-                "specie": "amazed-crow",
-                "description": "vital",
-                "gender": "male",
-                "id": 56,
-                "weight": 350562
-            }
-        ]
-    },
-    {
-        "name": "Bradley Douglas",
-        "address": "2734 Ray Plains Suite 612\nDudleyport, AK 90535",
-        "birthdate": "2010-02-24",
-        "telephone": "080-420-5979",
-        "id": 296872,
-        "pets": [
-            {
-                "name": "worm",
-                "specie": "first-minnow",
-                "description": "mighty",
-                "gender": "male",
-                "id": 75,
-                "weight": 38849
-            }
-        ]
-    },
-    {
-        "name": "Andrew Garcia",
-        "address": "1666 Jacqueline Cliff\nEvanbury, MI 99181",
-        "birthdate": "2017-06-30",
-        "telephone": "752.870.9508x99163",
-        "id": 716198,
-        "pets": [
-            {
-                "name": "stag",
-                "specie": "steady-insect",
-                "description": "vocal",
-                "gender": "male",
-                "id": 59,
-                "weight": 52086
+                "id": 83,
+                "weight": 473301
             },
-            {
-                "name": "fawn",
-                "specie": "helped-ant",
-                "description": "picked",
-                "gender": "male",
-                "id": 23,
-                "weight": 504768
-            }
-        ]
-    },
-    {
-        "name": "Michael Huber",
-        "address": "PSC 2090, Box 0133\nAPO AA 95126",
-        "birthdate": "1971-09-14",
-        "telephone": "486-510-7727",
-        "id": 726272,
-        "pets": [
-            {
-                "name": "shrew",
-                "specie": "fast-owl",
-                "description": "cute",
-                "gender": "female",
-                "id": 73,
-                "weight": 533426
-            },
-            {
-                "name": "louse",
-                "specie": "major-mutt",
-                "description": "simple",
-                "gender": "male",
-                "id": 42,
-                "weight": 256860
-            }
-        ]
-    },
-    {
-        "name": "Donna Wyatt",
-        "address": "26096 Martin Station Apt. 535\nPort Wesley, MI 85870",
-        "birthdate": "1989-03-21",
-        "telephone": "878-950-4836x14292",
-        "id": 120287,
-        "pets": [
-            {
-                "name": "wolf",
-                "specie": "apt-newt",
-                "description": "living",
-                "gender": "male",
-                "id": 31,
-                "weight": 838363
-            }
-        ]
-    },
-    {
-        "name": "Jesus Christensen",
-        "address": "18441 Becker Shoal\nLake Chrismouth, MO 63519",
-        "birthdate": "2004-09-18",
-        "telephone": "+1-016-283-3554x34568",
-        "id": 151505,
-        "pets": [
-            {
-                "name": "filly",
-                "specie": "wanted-condor",
-                "description": "fancy",
-                "gender": "female",
-                "id": 34,
-                "weight": 77632
-            },
-            {
-                "name": "ferret",
-                "specie": "key-calf",
-                "description": "cuddly",
-                "gender": "female",
-                "id": 50,
-                "weight": 179302
-            }
-        ]
-    },
-    {
-        "name": "Emily White",
-        "address": "0433 Johnny Via\nArthurstad, WA 32771",
-        "birthdate": "1979-07-09",
-        "telephone": "+1-955-503-5991x12680",
-        "id": 68441,
-        "pets": [
-            {
-                "name": "kodiak",
-                "specie": "upward-liger",
-                "description": "humble",
-                "gender": "female",
-                "id": 28,
-                "weight": 467316
-            },
-            {
-                "name": "raptor",
-                "specie": "mighty-elk",
-                "description": "alive",
-                "gender": "female",
-                "id": 65,
-                "weight": 691609
-            }
-        ]
-    },
-    {
-        "name": "Bryan Fletcher",
-        "address": "4253 Peterson Road Apt. 651\nChapmanmouth, DE 80483",
-        "birthdate": "2005-07-23",
-        "telephone": "359-225-8116",
-        "id": 198728,
-        "pets": [
-            {
-                "name": "sawfly",
-                "specie": "mighty-goat",
-                "description": "bright",
-                "gender": "female",
-                "id": 100,
-                "weight": 772431
-            }
-        ]
-    },
-    {
-        "name": "Gregory Sheppard",
-        "address": "32971 David Extensions Apt. 582\nEast Laurachester, TN 29273",
-        "birthdate": "2003-08-31",
-        "telephone": "001-238-480-9482x8343",
-        "id": 78945,
-        "pets": [
-            {
-                "name": "amoeba",
-                "specie": "clever-skink",
-                "description": "sure",
-                "gender": "female",
-                "id": 31,
-                "weight": 388103
-            },
-            {
-                "name": "cod",
-                "specie": "real-lizard",
-                "description": "above",
-                "gender": "female",
-                "id": 99,
-                "weight": 720631
-            }
-        ]
-    },
-    {
-        "name": "Richard Bond",
-        "address": "21433 Wilcox Rest\nNorth Melissatown, ID 98174",
-        "birthdate": "1973-07-17",
-        "telephone": "(317)708-4447",
-        "id": 466409,
-        "pets": [
-            {
-                "name": "swift",
-                "specie": "hardy-wren",
-                "description": "fresh",
-                "gender": "female",
-                "id": 85,
-                "weight": 524430
-            },
-            {
-                "name": "moray",
-                "specie": "bold-yak",
-                "description": "super",
-                "gender": "male",
-                "id": 46,
-                "weight": 893406
-            }
-        ]
-    },
-    {
-        "name": "Jordan Miller",
-        "address": "845 Samantha Union Apt. 040\nElizabethshire, OH 08030",
-        "birthdate": "2012-02-21",
-        "telephone": "001-312-654-7529x641",
-        "id": 970731,
-        "pets": [
-            {
-                "name": "hare",
-                "specie": "fancy-tahr",
-                "description": "holy",
-                "gender": "female",
-                "id": 43,
-                "weight": 710152
-            },
-            {
-                "name": "bull",
-                "specie": "rapid-finch",
-                "description": "flying",
-                "gender": "female",
-                "id": 90,
-                "weight": 792856
-            }
-        ]
-    },
-    {
-        "name": "Brenda Mcdonald",
-        "address": "28719 Rodriguez Springs\nRuizmouth, PA 09191",
-        "birthdate": "2003-03-19",
-        "telephone": "001-080-385-1350x9455",
-        "id": 940848,
-        "pets": [
-            {
-                "name": "gecko",
-                "specie": "dear-serval",
-                "description": "square",
-                "gender": "male",
-                "id": 37,
-                "weight": 898616
-            },
-            {
-                "name": "marten",
-                "specie": "strong-moray",
-                "description": "wanted",
-                "gender": "female",
-                "id": 95,
-                "weight": 676764
-            }
-        ]
-    },
-    {
-        "name": "David Graham",
-        "address": "5385 Erickson Center\nDonaldstad, NH 64621",
-        "birthdate": "2007-01-28",
-        "telephone": "174.923.5384x169",
-        "id": 30776,
-        "pets": [
-            {
-                "name": "beetle",
-                "specie": "sacred-martin",
-                "description": "vast",
-                "gender": "female",
-                "id": 72,
-                "weight": 142869
-            }
-        ]
-    },
-    {
-        "name": "Alicia Sutton",
-        "address": "2215 George Burgs Apt. 024\nMasonfurt, TN 93966",
-        "birthdate": "1972-05-17",
-        "telephone": "(074)528-2578x8554",
-        "id": 412950,
-        "pets": [
-            {
-                "name": "eagle",
-                "specie": "fancy-aphid",
-                "description": "tight",
-                "gender": "male",
-                "id": 9,
-                "weight": 389801
-            },
-            {
-                "name": "gator",
-                "specie": "pet-badger",
-                "description": "saved",
-                "gender": "female",
-                "id": 31,
-                "weight": 278092
-            }
-        ]
-    },
-    {
-        "name": "Charles Davis",
-        "address": "49957 Katelyn Rapid\nPort Barbara, VT 85791",
-        "birthdate": "1978-02-08",
-        "telephone": "+1-335-641-3664",
-        "id": 331221,
-        "pets": [
-            {
-                "name": "tick",
-                "specie": "bright-beagle",
-                "description": "open",
-                "gender": "female",
-                "id": 79,
-                "weight": 122581
-            },
-            {
-                "name": "tarpon",
-                "specie": "mature-viper",
-                "description": "just",
-                "gender": "female",
-                "id": 93,
-                "weight": 479493
-            }
-        ]
-    },
-    {
-        "name": "Denise Erickson",
-        "address": "399 Davis Springs Apt. 595\nLake Jason, MO 11257",
-        "birthdate": "2002-12-12",
-        "telephone": "972-962-0163",
-        "id": 277090,
-        "pets": [
-            {
-                "name": "fowl",
-                "specie": "fresh-louse",
-                "description": "vocal",
-                "gender": "male",
-                "id": 25,
-                "weight": 165423
-            },
-            {
-                "name": "cattle",
-                "specie": "meet-gannet",
-                "description": "strong",
-                "gender": "male",
-                "id": 72,
-                "weight": 123393
-            }
-        ]
-    },
-    {
-        "name": "Amy Price",
-        "address": "6028 Teresa Landing\nSouth Amanda, NC 81879",
-        "birthdate": "2009-01-07",
-        "telephone": "001-169-191-3671x0408",
-        "id": 683187,
-        "pets": [
-            {
-                "name": "goat",
-                "specie": "many-buck",
-                "description": "comic",
-                "gender": "male",
-                "id": 80,
-                "weight": 527648
-            }
-        ]
-    },
-    {
-        "name": "Julian Dunlap",
-        "address": "31241 Sheri Hollow\nMedinamouth, RI 65268",
-        "birthdate": "1977-02-10",
-        "telephone": "+1-172-705-2651x88837",
-        "id": 560005,
-        "pets": [
-            {
-                "name": "lark",
-                "specie": "true-squid",
-                "description": "saved",
-                "gender": "female",
-                "id": 55,
-                "weight": 265575
-            },
-            {
-                "name": "moose",
-                "specie": "humble-coyote",
-                "description": "solid",
-                "gender": "female",
-                "id": 98,
-                "weight": 497603
-            }
-        ]
-    },
-    {
-        "name": "Joshua Brown",
-        "address": "98024 Emily Station Apt. 714\nEast Elizabeth, GA 92697",
-        "birthdate": "1992-02-04",
-        "telephone": "813.184.4991x47309",
-        "id": 426304,
-        "pets": [
-            {
-                "name": "fly",
-                "specie": "still-gibbon",
-                "description": "frank",
-                "gender": "male",
-                "id": 32,
-                "weight": 289759
-            }
-        ]
-    },
-    {
-        "name": "James Mueller",
-        "address": "04972 Corey Brooks\nCrawfordtown, IN 11122",
-        "birthdate": "2000-11-07",
-        "telephone": "(314)622-3114x23583",
-        "id": 446860,
-        "pets": [
-            {
-                "name": "racer",
-                "specie": "quick-slug",
-                "description": "wise",
-                "gender": "female",
-                "id": 7,
-                "weight": 34433
-            },
-            {
-                "name": "bee",
-                "specie": "prime-troll",
-                "description": "free",
-                "gender": "male",
-                "id": 25,
-                "weight": 569384
-            }
-        ]
-    },
-    {
-        "name": "Sydney Allen",
-        "address": "USCGC Salazar\nFPO AP 12449",
-        "birthdate": "1975-08-28",
-        "telephone": "196.157.4433",
-        "id": 5927,
-        "pets": [
-            {
-                "name": "beetle",
-                "specie": "direct-bedbug",
-                "description": "cosmic",
-                "gender": "female",
-                "id": 23,
-                "weight": 513068
-            },
-            {
-                "name": "husky",
-                "specie": "one-sawfly",
-                "description": "cosmic",
-                "gender": "male",
-                "id": 49,
-                "weight": 563957
-            }
-        ]
-    },
-    {
-        "name": "Antonio Phillips",
-        "address": "02472 Clark Avenue Suite 660\nSouth Bettychester, ME 83923",
-        "birthdate": "2020-11-25",
-        "telephone": "+1-136-450-3482x680",
-        "id": 74250,
-        "pets": [
-            {
-                "name": "macaw",
-                "specie": "gentle-pig",
-                "description": "firm",
-                "gender": "male",
-                "id": 1,
-                "weight": 751372
-            },
-            {
-                "name": "adder",
-                "specie": "normal-eel",
-                "description": "usable",
-                "gender": "male",
-                "id": 18,
-                "weight": 714101
-            }
-        ]
-    },
-    {
-        "name": "Aaron Jackson",
-        "address": "69920 Davis Overpass\nNew Emilyshire, MT 22308",
-        "birthdate": "1983-03-05",
-        "telephone": "109.335.1357",
-        "id": 696997,
-        "pets": [
-            {
-                "name": "gopher",
-                "specie": "solid-sawfly",
-                "description": "enough",
-                "gender": "male",
-                "id": 39,
-                "weight": 800935
-            },
-            {
-                "name": "horse",
-                "specie": "free-robin",
-                "description": "keen",
-                "gender": "male",
-                "id": 9,
-                "weight": 191371
-            }
-        ]
-    },
-    {
-        "name": "Adam Burton",
-        "address": "1360 Figueroa Crossroad\nMichaelhaven, MS 63211",
-        "birthdate": "1989-12-05",
-        "telephone": "253.468.5432x745",
-        "id": 303289,
-        "pets": [
-            {
-                "name": "newt",
-                "specie": "wise-kitten",
-                "description": "viable",
-                "gender": "female",
-                "id": 75,
-                "weight": 168169
-            }
-        ]
-    },
-    {
-        "name": "Eric Wallace",
-        "address": "PSC 8600, Box 2643\nAPO AE 84278",
-        "birthdate": "1988-03-11",
-        "telephone": "(677)406-8849x7447",
-        "id": 338778,
-        "pets": [
-            {
-                "name": "kitten",
-                "specie": "first-baboon",
-                "description": "rested",
-                "gender": "male",
-                "id": 45,
-                "weight": 705857
-            },
-            {
-                "name": "chow",
-                "specie": "famous-midge",
-                "description": "modern",
-                "gender": "male",
-                "id": 15,
-                "weight": 698220
-            }
-        ]
-    },
-    {
-        "name": "Brandy Taylor",
-        "address": "73368 Kari Valley\nCarrchester, PA 54533",
-        "birthdate": "1993-12-01",
-        "telephone": "239.687.0171",
-        "id": 112928,
-        "pets": [
-            {
-                "name": "wasp",
-                "specie": "clear-cougar",
-                "description": "fun",
-                "gender": "female",
-                "id": 1,
-                "weight": 435284
-            }
-        ]
-    },
-    {
-        "name": "Shannon Perez",
-        "address": "27389 Wilson Views Apt. 942\nRobertburgh, VA 55734",
-        "birthdate": "1973-07-06",
-        "telephone": "(601)974-6908",
-        "id": 925640,
-        "pets": [
-            {
-                "name": "louse",
-                "specie": "moved-tiger",
-                "description": "real",
-                "gender": "male",
-                "id": 97,
-                "weight": 548359
-            }
-        ]
-    },
-    {
-        "name": "Gail Oneill",
-        "address": "971 Charlotte Common\nMichaelburgh, MI 29403",
-        "birthdate": "1988-01-06",
-        "telephone": "(177)770-4507x61149",
-        "id": 930176,
-        "pets": [
-            {
-                "name": "condor",
-                "specie": "saving-newt",
-                "description": "next",
-                "gender": "female",
-                "id": 97,
-                "weight": 827770
-            },
-            {
-                "name": "coral",
-                "specie": "cool-macaw",
-                "description": "major",
-                "gender": "male",
-                "id": 23,
-                "weight": 747626
-            }
-        ]
-    },
-    {
-        "name": "Charles Mccoy",
-        "address": "4312 Gibbs Stravenue Apt. 592\nSouth Sarahland, WV 26586",
-        "birthdate": "2004-01-22",
-        "telephone": "113-306-2155x10329",
-        "id": 189548,
-        "pets": [
-            {
-                "name": "cattle",
-                "specie": "enough-rabbit",
-                "description": "solid",
-                "gender": "male",
-                "id": 78,
-                "weight": 251855
-            },
-            {
-                "name": "turkey",
-                "specie": "pretty-hyena",
-                "description": "nearby",
-                "gender": "male",
-                "id": 54,
-                "weight": 877334
-            }
-        ]
-    },
-    {
-        "name": "Grant Cook",
-        "address": "6448 Cox Valley\nLake William, MI 36245",
-        "birthdate": "1997-03-07",
-        "telephone": "+1-663-845-0156x1911",
-        "id": 736333,
-        "pets": [
-            {
-                "name": "loon",
-                "specie": "major-possum",
-                "description": "solid",
-                "gender": "female",
-                "id": 55,
-                "weight": 347005
-            },
-            {
-                "name": "satyr",
-                "specie": "well-calf",
-                "description": "alive",
-                "gender": "male",
-                "id": 98,
-                "weight": 224576
-            }
-        ]
-    },
-    {
-        "name": "Allison Dunn",
-        "address": "Unit 4943 Box 6415\nDPO AA 31013",
-        "birthdate": "2011-12-19",
-        "telephone": "+1-602-653-5492x48179",
-        "id": 388038,
-        "pets": [
-            {
-                "name": "corgi",
-                "specie": "saved-kiwi",
-                "description": "choice",
-                "gender": "male",
-                "id": 82,
-                "weight": 875347
-            },
-            {
-                "name": "burro",
-                "specie": "mint-tarpon",
-                "description": "big",
-                "gender": "male",
-                "id": 26,
-                "weight": 393522
-            }
-        ]
-    },
-    {
-        "name": "Jonathan Rich",
-        "address": "0961 Omar Loop\nMichaelshire, OK 94858",
-        "birthdate": "1984-07-26",
-        "telephone": "782-342-7170",
-        "id": 65298,
-        "pets": [
-            {
-                "name": "kitten",
-                "specie": "noted-gnu",
-                "description": "brave",
-                "gender": "female",
-                "id": 6,
-                "weight": 125793
-            }
-        ]
-    },
-    {
-        "name": "Mark Wiley",
-        "address": "6454 Alex Overpass Apt. 912\nNorth Pamela, MS 73010",
-        "birthdate": "2018-04-30",
-        "telephone": "+1-913-420-4220",
-        "id": 868931,
-        "pets": [
-            {
-                "name": "hawk",
-                "specie": "above-fly",
-                "description": "boss",
-                "gender": "female",
-                "id": 8,
-                "weight": 487207
-            }
-        ]
-    },
-    {
-        "name": "Joshua Nelson",
-        "address": "695 Caitlin Cliff Apt. 524\nRicetown, NH 83711",
-        "birthdate": "2009-04-17",
-        "telephone": "(998)350-5430x706",
-        "id": 623128,
-        "pets": [
             {
                 "name": "beagle",
-                "specie": "holy-martin",
-                "description": "cool",
+                "specie": "well-tick",
+                "description": "quick",
                 "gender": "male",
-                "id": 72,
-                "weight": 753248
-            }
-        ]
-    },
-    {
-        "name": "Felicia Hoover",
-        "address": "77897 Allen Ranch Apt. 491\nNew Eric, CT 08524",
-        "birthdate": "1989-06-22",
-        "telephone": "894-697-1644x805",
-        "id": 930612,
-        "pets": [
-            {
-                "name": "pup",
-                "specie": "safe-moose",
-                "description": "grand",
-                "gender": "female",
-                "id": 45,
-                "weight": 15515
+                "id": 67,
+                "weight": 423747
             },
             {
-                "name": "wren",
-                "specie": "aware-cicada",
-                "description": "robust",
-                "gender": "male",
-                "id": 43,
-                "weight": 126376
-            }
-        ]
-    },
-    {
-        "name": "Kevin Jackson",
-        "address": "09681 Warner Bridge Apt. 181\nPort Laurenberg, LA 93915",
-        "birthdate": "1993-08-01",
-        "telephone": "(065)516-2305x961",
-        "id": 447010,
-        "pets": [
-            {
-                "name": "calf",
-                "specie": "helped-alpaca",
-                "description": "stable",
+                "name": "tetra",
+                "specie": "right-mouse",
+                "description": "known",
                 "gender": "female",
-                "id": 45,
-                "weight": 939960
-            },
-            {
-                "name": "jaguar",
-                "specie": "noble-calf",
-                "description": "handy",
-                "gender": "male",
-                "id": 64,
-                "weight": 795064
-            }
-        ]
-    },
-    {
-        "name": "John Evans",
-        "address": "63512 Maynard Terrace\nMirandashire, AR 93621",
-        "birthdate": "2019-03-17",
-        "telephone": "363-682-2905",
-        "id": 183616,
-        "pets": [
-            {
-                "name": "gibbon",
-                "specie": "poetic-gibbon",
-                "description": "tender",
-                "gender": "male",
-                "id": 100,
-                "weight": 41718
-            },
-            {
-                "name": "dragon",
-                "specie": "hip-sloth",
-                "description": "sound",
-                "gender": "male",
-                "id": 16,
-                "weight": 377895
-            }
-        ]
-    },
-    {
-        "name": "Colleen Owens",
-        "address": "768 Elizabeth Forge Apt. 282\nWest Emily, MS 29125",
-        "birthdate": "2017-01-29",
-        "telephone": "115-996-5746x312",
-        "id": 322167,
-        "pets": [
-            {
-                "name": "cub",
-                "specie": "huge-viper",
-                "description": "on",
-                "gender": "male",
-                "id": 84,
-                "weight": 396289
-            },
-            {
-                "name": "roughy",
-                "specie": "fast-bear",
-                "description": "in",
-                "gender": "female",
-                "id": 34,
-                "weight": 377875
-            }
-        ]
-    },
-    {
-        "name": "Andrew Morales",
-        "address": "95309 Castro Shoal Apt. 039\nMurphychester, IA 34222",
-        "birthdate": "1977-10-29",
-        "telephone": "6331678791",
-        "id": 989516,
-        "pets": [
-            {
-                "name": "alpaca",
-                "specie": "grand-dassie",
-                "description": "novel",
-                "gender": "female",
-                "id": 35,
-                "weight": 717656
-            }
-        ]
-    },
-    {
-        "name": "Ashley Dunlap",
-        "address": "765 Peterson Fort\nJamieborough, CA 24741",
-        "birthdate": "2012-01-23",
-        "telephone": "385-474-6376x446",
-        "id": 264606,
-        "pets": [
-            {
-                "name": "quail",
-                "specie": "epic-snail",
-                "description": "tidy",
-                "gender": "female",
-                "id": 60,
-                "weight": 515702
-            }
-        ]
-    },
-    {
-        "name": "Jill Miller",
-        "address": "6536 Mcbride Mount\nLake Teresa, WY 87099",
-        "birthdate": "1999-08-25",
-        "telephone": "412.206.4966",
-        "id": 858220,
-        "pets": [
-            {
-                "name": "yak",
-                "specie": "famous-kit",
-                "description": "holy",
-                "gender": "female",
-                "id": 89,
-                "weight": 37613
-            }
-        ]
-    },
-    {
-        "name": "Daniel Jordan",
-        "address": "81985 Perez Freeway Apt. 539\nNorth Johntown, NE 60545",
-        "birthdate": "1991-12-31",
-        "telephone": "001-539-199-2899x8253",
-        "id": 992675,
-        "pets": [
-            {
-                "name": "fawn",
-                "specie": "picked-gecko",
-                "description": "poetic",
-                "gender": "male",
-                "id": 81,
-                "weight": 806273
-            },
-            {
-                "name": "lemur",
-                "specie": "exact-bat",
-                "description": "wise",
-                "gender": "male",
-                "id": 49,
-                "weight": 835700
-            }
-        ]
-    },
-    {
-        "name": "Nicholas Moore",
-        "address": "7332 Billy Cliffs\nNorth Davidhaven, HI 73864",
-        "birthdate": "1971-07-16",
-        "telephone": "+1-490-490-6234x8277",
-        "id": 381350,
-        "pets": [
-            {
-                "name": "filly",
-                "specie": "subtle-fowl",
-                "description": "ideal",
-                "gender": "male",
-                "id": 90,
-                "weight": 844642
-            }
-        ]
-    },
-    {
-        "name": "Michelle Riley",
-        "address": "888 Kimberly Pine Suite 242\nHaleton, NV 39878",
-        "birthdate": "1991-07-20",
-        "telephone": "713.555.5460",
-        "id": 37327,
-        "pets": [
-            {
-                "name": "kid",
-                "specie": "neat-molly",
-                "description": "comic",
-                "gender": "male",
-                "id": 93,
-                "weight": 830983
-            },
-            {
-                "name": "lab",
-                "specie": "busy-goat",
-                "description": "mint",
-                "gender": "female",
-                "id": 25,
-                "weight": 348702
-            }
-        ]
-    },
-    {
-        "name": "Brianna Waters",
-        "address": "028 Phillips Ford\nGilesbury, IN 46422",
-        "birthdate": "1995-11-14",
-        "telephone": "1520246914",
-        "id": 420746,
-        "pets": [
-            {
-                "name": "eft",
-                "specie": "daring-bass",
-                "description": "aware",
-                "gender": "female",
-                "id": 7,
-                "weight": 825011
-            },
-            {
-                "name": "bison",
-                "specie": "prime-mite",
-                "description": "better",
-                "gender": "female",
-                "id": 45,
-                "weight": 40790
-            }
-        ]
-    },
-    {
-        "name": "Wanda Cobb",
-        "address": "Unit 3915 Box 6504\nDPO AP 05528",
-        "birthdate": "1978-09-22",
-        "telephone": "(739)653-1022",
-        "id": 250453,
-        "pets": [
-            {
-                "name": "macaw",
-                "specie": "above-fox",
-                "description": "finer",
-                "gender": "male",
-                "id": 62,
-                "weight": 174255
-            },
-            {
-                "name": "chimp",
-                "specie": "chief-stud",
-                "description": "main",
-                "gender": "male",
-                "id": 76,
-                "weight": 152212
-            }
-        ]
-    },
-    {
-        "name": "Michael Bolton",
-        "address": "4597 Smith Track Suite 394\nNew Richardhaven, SC 18550",
-        "birthdate": "1980-09-27",
-        "telephone": "195-047-6245",
-        "id": 732819,
-        "pets": [
-            {
-                "name": "bison",
-                "specie": "giving-doe",
-                "description": "humane",
-                "gender": "female",
-                "id": 31,
-                "weight": 160960
-            },
-            {
-                "name": "gopher",
-                "specie": "kind-koala",
-                "description": "chief",
-                "gender": "male",
-                "id": 81,
-                "weight": 910611
-            }
-        ]
-    },
-    {
-        "name": "Angela Daugherty",
-        "address": "074 Velazquez Point\nNew Aaronstad, WV 83980",
-        "birthdate": "2001-07-14",
-        "telephone": "581-293-9861",
-        "id": 792121,
-        "pets": [
-            {
-                "name": "bird",
-                "specie": "immune-cicada",
-                "description": "robust",
-                "gender": "male",
-                "id": 66,
-                "weight": 738595
+                "id": 50,
+                "weight": 950009
             },
             {
                 "name": "seal",
-                "specie": "polite-snipe",
-                "description": "new",
+                "specie": "ruling-kite",
+                "description": "first",
                 "gender": "female",
-                "id": 15,
-                "weight": 835501
+                "id": 92,
+                "weight": 176865
             }
         ]
     },
     {
-        "name": "Tammy Kemp",
-        "address": "164 Flowers Canyon\nBlackberg, ND 70644",
-        "birthdate": "1976-09-03",
-        "telephone": "+1-630-584-5390x301",
-        "id": 59078,
+        "name": "Bradley Gross",
+        "address": "8575 Merritt Lake\nSandrabury, LA 00719",
+        "birthdate": "1988-03-04",
+        "telephone": "451-967-0765x6697",
+        "id": 681576,
         "pets": [
             {
-                "name": "mole",
-                "specie": "living-hyena",
-                "description": "superb",
+                "name": "mullet",
+                "specie": "casual-muskox",
+                "description": "prompt",
                 "gender": "female",
-                "id": 18,
-                "weight": 68256
+                "id": 54,
+                "weight": 81457
             }
         ]
     },
     {
-        "name": "Michael Petersen",
-        "address": "86271 Charles Club\nLake Michelle, OK 37005",
-        "birthdate": "2013-10-31",
-        "telephone": "(875)823-0689x74208",
-        "id": 318536,
+        "name": "James Page",
+        "address": "USNS Pratt\nFPO AA 26226",
+        "birthdate": "2015-05-21",
+        "telephone": "001-679-375-0428x1877",
+        "id": 555984,
         "pets": [
             {
-                "name": "ferret",
-                "specie": "daring-finch",
-                "description": "divine",
-                "gender": "male",
-                "id": 56,
-                "weight": 729204
+                "name": "mutt",
+                "specie": "key-emu",
+                "description": "amazed",
+                "gender": "female",
+                "id": 71,
+                "weight": 869852
             },
             {
-                "name": "ray",
-                "specie": "top-tick",
-                "description": "cosmic",
+                "name": "alpaca",
+                "specie": "better-dory",
+                "description": "steady",
                 "gender": "male",
-                "id": 62,
-                "weight": 991805
+                "id": 76,
+                "weight": 622138
+            },
+            {
+                "name": "weasel",
+                "specie": "moral-liger",
+                "description": "social",
+                "gender": "female",
+                "id": 34,
+                "weight": 431768
             }
         ]
     },
     {
-        "name": "Eddie Johnson",
-        "address": "572 Smith Isle\nNew Shannon, OH 24257",
-        "birthdate": "2010-09-10",
-        "telephone": "+1-994-018-3360x17570",
-        "id": 272514,
+        "name": "Brenda Turner",
+        "address": "9904 Weaver Squares Suite 306\nKatrinahaven, MT 15826",
+        "birthdate": "1990-11-07",
+        "telephone": "283-839-9736x3400",
+        "id": 78000,
+        "pets": [
+            {
+                "name": "grouse",
+                "specie": "usable-hen",
+                "description": "upward",
+                "gender": "female",
+                "id": 47,
+                "weight": 123423
+            },
+            {
+                "name": "tuna",
+                "specie": "pretty-dog",
+                "description": "close",
+                "gender": "female",
+                "id": 43,
+                "weight": 153753
+            }
+        ]
+    },
+    {
+        "name": "Julia Lopez",
+        "address": "8559 William Ports\nRiverabury, CO 87852",
+        "birthdate": "2005-09-28",
+        "telephone": "851-598-0556",
+        "id": 208883,
+        "pets": [
+            {
+                "name": "hippo",
+                "specie": "pumped-cow",
+                "description": "fancy",
+                "gender": "male",
+                "id": 46,
+                "weight": 36948
+            }
+        ]
+    },
+    {
+        "name": "Laura Coleman",
+        "address": "9382 Thompson Street Suite 136\nLake Tinaburgh, VT 34743",
+        "birthdate": "2014-09-22",
+        "telephone": "6198353338",
+        "id": 641962,
+        "pets": [
+            {
+                "name": "tomcat",
+                "specie": "fit-walrus",
+                "description": "vital",
+                "gender": "male",
+                "id": 17,
+                "weight": 224026
+            },
+            {
+                "name": "cub",
+                "specie": "noted-marmot",
+                "description": "nearby",
+                "gender": "male",
+                "id": 59,
+                "weight": 23080
+            },
+            {
+                "name": "mantis",
+                "specie": "fair-loon",
+                "description": "ace",
+                "gender": "female",
+                "id": 19,
+                "weight": 944447
+            },
+            {
+                "name": "racer",
+                "specie": "master-marmot",
+                "description": "mutual",
+                "gender": "male",
+                "id": 2,
+                "weight": 250527
+            },
+            {
+                "name": "bream",
+                "specie": "joint-mantis",
+                "description": "ace",
+                "gender": "male",
+                "id": 16,
+                "weight": 940445
+            }
+        ]
+    },
+    {
+        "name": "Brian Sharp",
+        "address": "2861 Crystal Views\nDominiqueville, KY 55202",
+        "birthdate": "2007-10-21",
+        "telephone": "5424233360",
+        "id": 784178,
+        "pets": [
+            {
+                "name": "koala",
+                "specie": "epic-molly",
+                "description": "holy",
+                "gender": "male",
+                "id": 7,
+                "weight": 107855
+            },
+            {
+                "name": "satyr",
+                "specie": "merry-kitten",
+                "description": "amused",
+                "gender": "female",
+                "id": 24,
+                "weight": 688735
+            },
+            {
+                "name": "perch",
+                "specie": "star-amoeba",
+                "description": "normal",
+                "gender": "female",
+                "id": 86,
+                "weight": 739672
+            },
+            {
+                "name": "swine",
+                "specie": "ready-leech",
+                "description": "smooth",
+                "gender": "male",
+                "id": 53,
+                "weight": 789255
+            },
+            {
+                "name": "bengal",
+                "specie": "vital-shark",
+                "description": "set",
+                "gender": "male",
+                "id": 29,
+                "weight": 136149
+            }
+        ]
+    },
+    {
+        "name": "Vanessa Park",
+        "address": "Unit 9577 Box 5697\nDPO AP 08919",
+        "birthdate": "2001-04-25",
+        "telephone": "5863065509",
+        "id": 651749,
+        "pets": [
+            {
+                "name": "ghoul",
+                "specie": "first-kit",
+                "description": "cute",
+                "gender": "male",
+                "id": 68,
+                "weight": 42635
+            },
+            {
+                "name": "weasel",
+                "specie": "close-deer",
+                "description": "alert",
+                "gender": "female",
+                "id": 7,
+                "weight": 364135
+            },
+            {
+                "name": "ewe",
+                "specie": "many-tarpon",
+                "description": "mint",
+                "gender": "female",
+                "id": 58,
+                "weight": 543275
+            }
+        ]
+    },
+    {
+        "name": "Nathan Nelson",
+        "address": "68813 Martin Spring Suite 526\nSmithton, KS 94861",
+        "birthdate": "1980-10-22",
+        "telephone": "001-631-542-1367x766",
+        "id": 441836,
+        "pets": [
+            {
+                "name": "tarpon",
+                "specie": "prime-glider",
+                "description": "fleet",
+                "gender": "female",
+                "id": 94,
+                "weight": 137288
+            },
+            {
+                "name": "ghoul",
+                "specie": "merry-tahr",
+                "description": "noble",
+                "gender": "male",
+                "id": 37,
+                "weight": 741100
+            },
+            {
+                "name": "turtle",
+                "specie": "hot-leech",
+                "description": "big",
+                "gender": "male",
+                "id": 91,
+                "weight": 535872
+            },
+            {
+                "name": "lab",
+                "specie": "poetic-loon",
+                "description": "fresh",
+                "gender": "male",
+                "id": 58,
+                "weight": 181837
+            }
+        ]
+    },
+    {
+        "name": "Michelle Rogers",
+        "address": "0530 Becky Valley Suite 880\nEast Kimberly, WI 24220",
+        "birthdate": "1984-07-27",
+        "telephone": "507-367-4795x927",
+        "id": 527798,
+        "pets": [
+            {
+                "name": "serval",
+                "specie": "tender-falcon",
+                "description": "frank",
+                "gender": "male",
+                "id": 95,
+                "weight": 603939
+            },
+            {
+                "name": "moth",
+                "specie": "eager-koi",
+                "description": "ideal",
+                "gender": "male",
+                "id": 84,
+                "weight": 178498
+            },
+            {
+                "name": "frog",
+                "specie": "polite-bengal",
+                "description": "hardy",
+                "gender": "male",
+                "id": 44,
+                "weight": 82036
+            }
+        ]
+    },
+    {
+        "name": "April Walsh",
+        "address": "85956 Petty Drives\nPort Wandamouth, VA 33808",
+        "birthdate": "2009-05-03",
+        "telephone": "2258121600",
+        "id": 203867,
+        "pets": [
+            {
+                "name": "dove",
+                "specie": "deep-joey",
+                "description": "hip",
+                "gender": "female",
+                "id": 92,
+                "weight": 438818
+            },
+            {
+                "name": "poodle",
+                "specie": "native-amoeba",
+                "description": "wise",
+                "gender": "male",
+                "id": 61,
+                "weight": 399140
+            },
+            {
+                "name": "beagle",
+                "specie": "funny-swan",
+                "description": "saving",
+                "gender": "female",
+                "id": 91,
+                "weight": 259708
+            }
+        ]
+    },
+    {
+        "name": "Xavier Hernandez",
+        "address": "104 Anthony Manor Suite 914\nCarmenstad, IN 47208",
+        "birthdate": "1995-04-15",
+        "telephone": "974-919-3334x9836",
+        "id": 461364,
+        "pets": [
+            {
+                "name": "gull",
+                "specie": "holy-impala",
+                "description": "mature",
+                "gender": "male",
+                "id": 75,
+                "weight": 434342
+            },
+            {
+                "name": "amoeba",
+                "specie": "merry-oyster",
+                "description": "tender",
+                "gender": "female",
+                "id": 71,
+                "weight": 317325
+            },
+            {
+                "name": "dane",
+                "specie": "next-ghoul",
+                "description": "rich",
+                "gender": "female",
+                "id": 84,
+                "weight": 203995
+            },
+            {
+                "name": "weasel",
+                "specie": "moving-ray",
+                "description": "firm",
+                "gender": "female",
+                "id": 42,
+                "weight": 801014
+            },
+            {
+                "name": "bengal",
+                "specie": "proud-goat",
+                "description": "firm",
+                "gender": "female",
+                "id": 28,
+                "weight": 23564
+            },
+            {
+                "name": "elf",
+                "specie": "good-muskox",
+                "description": "polite",
+                "gender": "male",
+                "id": 96,
+                "weight": 943528
+            },
+            {
+                "name": "gar",
+                "specie": "proper-tick",
+                "description": "united",
+                "gender": "female",
+                "id": 52,
+                "weight": 504466
+            },
+            {
+                "name": "yeti",
+                "specie": "sure-kid",
+                "description": "mint",
+                "gender": "male",
+                "id": 73,
+                "weight": 138551
+            }
+        ]
+    },
+    {
+        "name": "Mary Humphrey",
+        "address": "4234 David Gateway Apt. 776\nEast Elizabeth, FL 34396",
+        "birthdate": "2005-09-22",
+        "telephone": "887.138.0825x2789",
+        "id": 68268,
+        "pets": [
+            {
+                "name": "martin",
+                "specie": "huge-moth",
+                "description": "known",
+                "gender": "female",
+                "id": 77,
+                "weight": 399822
+            },
+            {
+                "name": "bird",
+                "specie": "picked-newt",
+                "description": "vast",
+                "gender": "male",
+                "id": 32,
+                "weight": 556125
+            },
+            {
+                "name": "koala",
+                "specie": "deep-bird",
+                "description": "pumped",
+                "gender": "female",
+                "id": 72,
+                "weight": 555279
+            },
+            {
+                "name": "shrew",
+                "specie": "loyal-ox",
+                "description": "steady",
+                "gender": "female",
+                "id": 45,
+                "weight": 296517
+            },
+            {
+                "name": "coral",
+                "specie": "mutual-kodiak",
+                "description": "rare",
+                "gender": "female",
+                "id": 100,
+                "weight": 410304
+            },
+            {
+                "name": "fish",
+                "specie": "subtle-snake",
+                "description": "meet",
+                "gender": "female",
+                "id": 86,
+                "weight": 586093
+            },
+            {
+                "name": "gecko",
+                "specie": "game-akita",
+                "description": "rich",
+                "gender": "female",
+                "id": 63,
+                "weight": 263081
+            },
+            {
+                "name": "troll",
+                "specie": "square-colt",
+                "description": "caring",
+                "gender": "male",
+                "id": 5,
+                "weight": 198847
+            }
+        ]
+    },
+    {
+        "name": "Marcus Collins",
+        "address": "PSC 0003, Box 1656\nAPO AA 43061",
+        "birthdate": "1990-04-29",
+        "telephone": "001-584-850-0265",
+        "id": 629017,
+        "pets": [
+            {
+                "name": "minnow",
+                "specie": "set-lemur",
+                "description": "sweet",
+                "gender": "female",
+                "id": 14,
+                "weight": 127930
+            },
+            {
+                "name": "molly",
+                "specie": "major-mutt",
+                "description": "neat",
+                "gender": "male",
+                "id": 59,
+                "weight": 138087
+            },
+            {
+                "name": "dove",
+                "specie": "fun-monkey",
+                "description": "huge",
+                "gender": "female",
+                "id": 13,
+                "weight": 739730
+            },
+            {
+                "name": "tapir",
+                "specie": "good-stag",
+                "description": "exotic",
+                "gender": "male",
+                "id": 63,
+                "weight": 131323
+            },
+            {
+                "name": "mullet",
+                "specie": "polite-fox",
+                "description": "many",
+                "gender": "female",
+                "id": 34,
+                "weight": 312957
+            },
+            {
+                "name": "mako",
+                "specie": "lucky-toad",
+                "description": "needed",
+                "gender": "female",
+                "id": 49,
+                "weight": 899889
+            },
+            {
+                "name": "fish",
+                "specie": "solid-slug",
+                "description": "easy",
+                "gender": "male",
+                "id": 33,
+                "weight": 669328
+            },
+            {
+                "name": "ox",
+                "specie": "next-burro",
+                "description": "mint",
+                "gender": "female",
+                "id": 71,
+                "weight": 477668
+            }
+        ]
+    },
+    {
+        "name": "Gary Thomas",
+        "address": "27241 Thomas Hills Suite 192\nVictorburgh, NJ 12285",
+        "birthdate": "2004-08-03",
+        "telephone": "466-470-2908x72338",
+        "id": 854423,
+        "pets": [
+            {
+                "name": "owl",
+                "specie": "wired-eft",
+                "description": "mature",
+                "gender": "female",
+                "id": 66,
+                "weight": 302763
+            },
+            {
+                "name": "fly",
+                "specie": "unique-gannet",
+                "description": "noble",
+                "gender": "male",
+                "id": 60,
+                "weight": 66436
+            },
+            {
+                "name": "feline",
+                "specie": "steady-shark",
+                "description": "brief",
+                "gender": "male",
+                "id": 68,
+                "weight": 17435
+            }
+        ]
+    },
+    {
+        "name": "Donna Wise",
+        "address": "3038 Graves Drive Suite 197\nSouth Katherine, NM 28685",
+        "birthdate": "1977-09-12",
+        "telephone": "(539)912-5430x0321",
+        "id": 989864,
+        "pets": [
+            {
+                "name": "duck",
+                "specie": "above-gopher",
+                "description": "cute",
+                "gender": "male",
+                "id": 23,
+                "weight": 34552
+            },
+            {
+                "name": "caiman",
+                "specie": "prime-possum",
+                "description": "legal",
+                "gender": "female",
+                "id": 40,
+                "weight": 145343
+            },
+            {
+                "name": "squid",
+                "specie": "sure-gull",
+                "description": "mature",
+                "gender": "female",
+                "id": 5,
+                "weight": 943665
+            },
+            {
+                "name": "burro",
+                "specie": "clear-swine",
+                "description": "epic",
+                "gender": "female",
+                "id": 65,
+                "weight": 474084
+            },
+            {
+                "name": "mule",
+                "specie": "modern-feline",
+                "description": "fair",
+                "gender": "female",
+                "id": 16,
+                "weight": 766703
+            }
+        ]
+    },
+    {
+        "name": "Kathleen Horne",
+        "address": "224 Joseph Run\nEmilyfort, FL 00896",
+        "birthdate": "1980-06-07",
+        "telephone": "2428886571",
+        "id": 716413,
+        "pets": [
+            {
+                "name": "shrimp",
+                "specie": "whole-ape",
+                "description": "tender",
+                "gender": "male",
+                "id": 87,
+                "weight": 698372
+            },
+            {
+                "name": "viper",
+                "specie": "mighty-gannet",
+                "description": "well",
+                "gender": "male",
+                "id": 100,
+                "weight": 277869
+            },
+            {
+                "name": "hog",
+                "specie": "proud-akita",
+                "description": "up",
+                "gender": "male",
+                "id": 19,
+                "weight": 450016
+            },
+            {
+                "name": "goblin",
+                "specie": "valued-krill",
+                "description": "valid",
+                "gender": "male",
+                "id": 4,
+                "weight": 94687
+            },
+            {
+                "name": "wren",
+                "specie": "quiet-gibbon",
+                "description": "merry",
+                "gender": "male",
+                "id": 7,
+                "weight": 196455
+            },
+            {
+                "name": "fawn",
+                "specie": "proud-gull",
+                "description": "better",
+                "gender": "female",
+                "id": 3,
+                "weight": 838561
+            }
+        ]
+    },
+    {
+        "name": "Joseph Jones",
+        "address": "04765 Smith Mills Suite 032\nJohnnyburgh, MT 25604",
+        "birthdate": "1972-04-19",
+        "telephone": "+1-562-756-8221x567",
+        "id": 330902,
+        "pets": [
+            {
+                "name": "skink",
+                "specie": "cute-ewe",
+                "description": "neat",
+                "gender": "female",
+                "id": 23,
+                "weight": 271527
+            }
+        ]
+    },
+    {
+        "name": "Kristine Duffy",
+        "address": "2363 Kyle Mountains\nEast Janemouth, MO 29162",
+        "birthdate": "1976-11-26",
+        "telephone": "+1-784-366-9957x996",
+        "id": 884304,
+        "pets": [
+            {
+                "name": "trout",
+                "specie": "sweet-locust",
+                "description": "proud",
+                "gender": "male",
+                "id": 11,
+                "weight": 416294
+            }
+        ]
+    },
+    {
+        "name": "Lindsey King",
+        "address": "921 Baker Way Apt. 286\nPort Taraview, HI 70863",
+        "birthdate": "1975-03-31",
+        "telephone": "(331)486-6501",
+        "id": 303126,
+        "pets": [
+            {
+                "name": "macaw",
+                "specie": "bold-heron",
+                "description": "more",
+                "gender": "male",
+                "id": 83,
+                "weight": 867525
+            },
+            {
+                "name": "llama",
+                "specie": "driven-bream",
+                "description": "grown",
+                "gender": "male",
+                "id": 45,
+                "weight": 516291
+            },
+            {
+                "name": "wasp",
+                "specie": "master-sloth",
+                "description": "fleet",
+                "gender": "male",
+                "id": 17,
+                "weight": 378892
+            },
+            {
+                "name": "boxer",
+                "specie": "sure-bug",
+                "description": "fit",
+                "gender": "female",
+                "id": 40,
+                "weight": 233035
+            }
+        ]
+    },
+    {
+        "name": "Justin Stafford",
+        "address": "589 Oconnor Prairie\nNew Shelley, CO 92651",
+        "birthdate": "1987-07-17",
+        "telephone": "8333064445",
+        "id": 55911,
+        "pets": [
+            {
+                "name": "civet",
+                "specie": "sunny-tick",
+                "description": "full",
+                "gender": "female",
+                "id": 15,
+                "weight": 352211
+            },
+            {
+                "name": "leech",
+                "specie": "smooth-dragon",
+                "description": "holy",
+                "gender": "female",
+                "id": 45,
+                "weight": 612238
+            },
+            {
+                "name": "sloth",
+                "specie": "epic-asp",
+                "description": "intent",
+                "gender": "female",
+                "id": 22,
+                "weight": 595240
+            },
+            {
+                "name": "mule",
+                "specie": "giving-falcon",
+                "description": "divine",
+                "gender": "male",
+                "id": 72,
+                "weight": 21697
+            }
+        ]
+    },
+    {
+        "name": "Pamela Montoya",
+        "address": "0487 Fox Road Apt. 443\nHollyshire, CA 80790",
+        "birthdate": "1973-10-02",
+        "telephone": "3782735734",
+        "id": 680321,
+        "pets": [
+            {
+                "name": "sponge",
+                "specie": "brief-corgi",
+                "description": "giving",
+                "gender": "female",
+                "id": 54,
+                "weight": 53823
+            },
+            {
+                "name": "shark",
+                "specie": "heroic-amoeba",
+                "description": "suited",
+                "gender": "female",
+                "id": 95,
+                "weight": 870998
+            }
+        ]
+    },
+    {
+        "name": "Yvonne Pena",
+        "address": "4680 Flores Roads Apt. 615\nRayport, IL 03388",
+        "birthdate": "2016-10-28",
+        "telephone": "124.983.7381x558",
+        "id": 454925,
+        "pets": [
+            {
+                "name": "tomcat",
+                "specie": "master-hen",
+                "description": "hot",
+                "gender": "male",
+                "id": 49,
+                "weight": 53649
+            },
+            {
+                "name": "bull",
+                "specie": "amazed-gar",
+                "description": "modest",
+                "gender": "female",
+                "id": 31,
+                "weight": 274145
+            },
+            {
+                "name": "dragon",
+                "specie": "viable-stag",
+                "description": "helped",
+                "gender": "male",
+                "id": 100,
+                "weight": 627123
+            },
+            {
+                "name": "marmot",
+                "specie": "intent-trout",
+                "description": "clever",
+                "gender": "female",
+                "id": 97,
+                "weight": 123380
+            },
+            {
+                "name": "boxer",
+                "specie": "unique-weasel",
+                "description": "modest",
+                "gender": "male",
+                "id": 89,
+                "weight": 427831
+            },
+            {
+                "name": "adder",
+                "specie": "wanted-worm",
+                "description": "key",
+                "gender": "female",
+                "id": 52,
+                "weight": 428727
+            },
+            {
+                "name": "newt",
+                "specie": "pumped-akita",
+                "description": "proven",
+                "gender": "male",
+                "id": 12,
+                "weight": 584537
+            }
+        ]
+    },
+    {
+        "name": "Dawn Smith",
+        "address": "74084 Deleon Meadow\nCareyland, MN 02936",
+        "birthdate": "1990-03-02",
+        "telephone": "141.506.9252x24780",
+        "id": 956464,
+        "pets": [
+            {
+                "name": "robin",
+                "specie": "usable-rat",
+                "description": "game",
+                "gender": "male",
+                "id": 58,
+                "weight": 139540
+            },
+            {
+                "name": "foal",
+                "specie": "saving-iguana",
+                "description": "bright",
+                "gender": "female",
+                "id": 93,
+                "weight": 619327
+            },
+            {
+                "name": "falcon",
+                "specie": "crisp-minnow",
+                "description": "easy",
+                "gender": "female",
+                "id": 38,
+                "weight": 272362
+            },
+            {
+                "name": "hornet",
+                "specie": "warm-robin",
+                "description": "real",
+                "gender": "female",
+                "id": 30,
+                "weight": 625867
+            },
+            {
+                "name": "badger",
+                "specie": "big-prawn",
+                "description": "saved",
+                "gender": "male",
+                "id": 58,
+                "weight": 249637
+            },
+            {
+                "name": "midge",
+                "specie": "legal-grub",
+                "description": "secure",
+                "gender": "male",
+                "id": 41,
+                "weight": 948809
+            }
+        ]
+    },
+    {
+        "name": "Christopher Watson",
+        "address": "178 Ramsey Extensions Suite 783\nJohnfort, NH 69246",
+        "birthdate": "2000-02-23",
+        "telephone": "(543)357-3872",
+        "id": 275391,
+        "pets": [
+            {
+                "name": "wahoo",
+                "specie": "quick-lark",
+                "description": "close",
+                "gender": "female",
+                "id": 51,
+                "weight": 352285
+            },
+            {
+                "name": "man",
+                "specie": "on-moth",
+                "description": "grand",
+                "gender": "female",
+                "id": 98,
+                "weight": 929322
+            },
+            {
+                "name": "man",
+                "specie": "glad-koala",
+                "description": "honest",
+                "gender": "male",
+                "id": 63,
+                "weight": 23668
+            },
+            {
+                "name": "bird",
+                "specie": "well-eel",
+                "description": "famous",
+                "gender": "female",
+                "id": 21,
+                "weight": 954563
+            },
+            {
+                "name": "shark",
+                "specie": "real-swift",
+                "description": "fresh",
+                "gender": "male",
+                "id": 72,
+                "weight": 193650
+            },
+            {
+                "name": "lynx",
+                "specie": "fine-serval",
+                "description": "gentle",
+                "gender": "male",
+                "id": 12,
+                "weight": 298567
+            },
+            {
+                "name": "bobcat",
+                "specie": "guided-oryx",
+                "description": "open",
+                "gender": "female",
+                "id": 27,
+                "weight": 27859
+            },
+            {
+                "name": "mayfly",
+                "specie": "quiet-jackal",
+                "description": "pumped",
+                "gender": "male",
+                "id": 47,
+                "weight": 933208
+            }
+        ]
+    },
+    {
+        "name": "Samuel Roach",
+        "address": "2875 Carlos Turnpike Suite 976\nSamanthaport, OK 57163",
+        "birthdate": "2021-07-24",
+        "telephone": "+1-350-106-7561x843",
+        "id": 519034,
+        "pets": [
+            {
+                "name": "yak",
+                "specie": "bold-tiger",
+                "description": "secure",
+                "gender": "male",
+                "id": 49,
+                "weight": 963292
+            },
+            {
+                "name": "boa",
+                "specie": "normal-martin",
+                "description": "pro",
+                "gender": "male",
+                "id": 66,
+                "weight": 594552
+            },
+            {
+                "name": "lemur",
+                "specie": "unique-dory",
+                "description": "usable",
+                "gender": "female",
+                "id": 1,
+                "weight": 169555
+            }
+        ]
+    },
+    {
+        "name": "Adam Freeman",
+        "address": "6573 Dougherty Springs Suite 168\nEast Davidmouth, AK 50546",
+        "birthdate": "2019-10-23",
+        "telephone": "(901)235-8136x12793",
+        "id": 664878,
+        "pets": [
+            {
+                "name": "coyote",
+                "specie": "superb-hippo",
+                "description": "modern",
+                "gender": "female",
+                "id": 82,
+                "weight": 621664
+            },
+            {
+                "name": "fly",
+                "specie": "decent-pika",
+                "description": "normal",
+                "gender": "male",
+                "id": 50,
+                "weight": 740515
+            },
+            {
+                "name": "elf",
+                "specie": "pure-bunny",
+                "description": "bold",
+                "gender": "female",
+                "id": 11,
+                "weight": 318670
+            },
+            {
+                "name": "locust",
+                "specie": "amazed-mutt",
+                "description": "set",
+                "gender": "male",
+                "id": 82,
+                "weight": 385837
+            },
+            {
+                "name": "jaguar",
+                "specie": "living-hog",
+                "description": "rested",
+                "gender": "female",
+                "id": 42,
+                "weight": 253578
+            },
+            {
+                "name": "loon",
+                "specie": "superb-akita",
+                "description": "safe",
+                "gender": "male",
+                "id": 91,
+                "weight": 19774
+            }
+        ]
+    },
+    {
+        "name": "Laura Weber",
+        "address": "8151 Jones Highway\nLake Annette, IA 35191",
+        "birthdate": "1995-05-10",
+        "telephone": "001-339-665-4955",
+        "id": 915421,
+        "pets": [
+            {
+                "name": "tuna",
+                "specie": "steady-molly",
+                "description": "fluent",
+                "gender": "female",
+                "id": 58,
+                "weight": 11895
+            }
+        ]
+    },
+    {
+        "name": "Lee Rosales",
+        "address": "525 Lawrence Street Suite 032\nDanaberg, WY 21336",
+        "birthdate": "1978-12-05",
+        "telephone": "729-666-2727x2821",
+        "id": 405361,
+        "pets": [
+            {
+                "name": "gator",
+                "specie": "brave-bee",
+                "description": "holy",
+                "gender": "male",
+                "id": 42,
+                "weight": 318844
+            },
+            {
+                "name": "cub",
+                "specie": "top-dingo",
+                "description": "tender",
+                "gender": "female",
+                "id": 71,
+                "weight": 385555
+            },
+            {
+                "name": "shad",
+                "specie": "easy-mink",
+                "description": "fleet",
+                "gender": "female",
+                "id": 62,
+                "weight": 873970
+            },
+            {
+                "name": "piglet",
+                "specie": "super-sloth",
+                "description": "sweet",
+                "gender": "female",
+                "id": 95,
+                "weight": 348393
+            },
+            {
+                "name": "satyr",
+                "specie": "cute-egret",
+                "description": "living",
+                "gender": "male",
+                "id": 35,
+                "weight": 787770
+            }
+        ]
+    },
+    {
+        "name": "Angela Williams",
+        "address": "34878 Gonzales Circle\nNorth Adamland, ND 19188",
+        "birthdate": "1979-10-17",
+        "telephone": "(707)252-9692x18318",
+        "id": 64046,
+        "pets": [
+            {
+                "name": "loon",
+                "specie": "loyal-guppy",
+                "description": "social",
+                "gender": "female",
+                "id": 50,
+                "weight": 812899
+            }
+        ]
+    },
+    {
+        "name": "Jimmy Davis",
+        "address": "55852 Crystal Cape Apt. 919\nJessetown, CO 27338",
+        "birthdate": "2001-10-01",
+        "telephone": "+1-631-698-0400x33662",
+        "id": 795338,
+        "pets": [
+            {
+                "name": "beetle",
+                "specie": "honest-glider",
+                "description": "more",
+                "gender": "male",
+                "id": 50,
+                "weight": 394419
+            },
+            {
+                "name": "deer",
+                "specie": "calm-shark",
+                "description": "ruling",
+                "gender": "male",
+                "id": 99,
+                "weight": 152061
+            },
+            {
+                "name": "elf",
+                "specie": "mint-insect",
+                "description": "suited",
+                "gender": "male",
+                "id": 22,
+                "weight": 853666
+            },
+            {
+                "name": "cod",
+                "specie": "sacred-monkey",
+                "description": "steady",
+                "gender": "male",
+                "id": 69,
+                "weight": 971148
+            },
+            {
+                "name": "falcon",
+                "specie": "set-loon",
+                "description": "moving",
+                "gender": "female",
+                "id": 32,
+                "weight": 372486
+            },
+            {
+                "name": "ewe",
+                "specie": "on-gannet",
+                "description": "open",
+                "gender": "male",
+                "id": 32,
+                "weight": 672171
+            }
+        ]
+    },
+    {
+        "name": "Michael Heath",
+        "address": "24914 Jennifer Locks\nEast Colleenview, UT 00834",
+        "birthdate": "1995-05-07",
+        "telephone": "001-040-064-2424",
+        "id": 478309,
+        "pets": [
+            {
+                "name": "aphid",
+                "specie": "top-marten",
+                "description": "native",
+                "gender": "male",
+                "id": 3,
+                "weight": 52547
+            },
+            {
+                "name": "teal",
+                "specie": "pro-bat",
+                "description": "super",
+                "gender": "female",
+                "id": 77,
+                "weight": 10411
+            },
+            {
+                "name": "joey",
+                "specie": "mighty-troll",
+                "description": "pet",
+                "gender": "female",
+                "id": 7,
+                "weight": 646429
+            },
+            {
+                "name": "newt",
+                "specie": "causal-hermit",
+                "description": "noble",
+                "gender": "male",
+                "id": 10,
+                "weight": 949697
+            },
+            {
+                "name": "ram",
+                "specie": "witty-tarpon",
+                "description": "fair",
+                "gender": "female",
+                "id": 50,
+                "weight": 140928
+            },
+            {
+                "name": "locust",
+                "specie": "mint-salmon",
+                "description": "saved",
+                "gender": "male",
+                "id": 76,
+                "weight": 347243
+            }
+        ]
+    },
+    {
+        "name": "Katrina Davis",
+        "address": "900 Angelica Plains\nNew Tanner, FL 33128",
+        "birthdate": "1975-07-07",
+        "telephone": "+1-862-540-4564x0257",
+        "id": 530938,
+        "pets": [
+            {
+                "name": "rabbit",
+                "specie": "proper-aphid",
+                "description": "amazed",
+                "gender": "male",
+                "id": 92,
+                "weight": 187505
+            },
+            {
+                "name": "bull",
+                "specie": "modest-spider",
+                "description": "active",
+                "gender": "male",
+                "id": 84,
+                "weight": 21738
+            },
+            {
+                "name": "weevil",
+                "specie": "rare-snipe",
+                "description": "hot",
+                "gender": "female",
+                "id": 74,
+                "weight": 42874
+            },
+            {
+                "name": "doe",
+                "specie": "crisp-crab",
+                "description": "steady",
+                "gender": "male",
+                "id": 97,
+                "weight": 345054
+            },
+            {
+                "name": "gannet",
+                "specie": "sweet-weevil",
+                "description": "moving",
+                "gender": "male",
+                "id": 8,
+                "weight": 906646
+            },
+            {
+                "name": "frog",
+                "specie": "great-dodo",
+                "description": "lucky",
+                "gender": "male",
+                "id": 14,
+                "weight": 518398
+            },
+            {
+                "name": "yak",
+                "specie": "chief-jackal",
+                "description": "first",
+                "gender": "female",
+                "id": 43,
+                "weight": 117160
+            }
+        ]
+    },
+    {
+        "name": "Bradley Rice",
+        "address": "1868 Willis Road\nNorth Jessicabury, WV 47058",
+        "birthdate": "1994-09-20",
+        "telephone": "876-581-7859",
+        "id": 596388,
+        "pets": [
+            {
+                "name": "beagle",
+                "specie": "bright-orca",
+                "description": "easy",
+                "gender": "female",
+                "id": 90,
+                "weight": 924405
+            },
+            {
+                "name": "mole",
+                "specie": "rested-owl",
+                "description": "fluent",
+                "gender": "male",
+                "id": 44,
+                "weight": 720112
+            },
+            {
+                "name": "goblin",
+                "specie": "upward-dory",
+                "description": "active",
+                "gender": "female",
+                "id": 79,
+                "weight": 6306
+            },
+            {
+                "name": "moth",
+                "specie": "just-cat",
+                "description": "polite",
+                "gender": "female",
+                "id": 87,
+                "weight": 94965
+            },
+            {
+                "name": "burro",
+                "specie": "sweet-rodent",
+                "description": "bright",
+                "gender": "male",
+                "id": 83,
+                "weight": 103797
+            },
+            {
+                "name": "swine",
+                "specie": "firm-pup",
+                "description": "equal",
+                "gender": "female",
+                "id": 40,
+                "weight": 500610
+            },
+            {
+                "name": "dane",
+                "specie": "busy-stag",
+                "description": "ample",
+                "gender": "male",
+                "id": 28,
+                "weight": 756021
+            },
+            {
+                "name": "yak",
+                "specie": "light-dragon",
+                "description": "happy",
+                "gender": "female",
+                "id": 48,
+                "weight": 171145
+            }
+        ]
+    },
+    {
+        "name": "Katie Harris",
+        "address": "8752 Raymond Mission\nWest Justinstad, MI 80040",
+        "birthdate": "1979-02-27",
+        "telephone": "519.881.0637",
+        "id": 885717,
+        "pets": [
+            {
+                "name": "lynx",
+                "specie": "sharp-swine",
+                "description": "smart",
+                "gender": "male",
+                "id": 8,
+                "weight": 597939
+            },
+            {
+                "name": "fowl",
+                "specie": "robust-oryx",
+                "description": "up",
+                "gender": "male",
+                "id": 8,
+                "weight": 467417
+            },
+            {
+                "name": "lark",
+                "specie": "ready-raptor",
+                "description": "free",
+                "gender": "female",
+                "id": 99,
+                "weight": 471251
+            },
+            {
+                "name": "cobra",
+                "specie": "clean-gnu",
+                "description": "loyal",
+                "gender": "female",
+                "id": 69,
+                "weight": 873372
+            },
+            {
+                "name": "ant",
+                "specie": "first-insect",
+                "description": "live",
+                "gender": "female",
+                "id": 8,
+                "weight": 629946
+            },
+            {
+                "name": "wahoo",
+                "specie": "exact-alpaca",
+                "description": "glad",
+                "gender": "male",
+                "id": 86,
+                "weight": 760838
+            }
+        ]
+    },
+    {
+        "name": "Tonya Morrison",
+        "address": "0092 Olivia Fall Suite 518\nMorganton, NV 70902",
+        "birthdate": "2004-07-11",
+        "telephone": "(758)801-2784x820",
+        "id": 172005,
         "pets": [
             {
                 "name": "teal",
-                "specie": "honest-cub",
+                "specie": "kind-rat",
+                "description": "boss",
+                "gender": "male",
+                "id": 78,
+                "weight": 968311
+            },
+            {
+                "name": "turkey",
+                "specie": "pumped-dassie",
+                "description": "brave",
+                "gender": "female",
+                "id": 25,
+                "weight": 71112
+            },
+            {
+                "name": "serval",
+                "specie": "game-muskox",
+                "description": "epic",
+                "gender": "female",
+                "id": 33,
+                "weight": 322807
+            },
+            {
+                "name": "imp",
+                "specie": "mutual-adder",
+                "description": "sharp",
+                "gender": "female",
+                "id": 97,
+                "weight": 290601
+            },
+            {
+                "name": "molly",
+                "specie": "suited-mite",
+                "description": "major",
+                "gender": "female",
+                "id": 87,
+                "weight": 924800
+            },
+            {
+                "name": "snake",
+                "specie": "fancy-dingo",
+                "description": "clean",
+                "gender": "male",
+                "id": 56,
+                "weight": 145985
+            }
+        ]
+    },
+    {
+        "name": "Jodi Reyes",
+        "address": "896 Amber Streets Apt. 224\nHickshaven, OK 72403",
+        "birthdate": "1983-01-26",
+        "telephone": "136.651.0037",
+        "id": 714214,
+        "pets": [
+            {
+                "name": "aphid",
+                "specie": "tough-coyote",
+                "description": "moving",
+                "gender": "female",
+                "id": 98,
+                "weight": 555919
+            },
+            {
+                "name": "hermit",
+                "specie": "sweet-imp",
+                "description": "usable",
+                "gender": "female",
+                "id": 26,
+                "weight": 176297
+            },
+            {
+                "name": "iguana",
+                "specie": "liked-koi",
+                "description": "equal",
+                "gender": "male",
+                "id": 47,
+                "weight": 19188
+            },
+            {
+                "name": "pug",
+                "specie": "right-shrew",
+                "description": "social",
+                "gender": "male",
+                "id": 85,
+                "weight": 21189
+            }
+        ]
+    },
+    {
+        "name": "Sonya Davis",
+        "address": "PSC 2296, Box 6720\nAPO AE 12145",
+        "birthdate": "1994-09-19",
+        "telephone": "(393)479-0731x7361",
+        "id": 31533,
+        "pets": [
+            {
+                "name": "roughy",
+                "specie": "clean-goose",
+                "description": "famous",
+                "gender": "female",
+                "id": 57,
+                "weight": 467239
+            },
+            {
+                "name": "doe",
+                "specie": "enough-rhino",
+                "description": "merry",
+                "gender": "female",
+                "id": 73,
+                "weight": 262735
+            },
+            {
+                "name": "oryx",
+                "specie": "ruling-elf",
+                "description": "first",
+                "gender": "female",
+                "id": 53,
+                "weight": 201052
+            },
+            {
+                "name": "mullet",
+                "specie": "superb-gator",
+                "description": "humble",
+                "gender": "female",
+                "id": 35,
+                "weight": 538864
+            },
+            {
+                "name": "gopher",
+                "specie": "modest-gator",
+                "description": "stable",
+                "gender": "female",
+                "id": 86,
+                "weight": 234835
+            },
+            {
+                "name": "jaguar",
+                "specie": "eager-pika",
+                "description": "hot",
+                "gender": "female",
+                "id": 56,
+                "weight": 532641
+            }
+        ]
+    },
+    {
+        "name": "Nicholas Larson",
+        "address": "18585 Wendy Hill\nNew Patrickmouth, MA 90597",
+        "birthdate": "2018-06-01",
+        "telephone": "165-662-8975",
+        "id": 783707,
+        "pets": [
+            {
+                "name": "gibbon",
+                "specie": "up-fox",
+                "description": "choice",
+                "gender": "male",
+                "id": 47,
+                "weight": 76944
+            }
+        ]
+    },
+    {
+        "name": "Brittney Gregory",
+        "address": "86991 Maria Alley Apt. 280\nDominiqueside, DC 48482",
+        "birthdate": "2001-08-29",
+        "telephone": "(708)112-0610",
+        "id": 877554,
+        "pets": [
+            {
+                "name": "pup",
+                "specie": "loving-gibbon",
                 "description": "legal",
+                "gender": "female",
+                "id": 32,
+                "weight": 613096
+            },
+            {
+                "name": "elf",
+                "specie": "tough-toad",
+                "description": "mutual",
+                "gender": "male",
+                "id": 43,
+                "weight": 873309
+            },
+            {
+                "name": "shrew",
+                "specie": "live-duck",
+                "description": "vast",
+                "gender": "male",
+                "id": 29,
+                "weight": 453857
+            },
+            {
+                "name": "leech",
+                "specie": "ideal-ape",
+                "description": "subtle",
+                "gender": "female",
+                "id": 72,
+                "weight": 206973
+            }
+        ]
+    },
+    {
+        "name": "Rebecca Washington",
+        "address": "269 Emily Terrace\nSimmonsfurt, NJ 33813",
+        "birthdate": "2014-07-08",
+        "telephone": "+1-577-597-4892x8109",
+        "id": 86900,
+        "pets": [
+            {
+                "name": "shrimp",
+                "specie": "tender-stud",
+                "description": "rare",
+                "gender": "male",
+                "id": 99,
+                "weight": 41027
+            }
+        ]
+    },
+    {
+        "name": "Richard Wilson",
+        "address": "47360 James Pines\nAyalaborough, MI 48207",
+        "birthdate": "1977-11-02",
+        "telephone": "437-983-3535x9605",
+        "id": 416346,
+        "pets": [
+            {
+                "name": "locust",
+                "specie": "clever-chimp",
+                "description": "robust",
+                "gender": "male",
+                "id": 2,
+                "weight": 699027
+            },
+            {
+                "name": "skink",
+                "specie": "giving-bear",
+                "description": "better",
+                "gender": "male",
+                "id": 78,
+                "weight": 531918
+            },
+            {
+                "name": "viper",
+                "specie": "choice-pig",
+                "description": "crisp",
+                "gender": "female",
+                "id": 28,
+                "weight": 262106
+            }
+        ]
+    },
+    {
+        "name": "Kathleen White",
+        "address": "7555 Sara Island\nAmandaside, AZ 46615",
+        "birthdate": "1970-12-04",
+        "telephone": "(039)297-2757",
+        "id": 655656,
+        "pets": [
+            {
+                "name": "pig",
+                "specie": "first-dragon",
+                "description": "mature",
+                "gender": "female",
+                "id": 72,
+                "weight": 267397
+            }
+        ]
+    },
+    {
+        "name": "Melvin Jenkins",
+        "address": "7427 Cindy Fall\nWilliamtown, UT 62902",
+        "birthdate": "2019-12-11",
+        "telephone": "111.318.6056x456",
+        "id": 438098,
+        "pets": [
+            {
+                "name": "ant",
+                "specie": "noble-fox",
+                "description": "picked",
+                "gender": "male",
+                "id": 60,
+                "weight": 621773
+            },
+            {
+                "name": "frog",
+                "specie": "choice-cattle",
+                "description": "free",
+                "gender": "male",
+                "id": 92,
+                "weight": 758506
+            }
+        ]
+    },
+    {
+        "name": "Amanda Craig",
+        "address": "3922 William Village\nCraigside, IN 66200",
+        "birthdate": "1985-05-21",
+        "telephone": "948.194.4493",
+        "id": 310044,
+        "pets": [
+            {
+                "name": "kodiak",
+                "specie": "social-lion",
+                "description": "fit",
+                "gender": "female",
+                "id": 57,
+                "weight": 77768
+            },
+            {
+                "name": "roughy",
+                "specie": "legal-bison",
+                "description": "finer",
+                "gender": "female",
+                "id": 84,
+                "weight": 923834
+            },
+            {
+                "name": "python",
+                "specie": "finer-condor",
+                "description": "pretty",
+                "gender": "female",
+                "id": 48,
+                "weight": 930465
+            },
+            {
+                "name": "weasel",
+                "specie": "divine-bug",
+                "description": "safe",
+                "gender": "male",
+                "id": 78,
+                "weight": 345483
+            },
+            {
+                "name": "falcon",
+                "specie": "fleet-oryx",
+                "description": "pet",
+                "gender": "female",
+                "id": 36,
+                "weight": 49059
+            },
+            {
+                "name": "koi",
+                "specie": "sharp-adder",
+                "description": "normal",
+                "gender": "female",
+                "id": 51,
+                "weight": 552458
+            },
+            {
+                "name": "alien",
+                "specie": "wired-lab",
+                "description": "intent",
+                "gender": "female",
+                "id": 84,
+                "weight": 590251
+            },
+            {
+                "name": "owl",
+                "specie": "master-python",
+                "description": "fancy",
+                "gender": "female",
+                "id": 91,
+                "weight": 458285
+            }
+        ]
+    },
+    {
+        "name": "John Collier",
+        "address": "412 Kelley Throughway Apt. 563\nShellychester, IL 48772",
+        "birthdate": "2012-04-03",
+        "telephone": "001-149-149-8351",
+        "id": 468398,
+        "pets": [
+            {
+                "name": "jennet",
+                "specie": "equal-boar",
+                "description": "new",
+                "gender": "female",
+                "id": 94,
+                "weight": 117766
+            },
+            {
+                "name": "turtle",
+                "specie": "immune-vervet",
+                "description": "in",
+                "gender": "male",
+                "id": 37,
+                "weight": 865089
+            },
+            {
+                "name": "swine",
+                "specie": "able-wasp",
+                "description": "fit",
+                "gender": "male",
+                "id": 62,
+                "weight": 723177
+            }
+        ]
+    },
+    {
+        "name": "Scott Gonzalez",
+        "address": "411 Tracy Walk Suite 089\nBakerstad, AK 16472",
+        "birthdate": "1985-11-23",
+        "telephone": "001-722-885-0512x5862",
+        "id": 318398,
+        "pets": [
+            {
+                "name": "sheep",
+                "specie": "heroic-owl",
+                "description": "worthy",
+                "gender": "female",
+                "id": 82,
+                "weight": 819010
+            },
+            {
+                "name": "beetle",
+                "specie": "fancy-moth",
+                "description": "main",
+                "gender": "female",
+                "id": 33,
+                "weight": 92674
+            },
+            {
+                "name": "horse",
+                "specie": "major-ferret",
+                "description": "fit",
+                "gender": "female",
+                "id": 13,
+                "weight": 401793
+            },
+            {
+                "name": "loon",
+                "specie": "on-rodent",
+                "description": "tough",
+                "gender": "female",
+                "id": 82,
+                "weight": 604926
+            },
+            {
+                "name": "alien",
+                "specie": "cute-filly",
+                "description": "set",
+                "gender": "male",
+                "id": 75,
+                "weight": 194748
+            }
+        ]
+    },
+    {
+        "name": "Kathleen Wilson",
+        "address": "237 Gross Walk\nSouth Lindseyberg, MA 75352",
+        "birthdate": "2015-04-09",
+        "telephone": "+1-113-883-8963x7082",
+        "id": 943090,
+        "pets": [
+            {
+                "name": "possum",
+                "specie": "fond-ghost",
+                "description": "free",
+                "gender": "female",
+                "id": 57,
+                "weight": 330530
+            },
+            {
+                "name": "yeti",
+                "specie": "proud-drum",
+                "description": "great",
                 "gender": "male",
                 "id": 41,
-                "weight": 723474
+                "weight": 349533
+            },
+            {
+                "name": "alien",
+                "specie": "simple-hippo",
+                "description": "funny",
+                "gender": "male",
+                "id": 5,
+                "weight": 542520
+            },
+            {
+                "name": "gnat",
+                "specie": "pet-feline",
+                "description": "select",
+                "gender": "male",
+                "id": 28,
+                "weight": 263950
+            },
+            {
+                "name": "bird",
+                "specie": "sacred-dog",
+                "description": "grown",
+                "gender": "male",
+                "id": 41,
+                "weight": 540330
+            }
+        ]
+    },
+    {
+        "name": "Paula Trujillo",
+        "address": "245 Joseph Lock\nWest Gregoryborough, CO 09759",
+        "birthdate": "1985-11-07",
+        "telephone": "+1-081-253-5548x45250",
+        "id": 763733,
+        "pets": [
+            {
+                "name": "marmot",
+                "specie": "subtle-gopher",
+                "description": "amazed",
+                "gender": "male",
+                "id": 32,
+                "weight": 544059
+            },
+            {
+                "name": "satyr",
+                "specie": "tough-toucan",
+                "description": "native",
+                "gender": "female",
+                "id": 43,
+                "weight": 945273
+            },
+            {
+                "name": "goblin",
+                "specie": "humane-fox",
+                "description": "crack",
+                "gender": "male",
+                "id": 52,
+                "weight": 266727
+            },
+            {
+                "name": "seal",
+                "specie": "apt-man",
+                "description": "just",
+                "gender": "male",
+                "id": 41,
+                "weight": 825844
+            },
+            {
+                "name": "ram",
+                "specie": "crack-racer",
+                "description": "hip",
+                "gender": "male",
+                "id": 3,
+                "weight": 863066
+            }
+        ]
+    },
+    {
+        "name": "Christina Terry",
+        "address": "934 Antonio Village Apt. 080\nWest Marthaside, MA 15977",
+        "birthdate": "2008-10-24",
+        "telephone": "001-807-050-2415x277",
+        "id": 674702,
+        "pets": [
+            {
+                "name": "beetle",
+                "specie": "fine-horse",
+                "description": "caring",
+                "gender": "male",
+                "id": 100,
+                "weight": 985613
+            },
+            {
+                "name": "macaw",
+                "specie": "awake-gnu",
+                "description": "honest",
+                "gender": "female",
+                "id": 34,
+                "weight": 617892
+            },
+            {
+                "name": "condor",
+                "specie": "loving-sole",
+                "description": "moved",
+                "gender": "female",
+                "id": 15,
+                "weight": 485918
+            },
+            {
+                "name": "wolf",
+                "specie": "bold-mink",
+                "description": "nearby",
+                "gender": "female",
+                "id": 73,
+                "weight": 370098
+            },
+            {
+                "name": "oyster",
+                "specie": "prompt-jay",
+                "description": "pretty",
+                "gender": "female",
+                "id": 75,
+                "weight": 887394
+            },
+            {
+                "name": "lion",
+                "specie": "keen-ocelot",
+                "description": "subtle",
+                "gender": "female",
+                "id": 45,
+                "weight": 315619
+            },
+            {
+                "name": "ray",
+                "specie": "fit-shark",
+                "description": "ace",
+                "gender": "male",
+                "id": 97,
+                "weight": 526160
+            }
+        ]
+    },
+    {
+        "name": "Edwin Lawrence",
+        "address": "676 Barrera Drives\nPort Hectorshire, SD 76867",
+        "birthdate": "1972-11-01",
+        "telephone": "530-211-7566",
+        "id": 125907,
+        "pets": [
+            {
+                "name": "falcon",
+                "specie": "usable-thrush",
+                "description": "proper",
+                "gender": "female",
+                "id": 4,
+                "weight": 884117
+            },
+            {
+                "name": "bengal",
+                "specie": "sharp-skink",
+                "description": "moving",
+                "gender": "female",
+                "id": 43,
+                "weight": 355321
+            },
+            {
+                "name": "roughy",
+                "specie": "eager-egret",
+                "description": "funny",
+                "gender": "male",
+                "id": 98,
+                "weight": 800503
+            }
+        ]
+    },
+    {
+        "name": "Matthew Carney",
+        "address": "2595 Taylor Turnpike Suite 262\nDeniseview, AZ 31167",
+        "birthdate": "2010-02-23",
+        "telephone": "114.316.7572x821",
+        "id": 159821,
+        "pets": [
+            {
+                "name": "stag",
+                "specie": "new-pony",
+                "description": "rare",
+                "gender": "male",
+                "id": 8,
+                "weight": 500809
+            },
+            {
+                "name": "crane",
+                "specie": "gentle-beagle",
+                "description": "brave",
+                "gender": "male",
+                "id": 43,
+                "weight": 909634
+            },
+            {
+                "name": "feline",
+                "specie": "strong-grouse",
+                "description": "cool",
+                "gender": "female",
+                "id": 90,
+                "weight": 648179
+            }
+        ]
+    },
+    {
+        "name": "Brian Salazar",
+        "address": "94071 Stephen Place Suite 067\nBrendaville, NM 62984",
+        "birthdate": "1993-05-23",
+        "telephone": "058.817.9672",
+        "id": 776256,
+        "pets": [
+            {
+                "name": "marmot",
+                "specie": "moving-cattle",
+                "description": "key",
+                "gender": "female",
+                "id": 87,
+                "weight": 194324
+            },
+            {
+                "name": "eft",
+                "specie": "more-oriole",
+                "description": "above",
+                "gender": "male",
+                "id": 61,
+                "weight": 509983
+            }
+        ]
+    },
+    {
+        "name": "Kristin Bradley",
+        "address": "6288 Christina Cliff\nSteinstad, NJ 09462",
+        "birthdate": "1991-08-17",
+        "telephone": "767.157.4203x403",
+        "id": 619164,
+        "pets": [
+            {
+                "name": "ewe",
+                "specie": "direct-skink",
+                "description": "sought",
+                "gender": "female",
+                "id": 30,
+                "weight": 126355
+            },
+            {
+                "name": "leech",
+                "specie": "smart-pig",
+                "description": "smart",
+                "gender": "male",
+                "id": 48,
+                "weight": 261383
+            },
+            {
+                "name": "shrew",
+                "specie": "next-orca",
+                "description": "tough",
+                "gender": "male",
+                "id": 88,
+                "weight": 968771
+            },
+            {
+                "name": "insect",
+                "specie": "just-boxer",
+                "description": "causal",
+                "gender": "male",
+                "id": 51,
+                "weight": 82918
+            },
+            {
+                "name": "robin",
+                "specie": "subtle-boa",
+                "description": "better",
+                "gender": "male",
+                "id": 79,
+                "weight": 353596
+            },
+            {
+                "name": "maggot",
+                "specie": "modern-pika",
+                "description": "exact",
+                "gender": "male",
+                "id": 44,
+                "weight": 678507
+            },
+            {
+                "name": "ray",
+                "specie": "mighty-colt",
+                "description": "fond",
+                "gender": "female",
+                "id": 42,
+                "weight": 362042
+            },
+            {
+                "name": "shad",
+                "specie": "valued-mutt",
+                "description": "novel",
+                "gender": "male",
+                "id": 28,
+                "weight": 780651
+            }
+        ]
+    },
+    {
+        "name": "Daniel Pierce DVM",
+        "address": "385 Kenneth Valley\nLake Christina, IA 47329",
+        "birthdate": "1973-09-03",
+        "telephone": "001-489-156-3466x3696",
+        "id": 991787,
+        "pets": [
+            {
+                "name": "rat",
+                "specie": "calm-kite",
+                "description": "key",
+                "gender": "male",
+                "id": 98,
+                "weight": 837042
+            },
+            {
+                "name": "salmon",
+                "specie": "ruling-finch",
+                "description": "saving",
+                "gender": "female",
+                "id": 47,
+                "weight": 209871
+            },
+            {
+                "name": "lizard",
+                "specie": "saving-burro",
+                "description": "rare",
+                "gender": "female",
+                "id": 8,
+                "weight": 63520
+            },
+            {
+                "name": "satyr",
+                "specie": "quick-yak",
+                "description": "suited",
+                "gender": "male",
+                "id": 67,
+                "weight": 745262
+            },
+            {
+                "name": "salmon",
+                "specie": "huge-squid",
+                "description": "vast",
+                "gender": "male",
+                "id": 45,
+                "weight": 257659
+            }
+        ]
+    },
+    {
+        "name": "David Smith",
+        "address": "56165 Case Trace\nPort Stephaniebury, CA 50470",
+        "birthdate": "1974-11-22",
+        "telephone": "4408288091",
+        "id": 195433,
+        "pets": [
+            {
+                "name": "sawfly",
+                "specie": "clean-hawk",
+                "description": "guided",
+                "gender": "female",
+                "id": 27,
+                "weight": 828144
+            },
+            {
+                "name": "husky",
+                "specie": "tidy-leech",
+                "description": "rich",
+                "gender": "female",
+                "id": 25,
+                "weight": 734544
+            },
+            {
+                "name": "sheep",
+                "specie": "chief-insect",
+                "description": "solid",
+                "gender": "female",
+                "id": 32,
+                "weight": 479189
+            },
+            {
+                "name": "hawk",
+                "specie": "pet-pig",
+                "description": "kind",
+                "gender": "male",
+                "id": 85,
+                "weight": 840337
+            },
+            {
+                "name": "salmon",
+                "specie": "good-wren",
+                "description": "select",
+                "gender": "female",
+                "id": 39,
+                "weight": 467040
+            },
+            {
+                "name": "boxer",
+                "specie": "sound-ram",
+                "description": "new",
+                "gender": "male",
+                "id": 11,
+                "weight": 133714
+            },
+            {
+                "name": "python",
+                "specie": "finer-boxer",
+                "description": "civil",
+                "gender": "female",
+                "id": 75,
+                "weight": 383759
+            }
+        ]
+    },
+    {
+        "name": "Raymond Blair",
+        "address": "46327 Gay Fields\nSouth Dennis, MO 40957",
+        "birthdate": "1988-09-16",
+        "telephone": "(622)146-7931",
+        "id": 965654,
+        "pets": [
+            {
+                "name": "louse",
+                "specie": "rare-beagle",
+                "description": "pro",
+                "gender": "female",
+                "id": 64,
+                "weight": 975798
+            },
+            {
+                "name": "snake",
+                "specie": "boss-rat",
+                "description": "secure",
+                "gender": "male",
+                "id": 68,
+                "weight": 281029
+            },
+            {
+                "name": "sole",
+                "specie": "awake-oyster",
+                "description": "gentle",
+                "gender": "female",
+                "id": 30,
+                "weight": 834941
+            },
+            {
+                "name": "grub",
+                "specie": "exact-salmon",
+                "description": "pumped",
+                "gender": "male",
+                "id": 71,
+                "weight": 240135
+            },
+            {
+                "name": "hyena",
+                "specie": "clean-hound",
+                "description": "brief",
+                "gender": "female",
+                "id": 46,
+                "weight": 851298
+            },
+            {
+                "name": "gnu",
+                "specie": "awake-rat",
+                "description": "poetic",
+                "gender": "male",
+                "id": 41,
+                "weight": 97241
+            },
+            {
+                "name": "trout",
+                "specie": "major-hornet",
+                "description": "game",
+                "gender": "female",
+                "id": 80,
+                "weight": 538827
+            },
+            {
+                "name": "kodiak",
+                "specie": "top-bunny",
+                "description": "more",
+                "gender": "female",
+                "id": 41,
+                "weight": 9748
+            }
+        ]
+    },
+    {
+        "name": "Kyle Rogers",
+        "address": "57015 Morrow Squares\nGuzmanmouth, NE 43555",
+        "birthdate": "1999-12-03",
+        "telephone": "001-648-753-3693x9105",
+        "id": 303108,
+        "pets": [
+            {
+                "name": "teal",
+                "specie": "famous-gopher",
+                "description": "grand",
+                "gender": "male",
+                "id": 74,
+                "weight": 908097
+            },
+            {
+                "name": "corgi",
+                "specie": "sought-skunk",
+                "description": "calm",
+                "gender": "male",
+                "id": 41,
+                "weight": 796494
+            },
+            {
+                "name": "kite",
+                "specie": "sure-sheep",
+                "description": "firm",
+                "gender": "female",
+                "id": 74,
+                "weight": 487627
+            },
+            {
+                "name": "muskox",
+                "specie": "heroic-deer",
+                "description": "useful",
+                "gender": "male",
+                "id": 89,
+                "weight": 890667
             }
         ]
     }
