@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="820542">
+        <name>Kimberly Vargas</name>
+        <birth_date>2005-12-06</birth_date>
+        <telephone>216-042-4770</telephone>
+        <address>986 Rogers Plaza Apt. 508
+Edwinbury, WV 56309</address>
+        <Pet id="46">
+            <name>hippo</name>
+            <gender>female</gender>
+            <weight>381901</weight>
+        </Pet>
+        <Pet id="72">
+            <name>maggot</name>
+            <gender>male</gender>
+            <weight>825501</weight>
+        </Pet>
+        <Pet id="79">
+            <name>jaguar</name>
+            <gender>female</gender>
+            <weight>620561</weight>
+        </Pet>
+    </Owner>
+    <Owner id="424206">
+        <name>Miguel Hoover</name>
+        <birth_date>1986-10-16</birth_date>
+        <telephone>181.348.5428</telephone>
+        <address>861 Holmes Freeway
+North Karenfurt, FL 59216</address>
+        <Pet id="25">
+            <name>ant</name>
+            <gender>male</gender>
+            <weight>148783</weight>
+        </Pet>
+    </Owner>
+    <Owner id="688996">
+        <name>Regina Bailey</name>
+        <birth_date>1970-05-25</birth_date>
+        <telephone>080-172-8939x86063</telephone>
+        <address>023 Olivia Drive
+Wayneville, ME 27413</address>
+        <Pet id="8">
+            <name>hare</name>
+            <gender>male</gender>
+            <weight>80432</weight>
+        </Pet>
+        <Pet id="76">
+            <name>tiger</name>
+            <gender>male</gender>
+            <weight>118592</weight>
+        </Pet>
+    </Owner>
+    <Owner id="843156">
+        <name>Cody Morales</name>
+        <birth_date>2001-10-27</birth_date>
+        <telephone>+1-043-101-4358</telephone>
+        <address>39577 Shepard Mall
+East Robert, CA 78140</address>
+        <Pet id="100">
+            <name>slug</name>
+            <gender>female</gender>
+            <weight>288738</weight>
+        </Pet>
+        <Pet id="54">
+            <name>dingo</name>
+            <gender>male</gender>
+            <weight>400229</weight>
+        </Pet>
+        <Pet id="68">
+            <name>weasel</name>
+            <gender>female</gender>
+            <weight>930530</weight>
+        </Pet>
+    </Owner>
+    <Owner id="965978">
+        <name>Elizabeth Todd</name>
+        <birth_date>1975-12-16</birth_date>
+        <telephone>850-541-7114x061</telephone>
+        <address>48270 Charles Lodge Suite 122
+Ramirezport, VT 84668</address>
+        <Pet id="36">
+            <name>feline</name>
+            <gender>female</gender>
+            <weight>718054</weight>
+        </Pet>
+        <Pet id="24">
+            <name>grouse</name>
+            <gender>male</gender>
+            <weight>495766</weight>
+        </Pet>
+        <Pet id="89">
+            <name>cobra</name>
+            <gender>male</gender>
+            <weight>264564</weight>
+        </Pet>
+    </Owner>
+    <Owner id="122827">
+        <name>Nicole Miller</name>
+        <birth_date>1983-08-25</birth_date>
+        <telephone>075-426-2658x0221</telephone>
+        <address>011 Schmitt Spurs
+Chapmanmouth, NM 76302</address>
+        <Pet id="7">
+            <name>swan</name>
+            <gender>female</gender>
+            <weight>288560</weight>
+        </Pet>
+        <Pet id="98">
+            <name>ghoul</name>
+            <gender>female</gender>
+            <weight>842327</weight>
+        </Pet>
+        <Pet id="14">
+            <name>sawfly</name>
+            <gender>female</gender>
+            <weight>792430</weight>
+        </Pet>
+    </Owner>
+    <Owner id="169129">
+        <name>Nancy Glover</name>
+        <birth_date>2004-02-23</birth_date>
+        <telephone>+1-219-090-9726</telephone>
+        <address>6593 Delgado Square Suite 144
+Lake Katherine, NE 71848</address>
+        <Pet id="57">
+            <name>ferret</name>
+            <gender>male</gender>
+            <weight>436080</weight>
+        </Pet>
+        <Pet id="89">
+            <name>marmot</name>
+            <gender>female</gender>
+            <weight>205462</weight>
+        </Pet>
+        <Pet id="17">
+            <name>martin</name>
+            <gender>female</gender>
+            <weight>879853</weight>
+        </Pet>
+    </Owner>
+    <Owner id="840488">
+        <name>Garrett Cohen</name>
+        <birth_date>2004-06-02</birth_date>
+        <telephone>+1-811-279-9108x71888</telephone>
+        <address>24677 Moyer Roads Apt. 674
+East Jordanhaven, NE 74746</address>
+        <Pet id="20">
+            <name>fly</name>
+            <gender>female</gender>
+            <weight>195571</weight>
+        </Pet>
+    </Owner>
+    <Owner id="690122">
+        <name>Jerome Washington</name>
+        <birth_date>1971-12-16</birth_date>
+        <telephone>001-822-202-5785x546</telephone>
+        <address>074 Mooney Plaza Suite 041
+New Sarahville, VT 25306</address>
+        <Pet id="2">
+            <name>lab</name>
+            <gender>male</gender>
+            <weight>898748</weight>
+        </Pet>
+    </Owner>
+    <Owner id="216209">
+        <name>Nicole Garza</name>
+        <birth_date>2009-02-24</birth_date>
+        <telephone>+1-891-871-7646</telephone>
+        <address>8451 Joel Meadow
+Danielleview, ND 66027</address>
+        <Pet id="100">
+            <name>pup</name>
+            <gender>female</gender>
+            <weight>289811</weight>
+        </Pet>
+    </Owner>
+    <Owner id="191927">
+        <name>Antonio Chavez</name>
+        <birth_date>2004-03-18</birth_date>
+        <telephone>+1-371-165-6694x20505</telephone>
+        <address>10718 Robert Loop Suite 366
+New Scott, MT 23493</address>
+        <Pet id="29">
+            <name>lynx</name>
+            <gender>male</gender>
+            <weight>652160</weight>
+        </Pet>
+        <Pet id="8">
+            <name>mole</name>
+            <gender>male</gender>
+            <weight>848333</weight>
+        </Pet>
+    </Owner>
+    <Owner id="914951">
+        <name>Alexis Harris</name>
+        <birth_date>1996-05-07</birth_date>
+        <telephone>547.563.4567x86132</telephone>
+        <address>67987 Katherine Street Apt. 345
+Riggschester, NE 93902</address>
+        <Pet id="41">
+            <name>filly</name>
+            <gender>female</gender>
+            <weight>732744</weight>
+        </Pet>
+        <Pet id="94">
+            <name>cub</name>
+            <gender>female</gender>
+            <weight>543341</weight>
+        </Pet>
+        <Pet id="79">
+            <name>gannet</name>
+            <gender>male</gender>
+            <weight>221574</weight>
+        </Pet>
+    </Owner>
+    <Owner id="668590">
+        <name>Glenn Graves</name>
+        <birth_date>2015-06-20</birth_date>
+        <telephone>+1-554-970-9965x375</telephone>
+        <address>1281 Cannon Lakes
+Ryanton, FL 92177</address>
+        <Pet id="52">
+            <name>elk</name>
+            <gender>male</gender>
+            <weight>291563</weight>
+        </Pet>
+    </Owner>
+    <Owner id="826010">
+        <name>Luis Bowen</name>
+        <birth_date>2018-07-07</birth_date>
+        <telephone>(806)352-9297x0357</telephone>
+        <address>1855 Derrick Valley Apt. 962
+Lake Joseph, CT 08150</address>
+        <Pet id="25">
+            <name>foal</name>
+            <gender>female</gender>
+            <weight>283796</weight>
+        </Pet>
+        <Pet id="56">
+            <name>foal</name>
+            <gender>male</gender>
+            <weight>658319</weight>
+        </Pet>
+    </Owner>
+    <Owner id="568790">
+        <name>Jill Brown</name>
+        <birth_date>1982-04-01</birth_date>
+        <telephone>214.911.4516x79921</telephone>
+        <address>3624 Kayla Squares Apt. 948
+Millerton, CA 27850</address>
+        <Pet id="58">
+            <name>skunk</name>
+            <gender>female</gender>
+            <weight>733449</weight>
+        </Pet>
+    </Owner>
+    <Owner id="962888">
+        <name>James Moreno</name>
+        <birth_date>2006-08-03</birth_date>
+        <telephone>185.977.0636x88145</telephone>
+        <address>38989 Jones Trail
+New Tiffany, WA 23958</address>
+        <Pet id="67">
+            <name>slug</name>
+            <gender>female</gender>
+            <weight>71061</weight>
+        </Pet>
+    </Owner>
+    <Owner id="638080">
+        <name>Chad Meza</name>
+        <birth_date>2006-02-11</birth_date>
+        <telephone>836-634-1227</telephone>
+        <address>91399 James Viaduct
+Maryside, ND 12331</address>
+        <Pet id="43">
+            <name>sawfly</name>
+            <gender>male</gender>
+            <weight>822363</weight>
+        </Pet>
+        <Pet id="6">
+            <name>oyster</name>
+            <gender>female</gender>
+            <weight>673955</weight>
+        </Pet>
+    </Owner>
+    <Owner id="827323">
+        <name>James Nolan</name>
+        <birth_date>1980-01-28</birth_date>
+        <telephone>824-576-8102</telephone>
+        <address>86744 Kevin Fork Suite 739
+New Kennethberg, NV 06402</address>
+        <Pet id="46">
+            <name>midge</name>
+            <gender>male</gender>
+            <weight>571647</weight>
+        </Pet>
+    </Owner>
+    <Owner id="515237">
+        <name>Debra Wilson</name>
+        <birth_date>1990-11-27</birth_date>
+        <telephone>+1-293-980-8993x9793</telephone>
+        <address>7177 Reyes Mills
+Lake Kevin, PA 06475</address>
+        <Pet id="14">
+            <name>bird</name>
+            <gender>male</gender>
+            <weight>844475</weight>
+        </Pet>
+    </Owner>
+    <Owner id="114081">
+        <name>Meghan Hayes</name>
+        <birth_date>1984-02-24</birth_date>
+        <telephone>+1-380-548-0249x44122</telephone>
+        <address>7851 Kent Light Apt. 463
+North Shannonbury, LA 26424</address>
+        <Pet id="63">
+            <name>mutt</name>
+            <gender>male</gender>
+            <weight>50071</weight>
+        </Pet>
+        <Pet id="54">
+            <name>bee</name>
+            <gender>female</gender>
+            <weight>219367</weight>
+        </Pet>
+    </Owner>
+    <Owner id="728512">
+        <name>Kristy Harding</name>
+        <birth_date>2014-11-11</birth_date>
+        <telephone>+1-521-628-8648x073</telephone>
+        <address>7634 Torres Pass
+North Shannonburgh, IL 05336</address>
+        <Pet id="27">
+            <name>pig</name>
+            <gender>male</gender>
+            <weight>485505</weight>
+        </Pet>
+        <Pet id="7">
+            <name>toucan</name>
+            <gender>male</gender>
+            <weight>48584</weight>
+        </Pet>
+        <Pet id="52">
+            <name>tick</name>
+            <gender>male</gender>
+            <weight>360798</weight>
+        </Pet>
+    </Owner>
+    <Owner id="742583">
+        <name>Samantha Mercer</name>
+        <birth_date>1984-12-23</birth_date>
+        <telephone>413-994-6366</telephone>
+        <address>679 Conley Fords Apt. 546
+Theresachester, MN 64395</address>
+        <Pet id="47">
+            <name>cougar</name>
+            <gender>female</gender>
+            <weight>118793</weight>
+        </Pet>
+        <Pet id="27">
+            <name>asp</name>
+            <gender>female</gender>
+            <weight>914206</weight>
+        </Pet>
+    </Owner>
+    <Owner id="475194">
+        <name>Christian Mason</name>
+        <birth_date>1977-03-23</birth_date>
+        <telephone>365-712-8969</telephone>
+        <address>7087 Burton Mews Suite 393
+West Kimberly, WA 97443</address>
+        <Pet id="31">
+            <name>toucan</name>
+            <gender>female</gender>
+            <weight>17861</weight>
+        </Pet>
+    </Owner>
+    <Owner id="181479">
+        <name>Sara Cochran</name>
+        <birth_date>1997-02-24</birth_date>
+        <telephone>(932)546-4769x313</telephone>
+        <address>7016 Kyle Trail Apt. 468
+Port Charlesburgh, NM 42869</address>
+        <Pet id="100">
+            <name>eagle</name>
+            <gender>male</gender>
+            <weight>6204</weight>
+        </Pet>
+    </Owner>
+    <Owner id="922505">
+        <name>Robert Phillips</name>
+        <birth_date>2018-03-15</birth_date>
+        <telephone>662-124-9184x17719</telephone>
+        <address>672 Alexandra Stream
+North Hollytown, DE 08497</address>
+        <Pet id="14">
+            <name>lizard</name>
+            <gender>male</gender>
+            <weight>984271</weight>
+        </Pet>
+        <Pet id="19">
+            <name>thrush</name>
+            <gender>male</gender>
+            <weight>373093</weight>
+        </Pet>
+        <Pet id="5">
+            <name>dog</name>
+            <gender>male</gender>
+            <weight>531374</weight>
+        </Pet>
+    </Owner>
+    <Owner id="481800">
+        <name>Paul Alvarez</name>
+        <birth_date>1974-12-11</birth_date>
+        <telephone>071.291.6546x0421</telephone>
+        <address>458 Hernandez Harbor
+South Adam, RI 78023</address>
+        <Pet id="35">
+            <name>gar</name>
+            <gender>male</gender>
+            <weight>3640</weight>
+        </Pet>
+    </Owner>
+    <Owner id="909662">
+        <name>Joyce Mills</name>
+        <birth_date>1975-05-09</birth_date>
+        <telephone>001-802-971-2752x5136</telephone>
+        <address>598 Davis Streets
+Lamfort, WY 38538</address>
+        <Pet id="40">
+            <name>jaguar</name>
+            <gender>male</gender>
+            <weight>29531</weight>
+        </Pet>
+    </Owner>
+    <Owner id="189727">
+        <name>Scott Davis</name>
+        <birth_date>2020-04-08</birth_date>
+        <telephone>(703)177-0945</telephone>
+        <address>762 Armstrong Ramp Apt. 367
+Dayfort, MA 18374</address>
+        <Pet id="33">
+            <name>maggot</name>
+            <gender>female</gender>
+            <weight>553768</weight>
+        </Pet>
+    </Owner>
+    <Owner id="498095">
+        <name>Natalie Little</name>
+        <birth_date>1993-09-19</birth_date>
+        <telephone>(770)107-0960x7661</telephone>
+        <address>4683 Gomez Coves
+Watsonland, TX 30684</address>
+        <Pet id="60">
+            <name>crab</name>
+            <gender>female</gender>
+            <weight>86651</weight>
+        </Pet>
+    </Owner>
+    <Owner id="174739">
+        <name>Robert Brown</name>
+        <birth_date>2019-04-06</birth_date>
+        <telephone>+1-314-409-7430x879</telephone>
+        <address>97727 Jackson River
+Paulport, OR 24935</address>
+        <Pet id="45">
+            <name>zebra</name>
+            <gender>female</gender>
+            <weight>243968</weight>
+        </Pet>
+        <Pet id="90">
+            <name>tuna</name>
+            <gender>male</gender>
+            <weight>167763</weight>
+        </Pet>
+        <Pet id="70">
+            <name>boar</name>
+            <gender>male</gender>
+            <weight>111936</weight>
+        </Pet>
+    </Owner>
+    <Owner id="980248">
+        <name>Jennifer Green</name>
+        <birth_date>1970-08-01</birth_date>
+        <telephone>001-185-191-4202</telephone>
+        <address>52659 Joseph Island Suite 628
+Debraburgh, MI 07922</address>
+        <Pet id="49">
+            <name>gnat</name>
+            <gender>male</gender>
+            <weight>30182</weight>
+        </Pet>
+        <Pet id="40">
+            <name>worm</name>
+            <gender>male</gender>
+            <weight>605867</weight>
+        </Pet>
+        <Pet id="83">
+            <name>turtle</name>
+            <gender>female</gender>
+            <weight>576700</weight>
+        </Pet>
+    </Owner>
+    <Owner id="310915">
+        <name>Stanley Brown</name>
+        <birth_date>1985-01-08</birth_date>
+        <telephone>(530)675-6389</telephone>
+        <address>85370 Whitney Mountain Suite 211
+Caseystad, KS 37927</address>
+        <Pet id="92">
+            <name>lamb</name>
+            <gender>female</gender>
+            <weight>145798</weight>
+        </Pet>
+    </Owner>
+    <Owner id="422794">
+        <name>Tammy Sheppard</name>
+        <birth_date>2002-02-01</birth_date>
+        <telephone>936-259-1162x6253</telephone>
+        <address>08621 Tucker Land Suite 664
+South Jennifermouth, TN 17982</address>
+        <Pet id="84">
+            <name>lemur</name>
+            <gender>male</gender>
+            <weight>904590</weight>
+        </Pet>
+    </Owner>
+    <Owner id="942862">
+        <name>Catherine Howard</name>
+        <birth_date>1996-01-25</birth_date>
+        <telephone>1083216206</telephone>
+        <address>1170 Gillespie Isle
+South Michelle, NY 56808</address>
+        <Pet id="41">
+            <name>puma</name>
+            <gender>male</gender>
+            <weight>133874</weight>
+        </Pet>
+        <Pet id="6">
+            <name>eft</name>
+            <gender>female</gender>
+            <weight>325276</weight>
+        </Pet>
+        <Pet id="29">
+            <name>mite</name>
+            <gender>female</gender>
+            <weight>344269</weight>
+        </Pet>
+    </Owner>
+    <Owner id="131341">
+        <name>Susan Giles</name>
+        <birth_date>2013-07-03</birth_date>
+        <telephone>864-042-4174</telephone>
+        <address>3757 Kelley Unions
+Cathyside, CO 87118</address>
+        <Pet id="56">
+            <name>puma</name>
+            <gender>male</gender>
+            <weight>584465</weight>
+        </Pet>
+        <Pet id="10">
+            <name>turtle</name>
+            <gender>female</gender>
+            <weight>625319</weight>
+        </Pet>
+    </Owner>
+    <Owner id="191152">
+        <name>April Leonard</name>
+        <birth_date>1994-02-05</birth_date>
+        <telephone>+1-062-602-6218</telephone>
+        <address>1587 Brooks Corners
+Hendrixchester, MS 38035</address>
+        <Pet id="87">
+            <name>tick</name>
+            <gender>male</gender>
+            <weight>949857</weight>
+        </Pet>
+        <Pet id="22">
+            <name>kodiak</name>
+            <gender>male</gender>
+            <weight>714486</weight>
+        </Pet>
+        <Pet id="29">
+            <name>horse</name>
+            <gender>female</gender>
+            <weight>658449</weight>
+        </Pet>
+    </Owner>
+    <Owner id="276993">
+        <name>Melissa Moore</name>
+        <birth_date>2011-11-23</birth_date>
+        <telephone>6282359273</telephone>
+        <address>Unit 2464 Box 6331
+DPO AP 09458</address>
+        <Pet id="58">
+            <name>drum</name>
+            <gender>female</gender>
+            <weight>642839</weight>
+        </Pet>
+        <Pet id="95">
+            <name>oriole</name>
+            <gender>male</gender>
+            <weight>774492</weight>
+        </Pet>
+        <Pet id="64">
+            <name>oyster</name>
+            <gender>male</gender>
+            <weight>244589</weight>
+        </Pet>
+    </Owner>
+    <Owner id="725991">
+        <name>Michael Stone</name>
+        <birth_date>1983-06-03</birth_date>
+        <telephone>982-532-3842x3564</telephone>
+        <address>704 Fisher Mount Apt. 869
+Waltonfort, NC 49883</address>
+        <Pet id="76">
+            <name>jaguar</name>
+            <gender>female</gender>
+            <weight>259750</weight>
+        </Pet>
+        <Pet id="73">
+            <name>koi</name>
+            <gender>female</gender>
+            <weight>57825</weight>
+        </Pet>
+        <Pet id="90">
+            <name>dodo</name>
+            <gender>male</gender>
+            <weight>577431</weight>
+        </Pet>
+    </Owner>
+    <Owner id="234472">
+        <name>Tracey Beck</name>
+        <birth_date>1987-04-21</birth_date>
+        <telephone>001-079-002-7792x2373</telephone>
+        <address>784 Hernandez Fall Suite 748
+South Elizabethside, DC 12086</address>
+        <Pet id="4">
+            <name>serval</name>
+            <gender>male</gender>
+            <weight>966127</weight>
+        </Pet>
+        <Pet id="41">
+            <name>piglet</name>
+            <gender>male</gender>
+            <weight>237056</weight>
+        </Pet>
+    </Owner>
+    <Owner id="726782">
+        <name>Stephanie Jones</name>
+        <birth_date>1980-12-17</birth_date>
+        <telephone>264.265.5734x1004</telephone>
+        <address>794 Ronald Oval
+Melissachester, MD 25576</address>
+        <Pet id="29">
+            <name>rhino</name>
+            <gender>male</gender>
+            <weight>641091</weight>
+        </Pet>
+        <Pet id="33">
+            <name>leech</name>
+            <gender>female</gender>
+            <weight>899055</weight>
+        </Pet>
+    </Owner>
+    <Owner id="92416">
+        <name>James Curry</name>
+        <birth_date>2015-01-11</birth_date>
+        <telephone>001-480-884-1147x7686</telephone>
+        <address>425 Jennifer Prairie
+South Caitlin, FL 46629</address>
+        <Pet id="85">
+            <name>muskox</name>
+            <gender>female</gender>
+            <weight>306650</weight>
+        </Pet>
+    </Owner>
+    <Owner id="56803">
+        <name>David King Jr.</name>
+        <birth_date>1983-08-06</birth_date>
+        <telephone>+1-651-992-8266x093</telephone>
+        <address>6424 Russo Mill
+Richardburgh, NY 51636</address>
+        <Pet id="26">
+            <name>bear</name>
+            <gender>male</gender>
+            <weight>22746</weight>
+        </Pet>
+        <Pet id="33">
+            <name>ape</name>
+            <gender>female</gender>
+            <weight>289837</weight>
+        </Pet>
+    </Owner>
+    <Owner id="478007">
+        <name>Shawn Lamb</name>
+        <birth_date>2007-03-17</birth_date>
+        <telephone>699-024-6602x6669</telephone>
+        <address>1796 Eddie Islands Suite 891
+Port Felicia, NY 14564</address>
+        <Pet id="57">
+            <name>chimp</name>
+            <gender>male</gender>
+            <weight>664445</weight>
+        </Pet>
+    </Owner>
+    <Owner id="372822">
+        <name>Cynthia Lee</name>
+        <birth_date>1995-06-01</birth_date>
+        <telephone>(650)556-4040x4951</telephone>
+        <address>USS Lopez
+FPO AA 12050</address>
+        <Pet id="29">
+            <name>tapir</name>
+            <gender>male</gender>
+            <weight>194988</weight>
+        </Pet>
+        <Pet id="83">
+            <name>ferret</name>
+            <gender>female</gender>
+            <weight>699219</weight>
+        </Pet>
+    </Owner>
+    <Owner id="882943">
+        <name>Brian Brown</name>
+        <birth_date>1988-07-03</birth_date>
+        <telephone>491.664.7215</telephone>
+        <address>4748 Veronica Valleys
+Huffshire, MD 26010</address>
+        <Pet id="49">
+            <name>shrimp</name>
+            <gender>female</gender>
+            <weight>811729</weight>
+        </Pet>
+        <Pet id="83">
+            <name>guinea</name>
+            <gender>male</gender>
+            <weight>823204</weight>
+        </Pet>
+        <Pet id="67">
+            <name>parrot</name>
+            <gender>female</gender>
+            <weight>812765</weight>
+        </Pet>
+    </Owner>
+    <Owner id="901417">
+        <name>Christy Fitzpatrick</name>
+        <birth_date>1973-08-19</birth_date>
+        <telephone>+1-260-977-3056x5110</telephone>
+        <address>13503 Thomas Crossroad
+New Tracy, TN 62859</address>
+        <Pet id="78">
+            <name>loon</name>
+            <gender>female</gender>
+            <weight>736492</weight>
+        </Pet>
+        <Pet id="9">
+            <name>shrew</name>
+            <gender>male</gender>
+            <weight>103849</weight>
+        </Pet>
+        <Pet id="67">
+            <name>seal</name>
+            <gender>male</gender>
+            <weight>754321</weight>
+        </Pet>
+    </Owner>
+    <Owner id="569916">
+        <name>Angela Collins</name>
+        <birth_date>1994-05-13</birth_date>
+        <telephone>(435)424-4140</telephone>
+        <address>919 Joshua Motorway
+Lake George, WI 53016</address>
+        <Pet id="74">
+            <name>gnu</name>
+            <gender>male</gender>
+            <weight>831916</weight>
+        </Pet>
+    </Owner>
+    <Owner id="10829">
+        <name>Shelby Blake</name>
+        <birth_date>1970-04-15</birth_date>
+        <telephone>+1-353-806-3703</telephone>
+        <address>USNS Wilson
+FPO AA 96103</address>
+        <Pet id="2">
+            <name>lynx</name>
+            <gender>female</gender>
+            <weight>107631</weight>
+        </Pet>
+    </Owner>
+    <Owner id="200954">
+        <name>Jasmine Cox</name>
+        <birth_date>1975-08-23</birth_date>
+        <telephone>001-859-237-0390x761</telephone>
+        <address>6049 Patton Ports
+Jonesland, NM 24273</address>
+        <Pet id="90">
+            <name>emu</name>
+            <gender>female</gender>
+            <weight>923247</weight>
+        </Pet>
+        <Pet id="6">
+            <name>foal</name>
+            <gender>male</gender>
+            <weight>334327</weight>
+        </Pet>
+        <Pet id="27">
+            <name>swift</name>
+            <gender>male</gender>
+            <weight>639682</weight>
+        </Pet>
+    </Owner>
+    <Owner id="961751">
+        <name>Mark Abbott</name>
+        <birth_date>2018-06-17</birth_date>
+        <telephone>001-481-714-6729x476</telephone>
+        <address>152 Whitehead Road
+Garciastad, OH 87628</address>
+        <Pet id="24">
+            <name>jackal</name>
+            <gender>male</gender>
+            <weight>893680</weight>
+        </Pet>
+        <Pet id="30">
+            <name>bunny</name>
+            <gender>female</gender>
+            <weight>750781</weight>
+        </Pet>
+    </Owner>
+    <Owner id="899609">
+        <name>Angela Dunn</name>
+        <birth_date>2013-09-27</birth_date>
+        <telephone>678.165.6123x4977</telephone>
+        <address>5503 Green Shores Suite 538
+South Spencer, SC 75430</address>
+        <Pet id="19">
+            <name>raptor</name>
+            <gender>male</gender>
+            <weight>850025</weight>
+        </Pet>
+        <Pet id="48">
+            <name>tuna</name>
+            <gender>female</gender>
+            <weight>427347</weight>
+        </Pet>
+        <Pet id="67">
+            <name>tuna</name>
+            <gender>female</gender>
+            <weight>103587</weight>
+        </Pet>
+    </Owner>
+    <Owner id="947492">
+        <name>Derek Bowman</name>
+        <birth_date>1971-10-16</birth_date>
+        <telephone>293-818-1308x74527</telephone>
+        <address>69898 Black Branch
+Port Racheltown, MI 92872</address>
+        <Pet id="31">
+            <name>prawn</name>
+            <gender>male</gender>
+            <weight>493346</weight>
+        </Pet>
+        <Pet id="68">
+            <name>shrimp</name>
+            <gender>female</gender>
+            <weight>275515</weight>
+        </Pet>
+    </Owner>
+</owners>

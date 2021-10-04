@@ -52,5 +52,5 @@ def generator(n, m, name):
 
 
 for i in range(100):
-    generator(random.randint(1, 100), random.randint(1, 15), f'owners{str(i+1)}')
+    generator(random.randint(1, 100), random.randint(1, 8), f'owners{str(i+1)}')
 

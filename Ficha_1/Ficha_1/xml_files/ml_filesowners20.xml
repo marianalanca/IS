@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="220708">
+        <name>James Hogan</name>
+        <birth_date>2014-07-01</birth_date>
+        <telephone>488.262.8186x301</telephone>
+        <address>67127 Brady Mill
+Lake Dan, RI 93176</address>
+        <Pet id="25">
+            <name>magpie</name>
+            <gender>female</gender>
+            <weight>179914</weight>
+        </Pet>
+        <Pet id="4">
+            <name>oyster</name>
+            <gender>male</gender>
+            <weight>807220</weight>
+        </Pet>
+    </Owner>
+    <Owner id="815901">
+        <name>Mark Smith</name>
+        <birth_date>2021-03-14</birth_date>
+        <telephone>179.884.2891</telephone>
+        <address>9580 Steven Trace Suite 211
+South Alex, KS 40773</address>
+        <Pet id="88">
+            <name>kodiak</name>
+            <gender>male</gender>
+            <weight>664593</weight>
+        </Pet>
+        <Pet id="7">
+            <name>lemur</name>
+            <gender>female</gender>
+            <weight>589999</weight>
+        </Pet>
+    </Owner>
+    <Owner id="458580">
+        <name>Kendra Sharp MD</name>
+        <birth_date>2005-06-18</birth_date>
+        <telephone>231-377-5655x64817</telephone>
+        <address>5141 Brown Brooks Apt. 701
+Calderonmouth, NM 34136</address>
+        <Pet id="52">
+            <name>ibex</name>
+            <gender>male</gender>
+            <weight>844279</weight>
+        </Pet>
+        <Pet id="91">
+            <name>worm</name>
+            <gender>male</gender>
+            <weight>329712</weight>
+        </Pet>
+        <Pet id="7">
+            <name>loon</name>
+            <gender>male</gender>
+            <weight>508516</weight>
+        </Pet>
+        <Pet id="91">
+            <name>joey</name>
+            <gender>male</gender>
+            <weight>156511</weight>
+        </Pet>
+    </Owner>
+    <Owner id="66854">
+        <name>Jessica Munoz</name>
+        <birth_date>2010-11-04</birth_date>
+        <telephone>001-024-649-3936x8452</telephone>
+        <address>2938 Jimmy Knoll Apt. 120
+Carriemouth, ND 01923</address>
+        <Pet id="48">
+            <name>monkey</name>
+            <gender>male</gender>
+            <weight>483758</weight>
+        </Pet>
+        <Pet id="24">
+            <name>cod</name>
+            <gender>male</gender>
+            <weight>881060</weight>
+        </Pet>
+        <Pet id="40">
+            <name>quagga</name>
+            <gender>male</gender>
+            <weight>715380</weight>
+        </Pet>
+    </Owner>
+    <Owner id="746175">
+        <name>Jordan Thomas</name>
+        <birth_date>1981-09-25</birth_date>
+        <telephone>+1-973-177-4148x159</telephone>
+        <address>4513 Huynh Courts
+East Lauraside, SD 68212</address>
+        <Pet id="62">
+            <name>moray</name>
+            <gender>female</gender>
+            <weight>262332</weight>
+        </Pet>
+        <Pet id="3">
+            <name>frog</name>
+            <gender>male</gender>
+            <weight>719977</weight>
+        </Pet>
+        <Pet id="85">
+            <name>lark</name>
+            <gender>female</gender>
+            <weight>488616</weight>
+        </Pet>
+    </Owner>
+    <Owner id="793727">
+        <name>David Lee</name>
+        <birth_date>2011-07-25</birth_date>
+        <telephone>486.951.4169x07604</telephone>
+        <address>894 Stephanie Plaza Apt. 225
+Billymouth, ME 98407</address>
+        <Pet id="97">
+            <name>finch</name>
+            <gender>male</gender>
+            <weight>680551</weight>
+        </Pet>
+        <Pet id="43">
+            <name>flea</name>
+            <gender>male</gender>
+            <weight>35235</weight>
+        </Pet>
+    </Owner>
+    <Owner id="269185">
+        <name>Shannon Mendoza</name>
+        <birth_date>1984-01-20</birth_date>
+        <telephone>+1-688-189-9671x8442</telephone>
+        <address>PSC 7355, Box 6231
+APO AA 62389</address>
+        <Pet id="40">
+            <name>lynx</name>
+            <gender>female</gender>
+            <weight>250201</weight>
+        </Pet>
+    </Owner>
+    <Owner id="803056">
+        <name>Jennifer Hunt</name>
+        <birth_date>1976-06-10</birth_date>
+        <telephone>001-973-125-3205x897</telephone>
+        <address>29752 Jacob Cliffs
+North Mariashire, MT 67804</address>
+        <Pet id="19">
+            <name>yeti</name>
+            <gender>male</gender>
+            <weight>850486</weight>
+        </Pet>
+        <Pet id="91">
+            <name>eel</name>
+            <gender>female</gender>
+            <weight>182435</weight>
+        </Pet>
+    </Owner>
+    <Owner id="911943">
+        <name>Brittany Blevins</name>
+        <birth_date>1972-07-06</birth_date>
+        <telephone>274-214-2579</telephone>
+        <address>6345 Bridget Isle
+Kochbury, OK 60923</address>
+        <Pet id="43">
+            <name>thrush</name>
+            <gender>male</gender>
+            <weight>297954</weight>
+        </Pet>
+    </Owner>
+    <Owner id="7516">
+        <name>Julie Pierce</name>
+        <birth_date>1985-03-21</birth_date>
+        <telephone>+1-988-117-7189x2720</telephone>
+        <address>598 Wong Highway
+Harrisonmouth, AL 93448</address>
+        <Pet id="59">
+            <name>crab</name>
+            <gender>female</gender>
+            <weight>377590</weight>
+        </Pet>
+        <Pet id="41">
+            <name>mouse</name>
+            <gender>male</gender>
+            <weight>291879</weight>
+        </Pet>
+        <Pet id="43">
+            <name>robin</name>
+            <gender>male</gender>
+            <weight>41626</weight>
+        </Pet>
+    </Owner>
+    <Owner id="318897">
+        <name>Kenneth Burton</name>
+        <birth_date>1974-03-19</birth_date>
+        <telephone>013-999-9049x1361</telephone>
+        <address>22293 Samuel Rapid Apt. 074
+East Edward, AR 35748</address>
+        <Pet id="86">
+            <name>iguana</name>
+            <gender>male</gender>
+            <weight>384513</weight>
+        </Pet>
+        <Pet id="22">
+            <name>ocelot</name>
+            <gender>male</gender>
+            <weight>866510</weight>
+        </Pet>
+        <Pet id="23">
+            <name>cobra</name>
+            <gender>male</gender>
+            <weight>807668</weight>
+        </Pet>
+        <Pet id="93">
+            <name>kite</name>
+            <gender>female</gender>
+            <weight>131970</weight>
+        </Pet>
+    </Owner>
+</owners>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="686">
+        <name>Benjamin Freeman</name>
+        <birth_date>2008-10-08</birth_date>
+        <telephone>410-550-1569x447</telephone>
+        <address>63905 Rebecca Camp
+South Stephenfurt, IA 09245</address>
+        <Pet id="55">
+            <name>marmot</name>
+            <gender>male</gender>
+            <weight>406537</weight>
+        </Pet>
+        <Pet id="29">
+            <name>bull</name>
+            <gender>female</gender>
+            <weight>564136</weight>
+        </Pet>
+    </Owner>
+    <Owner id="622650">
+        <name>Nicole Williams</name>
+        <birth_date>1988-02-17</birth_date>
+        <telephone>+1-132-604-0295x683</telephone>
+        <address>6585 Barbara Mountains Apt. 729
+South Jamesside, GA 90344</address>
+        <Pet id="21">
+            <name>foal</name>
+            <gender>female</gender>
+            <weight>200673</weight>
+        </Pet>
+    </Owner>
+    <Owner id="119346">
+        <name>Pamela White</name>
+        <birth_date>1990-06-02</birth_date>
+        <telephone>001-158-034-1405</telephone>
+        <address>898 Raymond Via
+Floreston, RI 88579</address>
+        <Pet id="89">
+            <name>minnow</name>
+            <gender>female</gender>
+            <weight>856418</weight>
+        </Pet>
+        <Pet id="89">
+            <name>lab</name>
+            <gender>female</gender>
+            <weight>870029</weight>
+        </Pet>
+        <Pet id="55">
+            <name>husky</name>
+            <gender>male</gender>
+            <weight>849021</weight>
+        </Pet>
+    </Owner>
+</owners>

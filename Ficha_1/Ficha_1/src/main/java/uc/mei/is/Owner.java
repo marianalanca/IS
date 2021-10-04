@@ -32,6 +32,15 @@ public class Owner {
         this.address = address;
     }
 
+    public Owner(String id, String name, String birth_date, String telephone, String address, List<Pet> list) {
+        this.id = id;
+        this.name = name;
+        this.birth_date = birth_date;
+        this.telephone = telephone;
+        this.address = address;
+        this.list= list;
+    }
+
     public void setId(String id) {
         this.id = id;
     }

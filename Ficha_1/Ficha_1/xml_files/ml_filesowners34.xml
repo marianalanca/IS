@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="619815">
+        <name>Michael West</name>
+        <birth_date>1972-01-12</birth_date>
+        <telephone>(753)602-1137x50081</telephone>
+        <address>4487 Morris Shore
+New Shirley, VT 79727</address>
+        <Pet id="77">
+            <name>doe</name>
+            <gender>male</gender>
+            <weight>152593</weight>
+        </Pet>
+        <Pet id="16">
+            <name>tahr</name>
+            <gender>female</gender>
+            <weight>452441</weight>
+        </Pet>
+    </Owner>
+    <Owner id="627381">
+        <name>Allison Sexton</name>
+        <birth_date>1995-10-02</birth_date>
+        <telephone>001-370-631-9314x3462</telephone>
+        <address>430 Hill Manors
+Robinsonville, MN 74547</address>
+        <Pet id="58">
+            <name>heron</name>
+            <gender>female</gender>
+            <weight>438199</weight>
+        </Pet>
+    </Owner>
+    <Owner id="849402">
+        <name>Angela Miller</name>
+        <birth_date>1998-12-25</birth_date>
+        <telephone>302-576-2330</telephone>
+        <address>8693 Montoya Cape Suite 217
+Ruthhaven, AZ 82778</address>
+        <Pet id="62">
+            <name>squid</name>
+            <gender>female</gender>
+            <weight>474367</weight>
+        </Pet>
+    </Owner>
+    <Owner id="618648">
+        <name>Sheri Taylor</name>
+        <birth_date>2017-10-15</birth_date>
+        <telephone>(743)552-9029x613</telephone>
+        <address>PSC 6785, Box 7549
+APO AA 62255</address>
+        <Pet id="11">
+            <name>gannet</name>
+            <gender>male</gender>
+            <weight>377027</weight>
+        </Pet>
+    </Owner>
+    <Owner id="631907">
+        <name>Denise Lambert</name>
+        <birth_date>2000-12-23</birth_date>
+        <telephone>524-601-9248</telephone>
+        <address>1559 Pham Haven Apt. 928
+Katiechester, DC 79948</address>
+        <Pet id="86">
+            <name>gecko</name>
+            <gender>male</gender>
+            <weight>343891</weight>
+        </Pet>
+    </Owner>
+    <Owner id="530140">
+        <name>Omar Thompson</name>
+        <birth_date>2003-05-01</birth_date>
+        <telephone>754-136-7867</telephone>
+        <address>232 Brian Dam
+Shaneview, IN 72573</address>
+        <Pet id="79">
+            <name>leech</name>
+            <gender>male</gender>
+            <weight>938330</weight>
+        </Pet>
+        <Pet id="56">
+            <name>akita</name>
+            <gender>female</gender>
+            <weight>696210</weight>
+        </Pet>
+    </Owner>
+    <Owner id="243421">
+        <name>Kathleen Fuller</name>
+        <birth_date>2010-12-29</birth_date>
+        <telephone>060-780-7812</telephone>
+        <address>565 Zachary Prairie
+Isaacmouth, KS 73959</address>
+        <Pet id="40">
+            <name>cow</name>
+            <gender>male</gender>
+            <weight>938714</weight>
+        </Pet>
+        <Pet id="36">
+            <name>kid</name>
+            <gender>female</gender>
+            <weight>877107</weight>
+        </Pet>
+    </Owner>
+    <Owner id="368216">
+        <name>Heather Hunt</name>
+        <birth_date>2011-08-15</birth_date>
+        <telephone>(870)016-4704x17850</telephone>
+        <address>80219 Marc Row Suite 517
+North Samanthaside, MO 07724</address>
+        <Pet id="52">
+            <name>impala</name>
+            <gender>female</gender>
+            <weight>409686</weight>
+        </Pet>
+        <Pet id="42">
+            <name>baboon</name>
+            <gender>male</gender>
+            <weight>542050</weight>
+        </Pet>
+    </Owner>
+    <Owner id="176592">
+        <name>Kenneth Dixon</name>
+        <birth_date>2020-01-21</birth_date>
+        <telephone>001-172-087-9894x5348</telephone>
+        <address>076 Michele Parks Apt. 854
+East Lisa, DC 58136</address>
+        <Pet id="1">
+            <name>gull</name>
+            <gender>female</gender>
+            <weight>962829</weight>
+        </Pet>
+    </Owner>
+    <Owner id="400183">
+        <name>James Anthony</name>
+        <birth_date>2001-01-28</birth_date>
+        <telephone>001-085-450-7562x121</telephone>
+        <address>07969 Welch Lake Apt. 974
+East Joseph, TX 79493</address>
+        <Pet id="10">
+            <name>sole</name>
+            <gender>female</gender>
+            <weight>872579</weight>
+        </Pet>
+        <Pet id="12">
+            <name>lark</name>
+            <gender>female</gender>
+            <weight>639107</weight>
+        </Pet>
+    </Owner>
+    <Owner id="926573">
+        <name>Kimberly Roberts</name>
+        <birth_date>1995-05-30</birth_date>
+        <telephone>(059)940-2579</telephone>
+        <address>6283 Rachel Circle
+Annaville, OR 78897</address>
+        <Pet id="67">
+            <name>perch</name>
+            <gender>female</gender>
+            <weight>15402</weight>
+        </Pet>
+    </Owner>
+    <Owner id="873683">
+        <name>Wendy Garcia</name>
+        <birth_date>2006-05-30</birth_date>
+        <telephone>(832)011-6859x09808</telephone>
+        <address>PSC 7505, Box 1930
+APO AP 97273</address>
+        <Pet id="72">
+            <name>clam</name>
+            <gender>female</gender>
+            <weight>366081</weight>
+        </Pet>
+        <Pet id="5">
+            <name>gator</name>
+            <gender>male</gender>
+            <weight>514541</weight>
+        </Pet>
+    </Owner>
+    <Owner id="297333">
+        <name>Andrea Davis</name>
+        <birth_date>1987-09-08</birth_date>
+        <telephone>721.370.7765x5381</telephone>
+        <address>140 Ingram Mall
+Jefferyport, WY 53294</address>
+        <Pet id="28">
+            <name>bull</name>
+            <gender>female</gender>
+            <weight>579769</weight>
+        </Pet>
+        <Pet id="74">
+            <name>newt</name>
+            <gender>male</gender>
+            <weight>606788</weight>
+        </Pet>
+    </Owner>
+    <Owner id="254359">
+        <name>Tonya Anderson</name>
+        <birth_date>1990-08-22</birth_date>
+        <telephone>(871)830-8180x120</telephone>
+        <address>USCGC Hale
+FPO AE 41132</address>
+        <Pet id="16">
+            <name>mutt</name>
+            <gender>male</gender>
+            <weight>867156</weight>
+        </Pet>
+    </Owner>
+    <Owner id="269076">
+        <name>David Hogan</name>
+        <birth_date>2010-10-13</birth_date>
+        <telephone>001-519-846-9079x4002</telephone>
+        <address>61708 David Manor Suite 927
+West Brittany, MA 22937</address>
+        <Pet id="88">
+            <name>doe</name>
+            <gender>female</gender>
+            <weight>336814</weight>
+        </Pet>
+    </Owner>
+    <Owner id="673540">
+        <name>Patrick Johns</name>
+        <birth_date>1972-03-01</birth_date>
+        <telephone>001-957-197-7545x990</telephone>
+        <address>7850 White Wells Apt. 161
+South Daniel, KY 10626</address>
+        <Pet id="39">
+            <name>akita</name>
+            <gender>male</gender>
+            <weight>144784</weight>
+        </Pet>
+    </Owner>
+    <Owner id="35880">
+        <name>Lori Russell</name>
+        <birth_date>1989-01-21</birth_date>
+        <telephone>735-590-4755</telephone>
+        <address>9350 Bradshaw Via Apt. 005
+Lindaville, OK 29413</address>
+        <Pet id="47">
+            <name>heron</name>
+            <gender>female</gender>
+            <weight>651549</weight>
+        </Pet>
+        <Pet id="41">
+            <name>satyr</name>
+            <gender>female</gender>
+            <weight>281483</weight>
+        </Pet>
+    </Owner>
+    <Owner id="81116">
+        <name>Brett Meyer</name>
+        <birth_date>2015-07-30</birth_date>
+        <telephone>732-819-3412</telephone>
+        <address>743 Smith Summit
+Hallburgh, FL 53449</address>
+        <Pet id="83">
+            <name>puma</name>
+            <gender>female</gender>
+            <weight>935056</weight>
+        </Pet>
+    </Owner>
+    <Owner id="111883">
+        <name>Cynthia Burton</name>
+        <birth_date>2002-06-04</birth_date>
+        <telephone>(230)420-4754x831</telephone>
+        <address>605 Ortiz Forest
+Tammybury, KY 71226</address>
+        <Pet id="51">
+            <name>lion</name>
+            <gender>female</gender>
+            <weight>16471</weight>
+        </Pet>
+        <Pet id="75">
+            <name>baboon</name>
+            <gender>female</gender>
+            <weight>378906</weight>
+        </Pet>
+    </Owner>
+    <Owner id="514383">
+        <name>Danielle Clark</name>
+        <birth_date>1984-08-27</birth_date>
+        <telephone>254-112-1733x408</telephone>
+        <address>265 Nelson Creek Suite 966
+Livingstonview, RI 23107</address>
+        <Pet id="22">
+            <name>shark</name>
+            <gender>male</gender>
+            <weight>843203</weight>
+        </Pet>
+    </Owner>
+    <Owner id="957322">
+        <name>Richard Howard</name>
+        <birth_date>2015-11-01</birth_date>
+        <telephone>521-138-0666x687</telephone>
+        <address>9652 Antonio Point Suite 506
+South Davidborough, IN 25466</address>
+        <Pet id="2">
+            <name>mutt</name>
+            <gender>female</gender>
+            <weight>544354</weight>
+        </Pet>
+        <Pet id="79">
+            <name>marmot</name>
+            <gender>male</gender>
+            <weight>213111</weight>
+        </Pet>
+    </Owner>
+    <Owner id="689416">
+        <name>Brenda Christensen</name>
+        <birth_date>1980-03-14</birth_date>
+        <telephone>001-545-924-8299x59078</telephone>
+        <address>49119 Jimmy Forge
+Erinshire, AZ 78613</address>
+        <Pet id="60">
+            <name>elk</name>
+            <gender>male</gender>
+            <weight>664812</weight>
+        </Pet>
+    </Owner>
+    <Owner id="256754">
+        <name>James Flores</name>
+        <birth_date>1980-08-04</birth_date>
+        <telephone>886-556-1547x57169</telephone>
+        <address>73043 Susan Union Suite 043
+North Zacharyland, NY 32748</address>
+        <Pet id="2">
+            <name>egret</name>
+            <gender>female</gender>
+            <weight>423083</weight>
+        </Pet>
+        <Pet id="36">
+            <name>cod</name>
+            <gender>male</gender>
+            <weight>917078</weight>
+        </Pet>
+    </Owner>
+    <Owner id="577883">
+        <name>Jose Farmer</name>
+        <birth_date>2019-07-18</birth_date>
+        <telephone>+1-177-857-9210</telephone>
+        <address>2379 Natalie Bypass Suite 847
+Dillonside, VT 31930</address>
+        <Pet id="23">
+            <name>stork</name>
+            <gender>male</gender>
+            <weight>238839</weight>
+        </Pet>
+    </Owner>
+    <Owner id="646108">
+        <name>Sharon Dixon</name>
+        <birth_date>1990-07-26</birth_date>
+        <telephone>001-037-907-3247x52581</telephone>
+        <address>191 Natalie Manors Apt. 181
+West Henry, KY 70987</address>
+        <Pet id="90">
+            <name>pug</name>
+            <gender>male</gender>
+            <weight>222111</weight>
+        </Pet>
+        <Pet id="39">
+            <name>ape</name>
+            <gender>female</gender>
+            <weight>254548</weight>
+        </Pet>
+    </Owner>
+</owners>

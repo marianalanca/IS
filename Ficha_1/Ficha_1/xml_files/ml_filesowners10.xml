@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="915140">
+        <name>Willie Clark</name>
+        <birth_date>2016-10-01</birth_date>
+        <telephone>365-941-9562x8245</telephone>
+        <address>002 William Circle
+Armstrongview, OK 34075</address>
+        <Pet id="79">
+            <name>dodo</name>
+            <gender>male</gender>
+            <weight>48901</weight>
+        </Pet>
+        <Pet id="14">
+            <name>gnat</name>
+            <gender>female</gender>
+            <weight>927324</weight>
+        </Pet>
+        <Pet id="5">
+            <name>dingo</name>
+            <gender>male</gender>
+            <weight>483713</weight>
+        </Pet>
+        <Pet id="76">
+            <name>gnu</name>
+            <gender>female</gender>
+            <weight>501683</weight>
+        </Pet>
+    </Owner>
+    <Owner id="271583">
+        <name>Nancy Davis</name>
+        <birth_date>2015-11-26</birth_date>
+        <telephone>(005)382-7219x0548</telephone>
+        <address>PSC 5774, Box 1051
+APO AA 12058</address>
+        <Pet id="38">
+            <name>mink</name>
+            <gender>male</gender>
+            <weight>323201</weight>
+        </Pet>
+        <Pet id="43">
+            <name>llama</name>
+            <gender>male</gender>
+            <weight>837338</weight>
+        </Pet>
+    </Owner>
+    <Owner id="997423">
+        <name>Janet Obrien</name>
+        <birth_date>1977-06-10</birth_date>
+        <telephone>001-129-820-4356x52614</telephone>
+        <address>24904 Wiley Manors Apt. 423
+Gibbsside, DE 46582</address>
+        <Pet id="26">
+            <name>gnu</name>
+            <gender>female</gender>
+            <weight>391025</weight>
+        </Pet>
+        <Pet id="4">
+            <name>toucan</name>
+            <gender>female</gender>
+            <weight>4599</weight>
+        </Pet>
+        <Pet id="26">
+            <name>wahoo</name>
+            <gender>male</gender>
+            <weight>383071</weight>
+        </Pet>
+        <Pet id="31">
+            <name>sheep</name>
+            <gender>female</gender>
+            <weight>728745</weight>
+        </Pet>
+    </Owner>
+    <Owner id="390723">
+        <name>Darius Nelson</name>
+        <birth_date>1970-02-17</birth_date>
+        <telephone>001-480-158-5172x894</telephone>
+        <address>733 Phillips Tunnel
+Terrellchester, AL 73220</address>
+        <Pet id="22">
+            <name>jay</name>
+            <gender>female</gender>
+            <weight>528848</weight>
+        </Pet>
+        <Pet id="79">
+            <name>tick</name>
+            <gender>female</gender>
+            <weight>668030</weight>
+        </Pet>
+        <Pet id="32">
+            <name>dodo</name>
+            <gender>female</gender>
+            <weight>613132</weight>
+        </Pet>
+    </Owner>
+    <Owner id="891017">
+        <name>Walter Ballard</name>
+        <birth_date>1976-10-02</birth_date>
+        <telephone>651.573.7749x889</telephone>
+        <address>830 Jack Islands
+Walkertown, MD 51866</address>
+        <Pet id="36">
+            <name>ghost</name>
+            <gender>female</gender>
+            <weight>39926</weight>
+        </Pet>
+        <Pet id="55">
+            <name>ant</name>
+            <gender>female</gender>
+            <weight>454195</weight>
+        </Pet>
+        <Pet id="52">
+            <name>raptor</name>
+            <gender>female</gender>
+            <weight>122978</weight>
+        </Pet>
+    </Owner>
+    <Owner id="23607">
+        <name>Rachel Burton</name>
+        <birth_date>2014-06-05</birth_date>
+        <telephone>949.058.4712</telephone>
+        <address>16741 Neil Highway Apt. 737
+Jonesstad, NE 18469</address>
+        <Pet id="59">
+            <name>gator</name>
+            <gender>male</gender>
+            <weight>554212</weight>
+        </Pet>
+        <Pet id="40">
+            <name>raptor</name>
+            <gender>male</gender>
+            <weight>618792</weight>
+        </Pet>
+        <Pet id="3">
+            <name>foal</name>
+            <gender>female</gender>
+            <weight>892001</weight>
+        </Pet>
+        <Pet id="61">
+            <name>tiger</name>
+            <gender>female</gender>
+            <weight>790019</weight>
+        </Pet>
+    </Owner>
+    <Owner id="992508">
+        <name>Steven Davenport</name>
+        <birth_date>2001-04-21</birth_date>
+        <telephone>(616)601-6671</telephone>
+        <address>6632 Holly Centers
+Brandonton, WA 50673</address>
+        <Pet id="61">
+            <name>glider</name>
+            <gender>female</gender>
+            <weight>154028</weight>
+        </Pet>
+        <Pet id="46">
+            <name>glider</name>
+            <gender>female</gender>
+            <weight>772682</weight>
+        </Pet>
+    </Owner>
+    <Owner id="934419">
+        <name>Elizabeth Camacho</name>
+        <birth_date>2006-02-14</birth_date>
+        <telephone>510-948-7809x268</telephone>
+        <address>08175 Theresa Port
+South Benjamin, IA 08850</address>
+        <Pet id="13">
+            <name>koi</name>
+            <gender>female</gender>
+            <weight>50790</weight>
+        </Pet>
+    </Owner>
+    <Owner id="76587">
+        <name>Meghan Allen</name>
+        <birth_date>2010-10-16</birth_date>
+        <telephone>(493)732-5470</telephone>
+        <address>1666 Andre Groves
+East Hannah, NH 09680</address>
+        <Pet id="46">
+            <name>cow</name>
+            <gender>female</gender>
+            <weight>728452</weight>
+        </Pet>
+        <Pet id="17">
+            <name>ray</name>
+            <gender>male</gender>
+            <weight>399911</weight>
+        </Pet>
+        <Pet id="71">
+            <name>mule</name>
+            <gender>male</gender>
+            <weight>637666</weight>
+        </Pet>
+    </Owner>
+</owners>

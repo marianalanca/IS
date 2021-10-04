@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="325521">
+        <name>Marie Rose</name>
+        <birth_date>2021-03-01</birth_date>
+        <telephone>9209660507</telephone>
+        <address>70065 Tyler Trace
+East Kristinport, NV 50701</address>
+        <Pet id="69">
+            <name>troll</name>
+            <gender>male</gender>
+            <weight>649989</weight>
+        </Pet>
+        <Pet id="15">
+            <name>frog</name>
+            <gender>female</gender>
+            <weight>47603</weight>
+        </Pet>
+        <Pet id="66">
+            <name>panda</name>
+            <gender>female</gender>
+            <weight>741687</weight>
+        </Pet>
+    </Owner>
+    <Owner id="692314">
+        <name>Thomas Peterson</name>
+        <birth_date>1985-07-30</birth_date>
+        <telephone>(777)570-6823</telephone>
+        <address>5926 David Locks Suite 808
+New Kellymouth, FL 07466</address>
+        <Pet id="20">
+            <name>serval</name>
+            <gender>male</gender>
+            <weight>734371</weight>
+        </Pet>
+        <Pet id="15">
+            <name>filly</name>
+            <gender>male</gender>
+            <weight>913945</weight>
+        </Pet>
+        <Pet id="3">
+            <name>gecko</name>
+            <gender>female</gender>
+            <weight>919070</weight>
+        </Pet>
+    </Owner>
+    <Owner id="393729">
+        <name>Bonnie Conley</name>
+        <birth_date>1996-03-09</birth_date>
+        <telephone>001-883-678-6482x020</telephone>
+        <address>1926 Bonilla Burgs
+Bethville, AL 25182</address>
+        <Pet id="61">
+            <name>mayfly</name>
+            <gender>female</gender>
+            <weight>126078</weight>
+        </Pet>
+        <Pet id="9">
+            <name>martin</name>
+            <gender>male</gender>
+            <weight>821396</weight>
+        </Pet>
+        <Pet id="51">
+            <name>satyr</name>
+            <gender>male</gender>
+            <weight>317860</weight>
+        </Pet>
+    </Owner>
+    <Owner id="263074">
+        <name>Johnny Crawford</name>
+        <birth_date>1999-06-12</birth_date>
+        <telephone>894.943.6512x602</telephone>
+        <address>1146 Silva Mission Apt. 307
+Grahamburgh, MO 38060</address>
+        <Pet id="47">
+            <name>burro</name>
+            <gender>female</gender>
+            <weight>223626</weight>
+        </Pet>
+        <Pet id="98">
+            <name>whale</name>
+            <gender>male</gender>
+            <weight>8521</weight>
+        </Pet>
+        <Pet id="16">
+            <name>swine</name>
+            <gender>male</gender>
+            <weight>310323</weight>
+        </Pet>
+    </Owner>
+    <Owner id="710222">
+        <name>Craig Harrison</name>
+        <birth_date>2000-01-16</birth_date>
+        <telephone>+1-350-096-1174x51116</telephone>
+        <address>USNV Williams
+FPO AE 32582</address>
+        <Pet id="23">
+            <name>condor</name>
+            <gender>female</gender>
+            <weight>616506</weight>
+        </Pet>
+        <Pet id="45">
+            <name>condor</name>
+            <gender>male</gender>
+            <weight>563506</weight>
+        </Pet>
+    </Owner>
+    <Owner id="854944">
+        <name>Olivia Leach</name>
+        <birth_date>2004-10-14</birth_date>
+        <telephone>001-747-043-0135</telephone>
+        <address>4561 Matthews Overpass
+Davisside, LA 87228</address>
+        <Pet id="93">
+            <name>ewe</name>
+            <gender>male</gender>
+            <weight>240657</weight>
+        </Pet>
+    </Owner>
+    <Owner id="605794">
+        <name>Mr. William Smith</name>
+        <birth_date>1990-09-12</birth_date>
+        <telephone>899-616-7231x08443</telephone>
+        <address>99170 Hurst Mission Suite 496
+Pearsonfort, AL 73900</address>
+        <Pet id="14">
+            <name>heron</name>
+            <gender>female</gender>
+            <weight>57957</weight>
+        </Pet>
+    </Owner>
+    <Owner id="975201">
+        <name>Lauren Kennedy</name>
+        <birth_date>1973-04-30</birth_date>
+        <telephone>533.002.2922x85390</telephone>
+        <address>4824 Carter Springs Apt. 666
+East Ashleyview, OK 31824</address>
+        <Pet id="35">
+            <name>hare</name>
+            <gender>female</gender>
+            <weight>688480</weight>
+        </Pet>
+        <Pet id="49">
+            <name>alien</name>
+            <gender>male</gender>
+            <weight>68099</weight>
+        </Pet>
+        <Pet id="25">
+            <name>elk</name>
+            <gender>female</gender>
+            <weight>117136</weight>
+        </Pet>
+    </Owner>
+    <Owner id="29587">
+        <name>Kevin Carter</name>
+        <birth_date>1990-09-15</birth_date>
+        <telephone>001-766-559-4546x666</telephone>
+        <address>Unit 0998 Box 7938
+DPO AE 99779</address>
+        <Pet id="84">
+            <name>egret</name>
+            <gender>male</gender>
+            <weight>812506</weight>
+        </Pet>
+    </Owner>
+    <Owner id="576793">
+        <name>Misty Foley</name>
+        <birth_date>1986-01-27</birth_date>
+        <telephone>738.521.6935x726</telephone>
+        <address>8946 Troy Drive
+Juanborough, NE 09259</address>
+        <Pet id="73">
+            <name>worm</name>
+            <gender>female</gender>
+            <weight>514216</weight>
+        </Pet>
+    </Owner>
+    <Owner id="514430">
+        <name>William Moore</name>
+        <birth_date>2020-12-25</birth_date>
+        <telephone>(303)441-1434x7267</telephone>
+        <address>5720 Hancock Run Apt. 585
+North Johnton, MI 09359</address>
+        <Pet id="1">
+            <name>skunk</name>
+            <gender>female</gender>
+            <weight>611784</weight>
+        </Pet>
+    </Owner>
+    <Owner id="377129">
+        <name>Timothy Berry</name>
+        <birth_date>2000-03-17</birth_date>
+        <telephone>939-817-3024x03206</telephone>
+        <address>7197 Clark Glens
+Danielville, MS 58033</address>
+        <Pet id="74">
+            <name>stork</name>
+            <gender>male</gender>
+            <weight>877987</weight>
+        </Pet>
+        <Pet id="73">
+            <name>swift</name>
+            <gender>male</gender>
+            <weight>899489</weight>
+        </Pet>
+        <Pet id="9">
+            <name>shiner</name>
+            <gender>female</gender>
+            <weight>471505</weight>
+        </Pet>
+    </Owner>
+    <Owner id="216397">
+        <name>Savannah Jefferson</name>
+        <birth_date>2015-08-29</birth_date>
+        <telephone>289-930-9805x13849</telephone>
+        <address>259 Deborah Drive Apt. 654
+North Christopher, GA 05700</address>
+        <Pet id="47">
+            <name>falcon</name>
+            <gender>female</gender>
+            <weight>697649</weight>
+        </Pet>
+        <Pet id="96">
+            <name>possum</name>
+            <gender>female</gender>
+            <weight>198442</weight>
+        </Pet>
+    </Owner>
+    <Owner id="480781">
+        <name>Lisa Gilbert</name>
+        <birth_date>1975-03-17</birth_date>
+        <telephone>655-305-1528</telephone>
+        <address>36975 Adams Circle Suite 263
+Lake Lisa, SD 67958</address>
+        <Pet id="54">
+            <name>asp</name>
+            <gender>male</gender>
+            <weight>496339</weight>
+        </Pet>
+        <Pet id="57">
+            <name>lizard</name>
+            <gender>male</gender>
+            <weight>77065</weight>
+        </Pet>
+        <Pet id="18">
+            <name>stork</name>
+            <gender>male</gender>
+            <weight>905467</weight>
+        </Pet>
+    </Owner>
+    <Owner id="748881">
+        <name>Victor Lewis</name>
+        <birth_date>2012-12-21</birth_date>
+        <telephone>958.563.6221</telephone>
+        <address>9369 Catherine Ranch
+Coleshire, ME 99055</address>
+        <Pet id="38">
+            <name>louse</name>
+            <gender>female</gender>
+            <weight>411037</weight>
+        </Pet>
+        <Pet id="1">
+            <name>alpaca</name>
+            <gender>female</gender>
+            <weight>678934</weight>
+        </Pet>
+        <Pet id="67">
+            <name>drum</name>
+            <gender>female</gender>
+            <weight>5763</weight>
+        </Pet>
+    </Owner>
+    <Owner id="842486">
+        <name>David Fleming</name>
+        <birth_date>2011-04-03</birth_date>
+        <telephone>+1-685-824-4867x076</telephone>
+        <address>Unit 8634 Box 1942
+DPO AA 87125</address>
+        <Pet id="6">
+            <name>grouse</name>
+            <gender>male</gender>
+            <weight>155269</weight>
+        </Pet>
+        <Pet id="51">
+            <name>ewe</name>
+            <gender>female</gender>
+            <weight>470123</weight>
+        </Pet>
+        <Pet id="78">
+            <name>boar</name>
+            <gender>male</gender>
+            <weight>758675</weight>
+        </Pet>
+    </Owner>
+    <Owner id="890740">
+        <name>Jacob Schmidt</name>
+        <birth_date>2011-01-01</birth_date>
+        <telephone>+1-823-332-4953</telephone>
+        <address>USNV Gonzales
+FPO AA 05760</address>
+        <Pet id="56">
+            <name>shrimp</name>
+            <gender>male</gender>
+            <weight>364952</weight>
+        </Pet>
+        <Pet id="62">
+            <name>moth</name>
+            <gender>male</gender>
+            <weight>737113</weight>
+        </Pet>
+    </Owner>
+    <Owner id="571155">
+        <name>James Peters</name>
+        <birth_date>1999-02-18</birth_date>
+        <telephone>591-796-3359x73717</telephone>
+        <address>62416 Martinez Plaza Apt. 791
+North Saraland, FL 65244</address>
+        <Pet id="52">
+            <name>bug</name>
+            <gender>male</gender>
+            <weight>611840</weight>
+        </Pet>
+    </Owner>
+    <Owner id="667678">
+        <name>Kenneth Smith</name>
+        <birth_date>1994-03-20</birth_date>
+        <telephone>291.387.5067</telephone>
+        <address>65285 John Villages Apt. 838
+Jacquelineburgh, ID 79318</address>
+        <Pet id="26">
+            <name>parrot</name>
+            <gender>female</gender>
+            <weight>260760</weight>
+        </Pet>
+    </Owner>
+    <Owner id="790693">
+        <name>Jason Williams</name>
+        <birth_date>2012-10-30</birth_date>
+        <telephone>+1-521-813-2486x27979</telephone>
+        <address>USS Woods
+FPO AE 24902</address>
+        <Pet id="18">
+            <name>jay</name>
+            <gender>female</gender>
+            <weight>26458</weight>
+        </Pet>
+    </Owner>
+    <Owner id="638872">
+        <name>Andrew Stanley</name>
+        <birth_date>2003-10-09</birth_date>
+        <telephone>8412690201</telephone>
+        <address>0566 Julie Parkway
+New Christina, FL 77977</address>
+        <Pet id="29">
+            <name>skunk</name>
+            <gender>female</gender>
+            <weight>137682</weight>
+        </Pet>
+    </Owner>
+    <Owner id="919305">
+        <name>Kelli Smith</name>
+        <birth_date>1998-06-30</birth_date>
+        <telephone>502.860.7696x52794</telephone>
+        <address>942 Mitchell Camp
+East Janethaven, ID 92269</address>
+        <Pet id="73">
+            <name>sponge</name>
+            <gender>male</gender>
+            <weight>175521</weight>
+        </Pet>
+        <Pet id="64">
+            <name>pup</name>
+            <gender>male</gender>
+            <weight>709474</weight>
+        </Pet>
+    </Owner>
+    <Owner id="982549">
+        <name>Kyle Vincent</name>
+        <birth_date>2016-03-12</birth_date>
+        <telephone>001-607-840-7574x2927</telephone>
+        <address>0898 Jones Coves Suite 614
+East Kevinberg, MS 05979</address>
+        <Pet id="41">
+            <name>falcon</name>
+            <gender>male</gender>
+            <weight>5017</weight>
+        </Pet>
+        <Pet id="69">
+            <name>goat</name>
+            <gender>male</gender>
+            <weight>550822</weight>
+        </Pet>
+    </Owner>
+    <Owner id="309588">
+        <name>Allen Ryan</name>
+        <birth_date>1992-09-07</birth_date>
+        <telephone>092.945.3333x4154</telephone>
+        <address>8628 Adams Parks Apt. 312
+Garciaburgh, AZ 84869</address>
+        <Pet id="37">
+            <name>quagga</name>
+            <gender>male</gender>
+            <weight>102070</weight>
+        </Pet>
+    </Owner>
+    <Owner id="240467">
+        <name>Richard Romero</name>
+        <birth_date>1977-06-09</birth_date>
+        <telephone>(501)626-6422x3458</telephone>
+        <address>48276 Clayton Tunnel
+Torresshire, IN 68000</address>
+        <Pet id="29">
+            <name>parrot</name>
+            <gender>male</gender>
+            <weight>87909</weight>
+        </Pet>
+    </Owner>
+    <Owner id="925747">
+        <name>Terry Smith</name>
+        <birth_date>1994-09-19</birth_date>
+        <telephone>(800)973-6151</telephone>
+        <address>26381 Kendra Ports
+East Brittneyport, UT 92062</address>
+        <Pet id="18">
+            <name>fowl</name>
+            <gender>male</gender>
+            <weight>831478</weight>
+        </Pet>
+        <Pet id="7">
+            <name>adder</name>
+            <gender>female</gender>
+            <weight>290524</weight>
+        </Pet>
+    </Owner>
+    <Owner id="306212">
+        <name>Matthew Hall</name>
+        <birth_date>2014-11-25</birth_date>
+        <telephone>(135)292-3948</telephone>
+        <address>4312 Herrera Burg
+Brianmouth, SC 66292</address>
+        <Pet id="83">
+            <name>swine</name>
+            <gender>female</gender>
+            <weight>409886</weight>
+        </Pet>
+        <Pet id="97">
+            <name>earwig</name>
+            <gender>female</gender>
+            <weight>339279</weight>
+        </Pet>
+        <Pet id="55">
+            <name>goose</name>
+            <gender>male</gender>
+            <weight>192847</weight>
+        </Pet>
+    </Owner>
+    <Owner id="208330">
+        <name>Jessica Townsend</name>
+        <birth_date>1996-05-13</birth_date>
+        <telephone>1007855288</telephone>
+        <address>Unit 8640 Box 6213
+DPO AP 30882</address>
+        <Pet id="55">
+            <name>buck</name>
+            <gender>female</gender>
+            <weight>534622</weight>
+        </Pet>
+        <Pet id="3">
+            <name>emu</name>
+            <gender>male</gender>
+            <weight>796911</weight>
+        </Pet>
+    </Owner>
+    <Owner id="268599">
+        <name>Nathan Ward</name>
+        <birth_date>2018-07-07</birth_date>
+        <telephone>985-655-9054</telephone>
+        <address>469 Flores Park
+North Jeffrey, MA 76204</address>
+        <Pet id="37">
+            <name>mayfly</name>
+            <gender>female</gender>
+            <weight>118244</weight>
+        </Pet>
+        <Pet id="91">
+            <name>bream</name>
+            <gender>male</gender>
+            <weight>308186</weight>
+        </Pet>
+        <Pet id="3">
+            <name>whale</name>
+            <gender>male</gender>
+            <weight>188487</weight>
+        </Pet>
+    </Owner>
+    <Owner id="409075">
+        <name>Joy Myers</name>
+        <birth_date>2016-02-23</birth_date>
+        <telephone>001-308-359-5141x40884</telephone>
+        <address>29650 Stefanie Row Apt. 003
+Benjamintown, MI 89642</address>
+        <Pet id="71">
+            <name>dragon</name>
+            <gender>female</gender>
+            <weight>169286</weight>
+        </Pet>
+        <Pet id="14">
+            <name>caiman</name>
+            <gender>male</gender>
+            <weight>73004</weight>
+        </Pet>
+    </Owner>
+    <Owner id="967980">
+        <name>Marcus Graham</name>
+        <birth_date>1993-09-21</birth_date>
+        <telephone>(841)342-3374x941</telephone>
+        <address>182 Kyle Dam Apt. 205
+Cynthiamouth, GA 56163</address>
+        <Pet id="97">
+            <name>gar</name>
+            <gender>female</gender>
+            <weight>711195</weight>
+        </Pet>
+    </Owner>
+    <Owner id="472848">
+        <name>Kenneth Ryan</name>
+        <birth_date>1983-02-11</birth_date>
+        <telephone>+1-354-642-4903x6179</telephone>
+        <address>029 William Curve Apt. 767
+New Kevinville, SD 55114</address>
+        <Pet id="27">
+            <name>egret</name>
+            <gender>male</gender>
+            <weight>650224</weight>
+        </Pet>
+        <Pet id="70">
+            <name>flea</name>
+            <gender>female</gender>
+            <weight>586138</weight>
+        </Pet>
+        <Pet id="84">
+            <name>mako</name>
+            <gender>female</gender>
+            <weight>163055</weight>
+        </Pet>
+    </Owner>
+    <Owner id="442519">
+        <name>Diana Branch</name>
+        <birth_date>2001-07-21</birth_date>
+        <telephone>+1-151-284-3520x669</telephone>
+        <address>8720 John Courts Apt. 593
+Randallview, NH 85553</address>
+        <Pet id="87">
+            <name>vervet</name>
+            <gender>female</gender>
+            <weight>410175</weight>
+        </Pet>
+        <Pet id="20">
+            <name>swine</name>
+            <gender>male</gender>
+            <weight>189318</weight>
+        </Pet>
+    </Owner>
+    <Owner id="461654">
+        <name>Dana Garza</name>
+        <birth_date>1999-11-12</birth_date>
+        <telephone>(561)697-6104x1087</telephone>
+        <address>73801 Hernandez Lock Apt. 789
+Justinfort, ND 92094</address>
+        <Pet id="75">
+            <name>jackal</name>
+            <gender>male</gender>
+            <weight>130589</weight>
+        </Pet>
+        <Pet id="10">
+            <name>coyote</name>
+            <gender>male</gender>
+            <weight>540415</weight>
+        </Pet>
+    </Owner>
+    <Owner id="347759">
+        <name>Kimberly Mcdonald</name>
+        <birth_date>2004-04-14</birth_date>
+        <telephone>(413)427-7230x524</telephone>
+        <address>1487 Daisy Common
+Garciamouth, SC 09128</address>
+        <Pet id="80">
+            <name>tiger</name>
+            <gender>female</gender>
+            <weight>218392</weight>
+        </Pet>
+        <Pet id="21">
+            <name>lab</name>
+            <gender>male</gender>
+            <weight>112236</weight>
+        </Pet>
+        <Pet id="77">
+            <name>roughy</name>
+            <gender>female</gender>
+            <weight>239879</weight>
+        </Pet>
+    </Owner>
+    <Owner id="320083">
+        <name>Melissa Ballard</name>
+        <birth_date>2009-06-11</birth_date>
+        <telephone>+1-171-811-2067</telephone>
+        <address>203 Larson Crest
+Veronicahaven, NY 76957</address>
+        <Pet id="73">
+            <name>gibbon</name>
+            <gender>male</gender>
+            <weight>663225</weight>
+        </Pet>
+        <Pet id="64">
+            <name>ghost</name>
+            <gender>male</gender>
+            <weight>840922</weight>
+        </Pet>
+        <Pet id="12">
+            <name>alpaca</name>
+            <gender>female</gender>
+            <weight>247772</weight>
+        </Pet>
+    </Owner>
+    <Owner id="275834">
+        <name>Maria Jones</name>
+        <birth_date>2010-12-21</birth_date>
+        <telephone>(822)039-6881x042</telephone>
+        <address>746 Mcconnell Square Suite 962
+Dawnton, UT 40146</address>
+        <Pet id="72">
+            <name>pika</name>
+            <gender>female</gender>
+            <weight>647603</weight>
+        </Pet>
+        <Pet id="55">
+            <name>snail</name>
+            <gender>female</gender>
+            <weight>584537</weight>
+        </Pet>
+        <Pet id="6">
+            <name>kitten</name>
+            <gender>male</gender>
+            <weight>307130</weight>
+        </Pet>
+    </Owner>
+    <Owner id="360474">
+        <name>Ryan Thomas</name>
+        <birth_date>1998-07-24</birth_date>
+        <telephone>001-128-417-0760</telephone>
+        <address>028 Emily Shores Suite 659
+South Rhonda, MN 10074</address>
+        <Pet id="57">
+            <name>hyena</name>
+            <gender>male</gender>
+            <weight>13573</weight>
+        </Pet>
+    </Owner>
+    <Owner id="263141">
+        <name>Kimberly Ross</name>
+        <birth_date>1991-07-24</birth_date>
+        <telephone>911.107.6487x28406</telephone>
+        <address>90621 Jones Underpass
+New Elizabethstad, NY 99733</address>
+        <Pet id="90">
+            <name>filly</name>
+            <gender>female</gender>
+            <weight>675236</weight>
+        </Pet>
+        <Pet id="64">
+            <name>colt</name>
+            <gender>male</gender>
+            <weight>778453</weight>
+        </Pet>
+        <Pet id="27">
+            <name>swift</name>
+            <gender>male</gender>
+            <weight>71772</weight>
+        </Pet>
+    </Owner>
+    <Owner id="761924">
+        <name>James Bailey</name>
+        <birth_date>1997-02-14</birth_date>
+        <telephone>(391)197-6795</telephone>
+        <address>4718 Ruiz Plain
+Underwoodport, HI 38887</address>
+        <Pet id="26">
+            <name>vervet</name>
+            <gender>female</gender>
+            <weight>573058</weight>
+        </Pet>
+    </Owner>
+    <Owner id="683484">
+        <name>Veronica Wilson</name>
+        <birth_date>2010-09-12</birth_date>
+        <telephone>(766)451-5208</telephone>
+        <address>088 Kevin Brooks
+New Vanessashire, UT 57647</address>
+        <Pet id="22">
+            <name>bass</name>
+            <gender>female</gender>
+            <weight>173073</weight>
+        </Pet>
+    </Owner>
+    <Owner id="622602">
+        <name>Caleb Sweeney</name>
+        <birth_date>1992-01-25</birth_date>
+        <telephone>001-187-010-2292x127</telephone>
+        <address>PSC 6960, Box 4285
+APO AP 12521</address>
+        <Pet id="71">
+            <name>hound</name>
+            <gender>male</gender>
+            <weight>146873</weight>
+        </Pet>
+    </Owner>
+    <Owner id="327110">
+        <name>Teresa Gates</name>
+        <birth_date>1975-06-14</birth_date>
+        <telephone>598.105.7448</telephone>
+        <address>7058 Williamson Trafficway
+North Barry, VA 86414</address>
+        <Pet id="45">
+            <name>stud</name>
+            <gender>male</gender>
+            <weight>49510</weight>
+        </Pet>
+    </Owner>
+    <Owner id="374358">
+        <name>Angela Hale</name>
+        <birth_date>1990-08-01</birth_date>
+        <telephone>441.387.7701</telephone>
+        <address>537 Cody Street Suite 148
+Youngshire, PA 80984</address>
+        <Pet id="29">
+            <name>whale</name>
+            <gender>female</gender>
+            <weight>690671</weight>
+        </Pet>
+        <Pet id="32">
+            <name>muskox</name>
+            <gender>male</gender>
+            <weight>39606</weight>
+        </Pet>
+        <Pet id="39">
+            <name>tarpon</name>
+            <gender>male</gender>
+            <weight>183404</weight>
+        </Pet>
+    </Owner>
+    <Owner id="222764">
+        <name>Jeanette May</name>
+        <birth_date>1971-05-02</birth_date>
+        <telephone>+1-124-604-9113x755</telephone>
+        <address>8017 Larry Fork Suite 622
+Port Maria, CO 36180</address>
+        <Pet id="36">
+            <name>dove</name>
+            <gender>female</gender>
+            <weight>609488</weight>
+        </Pet>
+        <Pet id="80">
+            <name>fawn</name>
+            <gender>male</gender>
+            <weight>473745</weight>
+        </Pet>
+    </Owner>
+    <Owner id="988956">
+        <name>Lisa Mccarthy</name>
+        <birth_date>1994-06-02</birth_date>
+        <telephone>704.206.0222x21232</telephone>
+        <address>529 Catherine Pine Apt. 894
+Clayview, MS 76022</address>
+        <Pet id="3">
+            <name>frog</name>
+            <gender>female</gender>
+            <weight>996288</weight>
+        </Pet>
+        <Pet id="53">
+            <name>mutt</name>
+            <gender>male</gender>
+            <weight>810291</weight>
+        </Pet>
+        <Pet id="81">
+            <name>goblin</name>
+            <gender>male</gender>
+            <weight>586977</weight>
+        </Pet>
+    </Owner>
+    <Owner id="774460">
+        <name>Timothy Nguyen</name>
+        <birth_date>1980-04-12</birth_date>
+        <telephone>(988)507-7771</telephone>
+        <address>916 Julie Shore Apt. 042
+East Paulstad, MD 20477</address>
+        <Pet id="4">
+            <name>boxer</name>
+            <gender>female</gender>
+            <weight>656306</weight>
+        </Pet>
+    </Owner>
+    <Owner id="547219">
+        <name>Jonathan Torres</name>
+        <birth_date>1978-08-30</birth_date>
+        <telephone>981.339.9246x0072</telephone>
+        <address>04227 James Forges Apt. 850
+Daniellehaven, NH 02139</address>
+        <Pet id="81">
+            <name>quagga</name>
+            <gender>male</gender>
+            <weight>67600</weight>
+        </Pet>
+        <Pet id="57">
+            <name>snipe</name>
+            <gender>female</gender>
+            <weight>500927</weight>
+        </Pet>
+    </Owner>
+    <Owner id="692418">
+        <name>Travis Smith</name>
+        <birth_date>2012-09-13</birth_date>
+        <telephone>594.741.7324x5090</telephone>
+        <address>6737 Claudia Squares Apt. 912
+Robertstad, OR 06954</address>
+        <Pet id="31">
+            <name>buck</name>
+            <gender>female</gender>
+            <weight>298565</weight>
+        </Pet>
+        <Pet id="76">
+            <name>tahr</name>
+            <gender>female</gender>
+            <weight>218524</weight>
+        </Pet>
+    </Owner>
+    <Owner id="833950">
+        <name>Cody Buchanan MD</name>
+        <birth_date>2020-06-13</birth_date>
+        <telephone>(729)966-9266</telephone>
+        <address>98493 Warren Parks Apt. 775
+North Brenda, CA 86982</address>
+        <Pet id="39">
+            <name>kitten</name>
+            <gender>male</gender>
+            <weight>957670</weight>
+        </Pet>
+        <Pet id="88">
+            <name>pug</name>
+            <gender>female</gender>
+            <weight>781056</weight>
+        </Pet>
+    </Owner>
+</owners>

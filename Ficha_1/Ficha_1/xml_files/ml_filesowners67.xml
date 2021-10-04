@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<owners>
+    <Owner id="351912">
+        <name>Matthew Barrett</name>
+        <birth_date>2002-03-20</birth_date>
+        <telephone>+1-532-178-6175x112</telephone>
+        <address>280 Jimenez Creek Suite 141
+North Allen, FL 50494</address>
+        <Pet id="80">
+            <name>dove</name>
+            <gender>male</gender>
+            <weight>866075</weight>
+        </Pet>
+        <Pet id="32">
+            <name>marlin</name>
+            <gender>female</gender>
+            <weight>410160</weight>
+        </Pet>
+        <Pet id="88">
+            <name>jaguar</name>
+            <gender>male</gender>
+            <weight>942278</weight>
+        </Pet>
+    </Owner>
+    <Owner id="409753">
+        <name>Rachel Stephens</name>
+        <birth_date>1995-06-13</birth_date>
+        <telephone>9310406668</telephone>
+        <address>56490 Stacey Village
+East Savannah, ME 31707</address>
+        <Pet id="62">
+            <name>sloth</name>
+            <gender>female</gender>
+            <weight>536727</weight>
+        </Pet>
+        <Pet id="73">
+            <name>calf</name>
+            <gender>female</gender>
+            <weight>11561</weight>
+        </Pet>
+    </Owner>
+</owners>

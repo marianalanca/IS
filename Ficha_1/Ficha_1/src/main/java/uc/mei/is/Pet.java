@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(namespace="http://www.dei.uc.pt/EAI")
+@XmlRootElement()
 // order of the fields in XML
 // @XmlType(propOrder = {"price", "name"})
 @XmlAccessorType(XmlAccessType.FIELD)
