@@ -10,7 +10,7 @@ import data.Student;
 
 @Stateless
 public class ManageStudents implements IManageStudents {
-    @PersistenceContext(unitName = "playAula")
+    @PersistenceContext(unitName = "ClientsBus")
     EntityManager em;
 
     public void addStudent(String name) {
