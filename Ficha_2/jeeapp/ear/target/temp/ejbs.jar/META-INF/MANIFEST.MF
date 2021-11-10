@@ -2,5 +2,13 @@ Manifest-Version: 1.0
 Created-By: Apache Maven 3.8.3
 Built-By: main
 Build-Jdk: 16.0.2
-Class-Path: lib/jpa.jar lib/postgresql.jar lib/checker-qual.jar
+Class-Path: lib/jpa.jar lib/hibernate-entitymanager.jar lib/jboss-loggin
+ g.jar lib/hibernate-core.jar lib/antlr4.jar lib/antlr4-runtime.jar lib/
+ antlr-runtime.jar lib/ST4.jar lib/org.abego.treelayout.core.jar lib/jav
+ ax.json.jar lib/icu4j.jar lib/jandex.jar lib/classmate.jar lib/javax.ac
+ tivation-api.jar lib/jaxb-api.jar lib/jaxb-runtime.jar lib/txw2.jar lib
+ /istack-commons-runtime.jar lib/stax-ex.jar lib/FastInfoset.jar lib/dom
+ 4j.jar lib/hibernate-commons-annotations.jar lib/javax.persistence-api.
+ jar lib/byte-buddy.jar lib/jboss-transaction-api_1.2_spec.jar lib/postg
+ resql.jar lib/checker-qual.jar
 

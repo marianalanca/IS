@@ -13,11 +13,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="logging" target="1.5" />
-      <module name="primary-source" target="1.5" />
-      <module name="projects" target="1.5" />
-      <module name="servlet" target="1.5" />
-      <module name="servlets" target="1.5" />
+      <module name="ear" target="15" />
+      <module name="ejbs" target="15" />
+      <module name="jeeapp" target="15" />
+      <module name="jpa" target="15" />
+      <module name="web" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
