@@ -1,1 +1,3 @@
-servlet/MyServlet.class
+filter/SecurityFilter.class
+servlet/LoginServlet.class
+servlet/RegistrationServlet.class
