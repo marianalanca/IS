@@ -94,6 +94,10 @@ public class ClientUser implements Serializable {
         this.wallet = wallet;
     }
 
+    public void updateWallet(double sum) {
+        this.wallet += sum;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
