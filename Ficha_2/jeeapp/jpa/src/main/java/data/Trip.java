@@ -62,13 +62,18 @@ public class Trip {
         return price;
     }
 
-    /*public void setPassengers(List<AppUser> passengers) {
+    public void setPassengers(List<ClientUser> passengers) {
         this.passengers = passengers;
     }
 
-    public void addPassengers(AppUser passenger) {
-        passengers.add(passenger);
-    }*/
+    // TEST
+    public Boolean addPassengers(ClientUser passenger) {
+        if (passengers.size() < bus.getCapacity() && !passengers.contains(passenger)) {
+            passengers.add(passenger);
+            return true;
+        }
+        return false;
+    }
 
     public int getId() {
         return id;

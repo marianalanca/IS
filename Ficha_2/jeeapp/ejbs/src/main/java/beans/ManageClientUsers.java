@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.*;
 
 import data.ClientUser;
+import data.Trip;
 
 @Stateless
 public class ManageClientUsers implements IManageClientUsers {
@@ -48,4 +49,64 @@ public class ManageClientUsers implements IManageClientUsers {
         }
         return false;
     }
+
+    public Boolean updateWallet(String email, double value) {
+        ClientUser client = findClientUser(email);
+        if (client!=null && client.getWallet() + value >= 0) {
+
+            client.updateWallet(value);
+            em.persist(client);
+
+            return true;
+        }
+        return false;
+    }
+
+    public Boolean buyTicket(String email, Trip busTrip) {
+        ClientUser client = findClientUser(email);
+        double price = busTrip.getPrice();
+        if (client!=null && client.getWallet() - price >= 0 && busTrip.addPassengers(client)) {
+
+            client.updateWallet(- price);
+
+            em.persist(client);
+            em.persist(busTrip);
+
+            return true;
+        }
+        return false;
+    }
+
+    // Test
+    public void editInfo(String email, String password, String name, String address, String cc_number, int age) {
+        ClientUser client = findClientUser(email);
+        if (password!=null) {
+            client.setPassword(password);
+        }
+        if (name!=null) {
+            client.setName(name);
+        }
+        if (address!=null) {
+            client.setAddress(address);
+        }
+        if (cc_number!=null) {
+            client.setCc_number(cc_number);
+        }
+        if (age!=-1) {
+            client.setAge(age);
+        }
+
+        em.persist(client);
+    }
+
+    public void deleteUser(String email) {
+        ClientUser c = findClientUser(email);
+        // eliminar
+        // devolver todos os lugares em que esteja
+
+
+
+        em.remove(c);
+    }
+
 }

@@ -9,32 +9,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.IManageClientUsers;
-import data.ClientUser;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/delete")
+public class DeleteServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     @EJB
     private IManageClientUsers manageClients;
 
-//mudar para post
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        String email = request.getParameter("email");
-        String key = request.getParameter("key");
-        String destination = "/error.html";
 
-        if (email != null && key != null) {
-            boolean auth = manageClients.login(email, key);
-
-            if (auth) {
-                request.getSession(true).setAttribute("auth", email);
-                destination = "/secured/display.jsp";
-            } else {
+        if (request.getParameter("ok") != null ) {
+            manageClients.deleteUser(request.getParameter("auth"));
             request.getSession(true).removeAttribute("auth");
-            }
+
+            // aparecer mensagem a dizer que eliminou e para voltar para o menu
+
+
+        } else if (request.getParameter("cancel") != null) {
+            request.getRequestDispatcher("/secure/definitions.jsp").forward(request, response);
         }
-        request.getRequestDispatcher(destination).forward(request, response);
+
     }
 }
