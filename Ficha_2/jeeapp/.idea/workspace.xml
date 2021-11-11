@@ -5,80 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ear_ear.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ear_ear_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ejbs_ejb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ejbs_ejb_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/web_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_61_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_platform_jakarta_jakartaee_api_8_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_4_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_0_0_Alpha7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_entitymanager_6_0_0_Alpha7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ear/ear.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejbs/ejbs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/jpa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.devcontainer/wildfly-init-config.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.devcontainer/wildfly-init-config.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageClientUsers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/IManageClientUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/IManageClientUsers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/filter/SecurityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/registration.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/display.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/classes/filter/SecurityFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/classes/servlet/RegistrationServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/filter/SecurityFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/RegistrationServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/web/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/web/registration.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/target/web/secured/display.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear.ear" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/META-INF/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/META-INF/application.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/maven/book/ejbs/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/maven/book/ejbs/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/IManageStudents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageStudents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/IManageStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageStudents.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jeeapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jeeapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/App.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Bus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/ClientUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/ClientUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/CompanyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/CompanyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/MyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/MyServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/MyServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636479253201</updated>
       <workItem from="1636479254608" duration="1399000" />
-      <workItem from="1636539092565" duration="4134000" />
+      <workItem from="1636539092565" duration="4145000" />
     </task>
     <servers />
   </component>
