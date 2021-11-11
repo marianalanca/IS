@@ -5,54 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageClientUsers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/IManageClientUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/IManageClientUsers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/filter/SecurityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/registration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/display.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/classes/filter/SecurityFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/classes/servlet/RegistrationServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/filter/SecurityFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/RegistrationServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/web/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/web/registration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/target/web/secured/display.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear.ear" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageStudents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageStudents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/IManageStudents.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageStudents.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/IManageStudents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/ear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ear/ear.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/ejbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/ejbs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/MyServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/MyServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/MyServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,19 +35,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../3ano/SD/ProjetoFinal/XRLDESD" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name=".devcontainer: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -113,7 +58,8 @@
       <option name="presentableId" value="Default" />
       <updated>1636479253201</updated>
       <workItem from="1636479254608" duration="1399000" />
-      <workItem from="1636539092565" duration="4145000" />
+      <workItem from="1636539092565" duration="4516000" />
+      <workItem from="1636637613372" duration="1854000" />
     </task>
     <servers />
   </component>
