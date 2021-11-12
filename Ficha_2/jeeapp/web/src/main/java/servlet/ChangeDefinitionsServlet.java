@@ -21,8 +21,8 @@ public class ChangeDefinitionsServlet extends HttpServlet {
             throws IOException, ServletException {
 
 
-        manageClients.editInfo(request.getParameter("auth"), request.getParameter("password"),
-                request.getParameter("name"), request.getParameter("address"), request.getParameter("cc"), -1);
+        manageClients.editInfo(request.getSession(true).getAttribute("auth").toString(), request.getParameter("password"),
+                request.getParameter("name"), request.getParameter("address"), request.getParameter("cc"));
 
         request.getRequestDispatcher("/secured/display.jsp").forward(request, response);
 

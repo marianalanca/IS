@@ -15,14 +15,13 @@
 <body>
     <strong>Registration</strong>
 
-    <form action="register" method="post">
-        Name: <input name="name" type="text" placeholder="username..." /> <br />
-        Email:<input name="email" type="email" placeholder="email..." /> <br />
-        Number of Citizen Card: <input name="cc" type="text" placeholder="cc..." /> <br />
-        Address: <input name="address" type="text" placeholder="address..." /> <br />
-        Birth date: <input name="birthday" type="date"/> <br />
-        Password: <input name="password" type="password" placeholder="password..." /> <br />
-        Confirm password: <input name="confirmation" type="password" placeholder="password..." /> <br />
+    <form action="${pageContext.request.contextPath}/register" method="post">
+        Name: <input required="" name="name" type="text" placeholder="username..." /> <br />
+        Email:<input required="" name="email" type="email" placeholder="email..." /> <br />
+        Number of Citizen Card: <input required="" name="cc" type="text" placeholder="cc..." /> <br />
+        Address: <input required="" name="address" type="text" placeholder="address..." /> <br />
+        Password: <input required="" name="password" type="password" placeholder="password..." /> <br />
+        Confirm password: <input required="" name="confirmation" type="password" placeholder="password..." /> <br />
         <input type="submit">
     </form>
 

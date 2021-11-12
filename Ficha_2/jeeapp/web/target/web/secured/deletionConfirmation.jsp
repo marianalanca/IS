@@ -13,7 +13,7 @@
 <body>
     <h2>Tem a certeza que deseja eliminar a sua conta?</h2>
 
-    <form action="login" method="get">
+    <form action="${pageContext.request.contextPath}/delete" method="get">
         <input value="Eliminar" name="ok" type="submit">
         <input value="Cancelar" name="cancel" type="submit">
     </form>

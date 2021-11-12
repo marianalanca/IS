@@ -15,19 +15,21 @@
 </head>
 <body>
 
-    <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+    <form action="${pageContext.request.contextPath}/logout" method="get">
+        <input value="Sair" type="submit">
+    </form>
 
     <p>Welcome ${auth}</p>
 
     <h1>Menu</h1>
 
-    <a href="${pageContext.request.contextPath}/registration.jsp"> Wallet </a>. <br />
+    <a href="${pageContext.request.contextPath}/secured/chargeWallet.jsp"> Wallet </a>. <br />
 
-    <a href="${pageContext.request.contextPath}/registration.jsp"> Consultar viagens </a>. <br />
+    <a href="${pageContext.request.contextPath}/secured"> Consultar viagens </a>. <br />
 
-    <a href="${pageContext.request.contextPath}/registration.jsp"> As suas viagens </a>. <br />
+    <a href="${pageContext.request.contextPath}/secured"> As suas viagens </a> <br />
 
-    <a href="${pageContext.request.contextPath}/secured/definitions.jsp"> Definições </a>. <br />
+    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Editar perfil </a>
 
 </body>
 </html>

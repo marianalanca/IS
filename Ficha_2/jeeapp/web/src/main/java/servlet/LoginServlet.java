@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
     private IManageClientUsers manageClients;
 
 //mudar para post
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
         String email = request.getParameter("email");

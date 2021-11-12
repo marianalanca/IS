@@ -12,13 +12,15 @@
 </head>
 <body>
 
-    <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+    <form action="${pageContext.request.contextPath}/logout" method="get">
+        <input value="Sair" type="submit">
+    </form>
 
     <h1>Definições</h1>
 
-    <a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil </a> <br />
+    <a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil</a> <br />
 
-    <a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil </a>
+    <a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil</a>
 
 </body>
 </html>

@@ -12,9 +12,6 @@ public class ClientUser implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name, address, cc_number;
-    @Temporal(TemporalType.DATE)
-    private Date birth;
-    private int age;
     private double wallet;
     private String email, password;
 
@@ -24,13 +21,12 @@ public class ClientUser implements Serializable {
 
     public ClientUser() {}
 
-    public ClientUser(String email, String password, String name, String address, String cc_number, int age) {
+    public ClientUser(String email, String password, String name, String address, String cc_number) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.address = address;
         this.cc_number = cc_number;
-        this.age = age;
         wallet = 0.0;
     }
 
@@ -48,10 +44,6 @@ public class ClientUser implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    public int getAge() {
-        return age;
     }
 
     public String getCc_number() {
@@ -80,10 +72,6 @@ public class ClientUser implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public void setCc_number(String cc_number) {

@@ -22,14 +22,17 @@ public class DeleteServlet extends HttpServlet {
 
 
         if (request.getParameter("ok") != null ) {
-            manageClients.deleteUser(request.getParameter("auth"));
+            manageClients.deleteUser(request.getSession(true).getAttribute("auth").toString());
+
             request.getSession(true).removeAttribute("auth");
+
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
 
             // aparecer mensagem a dizer que eliminou e para voltar para o menu
 
 
         } else if (request.getParameter("cancel") != null) {
-            request.getRequestDispatcher("/secure/definitions.jsp").forward(request, response);
+            request.getRequestDispatcher("/secured/definitions.jsp").forward(request, response);
         }
 
     }

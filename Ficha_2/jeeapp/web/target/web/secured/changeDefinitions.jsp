@@ -12,15 +12,16 @@
 </head>
 <body>
 
-    <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+    <form action="${pageContext.request.contextPath}/logout" method="get">
+        <input value="Sair" name="ok" type="submit">
+    </form>
 
     <h1>Alterar definições de perfil</h1>
 
-    <form action="definitions" method="get">
+    <form action="${pageContext.request.contextPath}/definitions" method="post">
         Novo nome: <input name="name" type="text" placeholder="username..." /> <br />
         Novo number of Citizen Card: <input name="cc" type="text" placeholder="cc..." /> <br />
         Novo endereço: <input name="address" type="text" placeholder="address..." /> <br />
-        Nova Birth date: <input name="birthday" type="date"/> <br />
         Nova Password: <input name="password" type="password" placeholder="password..." /> <br />
         <input type="submit">
     </form>

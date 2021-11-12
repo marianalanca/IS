@@ -13,9 +13,9 @@ public class ManageClientUsers implements IManageClientUsers {
     @PersistenceContext(unitName = "ClientsBus")
     EntityManager em;
 
-    public void addClientUser(String email, String password, String name, String address, String cc_number, int age) {
+    public void addClientUser(String email, String password, String name, String address, String cc_number) {
         System.out.println("Adding Client " + name + "...");
-        ClientUser s = new ClientUser(email, password, name, address, cc_number, age);
+        ClientUser s = new ClientUser(email, password, name, address, cc_number);
         em.persist(s);
     }
 
@@ -31,12 +31,10 @@ public class ManageClientUsers implements IManageClientUsers {
         }
     }
 
-    public Boolean registration(String email, String password, String name, String address, String cc_number, String confirmation, int age) {
+    public Boolean registration(String email, String password, String name, String address, String cc_number, String confirmation) {
         // procurar se existe na bd
         if (password.equals(confirmation) && findClientUser(email)==null) {
-            System.out.println("Adding Client " + name + "...");
-            ClientUser s = new ClientUser(email, password, name, address, cc_number, age);
-            em.persist(s);
+            addClientUser(email, password, name, address, cc_number);
             return true;
         }
         return false;
@@ -78,22 +76,20 @@ public class ManageClientUsers implements IManageClientUsers {
     }
 
     // Test
-    public void editInfo(String email, String password, String name, String address, String cc_number, int age) {
+    public void editInfo(String email, String password, String name, String address, String cc_number) {
         ClientUser client = findClientUser(email);
-        if (password!=null) {
+
+        if (!Objects.equals(password, "")) {
             client.setPassword(password);
         }
-        if (name!=null) {
+        if (!Objects.equals(name, "")) {
             client.setName(name);
         }
-        if (address!=null) {
+        if (!Objects.equals(address, "")) {
             client.setAddress(address);
         }
-        if (cc_number!=null) {
+        if (!Objects.equals(cc_number, "")) {
             client.setCc_number(cc_number);
-        }
-        if (age!=-1) {
-            client.setAge(age);
         }
 
         em.persist(client);

@@ -23,7 +23,6 @@ public class RegistrationServlet extends HttpServlet {
         String email = request.getParameter("email");
         String cc_number = request.getParameter("cc");
         String address = request.getParameter("address");
-        //String birthday = request.getParameter("birthday");
         String password = request.getParameter("password");
         String conf = request.getParameter("confirmation");
 
@@ -31,7 +30,7 @@ public class RegistrationServlet extends HttpServlet {
 
         // não está a dar bem!
         if (name!=null && email!=null && cc_number!=null && address!=null && password!=null){
-            if (manageClients.registration(email, password, name, address,cc_number,conf, 5)) {
+            if (manageClients.registration(email, password, name, address,cc_number,conf)) {
                 destination = "/index.jsp";
             }
         }
