@@ -1,6 +1,7 @@
 package data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -9,42 +10,38 @@ public class Trip {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private Date departure_date;
+    private LocalDateTime departure_date;
     private String departure_point, destination;
+    private int capacity;
     private double price;
 
+    /*
     @ManyToOne(cascade = CascadeType.ALL)
-    private Bus bus;
+    private Bus bus; */
 
     @ManyToMany(mappedBy="tickets")
     private List<ClientUser> passengers;
 
-    //@ManyToMany(mappedBy="trip")
-    //private List<AppUser> passengers;
-
-
     public Trip() {
     }
 
-    public Trip(Date departure_date, String departure_point, String destination, double price, Bus bus) {
+    public Trip(LocalDateTime departure_date, String departure_point, String destination, double price, int capacity) {
         this.departure_date = departure_date;
         this.departure_point = departure_point;
         this.destination = destination;
+        this.capacity = capacity;
         this.price = price;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) { this.id = id; }
 
-    public void setDeparture_date(Date departure_date) {
+    public void setDeparture_date(LocalDateTime departure_date) {
         this.departure_date = departure_date;
     }
 
     public void setDeparture_point(String departure_point) {
         this.departure_point = departure_point;
     }
-
 
     public void setDestination(String destination) {
         this.destination = destination;
@@ -53,8 +50,12 @@ public class Trip {
     public void setPrice(double price) {
         this.price = price;
     }
+    
+    public void setcapacity(int capacity) {
+        this.capacity = capacity;
+    }
 
-    public Date getDeparture_date() {
+    public LocalDateTime getDeparture_date() {
         return departure_date;
     }
 
@@ -67,13 +68,14 @@ public class Trip {
     }
 
     // TEST
+    /*
     public Boolean addPassengers(ClientUser passenger) {
         if (passengers.size() < bus.getCapacity() && !passengers.contains(passenger)) {
             passengers.add(passenger);
             return true;
         }
         return false;
-    }
+    }*/
 
     public int getId() {
         return id;
@@ -86,6 +88,8 @@ public class Trip {
     public String getDestination() {
         return destination;
     }
+
+    public int getcapacity(){ return  capacity; }
 
     /*public List<AppUser> getPassengers() {
         return passengers;

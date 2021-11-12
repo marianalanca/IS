@@ -11,8 +11,9 @@ public class Bus {
     private String bus_number;
     private int capacity;
 
+    /*
     @OneToMany(mappedBy = "bus")
-    private List<Trip> bt;
+    private List<Trip> bt;*/
 
     public Bus() {
     }

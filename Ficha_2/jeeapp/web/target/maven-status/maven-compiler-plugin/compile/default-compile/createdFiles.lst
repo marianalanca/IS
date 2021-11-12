@@ -1,5 +1,6 @@
 servlet/ChangeDefinitionsServlet.class
 servlet/DeleteServlet.class
 filter/SecurityFilter.class
+servlet/CreateTripServlet.class
 servlet/LoginServlet.class
 servlet/RegistrationServlet.class

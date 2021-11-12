@@ -65,7 +65,7 @@ public class ManageClientUsers implements IManageClientUsers {
     public Boolean buyTicket(String email, Trip busTrip) {
         ClientUser client = findClientUser(email);
         double price = busTrip.getPrice();
-        if (client!=null && client.getWallet() - price >= 0 && busTrip.addPassengers(client)) {
+        if (client!=null && client.getWallet() - price >= 0 /*&& busTrip.addPassengers(client)*/) {
 
             client.updateWallet(- price);
 

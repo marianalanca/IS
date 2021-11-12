@@ -5,17 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/CompanyManagers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ICompanyManagers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/CreateTripServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/createTrip.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/displayCM.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/top5.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/ear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ear/ear.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/ejbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/ejbs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear.ear" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/ear/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/web.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/ejbs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Trip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Bus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/jpa.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/ChangeDefinitionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/ChangeDefinitionsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/ChangeDefinitionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/ChangeDefinitionsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="jsf" />
+        <option value="Jsp File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -27,6 +64,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -34,7 +72,23 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../3ano/SD/ProjetoFinal/XRLDESD" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\UC\4ano\IS\Projetos\Ficha_2\jeeapp\web\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name=".devcontainer: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -59,7 +113,9 @@
       <updated>1636479253201</updated>
       <workItem from="1636479254608" duration="1399000" />
       <workItem from="1636539092565" duration="4516000" />
-      <workItem from="1636637613372" duration="1854000" />
+      <workItem from="1636637613372" duration="11113000" />
+      <workItem from="1636708651830" duration="1921000" />
+      <workItem from="1636728604829" duration="9881000" />
     </task>
     <servers />
   </component>
