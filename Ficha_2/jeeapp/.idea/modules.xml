@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ear/ear.iml" filepath="$PROJECT_DIR$/ear/ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejbs/ejbs.iml" filepath="$PROJECT_DIR$/ejbs/ejbs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jeeapp.iml" filepath="$PROJECT_DIR$/jeeapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jeeapp.iml" filepath="$PROJECT_DIR$/.idea/jeeapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/jpa/jpa.iml" filepath="$PROJECT_DIR$/jpa/jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>

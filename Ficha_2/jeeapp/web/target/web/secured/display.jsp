@@ -16,7 +16,7 @@
 <body>
 
     <form action="${pageContext.request.contextPath}/logout" method="get">
-        <input value="Sair" name="ok" type="submit">
+        <input value="Sair" type="submit">
     </form>
 
     <p>Welcome ${auth}</p>

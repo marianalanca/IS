@@ -4,40 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/CompanyManagers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ICompanyManagers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/CreateTripServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/createTrip.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/displayCM.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/top5.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear.ear" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/ear/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Trip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Bus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/ChangeDefinitionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/ChangeDefinitionsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/ChangeDefinitionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/ChangeDefinitionsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-    </list>
+    <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,8 +24,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/src/main/webapp/registration.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="20gvsRJJUxVvOwK6zIquTS1o2Zw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
