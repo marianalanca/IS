@@ -10,7 +10,7 @@
     <strong>Create Trip</strong>
     <p>${auth}</p>
     <!--%= request.getContextPath() %>/-->
-    <form action="<%= request.getContextPath() %>/createTrip" method="get">
+    <form action="<%= request.getContextPath() %>/createTrip" method="post">
         Departure Point: <input required="" name="departure_point" type="text" placeholder="departure point..." /> <br />
         Destination:<input required="" name="destination" type="text" placeholder="destination..." /> <br />
         Price: <input required="" name="price" type="text" placeholder="price..." /> <br />

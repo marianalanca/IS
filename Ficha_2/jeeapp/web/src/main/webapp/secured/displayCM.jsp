@@ -14,9 +14,9 @@
 
 <h1>Menu</h1>
 
-    <a href="${pageContext.request.contextPath}/secured/createTrip.jsp"> Create trip </a> <br />
+    <a href="${pageContext.request.contextPath}/createTrip"> Create trip </a> <br />
 
-    <a href="${pageContext.request.contextPath}/deleteTrip"> Delete trip </a> <br />
+    <a href="${pageContext.request.contextPath}/deleteTrips"> Delete trip </a> <br />
 
     <a href="${pageContext.request.contextPath}/secured/top5.jsp"> See Top 5 </a> <br />
 

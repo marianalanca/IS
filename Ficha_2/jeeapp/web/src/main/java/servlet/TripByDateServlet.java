@@ -20,34 +20,27 @@ public class TripByDateServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        List<Trip> trips;
         String destination;
         String date1 = request.getParameter("date1");
         String date2 = request.getParameter("date2");
 
-        List<Trip> trips;
-
-        if(date1 == null){
-            destination = "error.html";
+        if(date2 != null){
+            trips = manageCM.findTripsBetDates(date1, date2);
         }
         else{
-            if(date2 != null){
-                trips = manageCM.findTripsBetDates(date1, date2);
-                //bet
-            }
-            else{
-                trips = manageCM.findTripsByDate(date1);
-                //date
-            }
-
-            if(trips != null){
-                request.setAttribute("trips", trips);
-                destination = "/ups.html";
-                //destination = "/secured/deleteTrip.jsp";
-            }
-            else{
-                destination = "/teste.html";
-            }
+            trips = manageCM.findTripsByDate(date1);
         }
+
+        if(trips != null){
+            request.setAttribute("trips", trips);
+            destination = "/ups.html";
+            //destination = "/secured/deleteTrip.jsp";
+        }
+        else{
+            destination = "/teste.html";
+        }
+
 
         request.getRequestDispatcher(destination).forward(request, response);
     }

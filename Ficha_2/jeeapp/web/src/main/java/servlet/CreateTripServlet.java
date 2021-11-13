@@ -16,23 +16,26 @@ public class CreateTripServlet extends HttpServlet {
     @EJB
     private ICompanyManagers manageCM;
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/secured/createTrip.jsp").forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String departure_point = request.getParameter("departure_point");
         String destination_point = request.getParameter("destination");
         String price = request.getParameter("price");
         String capacity = request.getParameter("capacity");
-        //String departure_date = request.getParameter("departure_date");
+        String departure_date = request.getParameter("departure_date");
 
-        String departure_date = "2021-11-14 17:55";
+        //String departure_date = "2021-11-14 17:55";
         String destination = "/error.html";
 
-        if ( departure_date != null && departure_point !=null && destination_point!=null && price!=null && capacity!=null){
-            if(manageCM.createTrip(departure_date, departure_point, destination_point, price, capacity)){
-                destination = "/secured/displayCM.jsp";
-            }
+        if(manageCM.createTrip(departure_date, departure_point, destination_point, price, capacity)){
+            destination = "/secured/displayCM.jsp";
         }
+
         request.getRequestDispatcher(destination).forward(request, response);
     }
 

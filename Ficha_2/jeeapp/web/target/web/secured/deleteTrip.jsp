@@ -6,11 +6,13 @@
     <title>Delete Trip</title>
 </head>
 <body>
-    <strong>Delete Trip</strong>
+    <a href="${pageContext.request.contextPath}/secured/displayCM.jsp"> Menu </a> <br />
     <p>${auth}</p>
 
-    <c:forEach itens="${trips}" var = "trip">
-        <c:out value="Departure point: ${trip.departure_point}\nDestination: ${trip.destination}\nDate: ${trip.departure_date}">
+    <strong>Delete Trip</strong>
+
+    <c:forEach items="${trips}" var = "trip">
+        <c:out value="Departure point: ${trip.departure_point}Destination: ${trip.destination}Date: ${trip.departure_date}">
         </c:out>
         <form action="<%= request.getContextPath() %>/deleteTrip" method="post">
             <input type="text" value="${trip.id}" name="trip_id" hidden="hidden">
