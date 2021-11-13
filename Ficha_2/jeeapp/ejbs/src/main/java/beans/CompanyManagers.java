@@ -1,12 +1,12 @@
 package beans;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.List;
+import java.util.logging.Level;
 
 import data.Trip;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -40,4 +40,71 @@ public class CompanyManagers implements ICompanyManagers{
         return true;
     }
 
+    public Boolean deleteTrip(String trip_id){
+
+        TypedQuery<Trip> t = em.createQuery("from Trip where id='"+ trip_id + "'", Trip.class);
+
+        if(t != null){
+            em.remove(t);
+            return true;
+        }
+
+        return false;
+    }
+
+    public List<Trip> findFutureTrips() {
+
+        Logger logger = LoggerFactory.getLogger(CompanyManagers.class);
+
+        LocalDateTime today = LocalDateTime.now();
+
+        logger.info("Date: " + today);
+
+        TypedQuery<Trip> q = em.createQuery("from Trip where departure_date >='"+ today + "'", Trip.class);
+
+        try {
+            return q.getResultList();
+        } catch (Exception e) {
+            //logger.trace("Error" + e);
+            return null;
+        }
+    }
+
+    public List<Trip> findTripsBetDates(String d1, String d2) {
+
+        //Logger logger = LoggerFactory.getLogger(CompanyManagers.class);
+        //logger.info("bet " + d1 + " and " + d2 + "\n");
+
+        TypedQuery<Trip> q = em.createQuery("from Trip where departure_date between'"+ d1 + " and "+ d2 + "'", Trip.class);
+
+        try {
+            return q.getResultList();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public List<Trip> findTripsByDate(String d) {
+
+        //Logger logger = LoggerFactory.getLogger(CompanyManagers.class);
+        //logger.info("bet " + d1 + " and " + d2 + "\n");
+
+        try {
+            //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            LocalDateTime aux_date = LocalDateTime.parse(d);
+            LocalDateTime d1 = aux_date;
+            d1 = d1.minusHours(aux_date.getHour());
+            d1 = d1.minusMinutes(aux_date.getMinute());
+            LocalDateTime d2 = aux_date;
+            d2 = d2.minusHours(aux_date.getHour()).plusHours(23);
+            d2 = d2.minusMinutes(aux_date.getMinute()).plusMinutes(59);
+
+            TypedQuery<Trip> q = em.createQuery("from Trip where departure_date between'"+ d1.toString() + " and "+ d2.toString() + "'", Trip.class);
+
+            return q.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

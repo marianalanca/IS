@@ -13,6 +13,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="web" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/web/target/web/META-INF/MANIFEST.MF" />

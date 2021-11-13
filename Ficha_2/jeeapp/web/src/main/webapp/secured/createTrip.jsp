@@ -11,11 +11,11 @@
     <p>${auth}</p>
     <!--%= request.getContextPath() %>/-->
     <form action="<%= request.getContextPath() %>/createTrip" method="get">
-        Departure Point: <input name="departure_point" type="text" placeholder="departure point..." /> <br />
-        Destination:<input name="destination" type="text" placeholder="destination..." /> <br />
-        Price: <input name="price" type="text" placeholder="price..." /> <br />
-        Capacity: <input name="capacity" type="text" placeholder="capacity..." /> <br />
-        Departure Date: <input name="departure_date" type="datetime-local"/> <br />
+        Departure Point: <input required="" name="departure_point" type="text" placeholder="departure point..." /> <br />
+        Destination:<input required="" name="destination" type="text" placeholder="destination..." /> <br />
+        Price: <input required="" name="price" type="text" placeholder="price..." /> <br />
+        Capacity: <input required="" name="capacity" type="text" placeholder="capacity..." /> <br />
+        Departure Date: <input required="" name="departure_date" type="datetime-local"/> <br />
         <input type="submit">
     </form>
 
