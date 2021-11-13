@@ -94,10 +94,6 @@ public class Trip {
 
     public int getcapacity(){ return  capacity; }
 
-    /*public List<AppUser> getPassengers() {
-        return passengers;
-    }*/
-
     public int getCapacity() {
         return capacity;
     }
