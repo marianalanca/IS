@@ -32,7 +32,7 @@ public class DeleteServlet extends HttpServlet {
 
 
         } else if (request.getParameter("cancel") != null) {
-            request.getRequestDispatcher("/secured/definitions.jsp").forward(request, response);
+            request.getRequestDispatcher("/secured/definitionsMenu.jsp").forward(request, response);
         }
 
     }

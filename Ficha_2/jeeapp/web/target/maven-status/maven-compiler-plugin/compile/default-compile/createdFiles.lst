@@ -1,10 +1,13 @@
-servlet/ChangeDefinitionsServlet.class
 servlet/DeleteServlet.class
 servlet/LogoutServlet.class
 servlet/TripByDateServlet.class
 servlet/DeleteTripServlet.class
-servlet/WalletServlet.class
 filter/SecurityFilter.class
-servlet/CreateTripServlet.class
 servlet/LoginServlet.class
 servlet/RegistrationServlet.class
+servlet/ChangeDefinitionsServlet.class
+servlet/SearchTripServlet.class
+servlet/WalletServlet.class
+servlet/RedirectServlet.class
+servlet/BuyTicketServlet.class
+servlet/CreateTripServlet.class

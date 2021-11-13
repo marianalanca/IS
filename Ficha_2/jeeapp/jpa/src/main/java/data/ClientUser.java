@@ -15,9 +15,8 @@ public class ClientUser implements Serializable {
     private double wallet;
     private String email, password;
 
-    // REVER
-    @ManyToMany
-    private List<Trip> tickets;
+    @OneToMany(mappedBy = "trip")
+    private List<Ticket> tickets;
 
     public ClientUser() {}
 
@@ -88,5 +87,21 @@ public class ClientUser implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
+    }
+
+    public void addTicket(Ticket ticket) {
+        tickets.add(ticket);
+    }
+
+    public void removeTicket(Ticket ticket) {
+        tickets.remove(ticket);
     }
 }

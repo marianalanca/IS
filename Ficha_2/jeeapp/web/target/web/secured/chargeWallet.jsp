@@ -18,6 +18,8 @@
 
 <h1>Carregar a carteira</h1>
 
+<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
+
 <form action="${pageContext.request.contextPath}/wallet" method="post">
     Valor: <input name="value" required="" type="number" step="0.01" placeholder="Quantidade para carregar..." /> <br />
     <input type="submit">

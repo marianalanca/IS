@@ -11,6 +11,13 @@
     <title>Eliminar a conta</title>
 </head>
 <body>
+
+    <form action="${pageContext.request.contextPath}/logout" method="get">
+        <input value="Sair" name="ok" type="submit">
+    </form>
+
+    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
+
     <h2>Tem a certeza que deseja eliminar a sua conta?</h2>
 
     <form action="${pageContext.request.contextPath}/delete" method="get">

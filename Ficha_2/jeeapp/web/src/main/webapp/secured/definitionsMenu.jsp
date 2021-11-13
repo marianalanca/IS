@@ -16,11 +16,14 @@
     <input value="Sair" type="submit">
 </form>
 
+<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
+
 <h1>Definições de utilizador</h1>
 
-<a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil</a> <br />
-
-<a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil</a>
+<form action="${pageContext.request.contextPath}/redirect" method="get">
+    <input value="Editar o seu perfil" name="edit" type="submit">  <br />
+    <input value="Eliminar perfil" name="delete" type="submit">  <br />
+</form>
 
 </body>
 </html>
