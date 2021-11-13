@@ -23,13 +23,13 @@
 
     <h1>Menu</h1>
 
-    <a href="${pageContext.request.contextPath}/secured/chargeWallet.jsp"> Wallet </a>. <br />
-
-    <a href="${pageContext.request.contextPath}/secured"> Consultar viagens </a>. <br />
-
-    <a href="${pageContext.request.contextPath}/secured"> As suas viagens </a> <br />
-
-    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Editar perfil </a>
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Carregar carteira" name="wallet" type="submit">  <br />
+        <input value="Consultar viagens disponíveis/Comprar" name="buy" type="submit">  <br />
+        <input value=" As suas viagens" name="refund" type="submit"> <br />
+        <input value="Editar perfil" name="profile" type="submit"> <br />
+        <input value="CM" name="CM" type="submit">
+    </form>
 
 </body>
 </html>

@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import beans.IManageClientUsers;
 
-@WebServlet("/definitions")
-public class ChangeDefinitionsServlet extends HttpServlet {
+@WebServlet("/purchase")
+public class BuyTicketServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     @EJB
     private IManageClientUsers manageClients;
@@ -19,11 +19,16 @@ public class ChangeDefinitionsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+        int seat = Integer.parseInt(request.getParameter("seat"));
 
-        manageClients.editInfo(request.getSession(true).getAttribute("auth").toString(), request.getParameter("password"),
-                request.getParameter("name"), request.getParameter("address"), request.getParameter("cc"));
+        // search trip by id
+        manageClients.buyTicket(request.getSession(true).getAttribute("auth").toString(), request.getParameter("id"),
+                seat);
 
-        request.getRequestDispatcher("/secured/definitionsMenu.jsp").forward(request, response);
-
+        request.getRequestDispatcher("/secured/display.jsp").forward(request, response);
     }
 }
+
+
+
+

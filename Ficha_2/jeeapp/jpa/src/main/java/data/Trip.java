@@ -2,7 +2,7 @@ package data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Entity
@@ -15,12 +15,8 @@ public class Trip {
     private int capacity;
     private double price;
 
-    /*
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Bus bus; */
-
-    @ManyToMany(mappedBy="tickets")
-    private List<ClientUser> passengers;
+    @OneToMany(mappedBy = "trip")
+    private List<Ticket> tickets;
 
     public Trip() {
     }
@@ -59,26 +55,33 @@ public class Trip {
         return departure_date;
     }
 
+    public String getDeparture_date_String() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+        return departure_date.format(formatter);
+    }
+
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
     public double getPrice() {
         return price;
     }
 
-    public void setPassengers(List<ClientUser> passengers) {
-        this.passengers = passengers;
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
     }
 
-    // TEST
-    /*
-    public Boolean addPassengers(ClientUser passenger) {
-        if (passengers.size() < bus.getCapacity() && !passengers.contains(passenger)) {
-            passengers.add(passenger);
-            return true;
-        }
-        return false;
-    }*/
+    public void addTicket(Ticket ticket) {
+        tickets.add(ticket);
+    }
 
-    public int getId() {
-        return id;
+    public void removeTicket(Ticket ticket) {
+        tickets.remove(ticket);
+    }
+
+    public String getId() {
+        return Integer.toString(id);
     }
 
     public String getDeparture_point() {
@@ -94,4 +97,12 @@ public class Trip {
     /*public List<AppUser> getPassengers() {
         return passengers;
     }*/
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 }

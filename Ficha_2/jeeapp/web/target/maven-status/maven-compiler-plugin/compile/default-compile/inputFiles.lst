@@ -1,10 +1,13 @@
-/workspace/web/src/main/java/filter/SecurityFilter.java
+/workspace/web/src/main/java/servlet/SearchTripServlet.java
 /workspace/web/src/main/java/servlet/DeleteServlet.java
 /workspace/web/src/main/java/servlet/LoginServlet.java
 /workspace/web/src/main/java/servlet/CreateTripServlet.java
-/workspace/web/src/main/java/servlet/WalletServlet.java
 /workspace/web/src/main/java/servlet/ChangeDefinitionsServlet.java
+/workspace/web/src/main/java/servlet/BuyTicketServlet.java
+/workspace/web/src/main/java/filter/SecurityFilter.java
+/workspace/web/src/main/java/servlet/WalletServlet.java
 /workspace/web/src/main/java/servlet/TripByDateServlet.java
+/workspace/web/src/main/java/servlet/RedirectServlet.java
 /workspace/web/src/main/java/servlet/LogoutServlet.java
 /workspace/web/src/main/java/servlet/DeleteTripServlet.java
 /workspace/web/src/main/java/servlet/RegistrationServlet.java

@@ -19,7 +19,7 @@
 </form>
 <br />
 
-Não tem conta? Criar <a href="${pageContext.request.contextPath}/registration.jsp"> aqui </a>.
+Não tem conta? Criar <a href="${pageContext.request.contextPath}/registration.jsp"> aqui </a>. <br />
 
 </body>
 </html>
