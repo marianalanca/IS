@@ -15,11 +15,12 @@ public class Trip {
     private int capacity;
     private double price;
 
-    @OneToMany(mappedBy = "trip")
+    @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Ticket> tickets;
 
     public Trip() {
     }
+
 
     public Trip(LocalDateTime departure_date, String departure_point, String destination, double price, int capacity) {
         this.departure_date = departure_date;

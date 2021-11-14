@@ -1,7 +1,6 @@
 package beans;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import javax.ejb.Stateless;
@@ -113,12 +112,13 @@ public class ManageClientUsers implements IManageClientUsers {
 
         if (client.getWallet() - trip.getPrice() >= 0 && trip.getTickets().size() < trip.getcapacity() &&
                 findTicket(trip, newTicket.getClient())==null && findTicketSeat(trip, seat) == null) {
-            trip.addTicket(newTicket);
-            client.addTicket(newTicket);
+            //trip.addTicket(newTicket);
+            //client.addTicket(newTicket);
             client.updateWallet(- trip.getPrice());
 
-            em.persist(client);
-            em.persist(trip);
+            //em.persist(client);
+            //em.persist(trip);
+            em.persist(newTicket);
             return true;
         }
         return false;
@@ -138,29 +138,31 @@ public class ManageClientUsers implements IManageClientUsers {
 
             client.updateWallet(price);
 
-            // procurar no cliente o ticket e tirar; procurar na trip o bilhete e remover
-
             Ticket ticket = findTicket(client, trip);
 
-            client.removeTicket(ticket);
-            trip.removeTicket(ticket);
+            Ticket t1 = em.find(Ticket.class, 3);
 
-            em.persist(client);
-            em.persist(trip);
+            em.remove(t1);
+            em.clear();
+
             return true;
         }
         return false;
     }
 
     public void returnTicket(ClientUser client, Ticket ticket) {
-        Trip trip = ticket.getTrip();
-        client.updateWallet(trip.getPrice());
+        client.updateWallet(ticket.getTrip().getPrice());
+        em.remove(ticket);
+    }
 
-        client.removeTicket(ticket);
-        trip.removeTicket(ticket);
+    public void returnTicket(String id) {
+        id = id.replace("/", "");
 
-        em.persist(client);
-        em.persist(trip);
+        Ticket ticket = em.find(Ticket.class, Integer.parseInt(id));
+
+        ticket.getClient().updateWallet(ticket.getTrip().getPrice());
+
+        em.remove(ticket);
     }
 
     public void editInfo(String email, String password, String name, String address, String cc_number) {
@@ -185,10 +187,6 @@ public class ManageClientUsers implements IManageClientUsers {
     // TESTAR MELHOR
     public void deleteUser(String email) {
         ClientUser c = findClientUser(email);
-
-        for (Ticket t:c.getTickets()) {
-            returnTicket(c, t);
-        }
 
         em.remove(c);
     }

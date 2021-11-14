@@ -30,13 +30,17 @@ public class WalletServlet extends HttpServlet {
 
         if (value>0) {
             manageClients.updateWallet(request.getSession(true).getAttribute("auth").toString(), value);
-            destination = "/secured/display.jsp";
-            // success destination
+            request.setAttribute("message", "Operação concluída com sucesso");
         } else{
+            request.setAttribute("message", "Processo falhou");
             // unsuccess destination
         }
 
+        double walletValue = manageClients.findClientUser(request.getSession(true).getAttribute("auth")
+                .toString()).getWallet();
+        request.setAttribute("wallet", walletValue);
 
-        request.getRequestDispatcher(destination).forward(request, response);
+
+        request.getRequestDispatcher("secured/chargeWallet.jsp").forward(request, response);
     }
 }

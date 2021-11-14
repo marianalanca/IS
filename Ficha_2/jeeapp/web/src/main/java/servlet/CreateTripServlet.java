@@ -23,10 +23,10 @@ public class CreateTripServlet extends HttpServlet {
         String destination_point = request.getParameter("destination");
         String price = request.getParameter("price");
         String capacity = request.getParameter("capacity");
-        //String departure_date = request.getParameter("departure_date");
+        String departure_date = request.getParameter("departure_date");
 
-        String departure_date = "2021-11-14 17:55";
-        String destination = "/error.html";
+        //String departure_date = "2021-11-14 17:55";
+        String destination = "/ups.html";
 
         if ( departure_date != null && departure_point !=null && destination_point!=null && price!=null && capacity!=null){
             if(manageCM.createTrip(departure_date, departure_point, destination_point, price, capacity)){

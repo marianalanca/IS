@@ -1,6 +1,7 @@
 package beans;
 
 import data.ClientUser;
+import data.Ticket;
 import data.Trip;
 
 import java.util.List;
@@ -26,4 +27,9 @@ public interface IManageClientUsers {
     public void deleteUser(String email);
 
     public List<Trip> searchTrips(String beg, String end);
+
+    public void returnTicket(ClientUser client, Ticket ticket);
+
+    public Boolean returnTicket(String email, String tripId);
+    public void returnTicket(String id);
 }
