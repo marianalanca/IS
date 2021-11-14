@@ -20,10 +20,13 @@ public class ChangeDefinitionsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
+        // HERE colocar proteção para o email!
         manageClients.editInfo(request.getSession(true).getAttribute("auth").toString(), request.getParameter("password"),
                 request.getParameter("name"), request.getParameter("address"), request.getParameter("cc"));
 
-        request.getRequestDispatcher("/secured/definitionsMenu.jsp").forward(request, response);
+        request.setAttribute("profile", manageClients.findClientUser(request.getSession(true).getAttribute("auth").toString()));
+        request.setAttribute("message", "Operação concluída com sucesso");
+        request.getRequestDispatcher("/secured/changeDefinitions.jsp").forward(request, response);
 
     }
 }

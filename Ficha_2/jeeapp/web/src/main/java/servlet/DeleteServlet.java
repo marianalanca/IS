@@ -20,6 +20,7 @@ public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
+        request.setAttribute("profile", manageClients.findClientUser(request.getSession(true).getAttribute("auth").toString()));
 
         if (request.getParameter("ok") != null ) {
             manageClients.deleteUser(request.getSession(true).getAttribute("auth").toString());

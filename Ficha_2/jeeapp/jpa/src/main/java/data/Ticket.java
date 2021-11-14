@@ -13,12 +13,11 @@ public class Ticket implements Serializable {
     private int id;
     private int seat;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Trip trip;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private ClientUser client;
-
 
     public Ticket() {}
 
@@ -30,6 +29,10 @@ public class Ticket implements Serializable {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public ClientUser getClient() {

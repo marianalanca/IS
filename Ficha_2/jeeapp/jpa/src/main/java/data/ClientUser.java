@@ -1,5 +1,7 @@
 package data;
 
+import org.hibernate.annotations.ColumnTransformer;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Date;
@@ -13,9 +15,11 @@ public class ClientUser implements Serializable {
     private int id;
     private String name, address, cc_number;
     private double wallet;
-    private String email, password;
+    private String email;
+    @ColumnTransformer(read = "pgp_sym_decrypt(password::bytea, 'mySecretKey')", write = "pgp_sym_encrypt(?, 'mySecretKey')")
+    private String password;
 
-    @OneToMany(mappedBy = "trip")
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Ticket> tickets;
 
     public ClientUser() {}
@@ -104,4 +108,6 @@ public class ClientUser implements Serializable {
     public void removeTicket(Ticket ticket) {
         tickets.remove(ticket);
     }
+
+
 }

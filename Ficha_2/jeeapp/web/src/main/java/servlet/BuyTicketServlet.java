@@ -21,11 +21,15 @@ public class BuyTicketServlet extends HttpServlet {
             throws IOException, ServletException {
         int seat = Integer.parseInt(request.getParameter("seat"));
 
-        // search trip by id
-        manageClients.buyTicket(request.getSession(true).getAttribute("auth").toString(), request.getParameter("id"),
-                seat);
+        String destination = "/error.html";
 
-        request.getRequestDispatcher("/secured/display.jsp").forward(request, response);
+        // search trip by id
+        if (manageClients.buyTicket(request.getSession(true).getAttribute("auth").toString(), request.getParameter("id"),
+                seat)) {
+            destination = "/secured/successfulOperation.jsp";
+        }
+
+        request.getRequestDispatcher(destination).forward(request, response);
     }
 }
 

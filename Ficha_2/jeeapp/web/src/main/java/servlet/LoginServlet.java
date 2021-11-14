@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
                 request.getSession(true).setAttribute("auth", email);
                 destination = "/secured/display.jsp";
                 //destination = "/secured/displayCM.jsp";
+
             } else {
             request.getSession(true).removeAttribute("auth");
             }
