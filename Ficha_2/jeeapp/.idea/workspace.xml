@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="">
+<<<<<<< HEAD
+=======
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__book_jpa_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Ticket.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/BuyTicketServlet.java" afterDir="false" />
@@ -16,12 +18,37 @@
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/ear_ear_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ear_ear_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jeeapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jeeapp.iml" afterDir="false" />
+>>>>>>> eb29b7a8b686b782214ba3a2cdf27d121af04dea
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ear/ear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ear/ear.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear.ear" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/ear/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/ear/web.war" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/CompanyManagers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/CompanyManagers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/CompanyManagers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/CompanyManagers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/ICompanyManagers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ICompanyManagers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/CompanyManagers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/CompanyManagers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/ejbs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/jpa.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/CreateTripServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/CreateTripServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/DeleteTripServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/DeleteTripServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/TripByDateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/TripByDateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/createTrip.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/createTrip.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/deleteTrip.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/deleteTrip.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/displayCM.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/displayCM.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/searchBetDates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/searchBetDates.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/CreateTripServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/CreateTripServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/DeleteTripServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/DeleteTripServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/CreateTripServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/CreateTripServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/DeleteTripServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/DeleteTripServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/TripByDateServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/TripByDateServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/secured/createTrip.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/createTrip.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/secured/deleteTrip.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/deleteTrip.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/secured/displayCM.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/displayCM.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/web/secured/searchBetDates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/searchBetDates.jsp" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageClientUsers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejbs/ejbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/ejbs.iml" afterDir="false" />
@@ -68,6 +95,7 @@
       <change beforePath="$PROJECT_DIR$/web/target/web/secured/deletionConfirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/deletionConfirmation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/web/secured/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/display.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
+>>>>>>> eb29b7a8b686b782214ba3a2cdf27d121af04dea
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +185,7 @@
       <workItem from="1636637613372" duration="11113000" />
       <workItem from="1636708651830" duration="1921000" />
       <workItem from="1636728604829" duration="13098000" />
-      <workItem from="1636799934804" duration="21362000" />
+      <workItem from="1636799934804" duration="27846000" />
     </task>
     <servers />
   </component>

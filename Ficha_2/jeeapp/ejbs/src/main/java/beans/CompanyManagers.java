@@ -2,7 +2,6 @@ package beans;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.logging.Level;
 
 import data.Trip;
 import org.slf4j.Logger;
@@ -54,13 +53,13 @@ public class CompanyManagers implements ICompanyManagers{
 
     public List<Trip> findFutureTrips() {
 
-        Logger logger = LoggerFactory.getLogger(CompanyManagers.class);
+        //Logger logger = LoggerFactory.getLogger(CompanyManagers.class);
 
         LocalDateTime today = LocalDateTime.now();
 
-        logger.info("Date: " + today);
+        //logger.info("Date: " + today);
 
-        TypedQuery<Trip> q = em.createQuery("from Trip where departure_date >='"+ today + "'", Trip.class);
+        TypedQuery<Trip> q = em.createQuery("from Trip where departure_date >= :today", Trip.class).setParameter("today", today);
 
         try {
             return q.getResultList();
