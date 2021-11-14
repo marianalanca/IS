@@ -32,7 +32,7 @@ public class DeleteTripServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String destination = "/error.html";
+        String destination = "/errorPage.jsp";
 
         String trip_id = request.getParameter("trip_id");
         if(manageCM.deleteTrip(trip_id)){

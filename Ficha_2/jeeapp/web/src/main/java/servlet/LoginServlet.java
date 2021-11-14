@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import beans.ICompanyManagers;
 import beans.IManageClientUsers;
 import data.ClientUser;
 
@@ -16,25 +17,42 @@ public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     @EJB
     private IManageClientUsers manageClients;
+    @EJB
+    private ICompanyManagers manageManagers;
 
-//mudar para post
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
         String email = request.getParameter("email");
         String key = request.getParameter("key");
-        String destination = "/error.html";
+        String destination = "/errorPage.jsp";
 
-        if (email != null && key != null) {
-            boolean auth = manageClients.login(email, key);
+        String userType = request.getParameter("userType");
 
-            if (auth) {
-                request.getSession(true).setAttribute("auth", email);
-                destination = "/secured/display.jsp";
-                //destination = "/secured/displayCM.jsp";
+        if (email != null && key != null && userType!=null) {
 
-            } else {
-            request.getSession(true).removeAttribute("auth");
+            if (userType.equals("user")) {
+
+                boolean auth = manageClients.login(email, key);
+
+                if (auth) {
+                    request.getSession(true).setAttribute("auth", email);
+                    destination = "/secured/display.jsp";
+                } else {
+                    request.getSession(true).removeAttribute("auth");
+                }
+
+            } else if (userType.equals("cm")) {
+                boolean auth = manageManagers.login(email, key);
+
+                //boolean auth = manageClients.login(email, key);
+
+                if (auth) {
+                    request.getSession(true).setAttribute("auth", email);
+                    destination = "/secured/displayCM.jsp";
+                } else {
+                    request.getSession(true).removeAttribute("auth");
+                }
             }
         }
         request.getRequestDispatcher(destination).forward(request, response);

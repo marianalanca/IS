@@ -17,7 +17,9 @@
         <input value="Sair" name="ok" type="submit">
     </form>
 
-    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Voltar ao Menu" name="menuDefinitions" type="submit">
+    </form>
 
     <h1>Alterar definições de perfil</h1>
 

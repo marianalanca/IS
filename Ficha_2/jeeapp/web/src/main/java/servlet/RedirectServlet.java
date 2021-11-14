@@ -22,7 +22,7 @@ public class RedirectServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        String destination = "/error.html";
+        String destination = "/errorPage.jsp";
 
         if (request.getParameter("wallet") != null ) {
             double walletValue = manageClients.findClientUser(request.getSession(true).getAttribute("auth")
@@ -36,10 +36,10 @@ public class RedirectServlet extends HttpServlet {
             destination = "/secured/searchTrips.jsp";
         } else if (request.getParameter("refund") != null) {
             // ir buscar as trips da pessoa
-            request.setAttribute("tickets", manageClients.findClientUser(request.getSession(true)
-                    .getAttribute("auth").toString()).getTickets());
+            request.setAttribute("tickets", manageClients.filterTickets(manageClients.findClientUser(request.getSession(true)
+                    .getAttribute("auth").toString()).getTickets()));
             destination = "/secured/tripRefund.jsp";
-        } else if (request.getParameter("profile") != null) {
+        } else if (request.getParameter("profile") != null || request.getParameter("menuDefinitions") != null) {
             request.setAttribute("profile", manageClients.findClientUser(request.getSession(true).getAttribute("auth")
                     .toString()));
             destination = "/secured/definitionsMenu.jsp";
@@ -51,8 +51,16 @@ public class RedirectServlet extends HttpServlet {
             destination = "/secured/changeDefinitions.jsp";
         } else if (request.getParameter("delete") != null) {
             destination = "/secured/deletionConfirmation.jsp";
-        } else if (request.getParameter("memu") != null) {
+        } else if (request.getParameter("menu") != null) {
             destination = "/secured/display.jsp";
+        } else if (request.getParameter("backSearchTrip") != null) {
+            destination = "/secured/searchTrips.jsp";
+        } else if (request.getParameter("home") != null) {
+            destination = "/index.jsp";
+        } else if (request.getParameter("register") != null) {
+            String message = "";
+            request.setAttribute("message", message);
+            destination = "/registration.jsp";
         }
 
         request.getRequestDispatcher(destination).forward(request, response);

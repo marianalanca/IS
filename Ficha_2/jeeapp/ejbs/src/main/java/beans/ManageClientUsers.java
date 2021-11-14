@@ -116,53 +116,23 @@ public class ManageClientUsers implements IManageClientUsers {
             //client.addTicket(newTicket);
             client.updateWallet(- trip.getPrice());
 
-            //em.persist(client);
-            //em.persist(trip);
             em.persist(newTicket);
             return true;
         }
         return false;
     }
 
-    // TEST
-    public Boolean returnTicket(String email, String tripId) {
-        ClientUser client = findClientUser(email);
+    public void returnTicket(int id) {
 
-        tripId = tripId.replace("/", "");
 
-        Trip trip = findTrip(tripId);
-
-        double price = trip.getPrice();
-
-        if (client!=null) {
-
-            client.updateWallet(price);
-
-            Ticket ticket = findTicket(client, trip);
-
-            Ticket t1 = em.find(Ticket.class, 3);
-
-            em.remove(t1);
-            em.clear();
-
-            return true;
-        }
-        return false;
-    }
-
-    public void returnTicket(ClientUser client, Ticket ticket) {
-        client.updateWallet(ticket.getTrip().getPrice());
-        em.remove(ticket);
-    }
-
-    public void returnTicket(String id) {
-        id = id.replace("/", "");
-
-        Ticket ticket = em.find(Ticket.class, Integer.parseInt(id));
+        Ticket ticket = em.find(Ticket.class, id);
 
         ticket.getClient().updateWallet(ticket.getTrip().getPrice());
 
-        em.remove(ticket);
+        int isSuccessful = em.createQuery("delete from Ticket p where p.id=:id ")
+                .setParameter("id", id)
+                .executeUpdate();
+
     }
 
     public void editInfo(String email, String password, String name, String address, String cc_number) {
@@ -184,9 +154,12 @@ public class ManageClientUsers implements IManageClientUsers {
         em.persist(client);
     }
 
-    // TESTAR MELHOR
     public void deleteUser(String email) {
         ClientUser c = findClientUser(email);
+
+        for (Ticket ticket: c.getTickets()) {
+            returnTicket(ticket.getId());
+        }
 
         em.remove(c);
     }
@@ -202,6 +175,22 @@ public class ManageClientUsers implements IManageClientUsers {
                 end_date.toString() + "'");
 
         return q.getResultList();
+    }
+
+    public List<Ticket> filterTickets(List<Ticket> unfiltered) {
+
+        List<Ticket> filtered = unfiltered;
+        filtered.removeIf(ticket -> ticket.getTrip().getDeparture_date().isBefore(LocalDateTime.now()));
+
+        return filtered;
+    }
+
+    public List<Trip> filterTrip(List<Trip> unfiltered) {
+
+        List<Trip> filtered = unfiltered;
+        filtered.removeIf(trip -> trip.getDeparture_date().isBefore(LocalDateTime.now()));
+
+        return filtered;
     }
 
 }

@@ -19,8 +19,10 @@
         <input value="Sair" type="submit">
     </form>
 
-    <a href="${pageContext.request.contextPath}/secured/searchTrips.jsp"> Voltar atrás</a> <br />
-    <a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar ao menu</a> <br />
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Voltar ao Menu" name="menu" type="submit">
+        <input value="Voltar à Pesquisa" name="backSearchTrip" type="submit">
+    </form>
 
     <h1>Viagens</h1>
 

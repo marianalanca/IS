@@ -26,14 +26,12 @@ public class WalletServlet extends HttpServlet {
         // passar para float
         int value = Integer.parseInt(request.getParameter("value"));
 
-        String destination = "/error.html";
+        String destination = "/errorPage.jsp";
 
-        if (value>0) {
-            manageClients.updateWallet(request.getSession(true).getAttribute("auth").toString(), value);
+        if (value>0 && manageClients.updateWallet(request.getSession(true).getAttribute("auth").toString(), value)) {
             request.setAttribute("message", "Operação concluída com sucesso");
         } else{
             request.setAttribute("message", "Processo falhou");
-            // unsuccess destination
         }
 
         double walletValue = manageClients.findClientUser(request.getSession(true).getAttribute("auth")

@@ -21,12 +21,14 @@ public class BuyTicketServlet extends HttpServlet {
             throws IOException, ServletException {
         int seat = Integer.parseInt(request.getParameter("seat"));
 
-        String destination = "/error.html";
+        String destination = "/errorPage.jsp";
 
         // search trip by id
         if (manageClients.buyTicket(request.getSession(true).getAttribute("auth").toString(), request.getParameter("id"),
                 seat)) {
             destination = "/secured/successfulOperation.jsp";
+        } else {
+            // aparecer mensagem de erro?
         }
 
         request.getRequestDispatcher(destination).forward(request, response);

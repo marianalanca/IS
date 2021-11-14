@@ -26,14 +26,15 @@ public class RegistrationServlet extends HttpServlet {
         String password = request.getParameter("password");
         String conf = request.getParameter("confirmation");
 
-        String destination = "/error.html";
+        String destination = "/registration.jsp";
 
-        // não está a dar bem!
-        if (name!=null && email!=null && cc_number!=null && address!=null && password!=null){
-            if (manageClients.registration(email, password, name, address,cc_number,conf)) {
-                destination = "/index.jsp";
-            }
+        if (name!=null && email!=null && cc_number!=null && address!=null && password!=null &&
+                manageClients.registration(email, password, name, address,cc_number,conf)){
+            destination = "/index.jsp";
+        } else {
+            request.setAttribute("message", "Registo falhou");
         }
+
         request.getRequestDispatcher(destination).forward(request, response);
     }
 }

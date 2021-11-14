@@ -23,8 +23,8 @@ public class SearchTripServlet extends HttpServlet {
 
         String destination = "/ups.html";
 
-        List<Trip> resSearch = manageClients.searchTrips(request.getParameter("beg_date"),
-                request.getParameter("end_date"));
+        List<Trip> resSearch = manageClients.filterTrip(manageClients.searchTrips(request.getParameter("beg_date"),
+                request.getParameter("end_date")));
 
         double walletValue = manageClients.findClientUser(request.getSession(true).getAttribute("auth").toString()).getWallet();
 

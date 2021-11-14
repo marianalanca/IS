@@ -2,7 +2,11 @@ package beans;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
+import data.ClientUser;
+import data.CompanyManager;
+import data.Ticket;
 import data.Trip;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +21,15 @@ public class CompanyManagers implements ICompanyManagers{
 
     @PersistenceContext(unitName = "ClientsBus")
     EntityManager em;
+
+    public Boolean login(String email, String password) {
+        CompanyManager manager = findManager(email);
+        if (manager!=null) {
+            System.out.println("HERE: " +manager.getPassword() + " " + password);
+            return Objects.equals(manager.getPassword(), password);
+        }
+        return false;
+    }
 
     public Boolean createTrip(String departure_date, String departure_point, String destination, String price, String capacity) {
         //System.out.println(departure_point + " " + destination + " " + price + " ");
@@ -50,6 +63,8 @@ public class CompanyManagers implements ICompanyManagers{
 
         return false;
     }
+
+
 
     public List<Trip> findFutureTrips() {
 
@@ -106,4 +121,18 @@ public class CompanyManagers implements ICompanyManagers{
             return null;
         }
     }
+
+    public CompanyManager findManager(String email) {
+        System.out.println("Searching Manager " + email + "...");
+
+        TypedQuery<CompanyManager> q = em.createQuery("from CompanyManager where email='"+email + "'", CompanyManager.class);
+
+        try {
+            return q.getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
 }

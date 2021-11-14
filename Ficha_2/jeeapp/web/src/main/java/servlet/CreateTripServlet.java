@@ -30,7 +30,7 @@ public class CreateTripServlet extends HttpServlet {
         String departure_date = request.getParameter("departure_date");
 
         //String departure_date = "2021-11-14 17:55";
-        String destination = "/error.html";
+        String destination = "/errorPage.jsp";
 
         if(manageCM.createTrip(departure_date, departure_point, destination_point, price, capacity)){
             destination = "/secured/displayCM.jsp";

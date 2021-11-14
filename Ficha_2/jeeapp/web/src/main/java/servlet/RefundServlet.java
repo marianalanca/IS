@@ -19,10 +19,11 @@ public class RefundServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-
+        //System.out.println("TICKETS: " +manageClients.findClientUser(request.getSession(true).getAttribute("auth").toString()).getTickets());
         // search trip by id
-        manageClients.returnTicket(request.getParameter("id"));
-        request.getRequestDispatcher("/secured/display.jsp").forward(request, response);
+        manageClients.returnTicket(Integer.parseInt(request.getParameter("id").replace("/", "")));
+        String destination = "/secured/successfulOperation.jsp";
+        request.getRequestDispatcher(destination).forward(request, response);
     }
 }
 

@@ -24,7 +24,7 @@ public class SecurityFilter implements Filter {
         }
         else
         {
-            request.getRequestDispatcher("/error.html").forward(request, response);
+            request.getRequestDispatcher("/errorPage.jsp").forward(request, response);
         }
     }
 }

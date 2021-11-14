@@ -1,6 +1,7 @@
 servlet/DeleteServlet.class
 servlet/LogoutServlet.class
 servlet/TripByDateServlet.class
+servlet/RefundServlet.class
 servlet/DeleteTripServlet.class
 filter/SecurityFilter.class
 servlet/LoginServlet.class

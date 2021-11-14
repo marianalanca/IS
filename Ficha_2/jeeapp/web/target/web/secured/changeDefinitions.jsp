@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="message" scope="request" type="java.lang.String"/>
 <html>
 <head>
     <title>Alterar definições de perfil</title>
@@ -16,7 +17,9 @@
         <input value="Sair" name="ok" type="submit">
     </form>
 
-    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Voltar ao Menu" name="menuDefinitions" type="submit">
+    </form>
 
     <h1>Alterar definições de perfil</h1>
 
@@ -27,6 +30,8 @@
         Nova Password: <input name="password" type="password" placeholder="password..." /> <br />
         <input type="submit">
     </form>
+
+    ${message} <br />
 
 </body>
 </html>
