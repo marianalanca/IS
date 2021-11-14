@@ -9,5 +9,8 @@ servlet/ChangeDefinitionsServlet.class
 servlet/SearchTripServlet.class
 servlet/WalletServlet.class
 servlet/RedirectServlet.class
+servlet/TripBetDatesServlet.class
+servlet/Top5Servlet.class
 servlet/BuyTicketServlet.class
 servlet/CreateTripServlet.class
+servlet/SelectTripServlet.class

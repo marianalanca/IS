@@ -199,7 +199,6 @@ public class ManageClientUsers implements IManageClientUsers {
         LocalDateTime beg_date = LocalDateTime.parse(beg);
         LocalDateTime end_date = LocalDateTime.parse(end);
 
-
         Query q = em.createQuery("from Trip where departure_date between '" + beg_date.toString() + "' and '" +
                 end_date.toString() + "'");
 

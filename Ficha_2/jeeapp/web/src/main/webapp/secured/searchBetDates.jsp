@@ -11,7 +11,7 @@
 
     <strong>Search between dates</strong>
 
-    <form action="<%= request.getContextPath() %>/tripByDate" method="get">
+    <form action="<%= request.getContextPath() %>/tripBetDate" method="post">
         Date 1: <input required="" name="date1" type="datetime-local"/> <br />
         Date 2: <input required="" name="date2" type="datetime-local"/> <br />
         <input type="submit">

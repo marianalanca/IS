@@ -29,7 +29,6 @@ public class CreateTripServlet extends HttpServlet {
         String capacity = request.getParameter("capacity");
         String departure_date = request.getParameter("departure_date");
 
-        //String departure_date = "2021-11-14 17:55";
         String destination = "/error.html";
 
         if(manageCM.createTrip(departure_date, departure_point, destination_point, price, capacity)){
