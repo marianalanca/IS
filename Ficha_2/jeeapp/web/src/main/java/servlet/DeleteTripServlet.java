@@ -36,7 +36,7 @@ public class DeleteTripServlet extends HttpServlet {
 
         String trip_id = request.getParameter("trip_id");
         if(manageCM.deleteTrip(trip_id)){
-            destination = "";
+            destination = "/secured/displayCM.jsp";
         }
 
         request.getRequestDispatcher(destination).forward(request, response);

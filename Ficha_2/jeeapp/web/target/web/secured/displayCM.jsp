@@ -18,11 +18,11 @@
 
     <a href="${pageContext.request.contextPath}/deleteTrips"> Delete trip </a> <br />
 
-    <a href="${pageContext.request.contextPath}/secured/top5.jsp"> See Top 5 </a> <br />
+    <a href="${pageContext.request.contextPath}/top5"> See Top 5 </a> <br />
 
-    <a href="${pageContext.request.contextPath}/secured/searchBetDates.jsp"> Search Trips between dates</a> <br />
+    <a href="${pageContext.request.contextPath}/tripBetDate"> Search Trips between dates</a> <br />
 
-    <a href="${pageContext.request.contextPath}/secured/searchByDate.jsp"> Search Trips by date</a> <br />
+    <a href="${pageContext.request.contextPath}/tripByDate"> Search Trips by date</a> <br />
 
 <!-- ist all passengers on a given trip listed during one of the previous searches -->
 <!-- The system sends a daily summary of the revenues of that day’s trips to the managers. -->

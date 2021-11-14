@@ -11,7 +11,7 @@
 
     <strong>Search by date</strong>
 
-    <form action="<%= request.getContextPath() %>/tripByDate" method="get">
+    <form action="<%= request.getContextPath() %>/tripByDate" method="post">
         Date: <input required="" name="date1" type="datetime-local"/> <br />
         <input type="submit">
     </form>

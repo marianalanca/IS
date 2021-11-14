@@ -16,7 +16,7 @@
       <module name="ear" target="15" />
       <module name="ejbs" target="15" />
       <module name="jeeapp" target="15" />
-      <module name="jpa" target="16" />
+      <module name="jpa" target="15" />
       <module name="web" target="15" />
     </bytecodeTargetLevel>
   </component>
