@@ -20,7 +20,7 @@
     <input value="Voltar ao Menu" name="menu" type="submit">
 </form>
 
-<h1>Sucesso</h1>
+<h1>Sem sucesso</h1>
 
 <p> Operação falhou. Tente novamente </p>
 
