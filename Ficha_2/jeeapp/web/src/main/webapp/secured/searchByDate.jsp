@@ -6,10 +6,15 @@
     <title>Search by date</title>
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/secured/displayCM.jsp"> Menu </a> <br />
+    <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+    <br>
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Menu" name="CM" type="submit">
+    </form>
+
     <p>${auth}</p>
 
-    <strong>Search by date</strong>
+    <h1>Search by date</h1>
 
     <form action="<%= request.getContextPath() %>/tripByDate" method="post">
         Date: <input required="" name="date1" type="datetime-local"/> <br />

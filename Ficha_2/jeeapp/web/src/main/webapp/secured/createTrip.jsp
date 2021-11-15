@@ -7,7 +7,15 @@
 </head>
 <body>
 
-    <strong>Create Trip</strong>
+<a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+<br>
+<form action="${pageContext.request.contextPath}/redirect" method="get">
+    <input value="Menu" name="CM" type="submit">
+</form>
+
+<p>${auth}</p>
+
+    <h1>Create Trip</h1>
     <p>${auth}</p>
     <!--%= request.getContextPath() %>/-->
     <form action="<%= request.getContextPath() %>/createTrip" method="post">

@@ -6,7 +6,15 @@
 </head>
 <body>
 
-    <strong>List Passengers</strong> <br/>
+<a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+<br>
+<form action="${pageContext.request.contextPath}/redirect" method="get">
+    <input value="Menu" name="CM" type="submit">
+</form>
+
+<p>${auth}</p>
+
+    <h1>List Passengers</h1> <br/>
 
     <c:choose>
         <c:when test="${empty passengersList}"> There is no passengers in this trip </c:when>

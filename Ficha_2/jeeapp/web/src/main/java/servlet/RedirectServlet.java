@@ -62,6 +62,23 @@ public class RedirectServlet extends HttpServlet {
             request.setAttribute("message", message);
             destination = "/registration.jsp";
         }
+        else if (request.getParameter("createTrip") != null) {
+            destination = "/createTrip";
+        }
+        else if (request.getParameter("deleteTrip") != null) {
+            String message = "";
+            request.setAttribute("message", message);
+            destination = "/deleteTrips";
+        }
+        else if (request.getParameter("top5") != null) {
+            destination = "/top5";
+        }
+        else if (request.getParameter("tripBetDate") != null) {
+            destination = "/tripBetDate";
+        }
+        else if (request.getParameter("tripByDate") != null) {
+            destination = "/tripByDate";
+        }
 
         request.getRequestDispatcher(destination).forward(request, response);
     }

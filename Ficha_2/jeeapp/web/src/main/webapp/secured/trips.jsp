@@ -6,10 +6,16 @@
     <title>List Trips</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/secured/displayCM.jsp"> Menu </a> <br />
+
+<a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+<br>
+<form action="${pageContext.request.contextPath}/redirect" method="get">
+    <input value="Menu" name="CM" type="submit">
+</form>
+
 <p>${auth}</p>
 
-<strong>Trips</strong><br/>
+<h1>Trips</h1><br/>
     <c:choose>
         <c:when test="${empty trips}"> There is no trips </c:when>
         <c:otherwise>
@@ -22,7 +28,7 @@
                 </c:out><br/>
                 <form action="<%= request.getContextPath() %>/selectDate" method="post">
                     <input type="text" value="${trip.id}" name="trip_id" hidden="hidden">
-                    <input type="submit">
+                    <input name="List Passengers" type="submit">
                 </form>
                 <br>
             </c:forEach>

@@ -32,7 +32,7 @@ public class CreateTripServlet extends HttpServlet {
         String destination = "/error.html";
 
         if(manageCM.createTrip(departure_date, departure_point, destination_point, price, capacity)){
-            destination = "/secured/displayCM.jsp";
+            destination = "/secured/success.jsp";
         }
 
         request.getRequestDispatcher(destination).forward(request, response);
