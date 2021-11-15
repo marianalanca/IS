@@ -6,7 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>APP MANHOSA</h1>
+<h1>Companhia de autocarros</h1>
 
 <br />
 
