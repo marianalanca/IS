@@ -6,10 +6,10 @@
 
 Na pasta do projeto:
 
-    ```bash
+    bash
     cd .devcontainer
     docker-compose up --build
-    ```
+    
 
 ## 2. Criar a extensão de encriptação na base de dados
 
@@ -27,18 +27,18 @@ Na pasta do projeto:
 
     Na consola do Docker:
 
-    ```bash
+    bash
     cd workspace/jeeapp/
      mvn clean package wildfly:deploy
-    ```
+    
 
 ## Criar um CompanyManager
 
     Na consola do docker:
 
-    ```bash
+    bash
     cd workspace/JPA/
     mvn clean package
     java -jar target/jpa.jar test@email testPassword
-    ```
+    
 
