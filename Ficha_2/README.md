@@ -6,7 +6,6 @@
 
 Na pasta do projeto:
 
-    bash
     cd .devcontainer
     docker-compose up --build
     
@@ -15,19 +14,15 @@ Na pasta do projeto:
 
     Na base de dados do docker:
 
-    ```bash
     psql -U postgres
-
     \c ClientsBus
-
     CREATE EXTENSION pgcrypto;
-    ```
+
 
 ### 3. Fazer deploy da aplicação
 
     Na consola do Docker:
 
-    bash
     cd workspace/jeeapp/
      mvn clean package wildfly:deploy
     
@@ -36,7 +31,6 @@ Na pasta do projeto:
 
     Na consola do docker:
 
-    bash
     cd workspace/JPA/
     mvn clean package
     java -jar target/jpa.jar test@email testPassword
