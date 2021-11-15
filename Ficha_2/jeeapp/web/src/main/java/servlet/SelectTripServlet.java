@@ -3,6 +3,7 @@ package servlet;
 import beans.ICompanyManagers;
 import data.ClientUser;
 import data.Ticket;
+import data.TicketDTO;
 import data.Trip;
 
 import javax.ejb.EJB;
@@ -20,25 +21,11 @@ public class SelectTripServlet extends HttpServlet {
     @EJB
     private ICompanyManagers manageCM;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-
-        /*
-        String trip_id = request.getParameter("trip_id");
-
-        List<ClientUser> passengers = manageCM.listPassenger(trip_id);
-
-        request.getSession(true).setAttribute("passengersList", passengers);
-
-        request.getRequestDispatcher("/secured/passengers.jsp").forward(request, response);
-        */
-    }
-
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         String trip_id = request.getParameter("trip_id");
 
-        List<Ticket> passengers = manageCM.listPassenger(trip_id);
+        List<TicketDTO> passengers = manageCM.listPassenger(trip_id);
 
         request.getSession(true).setAttribute("passengersList", passengers);
 

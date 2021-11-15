@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import beans.ICompanyManagers;
 import data.Trip;
+import data.TripDTO;
 
 @WebServlet("/deleteTrips")
 public class DeleteTripServlet extends HttpServlet {
@@ -21,7 +22,7 @@ public class DeleteTripServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Trip> trips = manageCM.findFutureTrips();
+        List<TripDTO> trips = manageCM.findFutureTrips();
         String destination = "/secured/deleteTrip.jsp";
 
         request.getSession(true).setAttribute("trips", trips);

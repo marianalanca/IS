@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import beans.IManageClientUsers;
 import data.Trip;
+import data.TripDTO;
 
 @WebServlet("/searchTrip")
 public class SearchTripServlet extends HttpServlet {
@@ -21,10 +22,12 @@ public class SearchTripServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String destination = "/ups.html";
-
-        List<Trip> resSearch = manageClients.filterTrip(manageClients.searchTrips(request.getParameter("beg_date"),
+        List<TripDTO> resSearch = manageClients.filterTrip(manageClients.searchTrips(request.getParameter("beg_date"),
                 request.getParameter("end_date")));
+
+        for (TripDTO d: resSearch) {
+            System.out.println("HERE: " + d.getId() + " " + d.getDeparture_point());
+        }
 
         double walletValue = manageClients.findClientUser(request.getSession(true).getAttribute("auth").toString()).getWallet();
 

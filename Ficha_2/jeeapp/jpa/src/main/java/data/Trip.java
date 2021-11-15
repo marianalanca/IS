@@ -93,8 +93,6 @@ public class Trip {
         return destination;
     }
 
-    public int getcapacity(){ return  capacity; }
-
     public int getCapacity() {
         return capacity;
     }

@@ -3,6 +3,7 @@ package beans;
 import data.ClientUser;
 import data.Ticket;
 import data.Trip;
+import data.TripDTO;
 
 import java.util.List;
 
@@ -17,8 +18,8 @@ public interface IManageClientUsers {
     public Boolean buyTicket(String email, String tripId, int seat);
     public void editInfo(String email, String password, String name, String address, String cc_number);
     public void deleteUser(String email);
-    public List<Trip> searchTrips(String beg, String end);
+    public List<TripDTO> searchTrips(String beg, String end);
     public void returnTicket(int id);
     public List<Ticket> filterTickets(String email);
-    public List<Trip> filterTrip(List<Trip> unfiltered);
+    public List<TripDTO> filterTrip(List<TripDTO> unfiltered);
 }

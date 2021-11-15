@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.ICompanyManagers;
+import data.ClientDTO;
 import data.ClientUser;
 import data.Trip;
 
@@ -22,7 +23,7 @@ public class Top5Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<ClientUser> top5 = manageCM.findTop5();
+        List<ClientDTO> top5 = manageCM.findTop5();
 
         request.getSession(true).setAttribute("top5", top5);
 

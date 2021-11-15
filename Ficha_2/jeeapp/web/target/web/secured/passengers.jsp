@@ -12,7 +12,7 @@
         <c:when test="${empty passengersList}"> There is no passengers in this trip </c:when>
         <c:otherwise>
                 <c:forEach var="item" items="${passengersList}">
-                    <c:out value="Name: ${item.client.name}">
+                    <c:out value="Name: ${item.clientName}">
                     </c:out><br>
                 </c:forEach>
         </c:otherwise>

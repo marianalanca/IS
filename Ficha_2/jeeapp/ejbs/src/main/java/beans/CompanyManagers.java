@@ -2,15 +2,13 @@ package beans;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import data.*;
 import data.ClientUser;
 import data.Ticket;
-import data.ClientUser;
-import data.CompanyManager;
-import data.Ticket;
-import data.Trip;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,11 +69,10 @@ public class CompanyManagers implements ICompanyManagers{
                 for(Ticket t: tickets){
                     if( (client = t.getClient()) != null){
                         client.updateWallet(trip.getPrice());
-                        //em.persist(client); //?
+                        em.persist(client);
                     }
-                    em.remove(t); //?
+                    //em.remove(t);
                 }
-                //em.remove(tickets);
             }
             em.remove(trip);
             return true;
@@ -84,20 +81,20 @@ public class CompanyManagers implements ICompanyManagers{
         return false;
     }
 
-    public List<Trip> findFutureTrips() {
+    public List<TripDTO> findFutureTrips() {
 
         LocalDateTime today = LocalDateTime.now();
 
         TypedQuery<Trip> q = em.createQuery("from Trip where departure_date >= :today", Trip.class).setParameter("today", today);
 
         try {
-            return q.getResultList();
+            return returnTDTO(q.getResultList());
         } catch (Exception e) {
             return null;
         }
     }
 
-    public List<Trip> findTripsBetDates(String d1, String d2) {
+    public List<TripDTO> findTripsBetDates(String d1, String d2) {
 
         try {
             LocalDateTime beg_date = LocalDateTime.parse(d1);
@@ -106,16 +103,17 @@ public class CompanyManagers implements ICompanyManagers{
             Query q = em.createQuery("from Trip where departure_date between '" + beg_date.toString() + "' and '" +
                     end_date.toString() + "'");
 
-            return q.getResultList();
+            return returnTDTO(q.getResultList());
+
         } catch (Exception e) {
             return null;
         }
     }
 
-    public List<Trip> findTripsByDate(String d) {
+    public List<TripDTO> findTripsByDate(String d) {
 
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
             LocalDateTime aux_date = LocalDateTime.parse(d);
             LocalDateTime d1 = aux_date;
             d1 = d1.minusHours(aux_date.getHour());
@@ -127,33 +125,60 @@ public class CompanyManagers implements ICompanyManagers{
             Query q = em.createQuery("from Trip where departure_date between '" + d1.toString() + "' and '" +
                     d2.toString() + "'");
 
-            return q.getResultList();
+            return returnTDTO(q.getResultList());
+
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public List<ClientUser> findTop5(){
+    public List<ClientDTO> findTop5(){
 
         try{
             TypedQuery<ClientUser> q = em.createQuery("from ClientUser c order by size(c.tickets), c.name desc", ClientUser.class);
             q.setMaxResults(5);
-            return q.getResultList();
+
+            List <ClientUser> clients = q.getResultList();
+            List<ClientDTO> cDTO = new ArrayList<>();
+            for(ClientUser c: clients){
+                cDTO.add(new ClientDTO(c.getName()));
+            }
+
+            return cDTO;
+
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public List<Ticket> listPassenger(String id_trip){
+    public List<TicketDTO> listPassenger(String id_trip){
         try{
             TypedQuery<Ticket> q = em.createQuery("from Ticket where trip ='" + id_trip + "'", Ticket.class);
-            return q.getResultList();
+            List<Ticket> tickets = q.getResultList();
+            List<TicketDTO> tDTO = new ArrayList<>();
+
+            for(Ticket t: tickets){
+                tDTO.add(new TicketDTO(t.getClient().getName()));
+            }
+
+            return tDTO;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public List<TripDTO> returnTDTO(List<Trip> trips){
+
+        List<TripDTO> tDTO = new ArrayList<>();
+        for(Trip t: trips){
+            int id = Integer.parseInt(t.getId());
+            tDTO.add(new TripDTO(id, t.getDeparture_date(), t.getDeparture_point(), t.getDestination(), t.getPrice(),  t.getCapacity()));
+        }
+
+        return tDTO;
     }
 
     public CompanyManager findManager(String email) {

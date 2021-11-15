@@ -1,6 +1,8 @@
 package beans;
 
+import java.net.Inet4Address;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.ejb.Stateless;
@@ -9,6 +11,7 @@ import javax.persistence.*;
 import data.ClientUser;
 import data.Ticket;
 import data.Trip;
+import data.TripDTO;
 
 @Stateless
 public class ManageClientUsers implements IManageClientUsers {
@@ -99,11 +102,13 @@ public class ManageClientUsers implements IManageClientUsers {
 
         tripId = tripId.replace("/", "");
 
+        System.out.println("HERE: " + tripId);
+
         Trip trip = findTrip(tripId);
 
         Ticket newTicket = new Ticket(client, trip, seat);
 
-        if (client.getWallet() - trip.getPrice() >= 0 && trip.getTickets().size() < trip.getcapacity() &&
+        if (client.getWallet() - trip.getPrice() >= 0 && trip.getTickets().size() < trip.getCapacity() &&
                 findTicket(newTicket.getClient(), trip)==null && findTicketSeat(trip, seat) == null) {
             client.updateWallet(- trip.getPrice());
 
@@ -153,7 +158,7 @@ public class ManageClientUsers implements IManageClientUsers {
         em.remove(c);
     }
 
-    public List<Trip> searchTrips(String beg, String end) {
+    public List<TripDTO> searchTrips(String beg, String end) {
         System.out.println("Searching trips...");
 
         LocalDateTime beg_date = LocalDateTime.parse(beg);
@@ -162,7 +167,13 @@ public class ManageClientUsers implements IManageClientUsers {
         Query q = em.createQuery("from Trip where departure_date between '" + beg_date.toString() + "' and '" +
                 end_date.toString() + "'");
 
-        return q.getResultList();
+        List<Trip> trip = q.getResultList();
+        List<TripDTO> tripDTO = new ArrayList<>();
+        for(Trip t: trip){
+            tripDTO.add(new TripDTO(Integer.parseInt(t.getId()), t.getDeparture_date(), t.getDeparture_point(), t.getDestination(), t.getPrice(), t.getCapacity()));
+        }
+
+        return tripDTO;
     }
 
     public List<Ticket> filterTickets(String email) {
@@ -176,9 +187,9 @@ public class ManageClientUsers implements IManageClientUsers {
         return t;
     }
 
-    public List<Trip> filterTrip(List<Trip> unfiltered) {
+    public List<TripDTO> filterTrip(List<TripDTO> unfiltered) {
 
-        List<Trip> filtered = unfiltered;
+        List<TripDTO> filtered = unfiltered;
         filtered.removeIf(trip -> trip.getDeparture_date().isBefore(LocalDateTime.now()));
 
         return filtered;

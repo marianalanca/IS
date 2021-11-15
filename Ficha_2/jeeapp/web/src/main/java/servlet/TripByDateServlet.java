@@ -2,6 +2,7 @@ package servlet;
 
 import beans.ICompanyManagers;
 import data.Trip;
+import data.TripDTO;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -24,11 +25,10 @@ public class TripByDateServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        List<Trip> trips;
         String destination;
         String date1 = request.getParameter("date1");
 
-        trips = manageCM.findTripsByDate(date1);
+        List<TripDTO> trips = manageCM.findTripsByDate(date1);
 
         request.getSession(true).setAttribute("trips", trips);
         destination = "/secured/trips.jsp";

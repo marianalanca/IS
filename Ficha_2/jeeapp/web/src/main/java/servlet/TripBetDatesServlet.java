@@ -2,6 +2,7 @@ package servlet;
 
 import beans.ICompanyManagers;
 import data.Trip;
+import data.TripDTO;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -27,7 +28,7 @@ public class TripBetDatesServlet extends HttpServlet {
         String date1 = request.getParameter("date1");
         String date2 = request.getParameter("date2");
 
-        List<Trip> trips = manageCM.findTripsBetDates(date1, date2);
+        List<TripDTO> trips = manageCM.findTripsBetDates(date1, date2);
 
         request.getSession(true).setAttribute("trips", trips);
 
