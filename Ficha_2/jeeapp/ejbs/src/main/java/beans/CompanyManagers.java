@@ -1,18 +1,21 @@
 package beans;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 import data.*;
 import data.ClientUser;
-import data.Ticket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import data.Ticket;;
 
 import javax.ejb.Stateless;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -59,10 +62,16 @@ public class CompanyManagers implements ICompanyManagers{
         TypedQuery<Ticket> q2;
         List<Ticket> tickets;
         ClientUser client;
+        Session mailSession = null;
 
         if(trip != null){
             q2 = em.createQuery("from Ticket where trip='"+ trip_id + "'", Ticket.class);
             tickets = q2.getResultList();
+
+            String dep_date = trip.getDeparture_date_String();
+            String dep_point = trip.getDeparture_point();
+            String dest = trip.getDestination();
+            double price = trip.getPrice();
 
             if(tickets != null){
 
@@ -70,11 +79,37 @@ public class CompanyManagers implements ICompanyManagers{
                     if( (client = t.getClient()) != null){
                         client.updateWallet(trip.getPrice());
                         em.persist(client);
+
+                        try{
+
+                            MimeMessage m = new MimeMessage(mailSession);
+                            Address[] to = new InternetAddress[] {new InternetAddress(client.getEmail()) };
+
+                            m.setRecipients(Message.RecipientType.TO, to);
+                            m.setSubject("Trip canceled");
+                            m.setSentDate(new java.util.Date());
+                            m.setContent("Dear client, \nWe are sorry to inform that your trip was been canceled.\n " +
+                                    "Departure Date: " + dep_date + "\nDeparture Point: " + dep_point +
+                                    "\nDestination: " + dest + "\nPrice: " + price +
+                                    "We refund the value of the ticket and we hope see you back. " +
+                                    "\nYour apologies, Bus's Company","text/plain");
+                            Transport.send(m);
+                            System.out.println("Mail sent!");
+                        }
+                        catch (javax.mail.MessagingException e)
+                        {
+                            e.printStackTrace();
+                            System.out.println("Error in Sending Mail: "+e);
+                        }
+
                     }
                     //em.remove(t);
                 }
             }
             em.remove(trip);
+
+
+
             return true;
         }
 

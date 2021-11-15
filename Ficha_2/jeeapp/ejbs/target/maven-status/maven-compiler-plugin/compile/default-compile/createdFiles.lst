@@ -1,4 +1,6 @@
 beans/CompanyManagers.class
 beans/ICompanyManagers.class
 beans/ManageClientUsers.class
+beans/Mail.class
 beans/IManageClientUsers.class
+beans/IMail.class

@@ -28,7 +28,7 @@
                 </c:out><br/>
                 <form action="<%= request.getContextPath() %>/selectDate" method="post">
                     <input type="text" value="${trip.id}" name="trip_id" hidden="hidden">
-                    <input type="submit">
+                    <input name="List Passengers" type="submit">
                 </form>
                 <br>
             </c:forEach>

@@ -22,6 +22,13 @@ jms-topic add --topic-address=playTopic --entries=java:jboss/exported/jms/topic/
 /subsystem=messaging-activemq/server=default/security-setting=#/role=guest:remove()
 /subsystem=messaging-activemq/server=default/security-setting=#/role=guest:add(consume=true,create-durable-queue=true,delete-durable-queue=true,create-non-durable-queue=true,delete-non-durable-queue=true,send=true)
 
+/subsystem=mail/mail-session=default/server=smtp/:write-attribute(name=username,value=marianaloreto30@gmail.com)
+/subsystem=mail/mail-session=default/server=smtp/:write-attribute(name=password,value=ymfigaaxtdjaajzl)
+/subsystem=mail/mail-session=default/server=smtp/:write-attribute(name=tls,value=true)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=mail-smtp/:write-attribute(name=host,value=smtp.gmail.com)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=mail-smtp/:write-attribute(name=port,value=587)
+
+
 # Run the batch commands
 run-batch
 
