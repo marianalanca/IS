@@ -24,8 +24,6 @@
 
 <h1>Carregar a carteira</h1>
 
-<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
-
 <p>Tem ${wallet}€ na sua carteira. </p ><br />
 
 <form action="${pageContext.request.contextPath}/wallet" method="post">

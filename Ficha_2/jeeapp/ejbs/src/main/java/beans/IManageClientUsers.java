@@ -19,6 +19,6 @@ public interface IManageClientUsers {
     public void deleteUser(String email);
     public List<Trip> searchTrips(String beg, String end);
     public void returnTicket(int id);
-    public List<Ticket> filterTickets(List<Ticket> unfiltered);
+    public List<Ticket> filterTickets(String email);
     public List<Trip> filterTrip(List<Trip> unfiltered);
 }

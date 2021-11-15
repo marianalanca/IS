@@ -19,7 +19,7 @@
 <input value="Voltar" name="home" type="submit"> <br />
 </form>
 
-    <strong>Registration</strong>
+    <h1>Registar</h1>
 
     <form action="${pageContext.request.contextPath}/register" method="post">
         Name: <input required="" name="name" type="text" placeholder="username..." /> <br />

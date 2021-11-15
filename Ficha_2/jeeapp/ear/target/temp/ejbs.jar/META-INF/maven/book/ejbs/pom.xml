@@ -27,10 +27,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <artifactId>slf4j-api</artifactId>
             <version>1.7.32</version>
         </dependency>
-        <dependency>
-            <groupId>book</groupId>
-            <artifactId>jpa</artifactId>
-        </dependency>
     </dependencies>
     <build>
         <pluginManagement>

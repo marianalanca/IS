@@ -1,5 +1,7 @@
 package data;
 
+import org.hibernate.annotations.ColumnTransformer;
+
 import java.util.List;
 import java.util.Date;
 import javax.persistence.*;
@@ -8,7 +10,9 @@ import javax.persistence.*;
 public class CompanyManager {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String email, password;
+    private String email;
+    @ColumnTransformer(read = "pgp_sym_decrypt(password::bytea, 'mySecretKey')", write = "pgp_sym_encrypt(?, 'mySecretKey')")
+    private String password;
 
     public CompanyManager() {}
 

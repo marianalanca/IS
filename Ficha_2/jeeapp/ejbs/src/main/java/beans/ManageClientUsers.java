@@ -74,31 +74,24 @@ public class ManageClientUsers implements IManageClientUsers {
         return false;
     }
 
-    public Ticket findTicket(Trip trip, ClientUser client) {
-        for (Ticket ticket:trip.getTickets()) {
-            if (ticket.getClient().equals(client)) {
-                return ticket;
-            }
-        }
-        return null;
-    }
-
     public Ticket findTicketSeat(Trip trip, int seat) {
-        for (Ticket ticket:trip.getTickets()) {
-            if (ticket.getSeat() == seat) {
-                return ticket;
-            }
+        TypedQuery<Ticket> q = em.createQuery("from Ticket where seat =" + seat + " and trip.id=" +trip.getId() ,  Ticket.class);
+
+        try {
+            return q.getSingleResult();
+        } catch (Exception e) {
+            return null;
         }
-        return null;
     }
 
     public Ticket findTicket(ClientUser client, Trip trip) {
-        for (Ticket ticket:client.getTickets()) {
-            if (ticket.getTrip().equals(trip)) {
-                return ticket;
-            }
+        TypedQuery<Ticket> q = em.createQuery("from Ticket where client.id =" + client.getId() + " and trip.id=" +trip.getId() ,  Ticket.class);
+
+        try {
+            return q.getSingleResult();
+        } catch (Exception e) {
+            return null;
         }
-        return null;
     }
 
     public Boolean buyTicket(String email, String tripId, int seat) {
@@ -111,9 +104,7 @@ public class ManageClientUsers implements IManageClientUsers {
         Ticket newTicket = new Ticket(client, trip, seat);
 
         if (client.getWallet() - trip.getPrice() >= 0 && trip.getTickets().size() < trip.getcapacity() &&
-                findTicket(trip, newTicket.getClient())==null && findTicketSeat(trip, seat) == null) {
-            //trip.addTicket(newTicket);
-            //client.addTicket(newTicket);
+                findTicket(newTicket.getClient(), trip)==null && findTicketSeat(trip, seat) == null) {
             client.updateWallet(- trip.getPrice());
 
             em.persist(newTicket);
@@ -123,16 +114,11 @@ public class ManageClientUsers implements IManageClientUsers {
     }
 
     public void returnTicket(int id) {
-
-
         Ticket ticket = em.find(Ticket.class, id);
 
         ticket.getClient().updateWallet(ticket.getTrip().getPrice());
 
-        int isSuccessful = em.createQuery("delete from Ticket p where p.id=:id ")
-                .setParameter("id", id)
-                .executeUpdate();
-
+        em.remove(ticket);
     }
 
     public void editInfo(String email, String password, String name, String address, String cc_number) {
@@ -157,7 +143,10 @@ public class ManageClientUsers implements IManageClientUsers {
     public void deleteUser(String email) {
         ClientUser c = findClientUser(email);
 
-        for (Ticket ticket: c.getTickets()) {
+        TypedQuery<Ticket> q = em.createQuery("from Ticket where client ='" + c.getId() + "'",  Ticket.class);
+        List<Ticket> t = q.getResultList();
+
+        for (Ticket ticket: t) {
             returnTicket(ticket.getId());
         }
 
@@ -176,12 +165,15 @@ public class ManageClientUsers implements IManageClientUsers {
         return q.getResultList();
     }
 
-    public List<Ticket> filterTickets(List<Ticket> unfiltered) {
+    public List<Ticket> filterTickets(String email) {
 
-        List<Ticket> filtered = unfiltered;
-        filtered.removeIf(ticket -> ticket.getTrip().getDeparture_date().isBefore(LocalDateTime.now()));
+        ClientUser client = findClientUser(email);
 
-        return filtered;
+        TypedQuery<Ticket> q = em.createQuery("from Ticket where client ='" + client.getId() + "'",  Ticket.class);
+        List<Ticket> t = q.getResultList();
+        t.removeIf(ticket -> ticket.getTrip().getDeparture_date().isBefore(LocalDateTime.now()));
+
+        return t;
     }
 
     public List<Trip> filterTrip(List<Trip> unfiltered) {
@@ -191,5 +183,4 @@ public class ManageClientUsers implements IManageClientUsers {
 
         return filtered;
     }
-
 }

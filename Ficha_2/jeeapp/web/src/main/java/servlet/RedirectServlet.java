@@ -37,7 +37,7 @@ public class RedirectServlet extends HttpServlet {
         } else if (request.getParameter("refund") != null) {
             // ir buscar as trips da pessoa
             request.setAttribute("tickets", manageClients.filterTickets(manageClients.findClientUser(request.getSession(true)
-                    .getAttribute("auth").toString()).getTickets()));
+                    .getAttribute("auth").toString()).getEmail()));
             destination = "/secured/tripRefund.jsp";
         } else if (request.getParameter("profile") != null || request.getParameter("menuDefinitions") != null) {
             request.setAttribute("profile", manageClients.findClientUser(request.getSession(true).getAttribute("auth")

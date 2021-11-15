@@ -15,7 +15,7 @@ public class Trip {
     private int capacity;
     private double price;
 
-    @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL)
     private List<Ticket> tickets;
 
     public Trip() {

@@ -16,11 +16,10 @@ public class LogoutServlet extends HttpServlet {
     @EJB
     private IManageClientUsers manageClients;
 
-//mudar para post
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
-        //request.getSession(true).removeAttribute("auth");
+        request.getSession(true).removeAttribute("auth");
 
         request.getSession(false);
 

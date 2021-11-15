@@ -28,7 +28,8 @@ public class BuyTicketServlet extends HttpServlet {
                 seat)) {
             destination = "/secured/successfulOperation.jsp";
         } else {
-            // aparecer mensagem de erro?
+
+            destination = "secured/unsuccessfulOperation.jsp";
         }
 
         request.getRequestDispatcher(destination).forward(request, response);
