@@ -2,7 +2,7 @@
 
 ## Como correr
 
-## 1. Criar o container docker
+### 1. Criar o container docker
 
 Na pasta do projeto:
 
@@ -11,7 +11,7 @@ Na pasta do projeto:
     docker-compose up --build
     
 
-## 2. Criar a extensão de encriptação na base de dados
+### 2. Criar a extensão de encriptação na base de dados
 
     Na base de dados do docker:
 
@@ -23,7 +23,7 @@ Na pasta do projeto:
     CREATE EXTENSION pgcrypto;
     ```
 
-## 2. Fazer deploy da aplicação
+### 3. Fazer deploy da aplicação
 
     Na consola do Docker:
 
