@@ -14,7 +14,15 @@
 
 <h1>Menu</h1>
 
-    <a href="${pageContext.request.contextPath}/createTrip"> Create trip </a> <br />
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Create trip" name="createTrip" type="submit">  <br />
+        <input value="Delete trip" name="deleteTrip" type="submit">  <br />
+        <input value="Top 5" name="top5" type="submit"> <br />
+        <input value="Search Trips between dates" name="tripBetDate" type="submit"> <br />
+        <input value="Search Trips by date" name="tripByDate" type="submit"> <br />
+    </form>
+
+<!-- <a href="${pageContext.request.contextPath}/createTrip"> Create trip </a> <br />
 
     <a href="${pageContext.request.contextPath}/deleteTrips"> Delete trip </a> <br />
 
@@ -22,10 +30,7 @@
 
     <a href="${pageContext.request.contextPath}/tripBetDate"> Search Trips between dates</a> <br />
 
-    <a href="${pageContext.request.contextPath}/tripByDate"> Search Trips by date</a> <br />
-
-<!-- ist all passengers on a given trip listed during one of the previous searches -->
-<!-- The system sends a daily summary of the revenues of that day’s trips to the managers. -->
+    <a href="${pageContext.request.contextPath}/tripByDate"> Search Trips by date</a> <br />-->
 
 </body>
 </html>

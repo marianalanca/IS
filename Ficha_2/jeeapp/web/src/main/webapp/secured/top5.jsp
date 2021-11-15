@@ -5,10 +5,15 @@
     <title>Top 5</title>
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/secured/displayCM.jsp"> Menu </a> <br />
+    <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
+
+    <form action="${pageContext.request.contextPath}/redirect" method="get">
+        <input value="Menu" name="CM" type="submit">
+    </form> <br>
+
     <p>${auth}</p>
 
-    <strong>Top 5</strong><br>
+    <h1>Top 5</h1><br>
 
     <c:choose>
         <c:when test="${empty top5}"> There is no top 5, we need to close the company </c:when>
