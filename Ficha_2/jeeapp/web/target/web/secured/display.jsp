@@ -29,7 +29,6 @@
         <input value="Consultar viagens disponíveis/Comprar" name="buy" type="submit">  <br />
         <input value="Cancelar reservas" name="refund" type="submit"> <br />
         <input value="Editar perfil" name="profile" type="submit"> <br />
-        <input value="CM" name="CM" type="submit"> <br />
     </form>
 
 </body>

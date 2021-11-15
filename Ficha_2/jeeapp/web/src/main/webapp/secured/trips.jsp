@@ -8,10 +8,10 @@
 <body>
 
 <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
-
+<br>
 <form action="${pageContext.request.contextPath}/redirect" method="get">
     <input value="Menu" name="CM" type="submit">
-</form> <br>
+</form>
 
 <p>${auth}</p>
 
@@ -28,7 +28,7 @@
                 </c:out><br/>
                 <form action="<%= request.getContextPath() %>/selectDate" method="post">
                     <input type="text" value="${trip.id}" name="trip_id" hidden="hidden">
-                    <input type="submit">
+                    <input name="List Passengers" type="submit">
                 </form>
                 <br>
             </c:forEach>

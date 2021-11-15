@@ -7,10 +7,10 @@
 </head>
 <body>
     <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
-
+    <br>
     <form action="${pageContext.request.contextPath}/redirect" method="get">
         <input value="Menu" name="CM" type="submit">
-    </form> <br>
+    </form>
 
     <p>${auth}</p>
 

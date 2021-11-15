@@ -6,10 +6,10 @@
 </head>
 <body>
     <a href="${pageContext.request.contextPath}/index.jsp"> Log out </a> <br />
-
+    <br>
     <form action="${pageContext.request.contextPath}/redirect" method="get">
         <input value="Menu" name="CM" type="submit">
-    </form> <br>
+    </form>
 
     <p>${auth}</p>
 
@@ -19,7 +19,7 @@
         <c:when test="${empty top5}"> There is no top 5, we need to close the company </c:when>
         <c:otherwise>
             <c:forEach items="${top5}" var = "top">
-                <c:out value="Client's name: ${top.name}">
+                <c:out value="\tClient's name: ${top.name}">
                 </c:out><br>
                 <br>
             </c:forEach>
