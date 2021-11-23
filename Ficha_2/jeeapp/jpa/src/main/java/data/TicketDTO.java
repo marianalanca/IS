@@ -3,17 +3,10 @@ package data;
 import java.io.Serializable;
 import javax.persistence.*;
 
-@Entity
-public class TicketDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class TicketDTO{
     private int id;
     private int seat;
     private String clientName;
-
-    //private Trip trip;
-    //private ClientUser client;
 
     public TicketDTO() {}
 

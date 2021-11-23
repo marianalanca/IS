@@ -7,11 +7,7 @@ import java.util.List;
 import java.util.Date;
 import javax.persistence.*;
 
-@Entity
-public class ClientDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class ClientDTO {
     private int id;
     private String name, address, cc_number;
     private double wallet;

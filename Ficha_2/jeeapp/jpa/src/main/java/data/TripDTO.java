@@ -5,10 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-@Entity
 public class TripDTO {
-
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private LocalDateTime departure_date;
     private String departure_point, destination;
