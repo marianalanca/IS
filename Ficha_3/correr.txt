@@ -1,5 +1,6 @@
 CORRER KAFKA
-
+-----------------------------------------------------------------------------------
+7.2 do livro
 4 consolas:
 	consola #1:
 		cd opt/kafka_2.13-2.8.1/
@@ -13,8 +14,28 @@ CORRER KAFKA
 		cd workspace
 		mvn clean package
 		java -jar target/KafkaStreams.jar coisa
-		
 	
 	consola #4:
 		cd workspace
 		java -cp target/KafkaStreams.jar kafka.SimpleProducer coisa
+-----------------------------------------------------------------------------------
+7.3 do livro
+consola #1:
+	cd opt/kafka_2.13-2.8.1/
+	bin/zookeeper-server-start.sh config/zookeeper.properties
+
+consola #2:
+	cd opt/kafka_2.13-2.8.1/
+	bin/kafka-server-start.sh config/server.properties
+
+consola #3:
+    cd opt/kafka_2.13-2.8.1/
+    bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic resultstopic
+
+consola #4:
+    cd workspace
+    java -cp target/KafkaStreams.jar streams.SimpleStreams kstreamstopic resultstopic
+
+consola #5:
+    cd workspace
+    java -cp target/KafkaStreams.jar kafka.SimpleProducer kstreamstopic
