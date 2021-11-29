@@ -1,0 +1,1350 @@
+Index: jpa/src/main/java/data/ClientUser.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package data;\r\n\r\nimport java.io.Serializable;\r\nimport java.util.List;\r\nimport java.util.Date;\r\nimport javax.persistence.*;\r\n\r\n@Entity\r\npublic class ClientUser implements Serializable {\r\n    private static final long serialVersionUID = 1L;\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.AUTO)\r\n    private int id;\r\n    private String name, address, cc_number;\r\n    private double wallet;\r\n    private String email, password;\r\n\r\n    // REVER\r\n    @ManyToMany\r\n    private List<Trip> tickets;\r\n\r\n    public ClientUser() {}\r\n\r\n    public ClientUser(String email, String password, String name, String address, String cc_number) {\r\n        this.email = email;\r\n        this.password = password;\r\n        this.name = name;\r\n        this.address = address;\r\n        this.cc_number = cc_number;\r\n        wallet = 0.0;\r\n    }\r\n\r\n    public int getId() {\r\n        return id;\r\n    }\r\n\r\n    public String getAddress() {\r\n        return address;\r\n    }\r\n\r\n    public double getWallet() {\r\n        return wallet;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public String getCc_number() {\r\n        return cc_number;\r\n    }\r\n\r\n    public void setId(int id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getEmail() {\r\n        return email;\r\n    }\r\n\r\n    public String getPassword() {\r\n        return password;\r\n    }\r\n\r\n    public void setPassword(String password) {\r\n        this.password = password;\r\n    }\r\n\r\n    public void setAddress(String address) {\r\n        this.address = address;\r\n    }\r\n\r\n    public void setName(String name) {\r\n        this.name = name;\r\n    }\r\n\r\n    public void setCc_number(String cc_number) {\r\n        this.cc_number = cc_number;\r\n    }\r\n\r\n    public void setWallet(double wallet) {\r\n        this.wallet = wallet;\r\n    }\r\n\r\n    public void updateWallet(double sum) {\r\n        this.wallet += sum;\r\n    }\r\n\r\n    public void setEmail(String email) {\r\n        this.email = email;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/jpa/src/main/java/data/ClientUser.java b/jpa/src/main/java/data/ClientUser.java
+--- a/jpa/src/main/java/data/ClientUser.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/jpa/src/main/java/data/ClientUser.java	(date 1636833891120)
+@@ -15,9 +15,8 @@
+     private double wallet;
+     private String email, password;
+ 
+-    // REVER
+-    @ManyToMany
+-    private List<Trip> tickets;
++    @OneToMany(mappedBy = "trip")
++    private List<Ticket> tickets;
+ 
+     public ClientUser() {}
+ 
+@@ -89,4 +88,20 @@
+     public void setEmail(String email) {
+         this.email = email;
+     }
++
++    public List<Ticket> getTickets() {
++        return tickets;
++    }
++
++    public void setTickets(List<Ticket> tickets) {
++        this.tickets = tickets;
++    }
++
++    public void addTicket(Ticket ticket) {
++        tickets.add(ticket);
++    }
++
++    public void removeTicket(Ticket ticket) {
++        tickets.remove(ticket);
++    }
+ }
+Index: web/src/main/java/servlet/DeleteServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package servlet;\r\n\r\nimport java.io.IOException;\r\nimport javax.ejb.EJB;\r\nimport javax.servlet.ServletException;\r\nimport javax.servlet.annotation.WebServlet;\r\nimport javax.servlet.http.HttpServlet;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\n\r\nimport beans.IManageClientUsers;\r\n\r\n@WebServlet(\"/delete\")\r\npublic class DeleteServlet extends HttpServlet {\r\n    private static final long serialVersionUID = 1L;\r\n    @EJB\r\n    private IManageClientUsers manageClients;\r\n\r\n\r\n    protected void doGet(HttpServletRequest request, HttpServletResponse response)\r\n            throws IOException, ServletException {\r\n\r\n\r\n        if (request.getParameter(\"ok\") != null ) {\r\n            manageClients.deleteUser(request.getSession(true).getAttribute(\"auth\").toString());\r\n\r\n            request.getSession(true).removeAttribute(\"auth\");\r\n\r\n            request.getRequestDispatcher(\"/index.jsp\").forward(request, response);\r\n\r\n            // aparecer mensagem a dizer que eliminou e para voltar para o menu\r\n\r\n\r\n        } else if (request.getParameter(\"cancel\") != null) {\r\n            request.getRequestDispatcher(\"/secured/definitions.jsp\").forward(request, response);\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/DeleteServlet.java b/web/src/main/java/servlet/DeleteServlet.java
+--- a/web/src/main/java/servlet/DeleteServlet.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/java/servlet/DeleteServlet.java	(date 1636827248682)
+@@ -32,7 +32,7 @@
+ 
+ 
+         } else if (request.getParameter("cancel") != null) {
+-            request.getRequestDispatcher("/secured/definitions.jsp").forward(request, response);
++            request.getRequestDispatcher("/secured/definitionsMenu.jsp").forward(request, response);
+         }
+ 
+     }
+Index: ejbs/src/main/java/beans/ManageClientUsers.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package beans;\r\n\r\nimport java.util.List;\r\nimport java.util.Objects;\r\nimport javax.ejb.Stateless;\r\nimport javax.persistence.*;\r\n\r\nimport data.ClientUser;\r\nimport data.Trip;\r\n\r\n@Stateless\r\npublic class ManageClientUsers implements IManageClientUsers {\r\n    @PersistenceContext(unitName = \"ClientsBus\")\r\n    EntityManager em;\r\n\r\n    public void addClientUser(String email, String password, String name, String address, String cc_number) {\r\n        System.out.println(\"Adding Client \" + name + \"...\");\r\n        ClientUser s = new ClientUser(email, password, name, address, cc_number);\r\n        em.persist(s);\r\n    }\r\n\r\n    public ClientUser findClientUser(String email) {\r\n        System.out.println(\"Searching Client \" + email + \"...\");\r\n\r\n        TypedQuery<ClientUser> q = em.createQuery(\"from ClientUser where email='\"+email + \"'\", ClientUser.class);\r\n\r\n        try {\r\n            return q.getSingleResult();\r\n        } catch (Exception e) {\r\n            return null;\r\n        }\r\n    }\r\n\r\n    public Boolean registration(String email, String password, String name, String address, String cc_number, String confirmation) {\r\n        // procurar se existe na bd\r\n        if (password.equals(confirmation) && findClientUser(email)==null) {\r\n            addClientUser(email, password, name, address, cc_number);\r\n            return true;\r\n        }\r\n        return false;\r\n    }\r\n\r\n    public Boolean login(String email, String password) {\r\n        ClientUser client = findClientUser(email);\r\n        if (client!=null) {\r\n            return Objects.equals(client.getPassword(), password);\r\n        }\r\n        return false;\r\n    }\r\n\r\n    public Boolean updateWallet(String email, double value) {\r\n        ClientUser client = findClientUser(email);\r\n        if (client!=null && client.getWallet() + value >= 0) {\r\n\r\n            client.updateWallet(value);\r\n            em.persist(client);\r\n\r\n            return true;\r\n        }\r\n        return false;\r\n    }\r\n\r\n    public Boolean buyTicket(String email, Trip busTrip) {\r\n        ClientUser client = findClientUser(email);\r\n        double price = busTrip.getPrice();\r\n        if (client!=null && client.getWallet() - price >= 0 /*&& busTrip.addPassengers(client)*/) {\r\n\r\n            client.updateWallet(- price);\r\n\r\n            em.persist(client);\r\n            em.persist(busTrip);\r\n\r\n            return true;\r\n        }\r\n        return false;\r\n    }\r\n\r\n    // Test\r\n    public void editInfo(String email, String password, String name, String address, String cc_number) {\r\n        ClientUser client = findClientUser(email);\r\n\r\n        if (!Objects.equals(password, \"\")) {\r\n            client.setPassword(password);\r\n        }\r\n        if (!Objects.equals(name, \"\")) {\r\n            client.setName(name);\r\n        }\r\n        if (!Objects.equals(address, \"\")) {\r\n            client.setAddress(address);\r\n        }\r\n        if (!Objects.equals(cc_number, \"\")) {\r\n            client.setCc_number(cc_number);\r\n        }\r\n\r\n        em.persist(client);\r\n    }\r\n\r\n    public void deleteUser(String email) {\r\n        ClientUser c = findClientUser(email);\r\n        // eliminar\r\n        // devolver todos os lugares em que esteja\r\n\r\n\r\n\r\n        em.remove(c);\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ejbs/src/main/java/beans/ManageClientUsers.java b/ejbs/src/main/java/beans/ManageClientUsers.java
+--- a/ejbs/src/main/java/beans/ManageClientUsers.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/ejbs/src/main/java/beans/ManageClientUsers.java	(date 1636834596722)
+@@ -1,11 +1,14 @@
+ package beans;
+ 
++import java.time.LocalDateTime;
++import java.util.Date;
+ import java.util.List;
+ import java.util.Objects;
+ import javax.ejb.Stateless;
+ import javax.persistence.*;
+ 
+ import data.ClientUser;
++import data.Ticket;
+ import data.Trip;
+ 
+ @Stateless
+@@ -24,6 +27,18 @@
+ 
+         TypedQuery<ClientUser> q = em.createQuery("from ClientUser where email='"+email + "'", ClientUser.class);
+ 
++        try {
++            return q.getSingleResult();
++        } catch (Exception e) {
++            return null;
++        }
++    }
++
++    public Trip findTrip(String id) {
++        System.out.println("Searching Trip " + id + "...");
++
++        TypedQuery<Trip> q = em.createQuery("from Trip where id='"+id + "'", Trip.class);
++
+         try {
+             return q.getSingleResult();
+         } catch (Exception e) {
+@@ -60,22 +75,94 @@
+         return false;
+     }
+ 
+-    public Boolean buyTicket(String email, Trip busTrip) {
++    public Ticket findTicket(Trip trip, ClientUser client) {
++        for (Ticket ticket:trip.getTickets()) {
++            if (ticket.getClient().equals(client)) {
++                return ticket;
++            }
++        }
++        return null;
++    }
++
++    public Ticket findTicketSeat(Trip trip, int seat) {
++        for (Ticket ticket:trip.getTickets()) {
++            if (ticket.getSeat() == seat) {
++                return ticket;
++            }
++        }
++        return null;
++    }
++
++    public Ticket findTicket(ClientUser client, Trip trip) {
++        for (Ticket ticket:client.getTickets()) {
++            if (ticket.getTrip().equals(trip)) {
++                return ticket;
++            }
++        }
++        return null;
++    }
++
++    public Boolean buyTicket(String email, String tripId, int seat) {
+         ClientUser client = findClientUser(email);
+-        double price = busTrip.getPrice();
+-        if (client!=null && client.getWallet() - price >= 0 /*&& busTrip.addPassengers(client)*/) {
++
++        tripId = tripId.replace("/", "");
+ 
+-            client.updateWallet(- price);
++        Trip trip = findTrip(tripId);
++
++        Ticket newTicket = new Ticket(client, trip, seat);
++
++        if (client.getWallet() - trip.getPrice() >= 0 && trip.getTickets().size() < trip.getcapacity() &&
++                findTicket(trip, newTicket.getClient())==null && findTicketSeat(trip, seat) == null) {
++            trip.addTicket(newTicket);
++            client.addTicket(newTicket);
++            client.updateWallet(- trip.getPrice());
+ 
+             em.persist(client);
+-            em.persist(busTrip);
+-
++            em.persist(trip);
+             return true;
+         }
+         return false;
+     }
+ 
+-    // Test
++    // TEST
++    public Boolean returnTicket(String email, String tripId) {
++        ClientUser client = findClientUser(email);
++
++        tripId = tripId.replace("/", "");
++
++        Trip trip = findTrip(tripId);
++
++        double price = trip.getPrice();
++
++        if (client!=null) {
++
++            client.updateWallet(price);
++
++            // procurar no cliente o ticket e tirar; procurar na trip o bilhete e remover
++
++            Ticket ticket = findTicket(client, trip);
++
++            client.removeTicket(ticket);
++            trip.removeTicket(ticket);
++
++            em.persist(client);
++            em.persist(trip);
++            return true;
++        }
++        return false;
++    }
++
++    public void returnTicket(ClientUser client, Ticket ticket) {
++        Trip trip = ticket.getTrip();
++        client.updateWallet(trip.getPrice());
++
++        client.removeTicket(ticket);
++        trip.removeTicket(ticket);
++
++        em.persist(client);
++        em.persist(trip);
++    }
++
+     public void editInfo(String email, String password, String name, String address, String cc_number) {
+         ClientUser client = findClientUser(email);
+ 
+@@ -95,14 +182,28 @@
+         em.persist(client);
+     }
+ 
++    // TESTAR MELHOR
+     public void deleteUser(String email) {
+         ClientUser c = findClientUser(email);
+-        // eliminar
+-        // devolver todos os lugares em que esteja
+ 
+-
++        for (Ticket t:c.getTickets()) {
++            returnTicket(c, t);
++        }
+ 
+         em.remove(c);
+     }
+ 
++    public List<Trip> searchTrips(String beg, String end) {
++        System.out.println("Searching trips...");
++
++        LocalDateTime beg_date = LocalDateTime.parse(beg);
++        LocalDateTime end_date = LocalDateTime.parse(end);
++
++
++        Query q = em.createQuery("from Trip where departure_date between '" + beg_date.toString() + "' and '" +
++                end_date.toString() + "'");
++
++        return q.getResultList();
++    }
++
+ }
+\ No newline at end of file
+Index: ejbs/src/main/java/beans/IManageClientUsers.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package beans;\r\n\r\nimport data.ClientUser;\r\nimport data.Trip;\r\n\r\npublic interface IManageClientUsers {\r\n    public void addClientUser(String email, String password, String name, String address, String cc_number);\r\n    public ClientUser findClientUser(String email);\r\n    public Boolean registration(String email, String password, String name, String address, String cc_number, String confirmation);\r\n    public Boolean login(String email, String password);\r\n    public Boolean updateWallet(String email, double value);\r\n    public Boolean buyTicket(String email, Trip busTrip);\r\n    public void editInfo(String email, String password, String name, String address, String cc_number);\r\n    public void deleteUser(String email);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ejbs/src/main/java/beans/IManageClientUsers.java b/ejbs/src/main/java/beans/IManageClientUsers.java
+--- a/ejbs/src/main/java/beans/IManageClientUsers.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/ejbs/src/main/java/beans/IManageClientUsers.java	(date 1636817717721)
+@@ -3,13 +3,27 @@
+ import data.ClientUser;
+ import data.Trip;
+ 
++import java.util.List;
++
+ public interface IManageClientUsers {
+     public void addClientUser(String email, String password, String name, String address, String cc_number);
++
+     public ClientUser findClientUser(String email);
+-    public Boolean registration(String email, String password, String name, String address, String cc_number, String confirmation);
++
++    public Trip findTrip(String id);
++
++    public Boolean registration(String email, String password, String name, String address, String cc_number,
++                                String confirmation);
++
+     public Boolean login(String email, String password);
++
+     public Boolean updateWallet(String email, double value);
+-    public Boolean buyTicket(String email, Trip busTrip);
++
++    public Boolean buyTicket(String email, String tripId, int seat);
++
+     public void editInfo(String email, String password, String name, String address, String cc_number);
++
+     public void deleteUser(String email);
++
++    public List<Trip> searchTrips(String beg, String end);
+ }
+Index: web/target/web/secured/definitions.jsp
+===================================================================
+diff --git a/web/target/web/secured/definitions.jsp b/web/target/web/secured/definitions.jsp
+deleted file mode 100644
+--- a/web/target/web/secured/definitions.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ /dev/null	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
+@@ -1,26 +0,0 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: maria
+-  Date: 10/11/2021
+-  Time: 22:44
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<html>
+-<head>
+-    <title>Definições</title>
+-</head>
+-<body>
+-
+-    <form action="${pageContext.request.contextPath}/logout" method="get">
+-        <input value="Sair" type="submit">
+-    </form>
+-
+-    <h1>Definições</h1>
+-
+-    <a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil</a> <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil</a>
+-
+-</body>
+-</html>
+Index: web/src/main/webapp/secured/definitions.jsp
+===================================================================
+diff --git a/web/src/main/webapp/secured/definitions.jsp b/web/src/main/webapp/secured/definitions.jsp
+deleted file mode 100644
+--- a/web/src/main/webapp/secured/definitions.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ /dev/null	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
+@@ -1,26 +0,0 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: maria
+-  Date: 10/11/2021
+-  Time: 22:44
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<html>
+-<head>
+-    <title>Definições</title>
+-</head>
+-<body>
+-
+-    <form action="${pageContext.request.contextPath}/logout" method="get">
+-        <input value="Sair" type="submit">
+-    </form>
+-
+-    <h1>Definições</h1>
+-
+-    <a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil</a> <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil</a>
+-
+-</body>
+-</html>
+Index: web/target/web/secured/chargeWallet.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 12/11/2021\r\n  Time: 16:15\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Carregar carteira</title>\r\n</head>\r\n<body>\r\n\r\n<form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n    <input value=\"Sair\" type=\"submit\">\r\n</form>\r\n\r\n<h1>Carregar a carteira</h1>\r\n\r\n<form action=\"${pageContext.request.contextPath}/wallet\" method=\"post\">\r\n    Valor: <input name=\"value\" required=\"\" type=\"number\" step=\"0.01\" placeholder=\"Quantidade para carregar...\" /> <br />\r\n    <input type=\"submit\">\r\n</form>\r\n\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/web/secured/chargeWallet.jsp b/web/target/web/secured/chargeWallet.jsp
+--- a/web/target/web/secured/chargeWallet.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/web/secured/chargeWallet.jsp	(date 1636816750000)
+@@ -18,6 +18,8 @@
+ 
+ <h1>Carregar a carteira</h1>
+ 
++<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
++
+ <form action="${pageContext.request.contextPath}/wallet" method="post">
+     Valor: <input name="value" required="" type="number" step="0.01" placeholder="Quantidade para carregar..." /> <br />
+     <input type="submit">
+Index: web/src/main/webapp/secured/definitionsMenu.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 12/11/2021\r\n  Time: 16:15\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Definições</title>\r\n</head>\r\n<body>\r\n\r\n<form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n    <input value=\"Sair\" type=\"submit\">\r\n</form>\r\n\r\n<h1>Definições de utilizador</h1>\r\n\r\n<a href=\"${pageContext.request.contextPath}/secured/changeDefinitions.jsp\"> Editar o seu perfil</a> <br />\r\n\r\n<a href=\"${pageContext.request.contextPath}/secured/deletionConfirmation.jsp\"> Eliminar perfil</a>\r\n\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/definitionsMenu.jsp b/web/src/main/webapp/secured/definitionsMenu.jsp
+--- a/web/src/main/webapp/secured/definitionsMenu.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/webapp/secured/definitionsMenu.jsp	(date 1636827248687)
+@@ -16,11 +16,14 @@
+     <input value="Sair" type="submit">
+ </form>
+ 
++<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
++
+ <h1>Definições de utilizador</h1>
+ 
+-<a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil</a> <br />
+-
+-<a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil</a>
++<form action="${pageContext.request.contextPath}/redirect" method="get">
++    <input value="Editar o seu perfil" name="edit" type="submit">  <br />
++    <input value="Eliminar perfil" name="delete" type="submit">  <br />
++</form>
+ 
+ </body>
+ </html>
+Index: web/target/web/secured/changeDefinitions.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 10/11/2021\r\n  Time: 23:01\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Alterar definições de perfil</title>\r\n</head>\r\n<body>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n        <input value=\"Sair\" name=\"ok\" type=\"submit\">\r\n    </form>\r\n\r\n    <h1>Alterar definições de perfil</h1>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/definitions\" method=\"post\">\r\n        Novo nome: <input name=\"name\" type=\"text\" placeholder=\"username...\" /> <br />\r\n        Novo number of Citizen Card: <input name=\"cc\" type=\"text\" placeholder=\"cc...\" /> <br />\r\n        Novo endereço: <input name=\"address\" type=\"text\" placeholder=\"address...\" /> <br />\r\n        Nova Password: <input name=\"password\" type=\"password\" placeholder=\"password...\" /> <br />\r\n        <input type=\"submit\">\r\n    </form>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/web/secured/changeDefinitions.jsp b/web/target/web/secured/changeDefinitions.jsp
+--- a/web/target/web/secured/changeDefinitions.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/web/secured/changeDefinitions.jsp	(date 1636816750000)
+@@ -16,6 +16,8 @@
+         <input value="Sair" name="ok" type="submit">
+     </form>
+ 
++    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
++
+     <h1>Alterar definições de perfil</h1>
+ 
+     <form action="${pageContext.request.contextPath}/definitions" method="post">
+Index: jpa/src/main/java/data/Trip.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package data;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.LocalDateTime;\r\nimport java.util.Date;\r\nimport java.util.List;\r\n\r\n@Entity\r\npublic class Trip {\r\n\r\n    @Id @GeneratedValue(strategy = GenerationType.AUTO)\r\n    private int id;\r\n    private LocalDateTime departure_date;\r\n    private String departure_point, destination;\r\n    private int capacity;\r\n    private double price;\r\n\r\n    /*\r\n    @ManyToOne(cascade = CascadeType.ALL)\r\n    private Bus bus; */\r\n\r\n    @ManyToMany(mappedBy=\"tickets\")\r\n    private List<ClientUser> passengers;\r\n\r\n    public Trip() {\r\n    }\r\n\r\n    public Trip(LocalDateTime departure_date, String departure_point, String destination, double price, int capacity) {\r\n        this.departure_date = departure_date;\r\n        this.departure_point = departure_point;\r\n        this.destination = destination;\r\n        this.capacity = capacity;\r\n        this.price = price;\r\n    }\r\n\r\n    public void setId(int id) { this.id = id; }\r\n\r\n    public void setDeparture_date(LocalDateTime departure_date) {\r\n        this.departure_date = departure_date;\r\n    }\r\n\r\n    public void setDeparture_point(String departure_point) {\r\n        this.departure_point = departure_point;\r\n    }\r\n\r\n    public void setDestination(String destination) {\r\n        this.destination = destination;\r\n    }\r\n\r\n    public void setPrice(double price) {\r\n        this.price = price;\r\n    }\r\n    \r\n    public void setcapacity(int capacity) {\r\n        this.capacity = capacity;\r\n    }\r\n\r\n    public LocalDateTime getDeparture_date() {\r\n        return departure_date;\r\n    }\r\n\r\n    public double getPrice() {\r\n        return price;\r\n    }\r\n\r\n    public void setPassengers(List<ClientUser> passengers) {\r\n        this.passengers = passengers;\r\n    }\r\n\r\n    // TEST\r\n    /*\r\n    public Boolean addPassengers(ClientUser passenger) {\r\n        if (passengers.size() < bus.getCapacity() && !passengers.contains(passenger)) {\r\n            passengers.add(passenger);\r\n            return true;\r\n        }\r\n        return false;\r\n    }*/\r\n\r\n    public int getId() {\r\n        return id;\r\n    }\r\n\r\n    public String getDeparture_point() {\r\n        return departure_point;\r\n    }\r\n\r\n    public String getDestination() {\r\n        return destination;\r\n    }\r\n\r\n    public int getcapacity(){ return  capacity; }\r\n\r\n    /*public List<AppUser> getPassengers() {\r\n        return passengers;\r\n    }*/\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/jpa/src/main/java/data/Trip.java b/jpa/src/main/java/data/Trip.java
+--- a/jpa/src/main/java/data/Trip.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/jpa/src/main/java/data/Trip.java	(date 1636833891139)
+@@ -2,7 +2,7 @@
+ 
+ import javax.persistence.*;
+ import java.time.LocalDateTime;
+-import java.util.Date;
++import java.time.format.DateTimeFormatter;
+ import java.util.List;
+ 
+ @Entity
+@@ -15,12 +15,8 @@
+     private int capacity;
+     private double price;
+ 
+-    /*
+-    @ManyToOne(cascade = CascadeType.ALL)
+-    private Bus bus; */
+-
+-    @ManyToMany(mappedBy="tickets")
+-    private List<ClientUser> passengers;
++    @OneToMany(mappedBy = "trip")
++    private List<Ticket> tickets;
+ 
+     public Trip() {
+     }
+@@ -59,26 +55,33 @@
+         return departure_date;
+     }
+ 
++    public String getDeparture_date_String() {
++        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
++        return departure_date.format(formatter);
++    }
++
++    public List<Ticket> getTickets() {
++        return tickets;
++    }
++
+     public double getPrice() {
+         return price;
+     }
+ 
+-    public void setPassengers(List<ClientUser> passengers) {
+-        this.passengers = passengers;
++    public void setTickets(List<Ticket> tickets) {
++        this.tickets = tickets;
++    }
++
++    public void addTicket(Ticket ticket) {
++        tickets.add(ticket);
+     }
+ 
+-    // TEST
+-    /*
+-    public Boolean addPassengers(ClientUser passenger) {
+-        if (passengers.size() < bus.getCapacity() && !passengers.contains(passenger)) {
+-            passengers.add(passenger);
+-            return true;
+-        }
+-        return false;
+-    }*/
++    public void removeTicket(Ticket ticket) {
++        tickets.remove(ticket);
++    }
+ 
+-    public int getId() {
+-        return id;
++    public String getId() {
++        return Integer.toString(id);
+     }
+ 
+     public String getDeparture_point() {
+@@ -94,4 +97,12 @@
+     /*public List<AppUser> getPassengers() {
+         return passengers;
+     }*/
++
++    public int getCapacity() {
++        return capacity;
++    }
++
++    public void setCapacity(int capacity) {
++        this.capacity = capacity;
++    }
+ }
+Index: web/target/web/secured/display.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 31/10/2021\r\n  Time: 15:04\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\"%>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n        <input value=\"Sair\" type=\"submit\">\r\n    </form>\r\n\r\n    <p>Welcome ${auth}</p>\r\n\r\n    <h1>Menu</h1>\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured/chargeWallet.jsp\"> Wallet </a>. <br />\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured\"> Consultar viagens </a>. <br />\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured\"> As suas viagens </a> <br />\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured/definitionsMenu.jsp\"> Editar perfil </a>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/web/secured/display.jsp b/web/target/web/secured/display.jsp
+--- a/web/target/web/secured/display.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/web/secured/display.jsp	(date 1636827028000)
+@@ -23,13 +23,13 @@
+ 
+     <h1>Menu</h1>
+ 
+-    <a href="${pageContext.request.contextPath}/secured/chargeWallet.jsp"> Wallet </a>. <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured"> Consultar viagens </a>. <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured"> As suas viagens </a> <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Editar perfil </a>
++    <form action="${pageContext.request.contextPath}/redirect" method="get">
++        <input value="Carregar carteira" name="wallet" type="submit">  <br />
++        <input value="Consultar viagens disponíveis/Comprar" name="buy" type="submit">  <br />
++        <input value=" As suas viagens" name="refund" type="submit"> <br />
++        <input value="Editar perfil" name="profile" type="submit"> <br />
++        <input value="CM" name="CM" type="submit">
++    </form>
+ 
+ </body>
+ </html>
+Index: web/src/main/webapp/secured/deletionConfirmation.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 10/11/2021\r\n  Time: 22:47\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Eliminar a conta</title>\r\n</head>\r\n<body>\r\n    <h2>Tem a certeza que deseja eliminar a sua conta?</h2>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/delete\" method=\"get\">\r\n        <input value=\"Eliminar\" name=\"ok\" type=\"submit\">\r\n        <input value=\"Cancelar\" name=\"cancel\" type=\"submit\">\r\n    </form>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/deletionConfirmation.jsp b/web/src/main/webapp/secured/deletionConfirmation.jsp
+--- a/web/src/main/webapp/secured/deletionConfirmation.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/webapp/secured/deletionConfirmation.jsp	(date 1636816972270)
+@@ -11,6 +11,13 @@
+     <title>Eliminar a conta</title>
+ </head>
+ <body>
++
++    <form action="${pageContext.request.contextPath}/logout" method="get">
++        <input value="Sair" name="ok" type="submit">
++    </form>
++
++    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
++
+     <h2>Tem a certeza que deseja eliminar a sua conta?</h2>
+ 
+     <form action="${pageContext.request.contextPath}/delete" method="get">
+Index: web/target/web/secured/definitionsMenu.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 12/11/2021\r\n  Time: 16:15\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Definições</title>\r\n</head>\r\n<body>\r\n\r\n<form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n    <input value=\"Sair\" type=\"submit\">\r\n</form>\r\n\r\n<h1>Definições de utilizador</h1>\r\n\r\n<a href=\"${pageContext.request.contextPath}/secured/changeDefinitions.jsp\"> Editar o seu perfil</a> <br />\r\n\r\n<a href=\"${pageContext.request.contextPath}/secured/deletionConfirmation.jsp\"> Eliminar perfil</a>\r\n\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/web/secured/definitionsMenu.jsp b/web/target/web/secured/definitionsMenu.jsp
+--- a/web/target/web/secured/definitionsMenu.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/web/secured/definitionsMenu.jsp	(date 1636827248000)
+@@ -16,11 +16,14 @@
+     <input value="Sair" type="submit">
+ </form>
+ 
++<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
++
+ <h1>Definições de utilizador</h1>
+ 
+-<a href="${pageContext.request.contextPath}/secured/changeDefinitions.jsp"> Editar o seu perfil</a> <br />
+-
+-<a href="${pageContext.request.contextPath}/secured/deletionConfirmation.jsp"> Eliminar perfil</a>
++<form action="${pageContext.request.contextPath}/redirect" method="get">
++    <input value="Editar o seu perfil" name="edit" type="submit">  <br />
++    <input value="Eliminar perfil" name="delete" type="submit">  <br />
++</form>
+ 
+ </body>
+ </html>
+Index: web/target/web/secured/deletionConfirmation.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 10/11/2021\r\n  Time: 22:47\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Eliminar a conta</title>\r\n</head>\r\n<body>\r\n    <h2>Tem a certeza que deseja eliminar a sua conta?</h2>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/delete\" method=\"get\">\r\n        <input value=\"Eliminar\" name=\"ok\" type=\"submit\">\r\n        <input value=\"Cancelar\" name=\"cancel\" type=\"submit\">\r\n    </form>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/web/secured/deletionConfirmation.jsp b/web/target/web/secured/deletionConfirmation.jsp
+--- a/web/target/web/secured/deletionConfirmation.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/web/secured/deletionConfirmation.jsp	(date 1636816972000)
+@@ -11,6 +11,13 @@
+     <title>Eliminar a conta</title>
+ </head>
+ <body>
++
++    <form action="${pageContext.request.contextPath}/logout" method="get">
++        <input value="Sair" name="ok" type="submit">
++    </form>
++
++    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
++
+     <h2>Tem a certeza que deseja eliminar a sua conta?</h2>
+ 
+     <form action="${pageContext.request.contextPath}/delete" method="get">
+Index: web/src/main/webapp/secured/changeDefinitions.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 10/11/2021\r\n  Time: 23:01\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Alterar definições de perfil</title>\r\n</head>\r\n<body>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n        <input value=\"Sair\" name=\"ok\" type=\"submit\">\r\n    </form>\r\n\r\n    <h1>Alterar definições de perfil</h1>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/definitions\" method=\"post\">\r\n        Novo nome: <input name=\"name\" type=\"text\" placeholder=\"username...\" /> <br />\r\n        Novo number of Citizen Card: <input name=\"cc\" type=\"text\" placeholder=\"cc...\" /> <br />\r\n        Novo endereço: <input name=\"address\" type=\"text\" placeholder=\"address...\" /> <br />\r\n        Nova Password: <input name=\"password\" type=\"password\" placeholder=\"password...\" /> <br />\r\n        <input type=\"submit\">\r\n    </form>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/changeDefinitions.jsp b/web/src/main/webapp/secured/changeDefinitions.jsp
+--- a/web/src/main/webapp/secured/changeDefinitions.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/webapp/secured/changeDefinitions.jsp	(date 1636816750780)
+@@ -16,6 +16,8 @@
+         <input value="Sair" name="ok" type="submit">
+     </form>
+ 
++    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Voltar</a> <br />
++
+     <h1>Alterar definições de perfil</h1>
+ 
+     <form action="${pageContext.request.contextPath}/definitions" method="post">
+Index: web/src/main/java/servlet/ChangeDefinitionsServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package servlet;\r\n\r\nimport java.io.IOException;\r\nimport javax.ejb.EJB;\r\nimport javax.servlet.ServletException;\r\nimport javax.servlet.annotation.WebServlet;\r\nimport javax.servlet.http.HttpServlet;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\n\r\nimport beans.IManageClientUsers;\r\n\r\n@WebServlet(\"/definitions\")\r\npublic class ChangeDefinitionsServlet extends HttpServlet {\r\n    private static final long serialVersionUID = 1L;\r\n    @EJB\r\n    private IManageClientUsers manageClients;\r\n\r\n\r\n    protected void doPost(HttpServletRequest request, HttpServletResponse response)\r\n            throws IOException, ServletException {\r\n\r\n\r\n        manageClients.editInfo(request.getSession(true).getAttribute(\"auth\").toString(), request.getParameter(\"password\"),\r\n                request.getParameter(\"name\"), request.getParameter(\"address\"), request.getParameter(\"cc\"));\r\n\r\n        request.getRequestDispatcher(\"/secured/display.jsp\").forward(request, response);\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/ChangeDefinitionsServlet.java b/web/src/main/java/servlet/ChangeDefinitionsServlet.java
+--- a/web/src/main/java/servlet/ChangeDefinitionsServlet.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/java/servlet/ChangeDefinitionsServlet.java	(date 1636827913447)
+@@ -20,11 +20,10 @@
+     protected void doPost(HttpServletRequest request, HttpServletResponse response)
+             throws IOException, ServletException {
+ 
+-
+         manageClients.editInfo(request.getSession(true).getAttribute("auth").toString(), request.getParameter("password"),
+                 request.getParameter("name"), request.getParameter("address"), request.getParameter("cc"));
+ 
+-        request.getRequestDispatcher("/secured/display.jsp").forward(request, response);
++        request.getRequestDispatcher("/secured/definitionsMenu.jsp").forward(request, response);
+ 
+     }
+ }
+\ No newline at end of file
+Index: web/src/main/webapp/secured/searchTrips.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/searchTrips.jsp b/web/src/main/webapp/secured/searchTrips.jsp
+new file mode 100644
+--- /dev/null	(date 1636816750845)
++++ b/web/src/main/webapp/secured/searchTrips.jsp	(date 1636816750845)
+@@ -0,0 +1,30 @@
++<%--
++  Created by IntelliJ IDEA.
++  User: maria
++  Date: 12/11/2021
++  Time: 21:44
++  To change this template use File | Settings | File Templates.
++--%>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<html>
++<head>
++    <title>Consultar viagens</title>
++</head>
++<body>
++
++    <form action="${pageContext.request.contextPath}/logout" method="get">
++        <input value="Sair" type="submit">
++    </form>
++
++    <a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
++
++    <h1>Procurar viagens</h1>
++
++    <form action="${pageContext.request.contextPath}/searchTrip" method="post">
++        Início intervalo: <input name="beg_date" required="" type="datetime-local"/> <br />
++        Fim intervalo: <input name="end_date" required="" type="datetime-local"/> <br />
++        <input value="Procurar" type="submit">
++    </form>
++
++</body>
++</html>
+Index: web/src/main/java/servlet/BuyTicketServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/BuyTicketServlet.java b/web/src/main/java/servlet/BuyTicketServlet.java
+new file mode 100644
+--- /dev/null	(date 1636817717741)
++++ b/web/src/main/java/servlet/BuyTicketServlet.java	(date 1636817717741)
+@@ -0,0 +1,34 @@
++package servlet;
++
++import java.io.IOException;
++import javax.ejb.EJB;
++import javax.servlet.ServletException;
++import javax.servlet.annotation.WebServlet;
++import javax.servlet.http.HttpServlet;
++import javax.servlet.http.HttpServletRequest;
++import javax.servlet.http.HttpServletResponse;
++
++import beans.IManageClientUsers;
++
++@WebServlet("/purchase")
++public class BuyTicketServlet extends HttpServlet {
++    private static final long serialVersionUID = 1L;
++    @EJB
++    private IManageClientUsers manageClients;
++
++
++    protected void doPost(HttpServletRequest request, HttpServletResponse response)
++            throws IOException, ServletException {
++        int seat = Integer.parseInt(request.getParameter("seat"));
++
++        // search trip by id
++        manageClients.buyTicket(request.getSession(true).getAttribute("auth").toString(), request.getParameter("id"),
++                seat);
++
++        request.getRequestDispatcher("/secured/display.jsp").forward(request, response);
++    }
++}
++
++
++
++
+Index: web/src/main/webapp/secured/tripRefund.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/tripRefund.jsp b/web/src/main/webapp/secured/tripRefund.jsp
+new file mode 100644
+--- /dev/null	(date 1636826168205)
++++ b/web/src/main/webapp/secured/tripRefund.jsp	(date 1636826168205)
+@@ -0,0 +1,43 @@
++<%--
++  Created by IntelliJ IDEA.
++  User: maria
++  Date: 13/11/2021
++  Time: 17:46
++  To change this template use File | Settings | File Templates.
++--%>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<html>
++<head>
++    <title>Refund</title>
++</head>
++<body>
++    <form action="${pageContext.request.contextPath}/logout" method="get">
++        <input value="Sair" type="submit">
++    </form>
++
++    <a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar atrás</a> <br />
++
++    <h1>Pedir reembolso</h1>
++
++    <form action="${pageContext.request.contextPath}/purchase" method="post">
++        <jsp:useBean id="tripSearch" scope="request" type="java.util.List"/>
++        <c:choose>
++            <c:when test="${empty tripSearch}">Não existem viagens disponíveis </c:when>
++            <c:otherwise>
++                <c:forEach var="item" items="${tripSearch}">
++                    <hr />
++                    <input type="radio" name="id" value=${item.getId()}/><strong>${item.getDeparture_point()} -> ${item.getDestination()}</strong> <br />
++                    <strong>Data de partida:</strong> ${item.getDeparture_date_String()} <br />
++                    <strong>Preço:</strong> ${item.getPrice()} <br />
++                    <strong>Número de lugares:</strong> ${item.getCapacity()} <br />
++                </c:forEach>
++
++                <input name="seat" required="" type="number" step="0.01" placeholder="Selecionar lugar..." /> <br />
++
++                <input value="Cancelar reserva" type="submit">
++            </c:otherwise>
++        </c:choose>
++    </form>
++
++</body>
++</html>
+Index: web/src/main/webapp/secured/buyTicket.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/buyTicket.jsp b/web/src/main/webapp/secured/buyTicket.jsp
+new file mode 100644
+--- /dev/null	(date 1636826108586)
++++ b/web/src/main/webapp/secured/buyTicket.jsp	(date 1636826108586)
+@@ -0,0 +1,60 @@
++<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
++<%@ page import="java.util.List" %>
++<%--
++  Created by IntelliJ IDEA.
++  User: maria
++  Date: 12/11/2021
++  Time: 22:29
++  To change this template use File | Settings | File Templates.
++--%>
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<html>
++<head>
++    <title>Resultado da pesquisa</title>
++</head>
++<body>
++
++
++    <form action="${pageContext.request.contextPath}/logout" method="get">
++        <input value="Sair" type="submit">
++    </form>
++
++    <a href="${pageContext.request.contextPath}/secured/searchTrips.jsp"> Voltar atrás</a> <br />
++    <a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar ao menu</a> <br />
++
++    <h1>Viagens</h1>
++
++        <!--
++        private LocalDateTime departure_date;
++        private String departure_point, destination;
++        private int capacity;
++        private double price;
++        -->
++
++    <p>Tem ${wallet}€ na sua carteira. </p>
++
++    <br />
++
++
++    <form action="${pageContext.request.contextPath}/purchase" method="post">
++        <jsp:useBean id="tripSearch" scope="request" type="java.util.List"/>
++        <c:choose>
++            <c:when test="${empty tripSearch}">Não existem viagens disponíveis </c:when>
++            <c:otherwise>
++                <c:forEach var="item" items="${tripSearch}">
++                    <hr />
++                    <input type="radio" name="id" value=${item.getId()}/><strong>${item.getDeparture_point()} -> ${item.getDestination()}</strong> <br />
++                    <strong>Data de partida:</strong> ${item.getDeparture_date_String()} <br />
++                    <strong>Preço:</strong> ${item.getPrice()} <br />
++                    <strong>Número de lugares:</strong> ${item.getCapacity()} <br />
++                </c:forEach>
++
++                <input name="seat" required="" type="number" step="0.01" placeholder="Selecionar lugar..." /> <br />
++
++                <input value="Comprar" type="submit">
++            </c:otherwise>
++        </c:choose>
++    </form>
++
++</body>
++</html>
+Index: web/src/main/java/servlet/SearchTripServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/SearchTripServlet.java b/web/src/main/java/servlet/SearchTripServlet.java
+new file mode 100644
+--- /dev/null	(date 1636832974175)
++++ b/web/src/main/java/servlet/SearchTripServlet.java	(date 1636832974175)
+@@ -0,0 +1,36 @@
++package servlet;
++
++import java.io.IOException;
++import java.util.List;
++import javax.ejb.EJB;
++import javax.servlet.ServletException;
++import javax.servlet.annotation.WebServlet;
++import javax.servlet.http.HttpServlet;
++import javax.servlet.http.HttpServletRequest;
++import javax.servlet.http.HttpServletResponse;
++
++import beans.IManageClientUsers;
++import data.Trip;
++
++@WebServlet("/searchTrip")
++public class SearchTripServlet extends HttpServlet {
++    private static final long serialVersionUID = 1L;
++    @EJB
++    private IManageClientUsers manageClients;
++
++    protected void doPost(HttpServletRequest request, HttpServletResponse response)
++            throws ServletException, IOException {
++
++        String destination = "/ups.html";
++
++        List<Trip> resSearch = manageClients.searchTrips(request.getParameter("beg_date"),
++                request.getParameter("end_date"));
++
++        double walletValue = manageClients.findClientUser(request.getSession(true).getAttribute("auth").toString()).getWallet();
++
++        request.setAttribute("tripSearch", resSearch);
++        request.setAttribute("wallet", walletValue);
++
++        request.getRequestDispatcher("secured/buyTicket.jsp").forward(request, response);
++    }
++}
+\ No newline at end of file
+Index: web/src/main/webapp/secured/display.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 31/10/2021\r\n  Time: 15:04\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\"%>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n    <form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n        <input value=\"Sair\" type=\"submit\">\r\n    </form>\r\n\r\n    <p>Welcome ${auth}</p>\r\n\r\n    <h1>Menu</h1>\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured/chargeWallet.jsp\"> Wallet </a>. <br />\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured\"> Consultar viagens </a>. <br />\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured\"> As suas viagens </a> <br />\r\n\r\n    <a href=\"${pageContext.request.contextPath}/secured/definitionsMenu.jsp\"> Editar perfil </a>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/display.jsp b/web/src/main/webapp/secured/display.jsp
+--- a/web/src/main/webapp/secured/display.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/webapp/secured/display.jsp	(date 1636827028941)
+@@ -23,13 +23,13 @@
+ 
+     <h1>Menu</h1>
+ 
+-    <a href="${pageContext.request.contextPath}/secured/chargeWallet.jsp"> Wallet </a>. <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured"> Consultar viagens </a>. <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured"> As suas viagens </a> <br />
+-
+-    <a href="${pageContext.request.contextPath}/secured/definitionsMenu.jsp"> Editar perfil </a>
++    <form action="${pageContext.request.contextPath}/redirect" method="get">
++        <input value="Carregar carteira" name="wallet" type="submit">  <br />
++        <input value="Consultar viagens disponíveis/Comprar" name="buy" type="submit">  <br />
++        <input value=" As suas viagens" name="refund" type="submit"> <br />
++        <input value="Editar perfil" name="profile" type="submit"> <br />
++        <input value="CM" name="CM" type="submit">
++    </form>
+ 
+ </body>
+ </html>
+Index: web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/workspace/web/src/main/java/filter/SecurityFilter.java\r\n/workspace/web/src/main/java/servlet/DeleteServlet.java\r\n/workspace/web/src/main/java/servlet/LoginServlet.java\r\n/workspace/web/src/main/java/servlet/CreateTripServlet.java\r\n/workspace/web/src/main/java/servlet/WalletServlet.java\r\n/workspace/web/src/main/java/servlet/ChangeDefinitionsServlet.java\r\n/workspace/web/src/main/java/servlet/LogoutServlet.java\r\n/workspace/web/src/main/java/servlet/RegistrationServlet.java\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+--- a/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(date 1636834559243)
+@@ -1,8 +1,11 @@
++/workspace/web/src/main/java/servlet/SearchTripServlet.java
+ /workspace/web/src/main/java/filter/SecurityFilter.java
+ /workspace/web/src/main/java/servlet/DeleteServlet.java
+ /workspace/web/src/main/java/servlet/LoginServlet.java
+ /workspace/web/src/main/java/servlet/CreateTripServlet.java
+ /workspace/web/src/main/java/servlet/WalletServlet.java
+ /workspace/web/src/main/java/servlet/ChangeDefinitionsServlet.java
++/workspace/web/src/main/java/servlet/BuyTicketServlet.java
++/workspace/web/src/main/java/servlet/RedirectServlet.java
+ /workspace/web/src/main/java/servlet/LogoutServlet.java
+ /workspace/web/src/main/java/servlet/RegistrationServlet.java
+Index: web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>servlet/ChangeDefinitionsServlet.class\r\nservlet/DeleteServlet.class\r\nservlet/LogoutServlet.class\r\nservlet/WalletServlet.class\r\nfilter/SecurityFilter.class\r\nservlet/CreateTripServlet.class\r\nservlet/LoginServlet.class\r\nservlet/RegistrationServlet.class\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst b/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+--- a/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst	(date 1636834525913)
+@@ -1,7 +1,10 @@
+ servlet/ChangeDefinitionsServlet.class
+ servlet/DeleteServlet.class
+ servlet/LogoutServlet.class
++servlet/SearchTripServlet.class
+ servlet/WalletServlet.class
++servlet/RedirectServlet.class
++servlet/BuyTicketServlet.class
+ filter/SecurityFilter.class
+ servlet/CreateTripServlet.class
+ servlet/LoginServlet.class
+Index: web/src/main/java/servlet/RedirectServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/RedirectServlet.java b/web/src/main/java/servlet/RedirectServlet.java
+new file mode 100644
+--- /dev/null	(date 1636827248692)
++++ b/web/src/main/java/servlet/RedirectServlet.java	(date 1636827248692)
+@@ -0,0 +1,38 @@
++package servlet;
++
++import java.io.IOException;
++import javax.ejb.EJB;
++import javax.servlet.ServletException;
++import javax.servlet.annotation.WebServlet;
++import javax.servlet.http.HttpServlet;
++import javax.servlet.http.HttpServletRequest;
++import javax.servlet.http.HttpServletResponse;
++
++@WebServlet("/redirect")
++public class RedirectServlet extends HttpServlet {
++    private static final long serialVersionUID = 1L;
++
++    protected void doGet(HttpServletRequest request, HttpServletResponse response)
++            throws IOException, ServletException {
++
++        String destination = "/error.html";
++
++        if (request.getParameter("wallet") != null ) {
++            destination = "/secured/chargeWallet.jsp";
++        } else if (request.getParameter("buy") != null) {
++            destination = "/secured/searchTrips.jsp";
++        } else if (request.getParameter("refund") != null) {
++            destination = "/secured/searchTrips.jsp";
++        } else if (request.getParameter("profile") != null) {
++            destination = "/secured/definitionsMenu.jsp";
++        } else if (request.getParameter("CM") != null) {
++            destination = "/secured/displayCM.jsp";
++        } else if (request.getParameter("edit") != null) {
++            destination = "/secured/changeDefinitions.jsp";
++        } else if (request.getParameter("delete") != null) {
++            destination = "/secured/deletionConfirmation.jsp";
++        }
++
++        request.getRequestDispatcher(destination).forward(request, response);
++    }
++}
+Index: jpa/src/main/java/data/Ticket.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/jpa/src/main/java/data/Ticket.java b/jpa/src/main/java/data/Ticket.java
+new file mode 100644
+--- /dev/null	(date 1636829107229)
++++ b/jpa/src/main/java/data/Ticket.java	(date 1636829107229)
+@@ -0,0 +1,59 @@
++package data;
++
++import java.io.Serializable;
++import java.util.List;
++import java.util.Date;
++import javax.persistence.*;
++
++@Entity
++public class Ticket implements Serializable {
++    private static final long serialVersionUID = 1L;
++    @Id
++    @GeneratedValue(strategy = GenerationType.AUTO)
++    private int id;
++    private int seat;
++
++    @ManyToOne(cascade = CascadeType.ALL)
++    private Trip trip;
++
++    @ManyToOne(cascade = CascadeType.ALL)
++    private ClientUser client;
++
++
++    public Ticket() {}
++
++    public Ticket(ClientUser client, Trip trip, int seat) {
++        this.client = client;
++        this.seat = seat;
++        this.trip = trip;
++    }
++
++    public int getId() {
++        return id;
++    }
++
++    public ClientUser getClient() {
++        return client;
++    }
++
++    public void setClient(ClientUser client) {
++        this.client = client;
++    }
++
++    public int getSeat() {
++        return seat;
++    }
++
++    public void setSeat(int seat) {
++        this.seat = seat;
++    }
++
++    public Trip getTrip() {
++        return trip;
++    }
++
++    public void setTrip(Trip trip) {
++        this.trip = trip;
++    }
++}
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f4b265bb-8ce5-46db-815e-b3061321c209\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"jsf\" />\r\n        <option value=\"Jsp File\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../..\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/web/src/main/webapp/registration.jsp\" root0=\"FORCE_HIGHLIGHTING\" root1=\"FORCE_HIGHLIGHTING\" root2=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"20gvsRJJUxVvOwK6zIquTS1o2Zw\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../../../../../3ano/SD/ProjetoFinal/XRLDESD\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\USER\\Desktop\\UC\\4ano\\IS\\Projetos\\Ficha_2\\jeeapp\\web\\src\\main\\webapp\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\".devcontainer: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"sourceFilePath\" value=\".devcontainer/docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Docker..devcontainer: Compose Deployment\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f4b265bb-8ce5-46db-815e-b3061321c209\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1636479253201</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1636479253201</updated>\r\n      <workItem from=\"1636479254608\" duration=\"1399000\" />\r\n      <workItem from=\"1636539092565\" duration=\"4516000\" />\r\n      <workItem from=\"1636637613372\" duration=\"11113000\" />\r\n      <workItem from=\"1636708651830\" duration=\"1921000\" />\r\n      <workItem from=\"1636728604829\" duration=\"9881000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/.idea/workspace.xml	(date 1636835352495)
+@@ -4,7 +4,73 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="" />
++    <list default="true" id="f4b265bb-8ce5-46db-815e-b3061321c209" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Ticket.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/BuyTicketServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/RedirectServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/web/src/main/java/servlet/SearchTripServlet.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/buyTicket.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/searchTrips.jsp" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/tripRefund.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/application.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear.ear" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear/META-INF/application.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear/ejbs.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/checker-qual.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/jpa.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear/lib/postgresql.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/ear/web.war" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/maven-archiver/pom.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/MANIFEST.MF" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/maven/book/ejbs/pom.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/META-INF/maven/book/ejbs/pom.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/CompanyManagers.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ICompanyManagers.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/IManageClientUsers.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ear/target/temp/ejbs.jar/beans/ManageClientUsers.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/IManageClientUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/IManageClientUsers.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/src/main/java/beans/ManageClientUsers.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/IManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/IManageClientUsers.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/classes/beans/ManageClientUsers.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ejbs/target/ejbs.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/ClientUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/data/ClientUser.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/data/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/data/Trip.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/ClientUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/ClientUser.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/classes/data/Trip.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/jpa.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/ChangeDefinitionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/ChangeDefinitionsServlet.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/DeleteServlet.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/LoginServlet.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/java/servlet/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/servlet/LogoutServlet.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/changeDefinitions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/changeDefinitions.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/chargeWallet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/chargeWallet.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/definitions.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/definitionsMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/definitionsMenu.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/deletionConfirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/deletionConfirmation.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/secured/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/secured/display.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/ChangeDefinitionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/ChangeDefinitionsServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/DeleteServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/LoginServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/classes/servlet/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/servlet/LogoutServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web.war" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/ChangeDefinitionsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/ChangeDefinitionsServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/DeleteServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/servlet/LogoutServlet.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/index.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/secured/changeDefinitions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/changeDefinitions.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/secured/chargeWallet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/chargeWallet.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/secured/definitions.jsp" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/secured/definitionsMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/definitionsMenu.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/secured/deletionConfirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/deletionConfirmation.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/web/target/web/secured/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/secured/display.jsp" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -14,10 +80,10 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Interface" />
+-        <option value="Class" />
+         <option value="jsf" />
++        <option value="HTML File" />
+         <option value="Jsp File" />
+-        <option value="HTML File" />
++        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -47,6 +113,9 @@
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\USER\Desktop\UC\4ano\IS\Projetos\Ficha_2\jeeapp\web\src\main\webapp" />
++    </key>
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="servlet" />
+     </key>
+   </component>
+   <component name="RunManager">
+Index: jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>data/ClientUser.class\r\ndata/CompanyManager.class\r\ndata/Trip.class\r\ndata/Bus.class\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst b/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+--- a/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst	(date 1636834353391)
+@@ -1,4 +1,5 @@
+ data/ClientUser.class
++data/Ticket.class
+ data/CompanyManager.class
+ data/Trip.class
+ data/Bus.class
+Index: web/src/main/java/servlet/LogoutServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package servlet;\r\n\r\nimport beans.IManageClientUsers;\r\n\r\nimport javax.ejb.EJB;\r\nimport javax.servlet.ServletException;\r\nimport javax.servlet.annotation.WebServlet;\r\nimport javax.servlet.http.HttpServlet;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\nimport java.io.IOException;\r\n\r\n@WebServlet(\"/logout\")\r\npublic class LogoutServlet extends HttpServlet {\r\n    private static final long serialVersionUID = 1L;\r\n    @EJB\r\n    private IManageClientUsers manageClients;\r\n\r\n//mudar para post\r\n    protected void doGet(HttpServletRequest request, HttpServletResponse response)\r\n            throws IOException, ServletException {\r\n\r\n        request.getSession(true).removeAttribute(\"auth\");\r\n\r\n        request.getRequestDispatcher(\"/index.jsp\").forward(request, response);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/LogoutServlet.java b/web/src/main/java/servlet/LogoutServlet.java
+--- a/web/src/main/java/servlet/LogoutServlet.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/java/servlet/LogoutServlet.java	(date 1636751859096)
+@@ -20,7 +20,9 @@
+     protected void doGet(HttpServletRequest request, HttpServletResponse response)
+             throws IOException, ServletException {
+ 
+-        request.getSession(true).removeAttribute("auth");
++        //request.getSession(true).removeAttribute("auth");
++
++        request.getSession(false);
+ 
+         request.getRequestDispatcher("/index.jsp").forward(request, response);
+     }
+Index: jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/workspace/jpa/src/main/java/data/ClientUser.java\r\n/workspace/jpa/src/main/java/data/Trip.java\r\n/workspace/jpa/src/main/java/data/Bus.java\r\n/workspace/jpa/src/main/java/data/CompanyManager.java\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+--- a/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(date 1636834498810)
+@@ -1,4 +1,5 @@
+ /workspace/jpa/src/main/java/data/ClientUser.java
++/workspace/jpa/src/main/java/data/Ticket.java
+ /workspace/jpa/src/main/java/data/Trip.java
+ /workspace/jpa/src/main/java/data/Bus.java
+ /workspace/jpa/src/main/java/data/CompanyManager.java
+Index: web/src/main/java/servlet/LoginServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package servlet;\r\n\r\nimport java.io.IOException;\r\nimport javax.ejb.EJB;\r\nimport javax.servlet.ServletException;\r\nimport javax.servlet.annotation.WebServlet;\r\nimport javax.servlet.http.HttpServlet;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\n\r\nimport beans.IManageClientUsers;\r\nimport data.ClientUser;\r\n\r\n@WebServlet(\"/login\")\r\npublic class LoginServlet extends HttpServlet {\r\n    private static final long serialVersionUID = 1L;\r\n    @EJB\r\n    private IManageClientUsers manageClients;\r\n\r\n//mudar para post\r\n    protected void doPost(HttpServletRequest request, HttpServletResponse response)\r\n            throws IOException, ServletException {\r\n\r\n        String email = request.getParameter(\"email\");\r\n        String key = request.getParameter(\"key\");\r\n        String destination = \"/error.html\";\r\n\r\n        if (email != null && key != null) {\r\n            boolean auth = manageClients.login(email, key);\r\n\r\n            if (auth) {\r\n                request.getSession(true).setAttribute(\"auth\", email);\r\n                destination = \"/secured/display.jsp\";\r\n                //destination = \"/secured/displayCM.jsp\";\r\n            } else {\r\n            request.getSession(true).removeAttribute(\"auth\");\r\n            }\r\n        }\r\n        request.getRequestDispatcher(destination).forward(request, response);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/java/servlet/LoginServlet.java b/web/src/main/java/servlet/LoginServlet.java
+--- a/web/src/main/java/servlet/LoginServlet.java	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/java/servlet/LoginServlet.java	(date 1636806722488)
+@@ -17,7 +17,7 @@
+     @EJB
+     private IManageClientUsers manageClients;
+ 
+-//mudar para post
++
+     protected void doPost(HttpServletRequest request, HttpServletResponse response)
+             throws IOException, ServletException {
+ 
+@@ -32,6 +32,8 @@
+                 request.getSession(true).setAttribute("auth", email);
+                 destination = "/secured/display.jsp";
+                 //destination = "/secured/displayCM.jsp";
++                manageClients.findTrip("4");
++                System.out.println("find trip: " + manageClients.findTrip("4").getPrice());
+             } else {
+             request.getSession(true).removeAttribute("auth");
+             }
+Index: web/target/web/index.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n<h1>APP MANHOSA</h1>\r\n\r\n<br />\r\n\r\n<h2>Login</h2>\r\n\r\n<form action=\"${pageContext.request.contextPath}/login\" method=\"post\">\r\n    Email: <input name=\"email\" type=\"email\" placeholder=\"email...\" />\r\n    Password: <input name=\"key\" type=\"password\" placeholder=\"password...\" />\r\n    <input type=\"submit\">\r\n</form>\r\n<br />\r\n\r\nNão tem conta? Criar <a href=\"${pageContext.request.contextPath}/registration.jsp\"> aqui </a>.\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/target/web/index.jsp b/web/target/web/index.jsp
+--- a/web/target/web/index.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/target/web/index.jsp	(date 1636752579000)
+@@ -19,7 +19,7 @@
+ </form>
+ <br />
+ 
+-Não tem conta? Criar <a href="${pageContext.request.contextPath}/registration.jsp"> aqui </a>.
++Não tem conta? Criar <a href="${pageContext.request.contextPath}/registration.jsp"> aqui </a>. <br />
+ 
+ </body>
+ </html>
+\ No newline at end of file
+Index: web/src/main/webapp/index.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n<h1>APP MANHOSA</h1>\r\n\r\n<br />\r\n\r\n<h2>Login</h2>\r\n\r\n<form action=\"${pageContext.request.contextPath}/login\" method=\"post\">\r\n    Email: <input name=\"email\" type=\"email\" placeholder=\"email...\" />\r\n    Password: <input name=\"key\" type=\"password\" placeholder=\"password...\" />\r\n    <input type=\"submit\">\r\n</form>\r\n<br />\r\n\r\nNão tem conta? Criar <a href=\"${pageContext.request.contextPath}/registration.jsp\"> aqui </a>.\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/index.jsp b/web/src/main/webapp/index.jsp
+--- a/web/src/main/webapp/index.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/webapp/index.jsp	(date 1636752579329)
+@@ -19,7 +19,7 @@
+ </form>
+ <br />
+ 
+-Não tem conta? Criar <a href="${pageContext.request.contextPath}/registration.jsp"> aqui </a>.
++Não tem conta? Criar <a href="${pageContext.request.contextPath}/registration.jsp"> aqui </a>. <br />
+ 
+ </body>
+ </html>
+\ No newline at end of file
+Index: web/src/main/webapp/secured/chargeWallet.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: maria\r\n  Date: 12/11/2021\r\n  Time: 16:15\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Carregar carteira</title>\r\n</head>\r\n<body>\r\n\r\n<form action=\"${pageContext.request.contextPath}/logout\" method=\"get\">\r\n    <input value=\"Sair\" type=\"submit\">\r\n</form>\r\n\r\n<h1>Carregar a carteira</h1>\r\n\r\n<form action=\"${pageContext.request.contextPath}/wallet\" method=\"post\">\r\n    Valor: <input name=\"value\" required=\"\" type=\"number\" step=\"0.01\" placeholder=\"Quantidade para carregar...\" /> <br />\r\n    <input type=\"submit\">\r\n</form>\r\n\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/web/src/main/webapp/secured/chargeWallet.jsp b/web/src/main/webapp/secured/chargeWallet.jsp
+--- a/web/src/main/webapp/secured/chargeWallet.jsp	(revision 5cf57bb5a849e5b7519332e306581f3700b1465f)
++++ b/web/src/main/webapp/secured/chargeWallet.jsp	(date 1636816750825)
+@@ -18,6 +18,8 @@
+ 
+ <h1>Carregar a carteira</h1>
+ 
++<a href="${pageContext.request.contextPath}/secured/display.jsp"> Voltar</a> <br />
++
+ <form action="${pageContext.request.contextPath}/wallet" method="post">
+     Valor: <input name="value" required="" type="number" step="0.01" placeholder="Quantidade para carregar..." /> <br />
+     <input type="submit">

@@ -33,12 +33,9 @@ public class SimpleProducer {
 
         Producer<String, Long> producer = new KafkaProducer<>(props);
 
-        System.out.println("BREAK 1");
         for (int i = 0; i < 1000; i++) {
-            System.out.println("ANTES");
             producer.send(new ProducerRecord<String, Long>(topicName, Integer.toString(i),
                     (long) i));
-            System.out.println("DEPOIS");
             if (i % 100 == 0)
                 System.out.println("Sending message " + (i + 1) + " to topic " + topicName);
         }

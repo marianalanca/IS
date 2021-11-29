@@ -34,7 +34,7 @@ consola #3:
 
 consola #4:
     cd workspace
-    java -cp target/KafkaStreams.jar streams.SimpleStreams kstreamstopic resultstopic
+    java -cp target/KafkaStreams.jar streams.SimpleStreamsExercisesa kstreamstopic resultstopic
 
 consola #5:
     cd workspace
