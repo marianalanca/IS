@@ -1,4 +1,4 @@
-package streams;
+package tutorial.streams;
 import java.io.IOException;
 import java.util.Properties;
 import org.apache.kafka.common.serialization.Serdes;
@@ -13,13 +13,12 @@ import org.apache.kafka.streams.kstream.Produced;
 import org.apache.kafka.streams.state.KeyValueIterator;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
 import org.apache.kafka.streams.state.ReadOnlyKeyValueStore;
-
-public class SimpleStreamsExercisesc {
+public class SimpleStreamsExercisesc_tutorial {
     private static final String tablename = "exercises";
     public static void main(String[] args) throws InterruptedException, IOException {
         if (args.length != 2) {
             System.err.println("Wrong arguments. Please run the class as follows:");
-            System.err.println(SimpleStreamsExercisesc.class.getName() + " input-topic output-topic");
+            System.err.println(SimpleStreamsExercisesc_tutorial.class.getName() + " input-topic output-topic");
             System.exit(1);
         }
         String topicName = args[0].toString();
