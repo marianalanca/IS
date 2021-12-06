@@ -12,7 +12,7 @@ public class SimpleStreamsExercisesa {
     public static void main(String[] args) throws InterruptedException, IOException {
         if (args.length != 2) {
             System.err.println("Wrong arguments. Please run the class as follows:");
-            System.err.println(streams.SimpleStreamsExercisesa_tutorial.class.getName() + " input-topic output-topic");
+            System.err.println(streams.SimpleStreamsExercisesa.class.getName() + " input-topic output-topic");
                     System.exit(1);
         }
         String topicName = args[0].toString();
