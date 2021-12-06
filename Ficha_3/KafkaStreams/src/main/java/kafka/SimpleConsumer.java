@@ -3,6 +3,7 @@ package kafka;
 import java.util.Collections;
 import java.util.Properties;
 
+import com.google.gson.Gson;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -35,15 +36,18 @@ public class SimpleConsumer {
         props.put("key.deserializer",
                 "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer",
-                "org.apache.kafka.common.serialization.LongDeserializer");
+                "org.apache.kafka.common.serialization.StringDeserializer");
 
-        Consumer<String, Long> consumer = new KafkaConsumer<>(props);
+        Consumer<String, String> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Collections.singletonList(topicName));
 
+        Gson gson = new Gson();
+
         while (true) {
-            ConsumerRecords<String, Long> records = consumer.poll(Long.MAX_VALUE);
-            for (ConsumerRecord<String, Long> record : records) {
-                System.out.println(record.key() + " => " + record.value());
+            ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);
+            for (ConsumerRecord<String, String> record : records) {
+                Object empObject = gson.fromJson(record.value(), Object.class);
+                System.out.println(record.key() + " => " + Long.toString(empObject.getValue()) + "; " + empObject.getCurrency());
             }
         }
         //consumer.close();

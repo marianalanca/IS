@@ -8,12 +8,12 @@ import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.KTable;
 
-public class SimpleStreamsExercisesa {
+public class CreditsStream {
     public static void main(String[] args) throws InterruptedException, IOException {
         if (args.length != 2) {
             System.err.println("Wrong arguments. Please run the class as follows:");
             System.err.println(streams.SimpleStreamsExercisesa.class.getName() + " input-topic output-topic");
-                    System.exit(1);
+            System.exit(1);
         }
         String topicName = args[0].toString();
         String outtopicname = args[1].toString();
