@@ -19,6 +19,7 @@ public class KafkaStream {
 
     public static double getValue(String jsonString) {
         JSONObject data = new JSONObject(jsonString);
+        System.out.println(jsonString);
         return data.getDouble("value")/data.getDouble("currencyValue");
     }
 
@@ -46,8 +47,7 @@ public class KafkaStream {
                 reduce(Double::sum);
         outlines_credits.toStream().mapValues((k, v) -> k + "- Credits->" + v).to(outtopicname);
 
-        KafkaStreams streams_credits = new KafkaStreams(builder.build(), props);
-        streams_credits.start();
+        // -------------------------------------------------------------------------------------------
 
         KStream<String, String> lines_payments = builder.stream(topicName_payments);
 
@@ -56,11 +56,13 @@ public class KafkaStream {
                 map((k,v) -> new KeyValue<>(k, getValue(v))).
                 groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
                 reduce(Double::sum);
-        outlines_payments.toStream().mapValues((k, v) -> k + "- Credits->" + v).to(outtopicname);
+        outlines_payments.toStream().mapValues((k, v) -> k + "- Payments->" + v).to(outtopicname);
 
-        KafkaStreams streams_payments = new KafkaStreams(builder.build(), props);
-        streams_payments.start();
+        KafkaStreams stream = new KafkaStreams(builder.build(), props);
+        stream.start();
+
 
         System.out.println("Reading stream from topic " + topicName_credits);
+        System.out.println("Reading stream from topic " + topicName_payments);
     }
 }

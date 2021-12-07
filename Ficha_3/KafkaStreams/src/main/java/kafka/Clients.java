@@ -54,8 +54,8 @@ public class Clients {
         );
 
         while (true) {
-            for (int i=0; i<1000; i++) {
-                String jsonString = gson.toJson(new Object(new Random().nextInt(100000),
+            for (int i=0; i<100; i++) {
+                String jsonString = gson.toJson(new Object(new Random().nextInt(100),
                         currencies.get(new Random().nextInt(currencies.size())),1));
 
                 String topic = topicName.get(new Random().nextInt(2));

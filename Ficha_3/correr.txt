@@ -34,8 +34,34 @@ consola #3:
 
 consola #4:
     cd workspace
-    java -cp target/KafkaStreams.jar streams.SimpleStreamsExercisesa kstreamstopic resultstopic
+    java -cp target/KafkaStreams.jar streams.SimpleStreamsExercisesb kstreamstopic resultstopic
 
 consola #5:
     cd workspace
     java -cp target/KafkaStreams.jar kafka.SimpleProducer kstreamstopic
+	
+-----------------------------------------------------------------------------------
+PROJETO
+
+consola #1:
+	cd opt/kafka_2.13-2.8.1/
+	bin/zookeeper-server-start.sh config/zookeeper.properties
+
+consola #2:
+	cd opt/kafka_2.13-2.8.1/
+	bin/kafka-server-start.sh config/server.properties
+
+consola #3:
+    cd opt/kafka_2.13-2.8.1/
+    bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic resultstopic
+
+consola #4:
+    cd workspace
+	mvn clean package
+    java -cp target/KafkaStreams.jar streams.KafkaStream credits payments resultstopic
+
+consola #5:
+    cd workspace
+    java -cp target/KafkaStreams.jar kafka.Clients credits payments
+	
+
