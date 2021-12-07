@@ -7,10 +7,6 @@
     <persistence-unit name="ClientsBus" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:/PostgresDS</jta-data-source>
-        <class>data.ClientUser</class>
-        <class>data.CompanyManager</class>
-        <class>data.Ticket</class>
-        <class>data.Trip</class>
         <properties>
             <!--<property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="My01pass" />-->
