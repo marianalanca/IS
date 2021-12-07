@@ -16,12 +16,14 @@ public class Clients {
 
     public static void main(String[]args) throws Exception {
         //Assign topicName to string variable
-        String topicName_credit = args[0].toString();
-        String topicName_payment = args[1].toString();
+        // topicName[0] -> currencies; [1] -> payments
+        List<String> topicName = Arrays.asList(args[0].toString(), args[1].toString());
+        //String topicName_credit = args[0].toString();
+        //String topicName_payment = args[1].toString();
         // create instance for properties to access producer configs
         Properties props = new Properties();
 
-        System.out.println("SOU O PRODUCER");
+        System.out.println("SOU O CLIENTS");
 
         //Assign localhost id
         props.put("bootstrap.servers", "localhost:9092");
@@ -43,17 +45,32 @@ public class Clients {
         Producer<String, String> producer = new KafkaProducer<>(props);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
+        // gerar lista de clients -> test
+        List<Client_test> clients = Arrays.asList(
+                new Client_test("01", 0, 0),
+                new Client_test("02", 0, 0),
+                new Client_test("03", 0, 0),
+                new Client_test("04", 0, 0)
+        );
 
-        for (int i = 0; i < 1000; i++) {
+        while (true) {
+            for (int i=0; i<1000; i++) {
+                String jsonString = gson.toJson(new Object(new Random().nextInt(100000),
+                        currencies.get(new Random().nextInt(currencies.size())),1));
 
-            String jsonString = gson.toJson(new Object("user", new Random().nextInt(100000),
-                    currencies.get(new Random().nextInt(currencies.size()))));
+                String topic = topicName.get(new Random().nextInt(2));
 
-            producer.send(new ProducerRecord<String, String>(topicName_credit, "send",
-                    jsonString));
+                // a key é o id do client
+                producer.send(new ProducerRecord<String, String>(topic,
+                        clients.get(new Random().nextInt(clients.size())).getId(),
+                        jsonString));
 
-            System.out.println("Sending message " + (i + 1) + " to topic " + topicName_credit);
+                System.out.println("Sending message to topic " + topic);
+            }
+
+            Thread.sleep(5000);
+
         }
-        producer.close();
+        //producer.close();
     }
 }

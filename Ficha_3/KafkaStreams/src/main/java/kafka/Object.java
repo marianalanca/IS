@@ -1,21 +1,25 @@
 package kafka;
 
 public class Object {
-    private String user;
-    private long value;
+    private double value;
     private String currency;
+    private double currencyValue;
 
-    public Object(String user, long value, String currency) {
-        this.user=user;
-        this.value=value;
-        this.currency=currency;
+    public Object(double value, String currency, double currencyValue) {
+        this.value = value;
+        this.currency = currency;
+        this.currencyValue = currencyValue;
     }
 
-    public String getUser() {
-        return user;
+    public double getCurrencyValue() {
+        return currencyValue;
     }
 
-    public long getValue() {
+    public void setCurrencyValue(double currencyValue) {
+        this.currencyValue = currencyValue;
+    }
+
+    public double getValue() {
         return value;
     }
 
@@ -23,11 +27,7 @@ public class Object {
         return currency;
     }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public void setValue(long value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
