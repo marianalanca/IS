@@ -2,6 +2,7 @@ package kafka;
 
 public class Object {
     private double value;
+    // eventualmente será só um objeto do tipo currency
     private String currency;
     private double currencyValue;
 
