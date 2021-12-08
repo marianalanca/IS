@@ -13,14 +13,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ear" target="16" />
-      <module name="ejbs" target="16" />
-      <module name="jpa" target="1.7" />
+      <module name="ear" target="18" />
+      <module name="ejbs" target="18" />
+      <module name="jpa" target="18" />
       <module name="logging" target="1.5" />
       <module name="primary-source" target="1.5" />
       <module name="projects" target="1.5" />
-      <module name="rest" target="16" />
-      <module name="restAPI" target="16" />
+      <module name="rest" target="18" />
+      <module name="restAPI" target="18" />
       <module name="servlet" target="1.5" />
       <module name="servlets" target="1.5" />
     </bytecodeTargetLevel>

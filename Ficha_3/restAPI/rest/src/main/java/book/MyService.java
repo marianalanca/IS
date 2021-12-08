@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 @Path("/myservice")
 @Produces(MediaType.APPLICATION_JSON)
 public class MyService {
-    @EJB
+    //@EJB
     //private IManageStudents manageStudents;
 
     @GET
@@ -34,11 +34,11 @@ public class MyService {
         return name;
     }
 
-    @GET
+    /*@GET
     @Path("/list")
     public List<int> method3(){
         return new ArrayList<int>();
-    }
+    }*/
 
     /*public List<Student> method3() {
         System.out.println("M3 executing....");
