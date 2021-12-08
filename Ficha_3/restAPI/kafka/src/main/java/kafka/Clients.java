@@ -92,7 +92,7 @@ public class Clients {
             ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);
             for (ConsumerRecord<String, String> record : records) {
                 //Object empObject = gson.fromJson(record.value(), Object.class);
-                System.out.println(record.key() + " => " + record.value());
+                System.out.println(record.key() + " from DB => " + record.value());
             }
 
             Thread.sleep(5000);
