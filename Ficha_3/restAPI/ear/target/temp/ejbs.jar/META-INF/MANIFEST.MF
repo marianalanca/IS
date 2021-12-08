@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.3
+Built-By: main
+Build-Jdk: 16.0.2
+Class-Path: jpa-1.jar lib/hibernate-core.jar lib/jboss-logging.jar lib/j
+ avax.persistence-api.jar lib/byte-buddy.jar lib/antlr.jar lib/jboss-tra
+ nsaction-api_1.2_spec.jar lib/jandex.jar lib/classmate.jar lib/javax.ac
+ tivation-api.jar lib/hibernate-commons-annotations.jar lib/jaxb-api.jar
+  lib/jaxb-runtime.jar lib/txw2.jar lib/istack-commons-runtime.jar lib/s
+ tax-ex.jar lib/FastInfoset.jar lib/slf4j-api.jar lib/jpa.jar
+

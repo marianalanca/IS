@@ -1,5 +1,7 @@
 package book;
 
+import beans.IAdministrator;
+
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -15,32 +17,29 @@ import javax.ws.rs.core.MediaType;
 @Path("/myservice")
 @Produces(MediaType.APPLICATION_JSON)
 public class MyService {
-    //@EJB
-    //private IManageStudents manageStudents;
+    @EJB
+    private IAdministrator manageAdmin;
+
 
     @GET
-    @Path("/test")
-    public String method1() {
-        System.out.println("M1 executing....");
-        return "M1 executed...";
+    @Path("/addManager")
+    public String addManager() {
+        String name = "name_" + new Time(Calendar.getInstance().getTimeInMillis());
+        manageAdmin.addManagers(/**/);
+        return name;
     }
 
     @GET
-    @Path("/add")
-    public String method2() {
-        System.out.println("M2 executing....");
+    @Path("/addClient")
+    public String addClient() {
         String name = "name_" + new Time(Calendar.getInstance().getTimeInMillis());
-        //manageStudents.addStudent(name);
+        manageAdmin.addClients(/**/);
         return name;
     }
 
     /*@GET
     @Path("/list")
-    public List<int> method3(){
-        return new ArrayList<int>();
-    }*/
-
-    /*public List<Student> method3() {
+    public List<Student> method3() {
         System.out.println("M3 executing....");
         List<Student> list = manageStudents.listStudents();
 
