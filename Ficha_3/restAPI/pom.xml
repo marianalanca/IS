@@ -10,6 +10,7 @@
     <module>jpa</module>
     <module>ear</module>
     <module>rest</module>
+      <module>kafka</module>
   </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -10,12 +10,14 @@
         <module name="rest" />
         <module name="jpa" />
         <module name="ear" />
+        <module name="kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ear" target="18" />
       <module name="ejbs" target="18" />
       <module name="jpa" target="18" />
+      <module name="kafka" target="15" />
       <module name="logging" target="1.5" />
       <module name="primary-source" target="1.5" />
       <module name="projects" target="1.5" />
