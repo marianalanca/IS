@@ -4,6 +4,7 @@ import java.util.*;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -27,12 +28,13 @@ public class Clients {
         //Assign topicName to string variable
         // topicName[0] -> currencies; [1] -> payments
         List<String> topicName = Arrays.asList(args[0].toString(), args[1].toString());
-        //String topicName_credit = args[0].toString();
-        //String topicName_payment = args[1].toString();
+        String topicNameConsumer = "DBInfo";
+
         // create instance for properties to access producer configs
         Properties props = new Properties();
 
         System.out.println("SOU O CLIENTS");
+
 
         //Assign localhost id
         props.put("bootstrap.servers", "localhost:9092");
@@ -50,6 +52,15 @@ public class Clients {
                 "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer",
                 "org.apache.kafka.common.serialization.StringSerializer");
+
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "KafkaExampleConsumer");
+        props.put("key.deserializer",
+                "org.apache.kafka.common.serialization.StringDeserializer");
+        props.put("value.deserializer",
+                "org.apache.kafka.common.serialization.StringDeserializer");
+
+        Consumer<String, String> consumer = new KafkaConsumer<>(props);
+        consumer.subscribe(Collections.singletonList(topicNameConsumer));
 
         Producer<String, String> producer = new KafkaProducer<>(props);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -76,6 +87,12 @@ public class Clients {
                         jsonString));
 
                 System.out.println("Sending message to topic " + topic);
+            }
+
+            ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);
+            for (ConsumerRecord<String, String> record : records) {
+                //Object empObject = gson.fromJson(record.value(), Object.class);
+                System.out.println(record.key() + " => " + record.value());
             }
 
             Thread.sleep(5000);
