@@ -7,12 +7,21 @@ import com.google.gson.GsonBuilder;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.streams.KeyValue;
 
 // https://howtodoinjava.com/gson/gson-serialize-deserialize-json/
 
 public class Clients {
 
-    static List<String> currencies = Arrays.asList("dollar", "Euro", "Yen", "Pound", "Won", "Franc", "Rupee", "Lira");
+    static List<KeyValue<String, Double>> currencies = Arrays.asList(
+            new KeyValue<String, Double>("Dollar", 0.89),
+            new KeyValue<String, Double>("Euro", 1.0),
+            new KeyValue<String, Double>("Yen", 0.0078),
+            new KeyValue<String, Double>("Pound", 1.18),
+            new KeyValue<String, Double>("Won", 0.00075),
+            new KeyValue<String, Double>("Franc", 0.96),
+            new KeyValue<String, Double>("Rupee", 0.012),
+            new KeyValue<String, Double>("Lira", 0.065));
 
     public static void main(String[]args) throws Exception {
         //Assign topicName to string variable
@@ -54,9 +63,10 @@ public class Clients {
         );
 
         while (true) {
-            for (int i=0; i<100; i++) {
+            for (int i=0; i<50; i++) {
+                KeyValue<String, Double> currency = currencies.get(new Random().nextInt(currencies.size()));
                 String jsonString = gson.toJson(new Object(new Random().nextInt(100),
-                        currencies.get(new Random().nextInt(currencies.size())),1));
+                        currency.key,currency.value));
 
                 String topic = topicName.get(new Random().nextInt(2));
 
