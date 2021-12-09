@@ -3,8 +3,10 @@
     <output-path>$PROJECT_DIR$/ear/target</output-path>
     <properties id="maven-jee-properties">
       <options>
+        <exploded>false</exploded>
         <module>ear</module>
         <packaging>ear</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="archive" name="ear.ear">

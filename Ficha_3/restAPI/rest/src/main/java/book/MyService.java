@@ -3,9 +3,7 @@ package book;
 import beans.IAdministrator;
 
 import java.sql.Time;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.GET;
@@ -33,7 +31,7 @@ public class MyService {
     @Path("/addClient")
     public String addClient() {
         String name = "name_" + new Time(Calendar.getInstance().getTimeInMillis());
-        manageAdmin.addClients(/**/);
+        //manageAdmin.addClients(/**/);
         return name;
     }
 

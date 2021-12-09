@@ -54,14 +54,25 @@ consola #2:
 consola #3:
     cd opt/kafka_2.13-2.8.1/
     bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic resultstopic
+	------------------------------------------------------------------------------------
+	Para ver a bd:
+	bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic DBInfo --from-beginning
 
 consola #4:
-    cd workspace
-	mvn clean package
-    java -cp target/KafkaStreams.jar streams.KafkaStream credits payments resultstopic
-
+    cd opt/kafka_2.13-2.8.1/
+    bin/connect-standalone.sh config/connect-standalone.properties config/connect-jdbc-source-currency.properties config/connect-jdbc-source-manager.properties config/connect-jdbc-source-client.properties
+	
 consola #5:
     cd workspace
-    java -cp target/KafkaStreams.jar kafka.Clients credits payments
+    java -cp target/kafka.jar kafka.Clients credits payments
+	
+consola #6:
+    cd workspace
+	mvn clean package
+    java -cp target/kafka.jar streams.KafkaStream credits payments resultstopic
+	
 	
 
+VER BD
+PÔR ISTO BEM
+COMEÇAR SINK??
