@@ -1,5 +1,6 @@
 package kafka;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 import com.google.gson.Gson;
@@ -63,61 +64,45 @@ public class Clients {
         Producer<String, String> producer = new KafkaProducer<>(props);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        // gerar lista de clients -> test
-        List<Client_test> clients = Arrays.asList(
-                new Client_test("01", 0, 0),
-                new Client_test("02", 0, 0),
-                new Client_test("03", 0, 0),
-                new Client_test("04", 0, 0)
-        );
-
-        // lista que vai buscar todas as currencies e clients e guarda para depois fazer o random e enviar os novos
-
         while (true) {
 
-            // recebe os três e guarda o currencies e o clientsIds
-            /*JSONObject currencies = null;
-            JSONObject clientIds = null;
-
-            while (currencies==null || clientIds==null) {
-                ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);  // não devia estar assim!
-
-                for (ConsumerRecord<String, String> record : records) {
-
-                    JSONObject data = new JSONObject(record.value()).getJSONObject("payload");
-
-                    if (data.has("credits")) {
-                        clientIds = data;
-                    } else if (data.has("currencyvalue")) {
-                        currencies = data;
-                    }
-                }
-
-            }*/
+            ArrayList<JSONObject> currencies = new ArrayList<>();
+            ArrayList<JSONObject> clientIds = new ArrayList<>();
 
             ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);  // não devia estar assim!
+
             for (ConsumerRecord<String, String> record : records) {
 
-                System.out.println(record.value());
-            }
+                JSONObject data = new JSONObject(record.value()).getJSONObject("payload");
 
-            for (int i=0; i<25; i++) {
-
-                KeyValue<String, Double> currency = currencies.get(new Random().nextInt(currencies.size()));
-                String jsonString = gson.toJson(new Object(new Random().nextInt(1000),
-                        currency.key,currency.value));
-
-                String topic = topicName.get(new Random().nextInt(2));
-
-                // a key é o id do client
-                producer.send(new ProducerRecord<String, String>(topic,
-                        "clientIds.get(new Random().nextInt(clientIds.size()))",
-                        jsonString));
-
-                System.out.println("Sending message to topic " + topic);
+                if (data.has("credits") ) {
+                    clientIds.add(data);
+                } else if (data.has("currencyvalue")) {
+                    currencies.add(data);
+                }
             }
 
 
+            if (currencies.size()>0 && clientIds.size()>0) {
+                for (int i=0; i<10; i++) {
+
+                    JSONObject currency = currencies.get(new Random().nextInt(currencies.size()));
+                    JSONObject client = clientIds.get(new Random().nextInt(clientIds.size()));
+
+                    String jsonString = gson.toJson(new Object(new Random().nextInt(1000),
+                            currency.get("currencyname").toString(), ((BigDecimal) currency.get("currencyvalue")).doubleValue()));
+
+
+                    String topic = topicName.get(new Random().nextInt(2));
+
+                    // a key é o id do client
+                    producer.send(new ProducerRecord<String, String>(topic,
+                            ((Integer) client.get("id")).toString(),
+                            jsonString));
+
+                    System.out.println("Sending message to topic " + topic);
+                }
+            }
 
             Thread.sleep(1000);
 
