@@ -13,7 +13,9 @@ import javax.ws.rs.core.Response;
 public class App {
     public static void main(String[] args) {
 
+
         Client client = ClientBuilder.newClient();
+
         WebTarget target = client.target("http://localhost:8080/restAPI/rest/myservice/addManager"); //tenho duvida no caminho
         Response response = target.request().get();
         String value = response.readEntity(String.class);

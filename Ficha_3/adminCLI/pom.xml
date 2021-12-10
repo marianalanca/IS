@@ -26,11 +26,16 @@
         <artifactId>resteasy-jackson2-provider</artifactId>
         <version>3.13.2.Final</version>
       </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
     <build>
       <finalName>${project.artifactId}</finalName>
       <pluginManagement>
-        <!--  lock down plugins versions to avoid using Maven defaults (may be moved to parent pom)  -->
         <plugins>
           <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -61,12 +66,22 @@
                 <manifest>
                   <addClasspath>true</addClasspath>
                   <classpathPrefix>lib/</classpathPrefix>
-                  <mainClass>book.App</mainClass>
+                  <mainClass>restAPI.App</mainClass>
                 </manifest>
               </archive>
             </configuration>
           </plugin>
         </plugins>
       </pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>15</source>
+            <target>15</target>
+          </configuration>
+        </plugin>
+      </plugins>
     </build>
   </project>
