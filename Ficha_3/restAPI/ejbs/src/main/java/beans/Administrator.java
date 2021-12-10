@@ -1,13 +1,16 @@
 package beans;
 
-import data.Client;
-import data.Currency;
+//import data.Client;
+//import data.Currency;
 
+import data.Client;
+
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public class Administrator implements IAdministrator{
-
+@Stateless
+public class Administrator /*implements IAdministrator*/{
 
     @PersistenceContext(unitName = "database")
     EntityManager em;
