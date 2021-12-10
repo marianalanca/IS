@@ -1,5 +1,9 @@
 package streams;
 
+import org.apache.kafka.clients.consumer.Consumer;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.KeyValue;
@@ -9,6 +13,8 @@ import org.apache.kafka.streams.kstream.*;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -29,6 +35,7 @@ public class KafkaStream {
         String topicName_credits = args[0].toString();
         String topicName_payments = args[1].toString();
         String outtopicname = args[2].toString();
+        String topicNameConsumer = "DBInfo";
         java.util.Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "kafka-stream");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
@@ -37,6 +44,7 @@ public class KafkaStream {
         StreamsBuilder builder = new StreamsBuilder();
         KStream<String, String> lines_credits = builder.stream(topicName_credits);
         KStream<String, String> lines_payments = builder.stream(topicName_payments);
+
 
         //7. Get the credit per client (students should compute this and the following values in euros)
         KTable<String, Double> outlines_credits = lines_credits.
