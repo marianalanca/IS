@@ -1,6 +1,7 @@
 package book;
 
-import beans.IAdministrator;
+import beans.Administrator;
+//import beans.IAdministrator;
 
 import java.sql.Time;
 import java.util.Calendar;
@@ -16,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class MyService {
     @EJB
-    private IAdministrator manageAdmin;
+    private Administrator manageAdmin;
 
 
     @GET
@@ -31,7 +32,7 @@ public class MyService {
     @Path("/addClient")
     public String addClient() {
         String name = "name_" + new Time(Calendar.getInstance().getTimeInMillis());
-        //manageAdmin.addClients(/**/);
+        manageAdmin.addClients(/**/);
         return name;
     }
 
