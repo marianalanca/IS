@@ -10,6 +10,8 @@ public class Client implements Serializable {
     private int id;
     private double payments;
     private double credits;
+    private double balance;
+    private double billMonth;
 
     @ManyToOne
     private Manager manager;
@@ -17,11 +19,26 @@ public class Client implements Serializable {
     public Client() {
         this.payments=0.0;
         this.credits=0.0;
+        this.balance=0.0;
+        this.billMonth=0.0;
     }
 
-    public Client(double payments, double credits) {
+    public Client(double payments, double credits, double balance) {
         this.payments = payments;
         this.credits = credits;
+        this.balance = balance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public double getbillMonth() {
+        return billMonth;
+    }
+
+    public void setbillMonth(double billMonth) {
+        this.billMonth = billMonth;
     }
 
     public int getId() {
@@ -46,6 +63,10 @@ public class Client implements Serializable {
 
     public void setCredits(double credits) {
         this.credits = credits;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public Manager getManager() {
