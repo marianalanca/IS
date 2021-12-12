@@ -15,14 +15,14 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ear" target="15" />
-      <module name="ejbs" target="18" />
-      <module name="jpa" target="18" />
+      <module name="ejbs" target="15" />
+      <module name="jpa" target="15" />
       <module name="kafka" target="15" />
       <module name="logging" target="1.5" />
       <module name="primary-source" target="1.5" />
       <module name="projects" target="1.5" />
       <module name="rest" target="15" />
-      <module name="restAPI" target="18" />
+      <module name="restAPI" target="15" />
       <module name="restclient" target="16" />
       <module name="servlet" target="1.5" />
       <module name="servlets" target="1.5" />
