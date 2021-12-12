@@ -196,7 +196,7 @@ public class Administrator /*implements IAdministrator*/{
         try {
             List <String> list = new ArrayList<>();
             for(Client c: q.getResultList()){
-                list.add("ID " + + c.getId() + ": "  + c.getbillMonth());
+                list.add("ID " + + c.getId() + ": "  + c.getBillMonth());
             }
 
             return list;
