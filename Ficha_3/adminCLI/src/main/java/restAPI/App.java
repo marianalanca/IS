@@ -103,16 +103,19 @@ public class App {
                             break;
 
                         case(4):
+
                             target = client.target("http://wildfly:8080/rest/services/myservice/listManagers");
                             response = target.request().get();
-                            List<ManagerDTO> managers = response.readEntity(new GenericType<>() {});
+                            List<ManagerDTO> managers = response.readEntity(new GenericType<List<ManagerDTO>>(){});
                             System.out.println("RESPONSE4:");
                             for (ManagerDTO m: managers) {
-                                System.out.println(m.getId());
+                                System.out.println(m.toString());
                             }
+                            response.close();
                             break;
 
                         case(5):
+
                             target = client.target("http://wildfly:8080/rest/services/myservice/listClients");
                             response = target.request().get();
                             List<ClientDTO> clients = response.readEntity(new GenericType<>() {
@@ -122,9 +125,18 @@ public class App {
                                 System.out.println(c.toString());
                             }
                             break;
+
                         case(6):
+                            target = client.target("http://wildfly:8080/rest/services/myservice/listCurrencies");
+                            response = target.request().get();
+                            List<CurrencyDTO> currencies = response.readEntity(new GenericType<>() {
+                            });
                             System.out.println("RESPONSE6:");
+                            for (CurrencyDTO c: currencies) {
+                                System.out.println(c.toString());
+                            }
                             break;
+
                         case(7):
                             //cenas
                             break;

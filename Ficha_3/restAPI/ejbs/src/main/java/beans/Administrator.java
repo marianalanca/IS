@@ -1,13 +1,12 @@
 package beans;
 
-import data.Client;
-import data.Currency;
-import data.Manager;
+import data.*;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -47,11 +46,16 @@ public class Administrator /*implements IAdministrator*/{
         return true;
     }
 
-    public List<Manager> listManagers(){
+    public List<ManagerDTO> listManagers(){
         TypedQuery<Manager> q = em.createQuery("from Manager", Manager.class);
 
         try {
-            return q.getResultList();
+            List <ManagerDTO> list = new ArrayList<>();
+            for(Manager m: q.getResultList()){
+                list.add(new ManagerDTO(m.getId()));
+            }
+
+            return list;
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -59,11 +63,16 @@ public class Administrator /*implements IAdministrator*/{
         }
     }
 
-    public List<Client> listClients(){
+    public List<ClientDTO> listClients(){
         TypedQuery<Client> q = em.createQuery("from Client", Client.class);
 
         try {
-            return q.getResultList();
+            List <ClientDTO> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add(new ClientDTO(c.getId(), c.getPayments(), c.getCredits(), c.getBalance()));
+            }
+
+            return list;
         }
         catch (Exception e) {
             e.printStackTrace();

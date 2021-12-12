@@ -3,14 +3,14 @@ package book;
 import beans.Administrator;
 import data.*;
 
-import java.sql.Time;
-import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.websocket.server.PathParam;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 @RequestScoped
 @Path("/myservice")
@@ -41,21 +41,23 @@ public class MyService {
     }
 
     @GET
-    @Path("/listManagres")
-    public List<Manager> listManagers() {
-        return manageAdmin.listManagers();
+    @Path("/listManagers")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listManagers() {
+        return Response.ok().entity(manageAdmin.listManagers()).build();
     }
 
     @GET
     @Path("/listClients")
-    public List<Client> listClients() {
-        return manageAdmin.listClients();
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response listClients() {
+        return Response.ok().entity(manageAdmin.listClients()).build();
     }
 
     @GET
     @Path("/listCurrencies")
-    public List<Currency> listCurrencies() {
-        return manageAdmin.listCurrencies();
+    public Response listCurrencies() {
+        return Response.ok().entity(manageAdmin.listCurrencies()).build();
     }
 
 

@@ -43,6 +43,6 @@ public class CurrencyDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "Currency name: " + currencyName + " Currency value: " + currencyValue;
+        return "ID " + id + ": Currency name - " + currencyName + "; Currency value - " + currencyValue;
     }
 }
