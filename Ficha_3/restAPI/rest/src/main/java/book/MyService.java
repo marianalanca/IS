@@ -60,5 +60,40 @@ public class MyService {
         return Response.ok().entity(manageAdmin.listCurrencies()).build();
     }
 
+    @GET
+    @Path("/creditPerClient")
+    public Response creditPerClient() {
+        return Response.ok().entity(manageAdmin.creditPerClient()).build();
+    }
+
+    @GET
+    @Path("/paymentsPerClient")
+    public Response paymentsPerClient() {
+        return Response.ok().entity(manageAdmin.paymentsPerClient()).build();
+    }
+
+    @POST
+    @Path("/balanceClient")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public double balanceClient(ClientDTO c) {
+        return manageAdmin.balanceOfClient(c.getId());
+    }
+
+    @GET
+    @Path("/totalCredits")
+    public double totalCredits() {
+        return manageAdmin.totalCredits();
+    }
+
+    @GET
+    @Path("/totalPayments")
+    public double totalPayments() {
+        return manageAdmin.totalPayments();
+    }
+    @GET
+    @Path("/totalBalance")
+    public double totalBalance() {
+        return manageAdmin.totalBalance();
+    }
 
 }

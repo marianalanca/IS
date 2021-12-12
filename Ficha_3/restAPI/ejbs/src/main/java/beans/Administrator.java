@@ -92,28 +92,102 @@ public class Administrator /*implements IAdministrator*/{
         }
     }
 
-    public double creditPerClient(){
-        return 0.0;
+    public List<String> creditPerClient(){
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
+
+        try {
+            List <String> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add("ID " + c.getId() + ": " + c.getCredits());
+            }
+
+            return list;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public double paymentsPerClient(){
-        return 0.0;
+    public List<String> paymentsPerClient(){
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
+
+        try {
+            List <String> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add("ID " + c.getId() + ": " + c.getPayments());
+            }
+
+            return list;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public double balanceOfClient( int clientID){
-        return 0.0;
+    public double balanceOfClient(int clientID){
+        TypedQuery<Client> q = em.createQuery("from Client where id='"+ clientID + "'", Client.class);
+
+        try {
+            Client c = q.getSingleResult();
+            return c.getBalance();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
     }
 
     public double totalCredits(){
-        return 0.0;
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
+        double total = 0.0;
+
+        try {
+            for(Client c: q.getResultList()){
+                total += c.getCredits();
+            }
+
+            return total;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
     }
 
     public double totalPayments(){
-        return 0.0;
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
+        double total = 0.0;
+
+        try {
+            for(Client c: q.getResultList()){
+                total += c.getPayments();
+            }
+
+            return total;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
     }
 
     public double totalBalance(){
-        return 0.0;
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
+        double total = 0.0;
+
+        try {
+            for(Client c: q.getResultList()){
+                total += c.getBalance();
+            }
+
+            return total;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
     }
 
     public void billClientLastMonth(){

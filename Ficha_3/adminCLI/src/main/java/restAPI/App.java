@@ -37,7 +37,7 @@ public class App {
             System.out.println("\nMENU\n 0. Exit\n 1. Add Manager\n 2. Add Client\n 3. Add Currency\n" +
                     " 4. List Managers\n 5. List Clients\n 6. List Currencies\n" +
                     " 7. Get credit per client\n 8. Get payments\n" +
-                    " 9. Get the current balance of a client\n10. Get total\n" +
+                    " 9. Get current balance of a client\n10. Get total credits\n" +
                     "11. Get total payments\n12. Get total balance\n" +
                     "13. Compute the bill for each client for the last month\n" +
                     "14. Get list of clients without payments for the last two months\n" +
@@ -138,23 +138,73 @@ public class App {
                             break;
 
                         case(7):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/creditPerClient");
+                            response = target.request().get();
+                            List<String> creditsPerClient = response.readEntity(new GenericType<>() {
+                            });
+                            System.out.println("RESPONSE7:");
+                            for (String c: creditsPerClient) {
+                                System.out.println(c);
+                            }
+
                             break;
+
                         case(8):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/paymentsPerClient");
+                            response = target.request().get();
+                            List<String> paymentsPerClient = response.readEntity(new GenericType<>() {
+                            });
+                            System.out.println("RESPONSE8:");
+                            for (String p: paymentsPerClient) {
+                                System.out.println(p);
+                            }
+
                             break;
+
                         case(9):
-                            //cenas
+
+                            System.out.print("Client's id: ");
+                            aux2 = myObj.nextInt();
+                            aux = myObj.nextLine();
+                            ClientDTO balanceC = new ClientDTO(aux2);
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/balanceClient");
+                            Entity<ClientDTO> send_client = Entity.entity(balanceC, MediaType.APPLICATION_JSON);
+                            response = target.request().post(send_client);
+                            aux = response.readEntity(String.class);
+                            System.out.println("RESPONSE9: " + aux);
+                            response.close();
+
                             break;
                         case(10):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/totalCredits");
+                            response = target.request().get();
+                            aux = response.readEntity(String.class);
+                            System.out.println("RESPONSE10: " + aux);
+
                             break;
+
                         case(11):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/totalPayments");
+                            response = target.request().get();
+                            aux = response.readEntity(String.class);
+                            System.out.println("RESPONSE11: " + aux);
+
                             break;
+
                         case(12):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/totalBalance");
+                            response = target.request().get();
+                            aux = response.readEntity(String.class);
+                            System.out.println("RESPONSE12: " + aux);
+
                             break;
+
                         case(13):
                             //cenas
                             break;

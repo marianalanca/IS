@@ -14,6 +14,10 @@ public class ClientDTO implements Serializable {
 
     public ClientDTO(){}
 
+    public ClientDTO(int id){
+        this.id = id;
+    }
+
     public ClientDTO(ManagerDTO manager) {
         this.manager = manager;
     }

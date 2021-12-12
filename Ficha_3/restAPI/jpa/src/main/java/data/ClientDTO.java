@@ -18,6 +18,11 @@ public class ClientDTO{
         this.billMonth=0.0;
     }
 
+    public ClientDTO(int id, double credits) {
+        this.id = id;
+        this.credits = credits;
+    }
+
     public ClientDTO(int id, double payments, double credits, double balance) {
         this.id = id;
         this.payments = payments;
