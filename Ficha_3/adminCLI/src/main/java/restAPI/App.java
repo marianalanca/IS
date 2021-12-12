@@ -72,12 +72,10 @@ public class App {
                             System.out.print("Manager's id: ");
                             aux2 = myObj.nextInt();
                             aux = myObj.nextLine();
-                            ManagerDTO m = new ManagerDTO(aux2);
+                            ManagerDTO manager = new ManagerDTO(aux2);
 
                             target = client.target("http://wildfly:8080/rest/services/myservice/addClient");
-                            //target = target.queryParam("id_manager", aux2);
-                            //response = target.request().get();
-                            Entity<ManagerDTO> send_manager = Entity.entity(m, MediaType.APPLICATION_JSON);
+                            Entity<ManagerDTO> send_manager = Entity.entity(manager, MediaType.APPLICATION_JSON);
                             response = target.request().post(send_manager);
                             aux = response.readEntity(String.class);
                             System.out.println("RESPONSE2: " + aux);
@@ -103,26 +101,29 @@ public class App {
                             response.close();
 
                             break;
+
                         case(4):
-                            target = client.target("http://wildfly:8080/rest/services/myservice/clients");
+                            target = client.target("http://wildfly:8080/rest/services/myservice/listManagers");
                             response = target.request().get();
-                            List<ManagerDTO> managers = response.readEntity(new GenericType<List<ManagerDTO>>() {
-                            });
-                            for (ManagerDTO c: managers) {
-                                System.out.println(c);
+                            List<ManagerDTO> managers = response.readEntity(new GenericType<>() {});
+                            System.out.println("RESPONSE4:");
+                            for (ManagerDTO m: managers) {
+                                System.out.println(m.getId());
                             }
                             break;
+
                         case(5):
-                            target = client.target("http://wildfly:8080/rest/services/myservice/clients");
+                            target = client.target("http://wildfly:8080/rest/services/myservice/listClients");
                             response = target.request().get();
-                            List<ClientDTO> clients = response.readEntity(new GenericType<List<ClientDTO>>() {
+                            List<ClientDTO> clients = response.readEntity(new GenericType<>() {
                             });
+                            System.out.println("RESPONSE5:");
                             for (ClientDTO c: clients) {
-                                System.out.println(c);
+                                System.out.println(c.toString());
                             }
                             break;
                         case(6):
-                            //cenas
+                            System.out.println("RESPONSE6:");
                             break;
                         case(7):
                             //cenas

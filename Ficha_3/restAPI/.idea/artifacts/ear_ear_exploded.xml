@@ -6,7 +6,6 @@
         <exploded>true</exploded>
         <module>ear</module>
         <packaging>ear</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">

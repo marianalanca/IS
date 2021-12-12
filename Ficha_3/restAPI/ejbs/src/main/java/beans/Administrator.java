@@ -60,7 +60,7 @@ public class Administrator /*implements IAdministrator*/{
     }
 
     public List<Client> listClients(){
-        TypedQuery<Client> q = em.createQuery("from Client ", Client.class);
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
 
         try {
             return q.getResultList();
@@ -72,7 +72,7 @@ public class Administrator /*implements IAdministrator*/{
     }
 
     public List<Currency> listCurrencies(){
-        TypedQuery<Currency> q = em.createQuery("from Currency ", Currency.class);
+        TypedQuery<Currency> q = em.createQuery("from Currency", Currency.class);
 
         try {
             return q.getResultList();

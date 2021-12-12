@@ -41,10 +41,22 @@ public class MyService {
     }
 
     @GET
+    @Path("/listManagres")
+    public List<Manager> listManagers() {
+        return manageAdmin.listManagers();
+    }
+
+    @GET
     @Path("/listClients")
     public List<Client> listClients() {
-        List<Client> list = manageAdmin.listClients();
-
-        return list;
+        return manageAdmin.listClients();
     }
+
+    @GET
+    @Path("/listCurrencies")
+    public List<Currency> listCurrencies() {
+        return manageAdmin.listCurrencies();
+    }
+
+
 }

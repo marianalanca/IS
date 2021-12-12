@@ -67,6 +67,6 @@ public class ClientDTO implements Serializable {
 
     @Override
     public String toString() {
-        return " Credit: " + credit + " Payment: " + payment + " Balance: " + balance;
+        return "ID: " + id + " Credit: " + credit + " Payment: " + payment + " Balance: " + balance;
     }
 }
