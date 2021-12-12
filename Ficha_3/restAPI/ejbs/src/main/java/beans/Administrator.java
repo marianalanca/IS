@@ -208,13 +208,13 @@ public class Administrator /*implements IAdministrator*/{
     }
 
     //last 2 months
-    public List <ClientDTO> listClientsWithoutPayments(){
-        TypedQuery<Client> q = em.createQuery("from Client where billMonth = 0.0", Client.class);
+    public List <String> listClientsWithoutPayments(){
+        TypedQuery<Client> q = em.createQuery("from Client where paymentsTwoMonths = 0.0", Client.class);
 
         try {
-            List <ClientDTO> list = new ArrayList<>();
+            List <String> list = new ArrayList<>();
             for(Client c: q.getResultList()){
-                list.add(new ClientDTO(c.getId()));
+                list.add("ID: " + c.getId());
             }
 
             return list;
