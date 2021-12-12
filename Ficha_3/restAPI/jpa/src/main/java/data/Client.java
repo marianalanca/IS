@@ -12,6 +12,7 @@ public class Client implements Serializable {
     private double credits;
     private double balance;
     private double billMonth;
+    private Long paymentsTwoMonths;
 
     @ManyToOne
     private Manager manager;
@@ -21,6 +22,7 @@ public class Client implements Serializable {
         this.credits=0.0;
         this.balance=0.0;
         this.billMonth=0.0;
+        this.paymentsTwoMonths = 0L;
     }
 
     public Client(double payments, double credits, double balance) {
@@ -33,12 +35,20 @@ public class Client implements Serializable {
         return balance;
     }
 
-    public double getbillMonth() {
+    public double getBillMonth() {
         return billMonth;
     }
 
-    public void setbillMonth(double billMonth) {
+    public Long isPaymentsTwoMonths() {
+        return paymentsTwoMonths;
+    }
+
+    public void setBillMonth(double billMonth) {
         this.billMonth = billMonth;
+    }
+
+    public void setPaymentsTwoMonths(Long paymentsTwoMonths) {
+        this.paymentsTwoMonths = paymentsTwoMonths;
     }
 
     public int getId() {

@@ -1,12 +1,11 @@
 package kafka;
 
-public class Object {
+public class ValueCurrency {
     private double value;
-    // eventualmente será só um objeto do tipo currency
     private String currency;
     private double currencyValue;
 
-    public Object(double value, String currency, double currencyValue) {
+    public ValueCurrency(double value, String currency, double currencyValue) {
         this.value = value;
         this.currency = currency;
         this.currencyValue = currencyValue;
