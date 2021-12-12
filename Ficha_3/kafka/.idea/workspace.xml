@@ -4,12 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="">
+    <list default="true" id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="cenas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kafka/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafka/Clients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/streams/KafkaStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/KafkaStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/kafka/Clients.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/Clients.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/streams/KafkaStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/streams/KafkaStream.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/kafka.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/kafka.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ear/ear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/ear.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear.ear" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear/ejbs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear/lib/jpa.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear/rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear/rest.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ejbs/ejbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ejbs/ejbs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ejbs/target/ejbs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/ejbs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/jpa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/jpa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/src/main/java/data/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/src/main/java/data/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/classes/data/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/classes/data/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/jpa.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/TEST-book.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/TEST-book.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/book.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/book.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/rest/rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/rest/rest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/rest/target/rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/rest/target/rest.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../restAPI/restAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/restAPI.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +63,16 @@
       <option name="presentableId" value="Default" />
       <updated>1639074021063</updated>
       <workItem from="1639074022235" duration="3000" />
-      <workItem from="1639074033357" duration="12319000" />
+      <workItem from="1639074033357" duration="27081000" />
     </task>
+    <task id="LOCAL-00001" summary="cenas">
+      <created>1639140013546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639140013546</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -57,5 +88,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cenas" />
+    <option name="LAST_COMMIT_MESSAGE" value="cenas" />
   </component>
 </project>

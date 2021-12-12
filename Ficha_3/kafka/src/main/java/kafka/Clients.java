@@ -64,23 +64,29 @@ public class Clients {
         Producer<String, String> producer = new KafkaProducer<>(props);
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        while (true) {
+        ArrayList<JSONObject> currencies = new ArrayList<>();
+        ArrayList<JSONObject> clientIds = new ArrayList<>();
 
-            ArrayList<JSONObject> currencies = new ArrayList<>();
-            ArrayList<JSONObject> clientIds = new ArrayList<>();
+        while (true) {
 
             ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);  // não devia estar assim!
 
             for (ConsumerRecord<String, String> record : records) {
 
+                System.out.println(record);
+
                 JSONObject data = new JSONObject(record.value()).getJSONObject("payload");
 
-                if (data.has("credits") ) {
+                // ter em atenção se não existe! -> não funciona ainda!
+
+                if (data.has("credits") && !clientIds.contains(data)) {
                     clientIds.add(data);
-                } else if (data.has("currencyvalue")) {
+                } else if (data.has("currencyvalue") && !currencies.contains(data)) {
                     currencies.add(data);
                 }
             }
+
+            System.out.println(currencies.size() + " " + clientIds.size());
 
 
             if (currencies.size()>0 && clientIds.size()>0) {
@@ -89,7 +95,7 @@ public class Clients {
                     JSONObject currency = currencies.get(new Random().nextInt(currencies.size()));
                     JSONObject client = clientIds.get(new Random().nextInt(clientIds.size()));
 
-                    String jsonString = gson.toJson(new Object(new Random().nextInt(1000),
+                    String jsonString = gson.toJson(new Object(new Random().nextInt(100),
                             currency.get("currencyname").toString(), ((BigDecimal) currency.get("currencyvalue")).doubleValue()));
 
 
@@ -103,8 +109,6 @@ public class Clients {
                     System.out.println("Sending message to topic " + topic);
                 }
             }
-
-            Thread.sleep(1000);
 
         }
     }

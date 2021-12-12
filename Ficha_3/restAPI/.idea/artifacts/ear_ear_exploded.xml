@@ -6,6 +6,7 @@
         <exploded>true</exploded>
         <module>ear</module>
         <packaging>ear</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">
@@ -36,7 +37,7 @@
         <element id="file-copy" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar" output-file-name="slf4j-api.jar" />
       </element>
       <element id="archive" name="ejbs.jar">
-        <element id="artifact" artifact-name="ejbs:ejb exploded" />
+        <element id="module-output" name="ejbs" />
       </element>
       <element id="archive" name="rest.war">
         <element id="artifact" artifact-name="rest:war exploded" />
