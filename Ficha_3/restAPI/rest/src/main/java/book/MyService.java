@@ -90,10 +90,25 @@ public class MyService {
     public double totalPayments() {
         return manageAdmin.totalPayments();
     }
+
     @GET
     @Path("/totalBalance")
     public double totalBalance() {
         return manageAdmin.totalBalance();
+    }
+
+    @GET
+    @Path("/billLastMonth")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response billLastMonth() {
+        return Response.ok().entity(manageAdmin.billClientLastMonth()).build();
+    }
+
+    @GET
+    @Path("/clientsWoutPayments")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response clientsWoutPayments() {
+        return Response.ok().entity(manageAdmin.listClientsWithoutPayments()).build();
     }
 
 }

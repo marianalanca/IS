@@ -190,13 +190,39 @@ public class Administrator /*implements IAdministrator*/{
         }
     }
 
-    public void billClientLastMonth(){
+    public List<String> billClientLastMonth(){
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
 
+        try {
+            List <String> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add("ID " + + c.getId() + ": "  + c.getbillMonth());
+            }
+
+            return list;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     //last 2 months
-    public void listClientsWithoutPayments(){
+    public List <ClientDTO> listClientsWithoutPayments(){
+        TypedQuery<Client> q = em.createQuery("from Client where billMonth = 0.0", Client.class);
 
+        try {
+            List <ClientDTO> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add(new ClientDTO(c.getId()));
+            }
+
+            return list;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public void clientHighestDebt(){
