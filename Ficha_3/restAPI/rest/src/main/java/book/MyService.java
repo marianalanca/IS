@@ -1,15 +1,15 @@
 package book;
 
 import beans.Administrator;
-//import beans.IAdministrator;
+import data.*;
 
 import java.sql.Time;
 import java.util.Calendar;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.websocket.server.PathParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @RequestScoped
@@ -22,26 +22,29 @@ public class MyService {
 
     @GET
     @Path("/addManager")
-    public String addManager() {
-        String name = "name_" + new Time(Calendar.getInstance().getTimeInMillis());
-        manageAdmin.addManagers(/**/);
-        return name;
+    public Boolean addManager() {
+        return manageAdmin.addManagers(/**/);
+    }
+
+    @POST
+    @Path("/addClient")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Boolean addClient(Manager m) {
+        return manageAdmin.addClients(m.getId());
+    }
+
+    @POST
+    @Path("/addCurrency")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Boolean addCurrency(Currency c) {
+        return manageAdmin.addCurrency(c.getCurrencyName(), c.getCurrencyValue());
     }
 
     @GET
-    @Path("/addClient")
-    public String addClient() {
-        String name = "name_" + new Time(Calendar.getInstance().getTimeInMillis());
-        manageAdmin.addClients(/**/);
-        return name;
-    }
-
-    /*@GET
-    @Path("/list")
-    public List<Student> method3() {
-        System.out.println("M3 executing....");
-        List<Student> list = manageStudents.listStudents();
+    @Path("/listClients")
+    public List<Client> listClients() {
+        List<Client> list = manageAdmin.listClients();
 
         return list;
-    }*/
+    }
 }

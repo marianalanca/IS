@@ -1,13 +1,14 @@
 package beans;
 
-//import data.Client;
-//import data.Currency;
-
 import data.Client;
+import data.Currency;
+import data.Manager;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 @Stateless
 public class Administrator /*implements IAdministrator*/{
@@ -16,29 +17,70 @@ public class Administrator /*implements IAdministrator*/{
     EntityManager em;
 
     public boolean addManagers(){
-        return false;
+        Manager m = new Manager();
+        em.persist(m);
+        return true;
     }
 
-    public boolean addClients(/*double payments, double credits*/){
-        Client c = new Client(/*payments, credits*/);
+    public boolean addClients(int id_manager/*double payments, double credits*/){
+
+        TypedQuery<Manager> q = em.createQuery("from Manager where id='" + id_manager + "'", Manager.class);
+
+        try {
+            Manager m = q.getSingleResult();
+
+            Client c = new Client(/*payments, credits*/);
+            c.setManager(m);
+            em.persist(c);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean addCurrency(String name, double value){
+        Currency c = new Currency(name, value);
         em.persist(c);
-        return false;
+        return true;
     }
 
-    public boolean addCurrency(){
-        return false;
+    public List<Manager> listManagers(){
+        TypedQuery<Manager> q = em.createQuery("from Manager", Manager.class);
+
+        try {
+            return q.getResultList();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public void listManagers(){
+    public List<Client> listClients(){
+        TypedQuery<Client> q = em.createQuery("from Client ", Client.class);
 
+        try {
+            return q.getResultList();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public void listClients(){
+    public List<Currency> listCurrencies(){
+        TypedQuery<Currency> q = em.createQuery("from Currency ", Currency.class);
 
-    }
-
-    public void listCurrencies(){
-
+        try {
+            return q.getResultList();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public double creditPerClient(){
