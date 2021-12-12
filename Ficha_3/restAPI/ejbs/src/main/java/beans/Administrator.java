@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
-public class Administrator /*implements IAdministrator*/{
+public class Administrator{
 
     @PersistenceContext(unitName = "database")
     EntityManager em;
@@ -21,7 +21,7 @@ public class Administrator /*implements IAdministrator*/{
         return true;
     }
 
-    public boolean addClients(int id_manager/*double payments, double credits*/){
+    public boolean addClients(int id_manager){
 
         TypedQuery<Manager> q = em.createQuery("from Manager where id='" + id_manager + "'", Manager.class);
 
@@ -29,6 +29,7 @@ public class Administrator /*implements IAdministrator*/{
             Manager m = q.getSingleResult();
 
             Client c = new Client(/*payments, credits*/);
+
             c.setManager(m);
             em.persist(c);
         }
