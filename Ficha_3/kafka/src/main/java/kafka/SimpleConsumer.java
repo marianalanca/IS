@@ -46,8 +46,8 @@ public class SimpleConsumer {
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);
             for (ConsumerRecord<String, String> record : records) {
-                Object empObject = gson.fromJson(record.value(), Object.class);
-                System.out.println(record.key() + " => " + Double.toString(empObject.getValue()) + "; " + empObject.getCurrency());
+                ValueCurrency empValueCurrency = gson.fromJson(record.value(), ValueCurrency.class);
+                System.out.println(record.key() + " => " + Double.toString(empValueCurrency.getValue()) + "; " + empValueCurrency.getCurrency());
             }
         }
         //consumer.close();
