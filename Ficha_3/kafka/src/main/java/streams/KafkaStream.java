@@ -62,14 +62,13 @@ public class KafkaStream {
 
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        if (args.length != 3) {
+        if (args.length != 2) {
             System.err.println("Wrong arguments. Please run the class as follows:");
-            System.err.println(streams.KafkaStream.class.getName() + " input-topic output-topic");
+            System.err.println(streams.KafkaStream.class.getName() + " input-topic-Credits input-topic-Payments");
             System.exit(1);
         }
         String topicCredits = args[0].toString();
         String topicPayments = args[1].toString();
-        String outtopicname = args[2].toString();
 
         String clientTopic = "client";
 
@@ -94,7 +93,7 @@ public class KafkaStream {
         KTable<String, Double> outlinesPayments = lines_payments.
                 map((k,v) -> new KeyValue<>(k, getValue(v))).
                 groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
-                        reduce(Double::sum);
+                        reduce( Double::sum);
         outlinesPayments.toStream().mapValues((k, v) -> toDBFormat("payments", k, v)).to(clientTopic);
 
         //9. Get the current balance of a client
@@ -176,13 +175,10 @@ public class KafkaStream {
                 groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
                 reduce(Double::sum);
 
-
-        outlinesManPayments.toStream().mapValues((k, v) -> k + " manager -> " + v).to(outtopicname);
-
         outlinesManPayments.toStream()
                 .map((k,v) -> new KeyValue<>("0", new ClientDebt(k,v)))
                 .groupByKey(Grouped.with(Serdes.String(), CustomSerdes.ClientDebt()))
-                .aggregate(() -> new ClientDebt("0",Double.MAX_VALUE),
+                .aggregate(() -> new ClientDebt("0",Double.MIN_VALUE),
                         (key, value, aggregate) -> {
                             if(value.getValue() > aggregate.getValue()){
                                 return new ClientDebt(value.getClientId(), value.getValue());
@@ -192,10 +188,10 @@ public class KafkaStream {
                             }
                         }, Materialized.with(Serdes.String(), CustomSerdes.ClientDebt()))
                 .mapValues((k, v) -> {
-                    return toDBFormat("highestdebtid", "0", v.getClientId().toString());
+                    return toDBFormat("highestrevid", k, v.getClientId());
                 })
                 .toStream()
-                .to(outtopicname);
+                .to(clientTopic);
 
 
         KafkaStreams stream = new KafkaStreams(builder.build(), props);

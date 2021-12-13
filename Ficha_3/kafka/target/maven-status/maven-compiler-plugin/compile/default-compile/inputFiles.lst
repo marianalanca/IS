@@ -1,13 +1,9 @@
 /workspace/kafka/src/main/java/kafka/SimpleConsumer.java
-/workspace/kafka/src/main/java/Serdes/ValueAggregate.java
+/workspace/kafka/src/main/java/Serdes/CustomSerdes.java
 /workspace/kafka/src/main/java/streams/KafkaStream.java
 /workspace/kafka/src/main/java/kafka/SimpleProducer.java
+/workspace/kafka/src/main/java/Serdes/ClientDebt.java
 /workspace/kafka/src/main/java/kafka/Clients.java
 /workspace/kafka/src/main/java/Serdes/JsonDeserializer.java
-/workspace/kafka/src/main/java/streams/SimpleStreamsExercisesd.java
-/workspace/kafka/src/main/java/streams/SimpleStreamsExercisesb.java
-/workspace/kafka/src/main/java/kafka/ValueCurrency.java
-/workspace/kafka/src/main/java/Serdes/ClientDebt.java
-/workspace/kafka/src/main/java/streams/SimpleStreamsExercisesa.java
 /workspace/kafka/src/main/java/Serdes/JsonSerializer.java
-/workspace/kafka/src/main/java/streams/SimpleStreamsExercisesc.java
+/workspace/kafka/src/main/java/kafka/ValueCurrency.java
