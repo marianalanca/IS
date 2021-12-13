@@ -141,15 +141,11 @@ public class Administrator{
     }
 
     public double totalCredits(){
-        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
-        double total = 0.0;
+        TypedQuery<Client> q = em.createQuery("from Client where id=0", Client.class);
 
         try {
-            for(Client c: q.getResultList()){
-                total += c.getCredits();
-            }
 
-            return total;
+            return q.getSingleResult().getCredits();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -158,15 +154,11 @@ public class Administrator{
     }
 
     public double totalPayments(){
-        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
-        double total = 0.0;
+        TypedQuery<Client> q = em.createQuery("from Client where id=0", Client.class);
 
         try {
-            for(Client c: q.getResultList()){
-                total += c.getPayments();
-            }
 
-            return total;
+            return q.getSingleResult().getPayments();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -175,15 +167,11 @@ public class Administrator{
     }
 
     public double totalBalance(){
-        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
-        double total = 0.0;
+        TypedQuery<Client> q = em.createQuery("from Client where id=0", Client.class);
 
         try {
-            for(Client c: q.getResultList()){
-                total += c.getBalance();
-            }
 
-            return total;
+            return q.getSingleResult().getBalance();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -247,8 +235,8 @@ public class Administrator{
         TypedQuery<Client> q = em.createQuery("from Client where id = 0", Client.class);
 
         try {
-            TypedQuery<Client> q2 = em.createQuery("from Client where id = '" + q.getSingleResult().getHighestRevId() + "'", Client.class);
-            Manager m = q2.getSingleResult().getManager();
+            TypedQuery<Manager> q2 = em.createQuery("from Manager where id = '" + q.getSingleResult().getHighestRevId() + "'", Manager.class);
+            Manager m = q2.getSingleResult();
 
             String s = "ID: " + m.getId();
 
