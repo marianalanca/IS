@@ -231,11 +231,23 @@ public class App {
                             break;
 
                         case(15):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/highestDebt");
+                            response = target.request().get();
+                            aux = response.readEntity(String.class);
+                            System.out.println("RESPONSE15: " + aux);
+
                             break;
+
                         case(16):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/highestRev");
+                            response = target.request().get();
+                            aux = response.readEntity(String.class);
+                            System.out.println("RESPONSE16: " + aux);
+
                             break;
+
                         default:
                             System.out.println("Invalid option. Try again");
                     }

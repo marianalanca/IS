@@ -226,11 +226,38 @@ public class Administrator{
         }
     }
 
-    public void clientHighestDebt(){
+    public String clientHighestDebt(){
+        TypedQuery<Client> q = em.createQuery("from Client where id = 0", Client.class);
 
+        try {
+            TypedQuery<Client> q2 = em.createQuery("from Client where id = '" + q.getSingleResult().getHighestDebtId() + "'", Client.class);
+            Client c = q2.getSingleResult();
+            String s = "ID " + c.getId() + ": Credits - " + c.getCredits() + "; Payments - " + c.getPayments() + "; Balance - " + c.getBalance();
+
+            return s;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public void managerHighestRevenue(){
+    public String managerHighestRevenue(){
+
+        TypedQuery<Client> q = em.createQuery("from Client where id = 0", Client.class);
+
+        try {
+            TypedQuery<Client> q2 = em.createQuery("from Client where id = '" + q.getSingleResult().getHighestRevId() + "'", Client.class);
+            Manager m = q2.getSingleResult().getManager();
+
+            String s = "ID: " + m.getId();
+
+            return s;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
 
     }
 
