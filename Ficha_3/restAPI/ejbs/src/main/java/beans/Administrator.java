@@ -247,7 +247,7 @@ public class Administrator{
         TypedQuery<Client> q = em.createQuery("from Client where id = 0", Client.class);
 
         try {
-            TypedQuery<Client> q2 = em.createQuery("from Client where id = '" + q.getSingleResult().getHighestDebtId() + "'", Client.class);
+            TypedQuery<Client> q2 = em.createQuery("from Client where id = '" + q.getSingleResult().getHighestRevId() + "'", Client.class);
             Manager m = q2.getSingleResult().getManager();
 
             String s = "ID: " + m.getId();
