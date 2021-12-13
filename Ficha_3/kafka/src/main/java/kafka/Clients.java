@@ -84,10 +84,13 @@ public class Clients {
                     JSONObject currency = currencies.get(new Random().nextInt(currencies.size()));
                     JSONObject client = clientIds.get(new Random().nextInt(clientIds.size()));
 
+
                     Integer value = new Random().nextInt(100);
 
                     String jsonString = gson.toJson(new ValueCurrency(value,
-                            currency.get("currencyname").toString(), ((BigDecimal) currency.get("currencyvalue")).doubleValue()));
+                            currency.get("currencyname").toString(),
+                            ((BigDecimal) currency.get("currencyvalue")).doubleValue(),
+                            (Integer) client.get("manager_id")));
 
 
                     String topic = topicName.get(new Random().nextInt(2));

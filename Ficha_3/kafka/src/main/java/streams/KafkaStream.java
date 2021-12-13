@@ -1,10 +1,5 @@
 package streams;
 
-import kafka.ValueCurrency;
-import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.KeyValue;
@@ -14,11 +9,11 @@ import org.apache.kafka.streams.kstream.*;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Map;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import Serdes.ClientDebt;
+import Serdes.CustomSerdes;
 
 public class KafkaStream {
 
@@ -27,6 +22,11 @@ public class KafkaStream {
     public static double getValue(String jsonString) {
         JSONObject toString = new JSONObject(jsonString);
         return toString.getDouble("value")*toString.getDouble("currencyValue");
+    }
+
+    public static int getManagerId(String jsonString) {
+        JSONObject toString = new JSONObject(jsonString);
+        return toString.getInt("managerId");
     }
 
     public static String toDBFormat(String c, String k, Double v){
@@ -39,6 +39,16 @@ public class KafkaStream {
                 "\"payload\":{\"id\":" + k + ",\"" + c + "\":" + v + "}}";
         }
 
+    public static String toDBFormat(String c, String k, String v){
+        return "{\"schema\":{\"type\":\"struct\",\"fields\":" +
+                "[" +
+                "{\"type\":\"int32\",\"optional\":false,\"field\":\"id\"}," +
+                "{\"type\":\"int32\",\"optional\":false,\"field\":\"" + c + "\"}" +
+                "]," +
+                "\"optional\":false}," +
+                "\"payload\":{\"id\":" + k + ",\"" + c + "\":" + v + "}}";
+    }
+
     public static String toDBFormat(String c, String k, Long v){
         return "{\"schema\":{\"type\":\"struct\",\"fields\":" +
                 "[" +
@@ -48,6 +58,8 @@ public class KafkaStream {
                 "\"optional\":false}," +
                 "\"payload\":{\"id\":" + k + ",\"" + c + "\":" + v + "}}";
     }
+
+
 
     public static void main(String[] args) throws InterruptedException, IOException {
         if (args.length != 3) {
@@ -88,7 +100,9 @@ public class KafkaStream {
         //9. Get the current balance of a client
         ValueJoiner<Double, Double, Double> valueSub = (leftValue, rightValue) -> leftValue - rightValue;
 
-        outlinesCredits.join(outlinesPayments,valueSub).mapValues((k, v) -> toDBFormat("balance", k, v)).toStream().to(clientTopic);
+        KTable<String, Double> outlinesBalance = outlinesCredits.join(outlinesPayments,valueSub);
+
+        outlinesBalance.mapValues((k, v) -> toDBFormat("balance", k, v)).toStream().to(clientTopic);
 
         //10. Get the total (i.e., sum of all persons) credits
         KTable<String, Double> outlinesTotalC = lines_credits.
@@ -112,7 +126,7 @@ public class KafkaStream {
         KTable<Windowed<String>, Double> bill_month = lines_credits.
                 map((k,v) -> new KeyValue<>(k, getValue(v))).
                 groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
-                windowedBy(TimeWindows.of(TimeUnit.DAYS.toMillis(month))).
+                windowedBy(TimeWindows.of(Duration.ofDays(TimeUnit.DAYS.toMillis(month)))).
                 //windowedBy(TimeWindows.of(TimeUnit.MINUTES.toMillis(5))).
                 reduce(Double::sum);
 
@@ -125,7 +139,7 @@ public class KafkaStream {
         KTable<Windowed<String>, Long> payment_month = lines_payments.
                 map((k,v) -> new KeyValue<>(k, getValue(v))).
                 groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
-                windowedBy(TimeWindows.of(TimeUnit.DAYS.toMillis(month * 2))).
+                windowedBy(TimeWindows.of(Duration.ofDays(TimeUnit.MINUTES.toMillis(5)))).
                 count();
 
         payment_month.toStream((wk, v) -> wk.key()).map((k, v) -> new KeyValue<>(k, toDBFormat("paymentstwomonths", k, v))).
@@ -135,12 +149,54 @@ public class KafkaStream {
         //15. Get the data of the person with the highest outstanding debt (i.e., the most negative current balance)
         // aggregate
 
-        // tenho de agrupar todos e ver qual deles o menor e depois separar
 
-        //builder.stream(topicCredits, Consumed.with(Serdes.String(), ))
+        outlinesBalance.toStream()
+                .map((k,v) -> new KeyValue<>("0", new ClientDebt(k,v)))
+                .groupByKey(Grouped.with(Serdes.String(), CustomSerdes.ClientDebt()))
+                .aggregate(() -> new ClientDebt("0",Double.MAX_VALUE),
+                        (key, value, aggregate) -> {
+                            if(value.getValue() < aggregate.getValue()){
+                                return new ClientDebt(value.getClientId(), value.getValue());
+                            }
+                            else{
+                                return aggregate;
+                            }
+                        }, Materialized.with(Serdes.String(), CustomSerdes.ClientDebt()))
+                .mapValues((k, v) -> {
+                    return toDBFormat("highestdebtid", "0", v.getClientId().toString());
+                })
+                .toStream()
+                .to(clientTopic);
 
 
         // 16. Get the data of the manager who has made the highest revenue in payments from his or her clients.
+
+        KTable<String, Double> outlinesManPayments = lines_payments.
+                map((k,v) -> new KeyValue<>(String.valueOf(getManagerId(v)), getValue(v))).
+                groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
+                reduce(Double::sum);
+
+
+        outlinesManPayments.toStream().mapValues((k, v) -> k + " manager -> " + v).to(outtopicname);
+
+        outlinesManPayments.toStream()
+                .map((k,v) -> new KeyValue<>("0", new ClientDebt(k,v)))
+                .groupByKey(Grouped.with(Serdes.String(), CustomSerdes.ClientDebt()))
+                .aggregate(() -> new ClientDebt("0",Double.MAX_VALUE),
+                        (key, value, aggregate) -> {
+                            if(value.getValue() > aggregate.getValue()){
+                                return new ClientDebt(value.getClientId(), value.getValue());
+                            }
+                            else{
+                                return aggregate;
+                            }
+                        }, Materialized.with(Serdes.String(), CustomSerdes.ClientDebt()))
+                .mapValues((k, v) -> {
+                    return toDBFormat("highestdebtid", "0", v.getClientId().toString());
+                })
+                .toStream()
+                .to(outtopicname);
+
 
         KafkaStreams stream = new KafkaStreams(builder.build(), props);
         stream.start();

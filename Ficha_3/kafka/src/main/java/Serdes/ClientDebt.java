@@ -1,30 +1,30 @@
 package Serdes;
 
 public class ClientDebt {
-    private int clientId;
-    private Double balance;
+    private String clientId;
+    private Double value;
 
     public ClientDebt() {
     }
 
-    public ClientDebt(int clientId, Double balance) {
+    public ClientDebt(String clientId, Double balance) {
         this.clientId = clientId;
-        this.balance = balance;
+        this.value = balance;
     }
 
-    public int getClientId() {
+    public String getClientId() {
         return clientId;
     }
 
-    public Double getBalance() {
-        return balance;
+    public Double getValue() {
+        return value;
     }
 
-    public void setClientId(int clientId) {
+    public void setClientId(String clientId) {
         this.clientId = clientId;
     }
 
-    public void setBalance(Double balance) {
-        this.balance = balance;
+    public void setValue(Double balance) {
+        this.value = balance;
     }
 }

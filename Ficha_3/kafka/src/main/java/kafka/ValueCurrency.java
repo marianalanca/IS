@@ -4,11 +4,16 @@ public class ValueCurrency {
     private double value;
     private String currency;
     private double currencyValue;
+    private int managerId;
 
-    public ValueCurrency(double value, String currency, double currencyValue) {
+    public ValueCurrency() {
+    }
+
+    public ValueCurrency(double value, String currency, double currencyValue, int managerId) {
         this.value = value;
         this.currency = currency;
         this.currencyValue = currencyValue;
+        this.managerId = managerId;
     }
 
     public double getCurrencyValue() {
@@ -33,5 +38,13 @@ public class ValueCurrency {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public int getManagerId() {
+        return managerId;
+    }
+
+    public void setManagerId(int managerId) {
+        this.managerId = managerId;
     }
 }

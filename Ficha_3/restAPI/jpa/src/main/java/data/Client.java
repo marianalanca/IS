@@ -13,6 +13,8 @@ public class Client implements Serializable {
     private double balance;
     private double billMonth;
     private Long paymentsTwoMonths;
+    private int highestDebtId;
+    private int highestRevId;
 
     @ManyToOne
     private Manager manager;
@@ -85,6 +87,26 @@ public class Client implements Serializable {
 
     public void setManager(Manager manager) {
         this.manager = manager;
+    }
+
+    public Long getPaymentsTwoMonths() {
+        return paymentsTwoMonths;
+    }
+
+    public int getHighestDebtId() {
+        return highestDebtId;
+    }
+
+    public int getHighestRevId() {
+        return highestRevId;
+    }
+
+    public void setHighestDebtId(int highestDebtId) {
+        this.highestDebtId = highestDebtId;
+    }
+
+    public void setHighestRevId(int highestRevId) {
+        this.highestRevId = highestRevId;
     }
 }
 
