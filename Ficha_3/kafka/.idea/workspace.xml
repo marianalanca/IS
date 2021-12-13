@@ -4,58 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="tudo exceto o 15 e o 16">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Serdes/CustomSerdes.java" afterDir="false" />
+    <list default="true" id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="o serdes não foi por algum motivo :shrug:">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Serdes/ClientDebt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Serdes/ClientDebt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Serdes/ValueAggregate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafka/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafka/Clients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafka/ValueCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafka/ValueCurrency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/streams/KafkaStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/KafkaStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/SimpleStreamsExercisesa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/SimpleStreamsExercisesb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/SimpleStreamsExercisesc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/streams/SimpleStreamsExercisesd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Serdes/ClientDebt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Serdes/ClientDebt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Serdes/ValueAggregate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/kafka/Clients.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/Clients.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/Object.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/SimpleConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/SimpleConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kafka/ValueCurrency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/ValueCurrency.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/streams/KafkaStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/streams/KafkaStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/streams/SimpleStreamsExercisesa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/streams/SimpleStreamsExercisesb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/streams/SimpleStreamsExercisesc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/streams/SimpleStreamsExercisesd.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/kafka.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/kafka.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/connect-api-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/connect-json-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/gson-2.8.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/jackson-datatype-jdk8-2.10.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/kafka-clients-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/kafka-streams-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/rocksdbjni-5.18.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/slf4j-api-1.7.30.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lib/zstd-jni-1.4.9-1.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/ear_ear_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/.idea/artifacts/rest_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear.ear" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear.ear" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear/lib/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear/lib/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/ear/target/ear/rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ear/target/ear/rest.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/ejbs/target/ejbs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/ejbs/target/ejbs.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/ejbs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/src/main/java/data/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/src/main/java/data/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/classes/data/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/classes/data/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/jpa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/jpa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/TEST-book.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/TEST-book.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/book.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/jpa/target/surefire-reports/book.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../restAPI/rest/target/rest.war" beforeDir="false" afterPath="$PROJECT_DIR$/../restAPI/rest/target/rest.war" afterDir="false" />
     </list>
+    <list id="62a5b6f3-d043-4f80-9f17-e5dd889d07bc" name="serdes não foi :shrug:" comment="serdes não foi :shrug:" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,13 +55,14 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="" />
+      <changelist id="62a5b6f3-d043-4f80-9f17-e5dd889d07bc" name="serdes não foi :shrug:" comment="" />
       <created>1639074021063</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639074021063</updated>
       <workItem from="1639074022235" duration="3000" />
       <workItem from="1639074033357" duration="42173000" />
-      <workItem from="1639308346820" duration="24777000" />
+      <workItem from="1639308346820" duration="29592000" />
     </task>
     <task id="LOCAL-00001" summary="cenas">
       <created>1639140013546</created>
@@ -123,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639338901483</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="15 done :party:">
+      <created>1639353972517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639353972517</updated>
+    </task>
+    <task id="LOCAL-00005" summary="serdes não foi :shrug:">
+      <created>1639354059453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639354059453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +121,8 @@
     <MESSAGE value="cenas" />
     <MESSAGE value="KAFKA + CLIENT Alterações" />
     <MESSAGE value="tudo exceto o 15 e o 16" />
-    <option name="LAST_COMMIT_MESSAGE" value="tudo exceto o 15 e o 16" />
+    <MESSAGE value="15 done :party:" />
+    <MESSAGE value="serdes não foi :shrug:" />
+    <option name="LAST_COMMIT_MESSAGE" value="serdes não foi :shrug:" />
   </component>
 </project>

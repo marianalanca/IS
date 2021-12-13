@@ -176,13 +176,10 @@ public class KafkaStream {
                 groupByKey(Grouped.with(Serdes.String(), Serdes.Double())).
                 reduce(Double::sum);
 
-
-        outlinesManPayments.toStream().mapValues((k, v) -> k + " manager -> " + v).to(outtopicname);
-
         outlinesManPayments.toStream()
                 .map((k,v) -> new KeyValue<>("0", new ClientDebt(k,v)))
                 .groupByKey(Grouped.with(Serdes.String(), CustomSerdes.ClientDebt()))
-                .aggregate(() -> new ClientDebt("0",Double.MAX_VALUE),
+                .aggregate(() -> new ClientDebt("0",Double.MIN_VALUE),
                         (key, value, aggregate) -> {
                             if(value.getValue() > aggregate.getValue()){
                                 return new ClientDebt(value.getClientId(), value.getValue());
@@ -192,10 +189,10 @@ public class KafkaStream {
                             }
                         }, Materialized.with(Serdes.String(), CustomSerdes.ClientDebt()))
                 .mapValues((k, v) -> {
-                    return toDBFormat("highestdebtid", "0", v.getClientId().toString());
+                    return toDBFormat("highestrevid", k, v.getClientId());
                 })
                 .toStream()
-                .to(outtopicname);
+                .to(clientTopic);
 
 
         KafkaStreams stream = new KafkaStreams(builder.build(), props);
