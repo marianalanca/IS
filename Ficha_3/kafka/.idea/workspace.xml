@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="o serdes não foi por algum motivo :shrug:">
+    <list default="true" id="9234e9a9-4ca3-4c61-9410-06a11899da20" name="Changes" comment="puta do 16 feito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/streams/KafkaStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/streams/KafkaStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Serdes/ClientDebt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Serdes/ClientDebt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Serdes/ValueAggregate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/Clients.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/Clients.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kafka/ValueCurrency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka/ValueCurrency.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/streams/KafkaStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/streams/KafkaStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kafka.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/kafka.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <list id="62a5b6f3-d043-4f80-9f17-e5dd889d07bc" name="serdes não foi :shrug:" comment="serdes não foi :shrug:" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +54,7 @@
       <updated>1639074021063</updated>
       <workItem from="1639074022235" duration="3000" />
       <workItem from="1639074033357" duration="42173000" />
-      <workItem from="1639308346820" duration="29592000" />
+      <workItem from="1639308346820" duration="30170000" />
     </task>
     <task id="LOCAL-00001" summary="cenas">
       <created>1639140013546</created>
@@ -99,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639354059453</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="puta do 16 feito">
+      <created>1639358848477</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639358848478</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +122,7 @@
     <MESSAGE value="tudo exceto o 15 e o 16" />
     <MESSAGE value="15 done :party:" />
     <MESSAGE value="serdes não foi :shrug:" />
-    <option name="LAST_COMMIT_MESSAGE" value="serdes não foi :shrug:" />
+    <MESSAGE value="puta do 16 feito" />
+    <option name="LAST_COMMIT_MESSAGE" value="puta do 16 feito" />
   </component>
 </project>
