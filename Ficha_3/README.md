@@ -16,8 +16,11 @@ Na base de dados do docker:
 
     psql -U postgres
     \c database
-
-
+    
+ Na primeira vez que se corre é necessário criar o utilizador com id=0:
+ 	
+	INSERT INTO client (id, balance, billmonth,credits,highestdebtid, highestrevid, payments,paymentstwomonths) VALUES ('0',0.0,0.0,0.0,0,0,0.0,0.0);
+	 
 ### 3. Kafka
 
 Consola no docker #1:
