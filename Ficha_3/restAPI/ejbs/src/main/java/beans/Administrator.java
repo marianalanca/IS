@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
-public class Administrator /*implements IAdministrator*/{
+public class Administrator{
 
     @PersistenceContext(unitName = "database")
     EntityManager em;
@@ -21,7 +21,7 @@ public class Administrator /*implements IAdministrator*/{
         return true;
     }
 
-    public boolean addClients(int id_manager/*double payments, double credits*/){
+    public boolean addClients(int id_manager){
 
         TypedQuery<Manager> q = em.createQuery("from Manager where id='" + id_manager + "'", Manager.class);
 
@@ -29,6 +29,7 @@ public class Administrator /*implements IAdministrator*/{
             Manager m = q.getSingleResult();
 
             Client c = new Client(/*payments, credits*/);
+
             c.setManager(m);
             em.persist(c);
         }
@@ -190,13 +191,39 @@ public class Administrator /*implements IAdministrator*/{
         }
     }
 
-    public void billClientLastMonth(){
+    public List<String> billClientLastMonth(){
+        TypedQuery<Client> q = em.createQuery("from Client", Client.class);
 
+        try {
+            List <String> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add("ID " + + c.getId() + ": "  + c.getBillMonth());
+            }
+
+            return list;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     //last 2 months
-    public void listClientsWithoutPayments(){
+    public List <String> listClientsWithoutPayments(){
+        TypedQuery<Client> q = em.createQuery("from Client where paymentsTwoMonths = 0.0", Client.class);
 
+        try {
+            List <String> list = new ArrayList<>();
+            for(Client c: q.getResultList()){
+                list.add("ID: " + c.getId());
+            }
+
+            return list;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public void clientHighestDebt(){

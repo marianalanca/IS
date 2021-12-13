@@ -1,10 +1,13 @@
 Serdes/JsonDeserializer.class
-kafka/ValueCurrency.class
+streams/SimpleStreamsExercisesc.class
 Serdes/ClientDebt.class
+streams/SimpleStreamsExercisesd.class
+kafka/Clients.class
+kafka/ValueCurrency.class
+Serdes/ValueAggregate.class
 Serdes/JsonSerializer.class
 kafka/SimpleConsumer.class
 kafka/SimpleProducer.class
-kafka/Clients.class
-Serdes/CustomSerdes$ClientDebtSerde.class
-Serdes/CustomSerdes.class
+streams/SimpleStreamsExercisesb.class
+streams/SimpleStreamsExercisesa.class
 streams/KafkaStream.class

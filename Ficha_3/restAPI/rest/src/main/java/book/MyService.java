@@ -3,11 +3,8 @@ package book;
 import beans.Administrator;
 import data.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
-import javax.websocket.server.PathParam;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -90,10 +87,25 @@ public class MyService {
     public double totalPayments() {
         return manageAdmin.totalPayments();
     }
+
     @GET
     @Path("/totalBalance")
     public double totalBalance() {
         return manageAdmin.totalBalance();
+    }
+
+    @GET
+    @Path("/billLastMonth")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response billLastMonth() {
+        return Response.ok().entity(manageAdmin.billClientLastMonth()).build();
+    }
+
+    @GET
+    @Path("/clientsWoutPayments")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response clientsWoutPayments() {
+        return Response.ok().entity(manageAdmin.listClientsWithoutPayments()).build();
     }
 
 }

@@ -206,11 +206,30 @@ public class App {
                             break;
 
                         case(13):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/billLastMonth");
+                            response = target.request().get();
+                            List<String> billLastMonth = response.readEntity(new GenericType<>() {
+                            });
+                            System.out.println("RESPONSE13:");
+                            for (String p: billLastMonth) {
+                                System.out.println(p);
+                            }
+
                             break;
+
                         case(14):
-                            //cenas
+
+                            target = client.target("http://wildfly:8080/rest/services/myservice/clientsWoutPayments");
+                            response = target.request().get();
+                            List<String> clientsWoutPayments = response.readEntity(new GenericType<>() {});
+                            System.out.println("RESPONSE14:");
+                            for (String p: clientsWoutPayments) {
+                                System.out.println(p);
+                            }
+
                             break;
+
                         case(15):
                             //cenas
                             break;

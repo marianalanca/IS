@@ -11,26 +11,14 @@ public class ClientDTO{
     private double billMonth;
     private Manager manager;
 
-    public ClientDTO() {
-        this.payments=0.0;
-        this.credits=0.0;
-        this.balance=0.0;
-        this.billMonth=0.0;
-    }
+    public ClientDTO() { }
 
-    public ClientDTO(int id, double credits) {
+    public ClientDTO(int id) {
         this.id = id;
-        this.credits = credits;
     }
 
     public ClientDTO(int id, double payments, double credits, double balance) {
         this.id = id;
-        this.payments = payments;
-        this.credits = credits;
-        this.balance = balance;
-    }
-
-    public ClientDTO(double payments, double credits, double balance) {
         this.payments = payments;
         this.credits = credits;
         this.balance = balance;
