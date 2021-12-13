@@ -1,4 +1,4 @@
-# Companhia de autocarros
+# Credit card company
 
 ## Como correr
 
