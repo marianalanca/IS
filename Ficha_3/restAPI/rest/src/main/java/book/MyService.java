@@ -108,4 +108,16 @@ public class MyService {
         return Response.ok().entity(manageAdmin.listClientsWithoutPayments()).build();
     }
 
+    @GET
+    @Path("/highestDebt")
+    public String highestDebt() {
+        return manageAdmin.clientHighestDebt();
+    }
+
+    @GET
+    @Path("/highestRev")
+    public String highestRev() {
+        return manageAdmin.managerHighestRevenue();
+    }
+
 }
