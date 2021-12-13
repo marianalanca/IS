@@ -1,4 +1,4 @@
-# Companhia de autocarros
+# Credit card company
 
 ## Como correr
 
@@ -21,36 +21,40 @@ Na base de dados do docker:
 ### 3. Kafka
 
 Consola no docker #1:
+
 	cd opt/kafka_2.13-2.8.1/
 	bin/zookeeper-server-start.sh config/zookeeper.properties
 
 Consola no docker #2:
+
 	cd opt/kafka_2.13-2.8.1/
-	bin/kafka-server-start.sh config/server.properties
+   	bin/kafka-server-start.sh config/server.properties
 
 Consola no docker #3:
+
     cd opt/kafka_2.13-2.8.1/
     bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic resultstopic
 
-	(para ver a bd)
-	bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic DBInfo --from-beginning
-
 Consola no docker #4:
+
     cd opt/kafka_2.13-2.8.1/
-    bin/connect-standalone.sh config/connect-standalone.properties config/connect-jdbc-source-currency.properties config/connect-jdbc-source-manager.properties config/connect-jdbc-source-client.properties
+   	bin/connect-standalone.sh config/connect-standalone.properties config/connect-jdbc-source-currency.properties config/connect-jdbc-source-manager.properties config/connect-jdbc-source-client.properties config/connect-jdbc-sink-database.properties
 	
 Consola no docker #5:
-    cd workspace
+
+    cd workspace/kafka
+    mvn clean package
     java -cp target/kafka.jar kafka.Clients credits payments
 	
 Consola no docker #6:
-    cd workspace
-	mvn clean package
-    java -cp target/kafka.jar streams.KafkaStream credits payments
+
+  	cd workspace/kafka
+   	java -cp target/kafka.jar streams.KafkaStream credits payments
 
 ### 4. Fazer deploy da restAPI
 
 Na consola do docker:
+
     cd workspace/restAPI
     mvn clean package wildfly:deploy
     
